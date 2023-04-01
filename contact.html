@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            overflow-y: hidden;
+			background-color: transparent;
+		}
+
+		.container {
+			background-color: transparent;
+			padding: 7.7px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+			width: 400px;
+			margin: 0 auto;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		input[type=text], input[type=email], textarea {
+			padding: 10px;
+			margin: 10px 0;
+			border: none;
+			border-radius: 3px;
+            background: transparent;
+			width: 100%;
+		}
+
+		input[type=submit] {
+			background-color: #d719e8;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		input[type=submit]:hover {
+			background-color: #13db9f;
+            transition: 800ms ease-in-out;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h2>Contact Us</h2>
+        <p>Complex 3A,B,C Anson Road, International Plaza, Singapore</p>
+		<form>
+			<label for="name"><b>Name</b></label>
+			<input type="text" placeholder="Enter Name" name="name" required>
+
+			<label for="email"><b>Email</b></label>
+			<input type="email" placeholder="Enter Email" name="email" required>
+
+			<label for="message"><b>Message</b></label>
+			<textarea name="message" placeholder="Enter Message" required></textarea>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+
+</body>
+</html>

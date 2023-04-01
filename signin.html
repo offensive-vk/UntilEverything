@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign In</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background-color: transparent;
+            font-family: sans-serif;
+		}
+
+		.container {
+			background-color: #ffffff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+			width: 400px;
+			margin: 0 auto;
+			margin-top: 100px;
+			text-align: center;
+		}
+
+		input[type=text], input[type=password] {
+			padding: 10px;
+			margin: 10px 0;
+			border: none;
+			border-radius: 3px;
+			width: 100%;
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h2 align="center">Sign In</h2>
+		<form>
+			<label for="email"><b>Email or Username</b></label>
+			<input type="text" placeholder="Enter Email or Username" name="email" required>
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required>
+			<input type="submit" value="Sign In">
+		</form>
+	</div>
+
+</body>
+</html>
