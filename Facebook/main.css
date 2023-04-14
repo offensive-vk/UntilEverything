@@ -1,3 +1,5 @@
+/* Created by Vedansh , you can too yourself. */
+/* All Rights Reserved. */
 body{
     scroll-behavior: smooth;
     font-family: Arial Nova;
@@ -24,6 +26,10 @@ header > h2{
 header > table{
     margin-right: 21px;
     padding-right: 10px;
+}
+header input{
+    border-radius: 4px;
+    border-color: #fff;
 }
 .login{
     background-color: cornflowerblue;
