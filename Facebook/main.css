@@ -51,18 +51,24 @@ form{
     display: block;
     margin-left: 40px;
     margin-right: 40px;
+    overflow-y: auto;
     /* padding-right: 10px; */
 }
 .signup tr td .fill{
     width: 100%;
     height: 30px;
-    border-radius: 4px;
-    border-color: aqua;
-    padding: 0 4px 0 4px;
+    border-radius: 5px;
+    border-color: #fff;
+    padding: 0 7px 0 7px;
+    font-size: 14px;
 }
 .signup tr td .names{
     width: 100%;
     height: 30px;
+    border-radius: 5px;
+    border-color: #fff;
+    padding: 0 7px 0 7px;
+    font-size: 14px;
 }
 .signup{
     border-spacing: 7px;
