@@ -1,0 +1,70 @@
+body{
+    scroll-behavior: smooth;
+    font-family: Arial Nova;
+    padding: 0;
+    margin: 0;
+}
+header{
+    display: flex;
+    margin-left: 19px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darkblue;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+header > h2{
+    font-size: 32px;
+    margin-left: 20px;
+    padding-left: 15px;
+}
+header > table{
+    margin-right: 21px;
+    padding-right: 10px;
+}
+.login{
+    background-color: cornflowerblue;
+    padding: 3px;
+    border-radius: 1.8px;
+}
+.head > tr > td > input{
+    border-radius: 3.1px;
+}
+.head tr td a{
+    text-decoration: none;
+    color: lightseagreen;
+    margin-bottom: 3.3px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left{
+    margin-left: 20px;
+    padding-left: 10px;
+}
+form{
+    display: block;
+    margin-left: 40px;
+    margin-right: 40px;
+    /* padding-right: 10px; */
+}
+.signup tr td .fill{
+    width: 100%;
+    height: 30px;
+    border-radius: 0;
+}
+.signup tr td .names{
+    width: 100%;
+    height: 30px;
+}
+.signup{
+    border-spacing: 7px;
+    border-collapse: collapse;
+}
+.signup tr td{
+    padding: 4.1px;
+}
