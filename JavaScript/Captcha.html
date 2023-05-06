@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Vedansh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Random Captcha Generator using JS</title>
+</head>
+<body align="center">
+    <h3>Solve The Captcha</h3>
+	<h3 id="eqn"></h3> 
+    <input type="number" id="answer" placeholder="Your Answer"/><br>
+    <button onclick="check()">Verify</button>
+    <div id="res"></div>
+
+    <script>
+        document.body.style.margin = "120px";
+        document.body.style.padding = "50px";
+        document.querySelector("input").style.width = "210px";
+        document.querySelector("input").style.height = "30px";
+        document.body.style.border = "2px solid #fff";
+        document.body.style.backgroundColor = "#000";
+        document.body.style.color = "#fff";
+        document.body.style.fontSize = "2rem";
+        document.body.style.fontFamily = "monospace";
+        document.getElementById("res").style.color = "green";
+
+
+        var n1 = parseInt(Math.random() * 90)+10;
+        var n2 = parseInt(Math.random() * 90)+10;
+        //document.getElementById("num1").innerHTML = n1;
+        //document.getElementById("num2").innerHTML = n2;
+
+        const arr = ["+", "-", "*","/"];
+        var x = arr[Math.floor(Math.random() * arr.length)];
+        var op = n1 + x + n2;
+        document.getElementById("eqn").innerHTML = op;
+        
+        function check() {
+            var answer = Number(document.getElementById("answer").value);
+            var result;
+            switch (x) {
+                case '+':
+                    result = n1 + n2;
+                    break;
+                case '-':
+                    result = n1 - n2;
+                    break;
+                case '*':
+                    result = n1 * n2;
+                    break;
+                case '/':
+                    result = Math.round(n1 / n2);
+                    break;
+                default:
+                document.getElementById("res").innerHTML = "Cannot Calculate Result";
+            }
+            if(result == answer){
+                document.getElementById("res").innerHTML = "Yay ! Correct Answer !";
+            }else{
+                document.getElementById("res").innerHTML = "Oops ! Incorrect Answer<br> "+"The Correct Answer is "+result;
+            }
+        }
+    </script>
+</body>
+</html>
