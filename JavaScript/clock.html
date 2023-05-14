@@ -16,6 +16,15 @@
             let seconds = now.getSeconds();
             let amOrPm = hours >= 12 ? 'PM' : 'AM';
             hours = hours % 12 || 12;
+            if (hours < 10) {
+                hours = '0' + hours;
+            }
+            if (minutes < 10) {
+                minutes = '0' + minutes;
+            }
+            if(seconds < 10){
+                seconds = '0' + seconds;
+            }
             const current = hours+" : "+minutes+" : "+seconds;
             document.getElementById("a1").style.color = "green";
             document.getElementById("a1").style.fontFamily = "monospace";
