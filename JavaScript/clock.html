@@ -2,10 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Vedansh">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clock</title>
-    
+    <title>Digital Clock</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #000;
+            text-align: center;
+        }
+        h1{
+            font-size: 9rem;
+            font-family: "Arial Nova Light";
+            background-color: #FA8BFF;
+            background-image: linear-gradient(-75deg, #FA8BFF 0%, #2BD2FF 45%, #2BFF88 90%);
+            /* background: linear-gradient(-77deg, aqua,rgb(3, 250, 86)); */
+            background-color: #fff; 
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
 <body onload="start()">
     <script>
@@ -26,14 +46,13 @@
                 seconds = '0' + seconds;
             }
             const current = hours+" : "+minutes+" : "+seconds;
-            document.getElementById("a1").style.color = "green";
-            document.getElementById("a1").style.fontFamily = "monospace";
-            document.getElementById("a1").innerHTML = current+" "+amOrPm;
+            document.getElementById("h1").innerHTML = current+" "+amOrPm;
         }
         const start = () => {
             setInterval(display, 1000);
         }
     </script>
-    <h1 id="a1"></h1>
+    <h1>Digital Clock</h1>
+    <h1 id="h1"></h1>
 </body>
 </html>
