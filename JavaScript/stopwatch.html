@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body{
+            margin: 40px;
+            padding: 40px;
+            box-sizing: border-box;
+            font-family: monospace;
+            display: inline-flex;
+        }
+        .box{
+            border: 5px double black;
+            text-align: center;
+            margin: 150px;
+            padding: 40px;
+        }
+        h1{
+            color: magenta;
+        }
+        input{
+            background-color: aqua;
+            color: black;
+            border: none;
+            width: 110px;
+            height: 40px;
+            border-radius: 12px;
+        }
+    </style>
+    <script>
+        var hrs = 0;
+        var min = 0;
+        var sec = 0;
+        var ms = 0;
+        var res;
+        function timer()
+        {
+
+            if(min == 59 && sec == 59 && ms == 99){
+                hrs++;
+                min=0;
+                sec=0;
+                ms=0;
+            }
+            if(sec == 59 && ms == 99){
+                min++;
+                sec=0;
+                ms=0;
+            }
+            if(ms == 99){
+                sec++;
+                ms=0
+            }
+            ms++;
+            document.getElementById("t1").innerHTML = hrs+" : "+min+" : "+sec+" : "+ms;
+        }
+        function start()
+        {
+            res = setInterval(timer, 1);
+        }
+        function stop()
+        {
+            clearInterval(res);
+        }
+        function reset()
+        {
+            stop();
+            hrs = 0;
+            min = 0;
+            sec = 0;
+            ms = 0;
+            document.getElementById("t1").innerHTML = hrs+" : "+min+" : "+sec+" : "+ms;
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <h1>Stopwatch</h1>
+        <h1 id="t1">00 : 00 : 00 : 00</h1><br>
+        <input type="button" id="start" value="Start" onclick="start()"/>
+        <input type="button" id="reset" value="Reset" onclick="reset()"/>
+        <input type="button" id="stop" value="Stop" onclick="stop()"/>
+    </div>
+</body>
+</html>
