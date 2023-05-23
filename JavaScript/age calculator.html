@@ -8,6 +8,8 @@
     <script>
        let getAge = () => {
             let dob = new Date(document.querySelector("#dob").value);
+            //let dob = new Date(document.getElementById("dob").value);
+            
             let date = new Date();
             let days = parseInt((date - dob)/(1000*60*60*24));
             let years = parseInt(days/365);
