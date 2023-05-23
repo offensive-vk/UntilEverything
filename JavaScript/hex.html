@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vedansh">
+    <title>HEX Code Generator</title>
+</head>
+<body align="center">
+    <script>
+        document.body.style.fontSize = "4rem";
+        document.body.style.margin = "20rem 40rem";
+        document.body.style.fontFamily = "monospace";
+        
+        document.body.style.background = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+        document.body.style.transition = "background 2s ease-in-out";
+        var hex = document.body.style.background = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+        document.write(hex);     
+        console.log(hex);   
+    </script>
+</body>
+</html>
