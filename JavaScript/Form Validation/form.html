@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vedansh">
+    <link rel="stylesheet" href="form.css">
+    <title>Form Validation with Javascript</title>
+</head>
+<body>
+    <h2>Form Validation</h2><br>
+    <form onsubmit="return validateForm(event)">
+
+        <!-- Name -->
+        <input type="text" placeholder="Enter Your Name" id="name"/><br>
+        <label id="label-1"></label><br>
+
+        <!-- DOB -->
+        <label>DOB &nbsp; &nbsp;</label>
+        <input type="date" id="dob"/><br>
+        <div id="res"></div><br>
+
+        <!-- Email -->
+        <input type="text" placeholder="Enter Your Email" id="email"/><br>
+        <label id="label-2"></label><br>
+
+        <!-- Number -->
+        <input type="number" placeholder="Enter Phone Number" id="number"/><br>
+        <label id="label-3"></label><br>
+
+        <!-- Password -->
+        <input type="text" placeholder="Password" id="password"/><br>
+        <label id="label-4"></label><br>
+
+        <!-- Submit & Reset -->
+        <input type="reset" placeholder="Reset"/>
+        <input type="submit" placeholder="Submit"/>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
