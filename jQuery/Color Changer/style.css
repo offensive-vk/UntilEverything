@@ -8,8 +8,7 @@ h1 {
     color: white;
     font-size: 80px;
 }
-  
-  button {
+button {
     background-color: #26f055;
     color: #000;
     padding: 10px 20px;
@@ -19,6 +18,4 @@ h1 {
     width: 150px;
     border-radius: 20px;
     font-size: 15px;
-
-  }
-  
+}
