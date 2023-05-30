@@ -1,0 +1,14 @@
+
+h1 {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
