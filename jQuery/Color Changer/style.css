@@ -1,14 +1,24 @@
-
+body{
+    margin: 100px;
+    padding: 100px;
+    font-family: monospace;
+    background-color: #fff;
+}
 h1 {
     color: white;
-    font-family: Arial, sans-serif;
-  }
+    font-size: 80px;
+}
   
   button {
-    background-color: #e74c3c;
-    color: white;
+    background-color: #26f055;
+    color: #000;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 15px;
+
   }
   
