@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      background-color: #000;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container h2 {
+      text-align: center;
+    }
+    
+    .container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <a href="another.html">Go to other webpage</a>
+  </div>
+  
+  <script>
+    // Function to set the cookie with email and password
+    function setCookie(email, password) {
+      var d = new Date();
+      d.setTime(d.getTime() + (3 * 60 * 60 * 1000)); // Expiry time: 3 hours
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = "email=" + email + ";" + expires + ";path=/";
+      document.cookie = "password=" + password + ";" + expires + ";path=/";
+      alert("Cookie has been created !");
+      
+    }
+    
+    // Function to get the cookie value by name
+    function getCookie(name) {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.indexOf(name + "=") === 0)
+          return cookie.substring((name + "=").length, cookie.length);
+      }
+      return "";
+    }
+    
+    // Function to auto-fill the form fields with cookie data
+    function autoFillForm() {
+      var email = getCookie("email");
+      var password = getCookie("password");
+      document.getElementById("email").value = email;
+      document.getElementById("password").value = password;
+    }
+    
+    // Function to handle form submission
+    function handleSubmit(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      
+      // Set the cookie with email and password
+      setCookie(email, password);
+      
+      // Optional: Show a success message or redirect to another page
+      
+      return false;
+    }
+    
+    // Auto-fill the form on page load
+    window.onload = function() {
+      autoFillForm();
+    };
+    
+    // Add submit event listener to the form
+    document.getElementById("loginForm").addEventListener("submit", handleSubmit);
+  </script>
+</body>
+</html>
