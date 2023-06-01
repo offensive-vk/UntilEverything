@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <h2>Cookie Example</h2>
+    <hr width="100%" size="5.6px" color="#000">
+    <input type="text" id="t1" placeholder="Enter Your Name"><br>
+    <input type="email" id="t2" placeholder="Enter Your Email"/><br>
+    <input type="submit" value="submit" onclick="createCookie()"/>
+    <script>
+        $(document).ready(function(){
+            $("#t1").val();
+            $("#t2").val();
+        });
+    </script>
+    <script>
+        let createCookie = () => {
+                name = document.getElementById("t1").value;
+                document.cookie = "fname = "+name+", max-age = "+15;
+
+                email = document.getElementById("t2").value;
+                document.cookie = "email = "+email;
+                alert("Cookie has been created !!"+document.cookie);
+        }
+    </script>
+</body>
+</html>
