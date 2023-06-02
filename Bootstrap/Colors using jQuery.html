@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <title>Bootstrap Practice</title>
+    <style>
+        body{
+            background: linear-gradient(160deg, cyan, magenta, orange);
+            height: 100vh;
+            margin: 30px;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .col-sm-4{
+            text-align: center;
+            font-size: 30px;
+            justify-content: center;
+            color: #fff;
+            font-family: Arial Nova Light, monospace;
+            line-height: 8.1rem;
+            /* width: 380px; */
+        }
+    </style>
+</head>
+<body>
+<h2 style="text-align: center; line-height: 2em;">Random HEX Generator using jQuery</h2>
+<div class="container-fluid d-grid m-1">
+    <div class="row" style="height: 160px;">
+        <div class="col-sm-4" id="item1">Column 1</div>
+        <div class="col-sm-4" id="item2">Column 2</div>
+        <div class="col-sm-4" id="item3">Column 3</div>
+    </div>
+    <div class="row" style="height: 160px;">
+        <div class="col-sm-4" id="item4">Column 4</div>
+        <div class="col-sm-4" id="item6">Column 5</div>
+        <div class="col-sm-4" id="item6">Column 6</div>
+    </div>
+    <div class="row" style="height: 160px;">
+        <div class="col-sm-4" id="item7">Column 7</div>
+        <div class="col-sm-4" id="item8">Column 8</div>
+        <div class="col-sm-4" id="item9">Column 9</div>
+    </div>
+    <div class="row" style="height: 160px;">
+        <div class="col-sm-4" id="item10">Column 10</div>
+        <div class="col-sm-4" id="item11">Column 11</div>
+        <div class="col-sm-4" id="item12">Column 12</div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    
+    $('.col-sm-4').each(function() {
+            var color = getRandomColor();
+            $(this).text(color);
+            $(this).css('background-color', color);
+            $(this).css('transition', 'background-color 700ms ease-in-out');
+        });
+    });
+</script>
+
+</body>
+</html>
