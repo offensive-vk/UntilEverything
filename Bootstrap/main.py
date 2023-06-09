@@ -18,7 +18,7 @@ for i in range(1, len(name)):
 def rex():
     num = random.randint(99,9999)
     print(num)
-    # print(999*999)
+    
 rex()
 class example:
     try:
