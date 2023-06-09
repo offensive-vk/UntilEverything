@@ -5,7 +5,7 @@ import time
 
 time.sleep(4)
 os.system("ipconfig /all")
-
+os.system("cls && systeminfo")
 print("Shruti is learning python now ")
 
 name = input("Enter Your Name: ")
