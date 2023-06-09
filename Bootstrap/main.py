@@ -28,6 +28,8 @@ class example:
     finally:
         print("Sorry vro thak gaya hu")
 pass
+
+
 def guess(num):
     number = random.randint(1, 10)
     guess = int(input("Guess a number between 1 and 10: "))
@@ -37,6 +39,7 @@ def guess(num):
     else:
         print("Sorry, the number was", number)
 
-guess(444)
 
+
+guess(444)
 function(guess);
