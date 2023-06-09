@@ -15,11 +15,6 @@ res = float(input("What's your result? "))
 for i in range(1, len(name)):
     print(i*name," \n")
 
-def rex():
-    num = random.randint(99,9999)
-    print(num)
-    
-rex()
 class example:
     try:
         print(random.randint(99,999)/0)
