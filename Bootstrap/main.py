@@ -2,6 +2,7 @@ import random
 import sys
 import os
 import time
+import string
 
 time.sleep(4)
 os.system("ipconfig /all")
@@ -12,6 +13,15 @@ print("Current Working Directory:", os.getcwd())
 print("Directory created:", os.mkdir('sample')) 
 print("Current Time: ", datetime.datetime.now())
 
+
+def generate_random_password(length):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+
+password_length = 8  # Set the desired password length
+random_password = generate_random_password(password_length)
+print("Random Password:", random_password)
 
 # print("Shruti is learning python now ")
 
