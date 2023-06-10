@@ -7,6 +7,7 @@ time.sleep(4)
 os.system("ipconfig /all")
 os.system("cls && systeminfo")
 
+print("Current Working Directory:", os.getcwd())
 
 
 # print("Shruti is learning python now ")
@@ -28,16 +29,14 @@ class example:
 pass
 
 
-def guess(num):
-    number = random.randint(1, 10)
-    guess = int(input("Guess a number between 1 and 10: "))
+# def guess(num):
+#     number = random.randint(1, 10)
+#     guess = int(input("Guess a number between 1 and 10: "))
 
-    if guess == number:
-        print("Congratulations! You guessed the correct number.")
-    else:
-        print("Sorry, the number was", number)
+#     if guess == number:
+#         print("Congratulations! You guessed the correct number.")
+#     else:
+#         print("Sorry, the number was", number)
 
-
-
-guess(444)
-function(guess)
+# guess(444)
+# function(guess)
