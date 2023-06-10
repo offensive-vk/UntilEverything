@@ -4,15 +4,15 @@ import os
 import time
 import string
 
-time.sleep(4)
+time.sleep(2)
 os.system("ipconfig /all")
 os.system("cls && systeminfo")
 
 print("Current Working Directory:", os.getcwd())
 
-print("Directory created:", os.mkdir('sample')) 
-print("Current Time: ", datetime.datetime.now())
-
+# print("Directory created:", os.mkdir('sample')) 
+# print("Current Time: ", datetime.datetime.now())
+time.time.__init__
 
 def generate_random_password(length):
     characters = string.ascii_letters + string.digits + string.punctuation
