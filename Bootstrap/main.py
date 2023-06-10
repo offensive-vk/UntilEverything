@@ -9,6 +9,9 @@ os.system("cls && systeminfo")
 
 print("Current Working Directory:", os.getcwd())
 
+print("Directory created:", os.mkdir('sample')) 
+print("Current Time: ", datetime.datetime.now())
+
 
 # print("Shruti is learning python now ")
 
