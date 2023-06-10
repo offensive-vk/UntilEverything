@@ -6,14 +6,17 @@ import time
 time.sleep(4)
 os.system("ipconfig /all")
 os.system("cls && systeminfo")
-print("Shruti is learning python now ")
 
-name = input("Enter Your Name: ")
-age = int(input("Enter Your Age: "))
-res = float(input("What's your result? "))
 
-for i in range(1, len(name)):
-    print(i*name," \n")
+
+# print("Shruti is learning python now ")
+
+# name = input("Enter Your Name: ")
+# age = int(input("Enter Your Age: "))
+# res = float(input("What's your result? "))
+
+# for i in range(1, len(name)):
+#     print(i*name," \n")
 
 class example:
     try:
