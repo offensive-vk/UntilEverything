@@ -3,6 +3,8 @@ import sys
 import os
 import time
 import string
+import html
+
 
 time.sleep(2)
 os.system("ipconfig /all")
@@ -14,6 +16,7 @@ print("Current Working Directory:", os.getcwd())
 # print("Current Time: ", datetime.datetime.now())
 time.time.__init__
 sys.stdout.write("Yo yo yo yo")
+
 def generate_random_password(length):
     characters = string.ascii_letters + string.digits + string.punctuation
     password = ''.join(random.choice(characters) for _ in range(length))
