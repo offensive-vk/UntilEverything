@@ -5,6 +5,7 @@ public class Main{
         thread.start();
         for(int i = 0; i < 9; i++) {
             System.out.println("Count "+i);
+            Thread.sleep(2000);
             
         }
     }
