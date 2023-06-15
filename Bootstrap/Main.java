@@ -4,7 +4,8 @@ public class Main{
         MyThread thread = new MyThread();
         thread.start();
         for(int i = 0; i < 9; i++) {
-            System.out.println();
+            System.out.println("Count "+i);
+            
         }
     }
 }
@@ -12,5 +13,6 @@ class MyThread extends Thread {
     @Override
     public void run() {
         System.out.println("MyThread is running");
+        // sleep(2000, 1000);
     }
 }
