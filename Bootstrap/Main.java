@@ -16,7 +16,7 @@ class MyThread extends Thread {
             System.out.println("Count Thread"+i*989210);    
         }
         System.out.println("MyThread is running");
-        // sleep(2000, 1000);
+        
     }
 }
 class MyRunnable implements Runnable {
