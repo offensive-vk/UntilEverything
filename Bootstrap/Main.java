@@ -2,7 +2,7 @@ package Bootstrap;
 public class Main{
     public static void main(String[] args) {
         MyThread thread = new MyThread();
-        MyRunnable run = new MyRunnable(new Runnable());
+        
         thread.start();
         for(int i = 0; i < 9; i++) {
             System.out.println("Count "+i);
