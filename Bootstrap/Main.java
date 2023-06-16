@@ -1,13 +1,13 @@
 package Bootstrap;
 public class Main{
-    public static void main(String[] args) {
-        System.exit(0);
-    }
-
     class Kid{
         private static final String name = "Vedansh";
-        protected Kid(){
+        public Kid(){
             System.out.println(name);
         }
+    }
+    public static void main(String[] args) {
+        Kid bruh = new Kid();
+        System.out.println(bruh.name);
     }
 }
