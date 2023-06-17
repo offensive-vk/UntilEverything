@@ -9,7 +9,6 @@ public class Main extends Thread{
     }
     protected final class Small{
         protected void getDefault(){
-
         }
     }
 }
