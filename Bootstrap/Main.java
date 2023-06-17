@@ -6,6 +6,10 @@ public class Main extends Thread{
         while(true){
             throw new RuntimeException("oops bruv , sorry , can't go on now :)", rx);
         }
-    
+    }
+    protected final class Small{
+        protected void getDefault(){
+
+        }
     }
 }
