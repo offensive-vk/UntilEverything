@@ -7,11 +7,6 @@ public class Main extends Thread{
             throw new RuntimeException("oops bruv , sorry , can't go on now :)", rx);
         }
     }
-    protected final abstract class Small{
-        protected void getDefault(){
-        }
-        protected abstract void fransis();
-        
-    }
+
 
 }
