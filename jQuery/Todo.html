@@ -5,7 +5,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     body{
-      
+      background-color: #333;
       margin: 0 auto;
       padding: 50px;
       font-size: 1rem
@@ -20,7 +20,6 @@
 
   <script>
     $(document).ready(function() {
-      // Add Task
       $('#addTaskBtn').click(function() {
         var task = $('#taskInput').val().trim();
         if (task !== '') {
