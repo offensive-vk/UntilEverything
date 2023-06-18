@@ -7,6 +7,4 @@ public class Main extends Thread{
             throw new RuntimeException("oops bruv , sorry , can't go on now :)", rx);
         }
     }
-
-
 }

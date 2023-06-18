@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic To-Do List</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{
+      
+      margin: 0 auto;
+      padding: 50px;
+      font-size: 1rem
+    }
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addTaskBtn">Add Task</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    $(document).ready(function() {
+      // Add Task
+      $('#addTaskBtn').click(function() {
+        var task = $('#taskInput').val().trim();
+        if (task !== '') {
+          var listItem = $('<li>').text(task);
+          var removeBtn = $('<button>').text('Remove');
+          removeBtn.click(function() {
+            $(this).parent().remove();
+          });
+          listItem.append(removeBtn);
+          $('#taskList').append(listItem);
+          $('#taskInput').val('');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
