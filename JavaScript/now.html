@@ -22,7 +22,6 @@
         hours = hours % 12 || 12;
         
         const dateTimeString = `Today is ${dayOfWeek}, ${month} ${date}, ${year}. The time is ${hours}:${minutes}:${seconds} ${amOrPm}.`;
-
         
         document.getElementById('datetime').innerHTML = dateTimeString;
       }
