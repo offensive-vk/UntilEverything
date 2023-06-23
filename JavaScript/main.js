@@ -5,7 +5,7 @@ const randomNumber = Math.floor(Math.random() * 100) + 1;
 let guess = Math.floor(Math.random() * 100) + 1;
 console.log(guess);
 // Convert the user's input to a number
-guess = parseInt(guess);
+guess = randomNumber;
 
 // Check if the guess is correct and provide feedback
 if (guess === randomNumber) {
