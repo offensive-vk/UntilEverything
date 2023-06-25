@@ -7,8 +7,11 @@
 </head>
 <body>
 <?php
+    // echo "Enter Your Values Dynamically ";
+    // $name = fgets(STDIN);
+
     $num1 = 10;
-    $num2 = 5;
+    $num2 = 15;
 
     $sum = $num1 + $num2;
     $difference = $num1 - $num2;
