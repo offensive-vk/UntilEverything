@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>One Div</title>
+    <title>Hello</title>
 </head>
 <body>
     <?php
