@@ -10,8 +10,7 @@
     function greet($name) {
         echo "Hello, " . $name . "! Welcome to our website.";
     }
-
-    greet("John");
+    greet("John"); //Calling 
 ?>
 
 </body>
