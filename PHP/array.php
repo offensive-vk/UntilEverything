@@ -50,7 +50,18 @@
         )
         */
     ?>
+    <?php
+        $numbers = array(4, 2, 1, 3, 5);
 
+        // Searching for an element in an array
+        $key = array_search(3, $numbers);
+        echo "Element found at index: " . $key;  // Output: Element found at index: 3
+
+        // Sorting an array in ascending order
+        sort($numbers);
+        print_r($numbers);
+        // Output: Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 )
+    ?>
 
 </body>
 </html>
