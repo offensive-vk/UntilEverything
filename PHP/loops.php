@@ -12,7 +12,7 @@
     for ($i = 1; $i <= 10; $i++) {
         echo $i . "<br>";
     }
-
+    
     // Example 2: While Loop
     echo "Counting from 10 to 1 using a while loop:<br>";
     $j = 10;
