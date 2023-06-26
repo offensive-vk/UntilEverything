@@ -28,6 +28,28 @@
         }
         // Output: 1 2 3 4 5
     ?>
+    <?php
+        // Adding elements to an array
+        $colors = array("Red", "Green", "Blue");
+        $colors[] = "Yellow"; // Add element at the end
+
+        // Removing elements from an array
+        unset($colors[1]); // Remove element at index 1
+
+        // Modifying array elements
+        $colors[0] = "Purple";
+
+        // Displaying array contents
+        print_r($colors);
+        /* Output:
+        Array
+        (
+            [0] => Purple
+            [2] => Blue
+            [3] => Yellow
+        )
+        */
+    ?>
 
 
 </body>
