@@ -1,6 +1,6 @@
 <?php 
 class Student {
-    //
+    // Private cLass variables
     private $name;
     private $age;
     private $grade;
