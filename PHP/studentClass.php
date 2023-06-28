@@ -16,9 +16,7 @@ class Student {
     }
 }
 
-// Create a student object
 $student = new Student("SSP John Wick", 17, "11th");
-// Get student information
 echo $student->getStudentInfo() . "\n";
 
 ?>
