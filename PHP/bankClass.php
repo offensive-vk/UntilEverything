@@ -29,6 +29,8 @@ $account = new BankAccount("123456789");
 
 $account->deposit($randomNumber);
 $account->withdraw($randomNumber);
-echo "[ Account Balance: " . $account->getBalance() . "]\n";
+
+echo "[ Account Number : " . $account->$account . "]\n";
+echo "[ Account Balance : " . $account->getBalance() . "]\n";
 
 ?>
