@@ -1,5 +1,5 @@
 <?php 
-//
+// Single level inheritance in PHP
 class Vehicle {
     protected $brand;
     protected $color;
