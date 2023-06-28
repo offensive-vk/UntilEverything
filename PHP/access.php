@@ -3,7 +3,7 @@ class AccessModifiersDemo {
     public $publicVar = "Public";          // Public variable
     protected $protectedVar = "Protected"; // Protected variable
     private $privateVar = "Private";       // Private variable
-
+    
     public function publicMethod() {
         echo "This is a public method.\n";
     }
@@ -28,7 +28,6 @@ class AccessModifiersDemo {
 }
 
 $demo = new AccessModifiersDemo();
-
 // Accessing public variable and method
 echo $demo->publicVar . "\n";        // Output: Public
 $demo->publicMethod();               // Output: This is a public method.
