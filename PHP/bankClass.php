@@ -7,7 +7,6 @@ class BankAccount {
         $this->accountNumber = $accountNumber;
         $this->balance = 0;
     }
-
     public function deposit($amount) {
         $this->balance += $amount;
     }
@@ -24,12 +23,12 @@ class BankAccount {
         return $this->balance;
     }
 }
-
+$randomNumber = rand(1000, 9999);
 // Create a bank account object
 $account = new BankAccount("123456789");
 
-$account->deposit(1000);
-$account->withdraw(500);
-echo "Account Balance: " . $account->getBalance() . "\n";
+$account->deposit($randomNumber);
+$account->withdraw($randomNumber);
+echo "[ Account Balance: " . $account->getBalance() . "]\n";
 
 ?>
