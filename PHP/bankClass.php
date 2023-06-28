@@ -2,7 +2,6 @@
 class BankAccount {
     private $accountNumber;
     private $balance;
-
     public function __construct($accountNumber) {
         $this->accountNumber = $accountNumber;
         $this->balance = 0;
@@ -10,7 +9,6 @@ class BankAccount {
     public function deposit($amount) {
         $this->balance += $amount;
     }
-
     public function withdraw($amount) {
         if ($amount <= $this->balance) {
             $this->balance -= $amount;
@@ -18,19 +16,18 @@ class BankAccount {
             echo "Insufficient balance.\n";
         }
     }
-
     public function getBalance() {
         return $this->balance;
     }
 }
-$randomNumber = rand(1000, 9999);
+$randomDeposit = rand(1000, 9999);
+$randomWithdraw = rand(1000, 9999);
 // Create a bank account object
 $account = new BankAccount("123456789");
 
-$account->deposit($randomNumber);
-$account->withdraw($randomNumber);
+$account->deposit($randomDeposit);
+$account->withdraw($randomWithdraw);
 
-echo "[ Account Number : " . $account->$account . "]\n";
 echo "[ Account Balance : " . $account->getBalance() . "]\n";
 
 ?>
