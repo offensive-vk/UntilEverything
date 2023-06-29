@@ -1,6 +1,5 @@
 <?php 
 //Program demonstrates the functionality of polymorphic behaviour in PHP
-
 interface Shape {
     public function calculateArea();
 }
