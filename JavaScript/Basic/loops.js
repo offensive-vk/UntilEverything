@@ -8,3 +8,12 @@ for (let num of numbers) {
 }
 
 console.log("Random Number : ", sum);
+
+const words = ["JavaScript is a","high level", "Programming", "Language"];
+let sentence = "";
+
+for (let word of words) {
+    sentence += word + " ";
+}
+
+console.log("Sentence:", sentence.trim());
