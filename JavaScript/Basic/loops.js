@@ -9,6 +9,7 @@ for (let num of numbers) {
 
 console.log("Random Number : ", sum);
 
+//Second Example
 const words = ["JavaScript is a","high level", "Programming", "Language"];
 let sentence = "";
 
