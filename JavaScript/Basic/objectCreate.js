@@ -13,3 +13,6 @@ console.log(person.profession);
 for (let key in person) {
     console.log(key + ": " + person[key]);
 }
+// to add a property in Object :
+person.salary = 95000;
+console.log(person);
