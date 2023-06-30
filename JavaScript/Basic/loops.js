@@ -7,7 +7,7 @@ for (let num of numbers) {
     sum += Math.round(num);
 }
 
-console.log("Random Number : ", sum);
+console.log("\n\t\t[ :: Random Number :: ", sum, " ]\n");
 
 //Second Example
 const words = ["JavaScript is a","high level", "Programming", "Language"];
@@ -17,4 +17,4 @@ for (let word of words) {
     sentence += word + " ";
 }
 
-console.log("Sentence:", sentence.trim());
+console.log("\t [ Sentence:", sentence.trim(), " ]\n");
