@@ -17,3 +17,16 @@ console.log(clonedPerson);
 
 const propertyCount = Object.keys(person).length;
 console.log("Number of properties:", propertyCount);
+
+const obj1 = {
+    name: "Kiddo",
+    age: 12,
+};
+
+const obj2 = {
+    name: "Kiddo",
+    age: 12,
+};
+
+const isEqual = JSON.stringify(obj1) === JSON.stringify(obj2);
+console.log("Objects are equal:", isEqual);
