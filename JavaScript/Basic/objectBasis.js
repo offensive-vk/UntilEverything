@@ -20,3 +20,4 @@ console.log(person);
 //to delete a property in Object:
 delete person.age;
 console.log(person);
+
