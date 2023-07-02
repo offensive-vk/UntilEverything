@@ -4,18 +4,18 @@ const car = {
     price: 890229,
 };
 
-if ("name" in person) {
+if ("name" in car) {
     console.log("Name property exists.");
 } else {
     console.log("Name property does not exist.");
 }
 
 //copy a object 
-const clonedPerson = { ...person };
-console.log(clonedPerson);
+const clonedCar = { ...car };
+console.log(clonedCar);
 
 
-const propertyCount = Object.keys(person).length;
+const propertyCount = Object.keys(car).length;
 console.log("Number of properties:", propertyCount);
 
 const obj1 = {
@@ -32,3 +32,14 @@ const isEqual = JSON.stringify(obj1) === JSON.stringify(obj2);
 console.log("Objects are equal:", isEqual);
 // JSON.stringify() method is used to convert both objects into JSON strings. 
 //The equality of the strings is then checked to determine if the objects are equal.
+
+const person = {
+    name: "John",
+    age: 30,
+    sayHello: function () {
+        console.log(`Hello, my name is ${this.name}.`);
+    },
+};
+
+console.log(person.name);
+person.sayHello();
