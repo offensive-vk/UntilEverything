@@ -30,3 +30,5 @@ const obj2 = {
 
 const isEqual = JSON.stringify(obj1) === JSON.stringify(obj2);
 console.log("Objects are equal:", isEqual);
+// JSON.stringify() method is used to convert both objects into JSON strings. 
+//The equality of the strings is then checked to determine if the objects are equal.
