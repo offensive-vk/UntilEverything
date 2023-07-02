@@ -12,3 +12,8 @@ if ("name" in person) {
 //copy a object 
 const clonedPerson = { ...person };
 console.log(clonedPerson);
+
+
+
+const propertyCount = Object.keys(person).length;
+console.log("Number of properties:", propertyCount);
