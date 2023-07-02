@@ -17,7 +17,11 @@ console.log(clonedCar);
 
 const propertyCount = Object.keys(car).length;
 console.log("Number of properties:", propertyCount);
+/*
+*
+The Object.keys() method is a built-in function in JavaScript that returns an array of a given object's own enumerable property names. It takes an object as an argument and returns an array containing the keys (property names) of that object.
 
+*/
 const obj1 = {
     name: "Kiddo",
     age: 12,
