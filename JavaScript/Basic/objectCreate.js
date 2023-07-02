@@ -16,3 +16,7 @@ for (let key in person) {
 // to add a property in Object :
 person.salary = 95000;
 console.log(person);
+
+//to delete a property in Object:
+delete person.age;
+console.log(person);
