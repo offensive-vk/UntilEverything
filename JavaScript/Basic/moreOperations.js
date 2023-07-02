@@ -33,6 +33,11 @@ console.log("Objects are equal:", isEqual);
 // JSON.stringify() method is used to convert both objects into JSON strings. 
 //The equality of the strings is then checked to determine if the objects are equal.
 
+const parsedObject = JSON.parse(json);
+console.log(parsedObject);
+//the JSON.parse() function is used to parse the JSON string back into a JavaScript object. 
+//The JSON.parse() function is another built-in JavaScript method that deserializes a JSON string into a JavaScript object.
+
 const person = {
     name: "John",
     age: 30,
