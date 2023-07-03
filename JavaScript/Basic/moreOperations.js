@@ -37,8 +37,8 @@ console.log("Objects are equal:", isEqual);
 // JSON.stringify() method is used to convert both objects into JSON strings. 
 //The equality of the strings is then checked to determine if the objects are equal.
 
-const parsedObject = JSON.parse(json);
-console.log(parsedObject);
+//const parsedObject = JSON.parse(json);
+//console.log(parsedObject);
 //the JSON.parse() function is used to parse the JSON string back into a JavaScript object. 
 //The JSON.parse() function is another built-in JavaScript method that deserializes a JSON string into a JavaScript object.
 
@@ -52,3 +52,27 @@ const person = {
 
 console.log(person.name);
 person.sayHello();
+
+
+/* 
+Object.assign() is a built-in method in JavaScript that is used to copy the values of all enumerable properties from one or more source objects to a target object. It merges the properties of the source objects into the target object.
+
+Object.assign(target, ...sources)
+
+target: The target object to which the properties will be copied.
+sources: One or more source objects from which the properties will be copied.
+
+*/
+const target = {
+    prop1: 'value1',
+    prop2: 'value2'
+};
+
+const source = {
+    prop2: 'updated value',
+    prop3: 'value3'
+};
+
+const mergedObject = Object.assign(target, source);
+
+console.log(mergedObject);
