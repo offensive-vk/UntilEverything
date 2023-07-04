@@ -2,7 +2,7 @@
 const elementById = document.getElementById('myElementId');
 
 // Get elements by class name
-const elementsByClassName = document.getElementsByClassName('myClassName');
+const elementsByClassName = document.getElementsByClassName('ClassName');
 
 // Get elements by tag name
 const elementsByTagName = document.getElementsByTagName('div');
