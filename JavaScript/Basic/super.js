@@ -1,4 +1,4 @@
-
+//Example of super keyword in javascript
 class Animal {
     constructor(name) {
         this.name = name;
