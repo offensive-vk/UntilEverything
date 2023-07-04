@@ -1,3 +1,4 @@
+
 class Animal {
     constructor(name) {
         this.name = name;
@@ -24,5 +25,5 @@ class Dog extends Animal {
 }
 
 const dog = new Dog("Buddy", "Labrador");
-dog.speak(); // Output: Buddy barks.
-dog.displayBreed(); // Output: Buddy is a Labrador.
+dog.speak();
+dog.displayBreed(); 
