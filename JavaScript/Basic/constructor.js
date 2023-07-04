@@ -1,3 +1,4 @@
+// this program shows the use of constructors and methods in javascript
 class Person {
     constructor(name, age) {
         this.name = name;
