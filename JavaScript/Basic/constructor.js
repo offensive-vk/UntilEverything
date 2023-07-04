@@ -9,8 +9,8 @@ class Person {
     }
 }
 
-const person1 = new Person("John", 30);
-person1.sayHello(); // Output: Hello, my name is John and I am 30 years old.
+const person1 = new Person("John", 100);
+person1.sayHello(); 
 
-const person2 = new Person("Jane", 25);
+const person2 = new Person("Jane", 125);
 person2.sayHello();
