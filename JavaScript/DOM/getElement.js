@@ -11,3 +11,13 @@ const elementsByTagName = document.getElementsByTagName('div');
 const elementByQuerySelector = document.querySelector('#myElementId');
 const elementsByQuerySelectorAll = document.querySelectorAll('.myClassName');
 
+//manipulation 
+
+// Change text content
+elementById.textContent = 'New text content';
+
+// Modify attribute
+elementById.setAttribute('href', 'https://example.com');
+
+// Update HTML structure
+elementById.innerHTML = '<h1>New HTML structure</h1>';
