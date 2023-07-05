@@ -36,3 +36,12 @@ for (let i = 0; i < elements.length; i++) {
         console.log('Mouse over element ' + i);
     });
 }
+
+// Get the input element by ID
+const input = document.getElementById('myInput');
+
+// Add a change event listener
+input.addEventListener('change', function () {
+    // Code to be executed when the input value changes
+    console.log('Input value changed: ' + input.value);
+});
