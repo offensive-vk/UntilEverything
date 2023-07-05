@@ -7,3 +7,8 @@ button.addEventListener('click', function () {
     console.log('Button clicked!');
 });
 
+// Add a key press event listener to the document
+document.addEventListener('keypress', function (event) {
+    // Code to be executed when a key is pressed
+    console.log('Key pressed: ' + event.key);
+});
