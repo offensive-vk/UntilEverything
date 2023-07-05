@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>classList Methods and Properties</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="myHeading">classList Methods and Properties</h1>
+    <p id="myParagraph">Click the button to manipulate classes on the paragraph.</p>
+
+    <button id="myButton">Manipulate Classes</button>
+
+    <script>
+        // Get references to the elements
+        const button = document.getElementById('myButton');
+        const paragraph = document.getElementById('myParagraph');
+
+        // Event listener for the button click
+        button.addEventListener('click', function () {
+            // Add class
+            paragraph.classList.add('highlight');
+
+            // Remove class
+            paragraph.classList.remove('underline');
+
+            // Toggle class
+            paragraph.classList.toggle('italic');
+
+            // Check if class exists
+            const hasClass = paragraph.classList.contains('highlight');
+            console.log('Has "highlight" class:', hasClass);
+
+            // Get the value of class attribute as a string
+            const classAttribute = paragraph.classList.value;
+            console.log('Class attribute value:', classAttribute);
+
+            // Replace existing classes with new classes
+            paragraph.classList.replace('highlight', 'red-text');
+        });
+    </script>
+</body>
+</html>
