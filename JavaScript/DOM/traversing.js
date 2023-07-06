@@ -32,3 +32,7 @@ const nthChildElement = document.getElementById('parentElementId').querySelector
 //Nth Last Child Selector (nth-last-child):
 // Get the parent element and select its nth last child element (e.g., 2nd last child)
 const nthLastChildElement = document.getElementById('parentElementId').querySelector(':nth-last-child(2)');
+
+//Last Child Selector (lastElementChild):
+// Get the parent element and select its last child element
+const lastChildElement = document.getElementById('parentElementId').lastElementChild;
