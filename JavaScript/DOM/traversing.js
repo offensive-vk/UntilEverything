@@ -24,3 +24,8 @@ const nextSiblingElement = document.getElementById('myElementId').nextElementSib
 //Previous Sibling Selector (previousElementSibling):
 // Get the element with ID "myElementId" and select its previous sibling
 const previousSiblingElement = document.getElementById('myElementId').previousElementSibling;
+
+
+//Nth Last Child Selector (nth-last-child):
+// Get the parent element and select its nth last child element (e.g., 2nd last child)
+const nthLastChildElement = document.getElementById('parentElementId').querySelector(':nth-last-child(2)');
