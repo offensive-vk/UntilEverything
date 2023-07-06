@@ -36,3 +36,7 @@ const nthLastChildElement = document.getElementById('parentElementId').querySele
 //Last Child Selector (lastElementChild):
 // Get the parent element and select its last child element
 const lastChildElement = document.getElementById('parentElementId').lastElementChild;
+
+//First Child Selector (firstElementChild):
+// Get the parent element and select its first child element
+const firstChildElement = document.getElementById('parentElementId').firstElementChild;
