@@ -21,3 +21,10 @@ const className = document.body.className; // Returns the class attribute value
 document.body.className = 'my-class'; // Sets the class attribute value
 
 //contentEditable: Gets or sets whether the content of the <body> element is editable.
+const contentEditable = document.body.contentEditable; // Returns "true" or "false"
+document.body.contentEditable = 'true'; // Enables editing of the content
+
+const offsetHeight = document.body.offsetHeight; // Returns the height of the body element
+const offsetWidth = document.body.offsetWidth; // Returns the width of the body element
+const scrollHeight = document.body.scrollHeight; // Returns the scrollable height of the body element
+const scrollWidth = document.body.scrollWidth; // Returns the scrollable width of the body element
