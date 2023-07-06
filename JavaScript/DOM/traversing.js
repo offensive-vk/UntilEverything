@@ -22,3 +22,5 @@ const siblingElements = document.querySelectorAll('#myElementId ~ .siblingClassN
 const nextSiblingElement = document.getElementById('myElementId').nextElementSibling;
 
 //Previous Sibling Selector (previousElementSibling):
+// Get the element with ID "myElementId" and select its previous sibling
+const previousSiblingElement = document.getElementById('myElementId').previousElementSibling;
