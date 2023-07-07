@@ -9,3 +9,4 @@ document.addEventListener('click', function (event) {
     console.log('Mouse coordinates:', mouseX, mouseY);
 });
 
+//more
