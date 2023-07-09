@@ -14,3 +14,10 @@ const Cars = {
 };
 
 //3. Creating object by a function
+function Teachers(name, subject, salary){
+    this.name = name;
+    this.subject = subject;
+    this.salary = salary;
+}
+//Creating a variable and calling the function
+var Teacher1 = new Teacher('Rakesh','Maths', 12000);
