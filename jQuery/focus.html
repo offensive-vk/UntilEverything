@@ -1,0 +1,36 @@
+<!-- The focus() method attaches an event handler function to an HTML form field.
+The function is executed when the form field gets focus -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jQuery.js"></script>
+    <script>
+        //const name = document.querySelector("#name").value;
+        //const email = document.querySelector("#email").value;
+
+        $(document).ready(function () {
+            const name = $("#name").val();
+            const email = $("#email").val();
+            $("input").focus(function () {
+                $(this).css("background-color", "aqua");
+                $("#res").text(name);
+            });
+            $("input").blur(function () {
+                $(this).css("background-color", "#000");
+                document.body.style.backgroundColor = "magenta";
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    Name: <input type="text" name="fullname" id="name"><br>
+    Email: <input type="text" name="email" id="email">
+    <p id="res"></p>
+</body>
+
+</html>
