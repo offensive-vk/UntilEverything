@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jQuery.js"></script>
+    <script>
+        const filteredItems = $('li').filter(function () {
+            return $(this).text().startsWith('P');
+        });
+
+        filteredItems.css('color', 'red');
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Pineapple</li>
+    </ul>
+</body>
+</html>
