@@ -2,9 +2,22 @@
 <html>
 <head>
   <title>AJAX Example</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="jQuery.js"></script>
   <script>
-
+    $(document).ready(function() {
+        $("#loadData").click(function() {
+          $.ajax({
+            url: "data.txt",
+            method: "GET",
+            success: function(response) {
+              $("#content").text(response);
+            },
+            error: function(xhr, status, error) {
+              console.log("An error occurred: " + error);
+            }
+          });
+        });
+      });
   </script>
 </head>
 <body>
