@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jQuery.js"></script>
+    <script>
+        const parentElement = $('#parent');
+        const specialItem = parentElement.find('.special');
+        console.log(specialItem.text()); // Output: Item 3
+    </script>
+</head>
+
+<body>
+    <div id="parent">
+        <ul>
+            <li class="normal">Item 1</li>
+            <li class="normal">Item 2</li>
+            <li class="special">Item 3</li>
+            <li class="normal">Item 4</li>
+        </ul>
+    </div>
+</body>
+</html>
