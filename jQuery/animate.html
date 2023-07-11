@@ -6,6 +6,8 @@ This means that if you write multiple animate() calls after each other, jQuery c
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
+        //Syntax: 
+        //$(selector).animate(styles, duration, easing, complete);
         $(document).ready(function () {
             $("button").click(function () {
                 var div = $("div");
@@ -15,6 +17,12 @@ This means that if you write multiple animate() calls after each other, jQuery c
                 div.animate({ width: '100px', opacity: '0.8' }, "slow",);
             });
         });
+        /* 
+        duration (optional): The duration of the animation in milliseconds. It specifies how long the animation should take to complete. If not provided, the default duration is 400 milliseconds.
+
+        easing (optional): The easing function to control the pace of the animation. It determines the speed at which the animation progresses. Some commonly used easing functions include "linear", "swing", "easeIn", "easeOut", etc. If not provided, the default easing is "swing".    
+
+        */
     </script>
     <style>
         body{
