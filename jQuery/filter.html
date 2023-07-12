@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="jQuery.js"></script>
-    <script>
-        const filteredItems = $('li').filter(function () {
-            return $(this).text().startsWith('P');
-        });
-
-        filteredItems.css('color', 'red');
-        console.log(filteredItems);
-    </script>
+    <script src="jquery.js"></script>
 </head>
 <body>
     <ul>
@@ -18,5 +10,16 @@
         <li>Banana</li>
         <li>Pineapple</li>
     </ul>
+
+    <script>
+        $(document).ready(function() {
+            const filteredItems = $('li').filter(function () {
+                return $(this).text().startsWith('P');
+            });
+
+            filteredItems.css('color', 'red');
+            console.log(filteredItems);
+        });
+    </script>
 </body>
 </html>
