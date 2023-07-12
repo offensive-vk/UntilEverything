@@ -13,5 +13,30 @@
 <body>
     <div id="myElement">Hello, World!</div>
     <button id="myButton">Toggle Highlight</button>
+    <script>
+        $(document).ready(function() {
+            // Add class "highlight" to elements
+            $('#myElement').addClass('highlight');
+        
+            // Remove class "highlight" from elements after 2 seconds
+            setTimeout(function() {
+                $('#myElement').removeClass('highlight');
+            }, 2000);
+        
+            // Toggle class "highlight" on elements on click
+            $('#myButton').click(function() {
+                $('#myElement').toggleClass('highlight');
+            });
+        
+            // Get and set CSS properties of elements
+            $('#myElement').css({
+                'font-size': '20px',
+                'color': 'blue'
+            });
+    
+        // Log the font-size of the element
+        console.log('Font size:', $('#myElement').css('font-size'));
+        });
+      </script>
 </body>
 </html>
