@@ -9,12 +9,13 @@
 <body>
     <button id="myButton1">Click Me 1</button>
     <button id="myButton2">Click Me 2</button>
+    <button id="myButton3">Click Me</button>
     <script>
         //click(): Attach a click event handler to elements.
         //on(): Attach event handlers to elements for various events.
         //trigger(): Trigger a specific event on elements.
         //off(): Remove event handlers from elements.
-        
+
         $('#myButton1').click(function () {
             console.log('Button clicked!');
         });
@@ -25,6 +26,17 @@
             console.log('Button clicked!');
         });
         
+    </script>
+    <script>
+        $('#myButton').trigger('click');
+    </script>
+    <script>
+        $('#myButton').on('click', function() {
+            console.log('Button clicked!');
+        });
+        
+        // Remove the click event handler from the button
+        $('#myButton').off('click');
     </script>
 </body>
 </html>
