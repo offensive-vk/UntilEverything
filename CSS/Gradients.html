@@ -8,5 +8,43 @@
 </head>
 <body align="center">
     <h2>This is some text</h2>
+    <div class="container">
+        <section class="item one"></section>
+        <section class="item two"></section>
+        <section class="item three"></section>
+        <section class="item four"></section>
+        <section class="item five"></section>
+    </div>
+    <style>
+        body{
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 10px;
+        }
+        
+        .item {
+            background-color: #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .container {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            }
+        }
+    </style>
 </body>
 </html>
