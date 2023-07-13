@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Vedansh" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIfferent Colored Gradients In CSS</title>
+</head>
+
+<body align="center">
+    <div class="container">
+        <section class="item one"></section>
+        <section class="item two"></section>
+        <section class="item three"></section>
+        <section class="item four"></section>
+        <section class="item five"></section>
+    </div>
+    <style>
+        body {
+            margin: 30px;
+            height: 100vh;
+            background-color: #000;
+            
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .item {
+            flex: 1;
+            height: 90vh;
+            width: 100vw;
+        }
+        
+        .one {
+            background-color: red;
+        }
+        
+        .two {
+            background-color: orange;
+        }
+        
+        .three {
+            background: linear-gradient(45deg, #FF4081, #00E676);        }
+        
+        .four {
+            background: linear-gradient(90deg, #F44336, #9C27B0);
+        }
+        
+        .five {
+            background: linear-gradient(-135deg, #FFC107, #3F51B5);
+        
+        }
+            
+    </style>
+</body>
+</html>
