@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta name="author" content="Vedansh" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIfferent Colored Gradients In CSS</title>
 </head>
-
 <body align="center">
     <div class="container">
         <section class="item one"></section>
@@ -25,16 +24,19 @@
                     document.body.style.transition = 'background 600ms ease-in-out'; 
                     document.body.style.background = color;
                     console.log(color);
+                    e.textContent = color;
                 });
                 e.addEventListener('mouseout', () => {
                     document.body.style.transition = 'background 600ms ease-in-out'; 
                     document.body.style.background = "#000";
+                    e.textContent = '';
                 });
             });
+
     </script>
     <style>
         body {
-            margin: 30px;
+            margin: 40px;
             height: 100vh;
             background: #000;
             overflow-y: hidden;
@@ -44,13 +46,17 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-        
         .item {
             flex: 1;
             height: 90vh;
             width: 100vw;
             border-radius: 12px;
             transition: all 0.3s ease-in-out;
+
+            font-size: 27px;
+            font-family: monospace;
+            text-align: center;
+            padding-top: 100px;
         }
         .item:hover{
             filter: opacity(0.7);
