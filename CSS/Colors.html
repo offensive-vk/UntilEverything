@@ -15,12 +15,29 @@
         <section class="item four"></section>
         <section class="item five"></section>
     </div>
+    <script>
+        var items = document.querySelectorAll('.item');
+            items.forEach((e) => {
+                e.addEventListener('mouseover', () => {
+                    document.body.style.display = 'none;'
+                    const property = window.getComputedStyle(e);
+                    const color = property.getPropertyValue('background');
+                    document.body.style.transition = 'background 600ms ease-in-out'; 
+                    document.body.style.background = color;
+                    console.log(color);
+                });
+                e.addEventListener('mouseout', () => {
+                    document.body.style.transition = 'background 600ms ease-in-out'; 
+                    document.body.style.background = "#000";
+                });
+            });
+    </script>
     <style>
         body {
             margin: 30px;
             height: 100vh;
-            background-color: #000;
-            
+            background: #000;
+            overflow-y: hidden;
         }
         .container {
             display: flex;
@@ -32,18 +49,29 @@
             flex: 1;
             height: 90vh;
             width: 100vw;
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
         }
-        
+        .item:hover{
+            filter: opacity(0.7);
+            border-radius: 20px;
+            transform: scale(1.2);
+            z-index: 1;
+        }
+        .item:not(:hover) {
+            transform: scale(0.9);
+        }
         .one {
-            background-color: red;
+            background: linear-gradient(-60deg, #FF5722, #4CAF50);        
         }
         
         .two {
-            background-color: orange;
+            background: linear-gradient(135deg, #2196F3, #FFEB3B, #F44336);
         }
         
         .three {
-            background: linear-gradient(45deg, #FF4081, #00E676);        }
+            background: linear-gradient(45deg, #FF4081, #00E676);        
+        }
         
         .four {
             background: linear-gradient(90deg, #F44336, #9C27B0);
@@ -51,9 +79,7 @@
         
         .five {
             background: linear-gradient(-135deg, #FFC107, #3F51B5);
-        
         }
-            
     </style>
 </body>
 </html>
