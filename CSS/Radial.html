@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        background: #000;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .item {
+        flex: 1;
+        margin: 10px;
+        background: radial-gradient(circle at center, #F44336, #3F51B5);
+        color: white;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        width: 90vw;
+    }
+    .one{
+        background: radial-gradient(circle at center, #FF4081, #00E676);
+    }
+    .two{
+        background: linear-gradient(to right, hsl(0, 0%, 15%) 2%, hsl(0, 0%, 10%) 5%, hsl(0, 0%, 5%) 10%);
+    }
+    .three{
+        background: radial-gradient(circle at center, #F44336, #3F51B5);
+    }          
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item one">Section 1</div>
+        <div class="item two">Section 2</div>
+        <div class="item three">Section 3</div>
+        <div class="item four">Section 4</div>
+        <div class="item five">Section 5</div>
+    </div>
+</body>
+</html>
