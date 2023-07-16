@@ -2,7 +2,15 @@
 <html>
 <head>
     <title>Coordinate Tracker</title>
+</head>
+<body>
+    <div id="coordinates">Move your mouse to track coordinates</div>
+    <div id="res"></div>
     <style>
+        :root{
+            --x : 0;
+            --y : 0;
+        }
         body {
             font-family: monospace;
             margin: 0;
@@ -21,19 +29,30 @@
             font-size: 72px;
             color: #000;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
+        }
+        #res{
+            position: absolute;
+            background-color: red;
+            height: 300px;
+            width: 300px;
+            border: 2px solid #000;
+            margin: 0 auto;
+            translate: var(--x) var(--y);
         }
     </style>
     <script>
+        const root = document.documentElement;
         document.addEventListener("DOMContentLoaded", function() {
             document.addEventListener("mousemove", function(event) {
                 var coordinates = document.getElementById("coordinates");
+                var box = document.querySelector("#res");
+                const x = event.clientX;
+                const y = event.clientY;
+                box.style.setProperty("--x", x);
+                box.style.setProperty("--y", y);
                 coordinates.textContent = "X: " + event.clientX + ", Y: " + event.clientY;
             });
         });
     </script>
-</head>
-<body>
-    <div id="coordinates">Move your mouse to track coordinates</div>
 </body>
 </html>
