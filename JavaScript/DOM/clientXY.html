@@ -7,8 +7,12 @@
             font-family: monospace;
             margin: 0;
             padding: 0;
+            transition: background-color 0.5s;
+            transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
         }
-        
+        body:hover{
+            background-color: aqua;
+        }
         #coordinates {
             position: fixed;
             top: 50%;
@@ -17,15 +21,15 @@
             font-size: 72px;
             color: #000;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            transition: background-color 0.5s ease;
+
         }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-        document.addEventListener("mousemove", function(event) {
-            var coordinates = document.getElementById("coordinates");
-            coordinates.textContent = "X: " + event.clientX + ", Y: " + event.clientY;
-        });
+            document.addEventListener("mousemove", function(event) {
+                var coordinates = document.getElementById("coordinates");
+                coordinates.textContent = "X: " + event.clientX + ", Y: " + event.clientY;
+            });
         });
     </script>
 </head>
