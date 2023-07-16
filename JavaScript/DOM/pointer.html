@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coordinate Tracker</title>
+    <style>
+        body {
+            font-family: monospace, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+    
+        #coordinates {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 72px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.5s ease;
+        }
+    
+        html, body {
+            cursor: url(cursor.png), auto;
+        }
+    
+        @media (hover: hover) {
+            html, body {
+                cursor: none;
+            }
+        #cursor-border {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.2s ease;
+            transform: translate(-50%, -50%);
+        }
+        body:hover #cursor-border {
+            transform: translate(calc(-50% + 16px), calc(-50% + 16px));
+        }
+    }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener("mousemove", function(event) {
+                var coordinates = document.getElementById("coordinates");
+                coordinates.textContent = "X: " + event.clientX + " Y: " + event.clientY;
+                var cursorBorder = document.getElementById("cursor-border");
+                cursorBorder.style.left = event.clientX + "px";
+                cursorBorder.style.top = event.clientY + "px";
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="coordinates">Move your mouse to track coordinates</div>
+    <div id="cursor-border"></div>
+</body>
+</html>
