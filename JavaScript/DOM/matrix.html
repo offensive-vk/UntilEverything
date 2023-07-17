@@ -1,74 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Unique Transformations with Loading Animations</title>
-  <style>
+    <meta name="author" content="Vedansh">
+    <title>Unique Transformations with Loading Animations</title>
+    <style>
     .box-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 
     .box {
-      width: 200px;
-      height: 200px;
-      margin: 20px;
-      background-color: #3498db;
-      animation: loadingAnimation 3.6s infinite;
-      transform-style: preserve-3d;
-      transform-origin: center;
-      perspective: 1000px;
-      will-change: transform;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        background-color: #3498db;
+        animation: loadingAnimation 3.6s infinite;
+        transform-style: preserve-3d;
+        transform-origin: center;
+        perspective: 1000px;
+        will-change: transform;
     }
 
     .box:nth-child(1) {
-      background-color: #e74c3c;
-      animation-delay: 0.1s;
-      transform: matrix3d(0.9, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1);
+        background-color: #e74c3c;
+        animation-delay: 0.1s;
+        transform: matrix3d(0.9, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1);
     }
 
     .box:nth-child(2) {
-      background-color: #2ecc71;
-      animation-delay: 0.2s;
-      transform: matrix3d(0.9, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+        background-color: #2ecc71;
+        animation-delay: 0.2s;
+        transform: matrix3d(0.9, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
     }
 
     .box:nth-child(3) {
-      background-color: #f1c40f;
-      animation-delay: 0.3s;
-      transform: matrix3d(1.1, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1);
+        background-color: #f1c40f;
+        animation-delay: 0.3s;
+        transform: matrix3d(1.1, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1);
     }
 
     .box:nth-child(4) {
-      background-color: #9b59b6;
-      animation-delay: 0.4s;
-      transform: matrix3d(0.9, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+        background-color: #9b59b6;
+        animation-delay: 0.4s;
+        transform: matrix3d(0.9, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
     }
 
     .box:nth-child(5) {
-      background-color: #e67e22;
-      animation-delay: 0.5s;
-      transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+        background-color: #e67e22;
+        animation-delay: 0.5s;
+        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
     }
 
     @keyframes loadingAnimation {
-      0% {
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-      }
-      100% {
-        transform: rotateX(1turn) rotateY(1turn) rotateZ(1turn);
-      }
+        0% {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        100% {
+            transform: rotateX(1turn) rotateY(1turn) rotateZ(1turn);
+        }
     }
-  </style>
+    </style>
 </head>
 <body>
-  <div class="box-container">
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-  </div>
+    <div class="box-container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
 </body>
 </html>
