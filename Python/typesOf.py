@@ -32,3 +32,27 @@ class Parrot(Animal, Bird):
 # Usage
 parrot = Parrot()
 parrot.speak()  # Output: Animal speaks
+
+
+# Multilevel Inheritance: Program to demonstrate multilevel inheritance
+
+# Grandparent class
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+# Parent class
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
+
+# Derived class inheriting from Parent class
+class Bulldog(Dog):
+    def guard(self):
+        print("Bulldog guards")
+
+# Usage
+bulldog = Bulldog()
+bulldog.speak()  # Output: Animal speaks
+bulldog.bark()   # Output: Dog barks
+bulldog.guard()  # Output: Bulldog guards
