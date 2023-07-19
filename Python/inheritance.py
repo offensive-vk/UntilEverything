@@ -5,6 +5,7 @@ class Animal:
     def make_sound(self):
         return "Some generic sound"
 
+# single level inheritance
 class Dog(Animal):
     def make_sound(self):
         return "Woof!"
