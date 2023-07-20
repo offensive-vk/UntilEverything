@@ -1,4 +1,4 @@
-# Single Inheritance: Program to demonstrate single inheritance
+# Single Inheritance
 
 # Base class
 class Animal:
@@ -14,7 +14,7 @@ class Dog(Animal):
 dog = Dog()
 dog.speak()  # Output: Dog barks
 
-# Multiple Inheritance: Program to demonstrate multiple inheritance
+# Multiple Inheritance
 
 # Base classes
 class Animal:
@@ -34,7 +34,7 @@ parrot = Parrot()
 parrot.speak()  # Output: Animal speaks
 
 
-# Multilevel Inheritance: Program to demonstrate multilevel inheritance
+# Multilevel Inheritance
 
 # Grandparent class
 class Animal:
@@ -51,7 +51,7 @@ class Bulldog(Dog):
     def guard(self):
         print("Bulldog guards")
 
-# Usage
+
 bulldog = Bulldog()
 bulldog.speak()  # Output: Animal speaks
 bulldog.bark()   # Output: Dog barks
