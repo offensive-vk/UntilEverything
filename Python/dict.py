@@ -16,9 +16,8 @@ person["city"] = "New York"
 
 # Deleting a key-value pair
 del person["occupation"]
-
 print(person)
-
+print("\n=================================\n")
 ###### Basic Finished ################
 # Student Database using dictionaries
 
