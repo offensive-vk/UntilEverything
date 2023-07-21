@@ -22,7 +22,7 @@ def generate_random_password(length):
     password = ''.join(random.choice(characters) for _ in range(length))
     return password
 
-password_length = 8  # Set the desired password length
+password_length = 10
 random_password = generate_random_password(password_length)
 print("Random Password:", random_password)
 
