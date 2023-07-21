@@ -7,8 +7,8 @@ import html
 
 
 time.sleep(2)
-os.system("ipconfig /all")
-os.system("cls && systeminfo")
+os.system("color A && ipconfig /all")
+os.system("cls && echo Hello user")
 
 print("Current Working Directory:", os.getcwd())
 
@@ -25,8 +25,6 @@ def generate_random_password(length):
 password_length = 8  # Set the desired password length
 random_password = generate_random_password(password_length)
 print("Random Password:", random_password)
-
-# print("Shruti is learning python now ")
 
 # name = input("Enter Your Name: ")
 # age = int(input("Enter Your Age: "))
