@@ -4,13 +4,12 @@ person = {
     "age": 30,
     "occupation": "Engineer"
 }
-
 # Accessing values
-print(person["name"])  # Output: John
-print(person["age"])   # Output: 30
+print(person["name"])
+print(person["age"])   
 
 # Modifying a value
-person["age"] = 31
+person["age"] = 22
 
 # Adding a new key-value pair
 person["city"] = "New York"
@@ -19,3 +18,5 @@ person["city"] = "New York"
 del person["occupation"]
 
 print(person)
+
+###### Basic ################
