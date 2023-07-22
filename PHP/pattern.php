@@ -27,14 +27,24 @@ for ($i = 1; $i <= $lines; $i++) {
 // Another
 <?php
 
-for($i=1;$i<=5;$i++)
-{
-	for($j=1;$j<=$i;$j++)
-	{
-		echo "*";
-	}
+for ($i = 1; $i <= 5; $i++) {
+    for ($j = 1; $j <= $i; $j++) {
+        echo "*";
+    }
 
-	echo "\n";
+    echo "\n";
 }
 
+?>
+
+//Another one
+
+<?php
+
+for ($i = 1; $i <= 5; $i++) {
+    for ($j = 1; $j <= $i; $j++) {
+        echo $j . " ";
+    }
+    echo "\n";
+}
 ?>
