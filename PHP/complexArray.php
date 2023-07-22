@@ -24,7 +24,7 @@ printMatrix($b);
 
 //add two array
 
-echo "\nArray c = a + b :\n\t";
+echo "\nArray c = a + b :\t";
 
 addMatrix($a,$b);
 
