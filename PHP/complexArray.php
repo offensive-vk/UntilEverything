@@ -14,18 +14,17 @@ $b=array(array(1,2,3,4),
 		
 //print array
 
-echo "Array a :<br><br>";
+echo ":: Array A :\n\n";
 
 printMatrix($a);
 
-echo "<br>Array b :<br><br>";
+echo ":: Array b :\n\n";
 
 printMatrix($b);
 
-		
 //add two array
 
-echo "<br>Array c = a + b :<br><br>";
+echo "\nArray c = a + b :\n\t";
 
 addMatrix($a,$b);
 
