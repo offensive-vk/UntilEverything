@@ -7,10 +7,10 @@ log("================================\n");
 var num1 = 423423;
 var num2 = 103423;
 var res = num1 * num2 + num1 / num2 - num1 % num2;
-if (res <= 9999) {
+if (res <= 999999) {
     log("less than equal to 9999");
 }
-else if (res >= 9999) {
+else if (res >= 999999) {
     log("greater than equal to 9999");
 }
 else {
