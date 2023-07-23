@@ -3,6 +3,8 @@ console.log("\n\t First Typescript Program !!\n\t");
 console.log("================================\n");
 
 // Syntax for type declarations: [keyword] [varName]: [type] = [value];
+// any type is used for assigning any type of data in it.
+
 let log = console.log;
 let no: any; // type definition
 let rollno: number = 10922;
