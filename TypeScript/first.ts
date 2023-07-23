@@ -21,3 +21,8 @@ log("4th valid : "+valid);
 log("5th x : "+x);
 log("6th y : "+y);
 log("7th z : "+z);
+
+
+
+console.log("================================\n");
+console.log("\n End of Program !!\n\t");
