@@ -6,7 +6,7 @@ console.log("================================\n");
 // any type is used for assigning any type of data in it.
 
 let log = console.log;
-let no: any; // type definition
+let num: any; // type definition
 let rollno: number = 10922;
 let string: string = "Its me rahul";
 let valid: boolean = true;
@@ -14,5 +14,10 @@ let x: null = null;
 let y: undefined;
 let z:void;
 
-log("1st no : "+no);
+log("1st num : "+num);
 log("2nd rollno : "+rollno);
+log("3rd string : "+string);
+log("4th valid : "+valid);
+log("5th x : "+x);
+log("6th y : "+y);
+log("7th z : "+z);
