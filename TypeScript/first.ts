@@ -1,4 +1,6 @@
-
+/* 
+* Copyright (c) by Vedansh 
+*/
 console.log("\n\t First Typescript Program !!\n\t");
 console.log("================================\n");
 
@@ -21,7 +23,6 @@ log("4th valid : "+valid);
 log("5th x : "+x);
 log("6th y : "+y);
 log("7th z : "+z);
-
 
 
 console.log("================================\n");
