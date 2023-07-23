@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #matrix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: green;
+            /* Change to red if desired */
+            font-family: monospace;
+            font-size: 10vw;
+            /* Adjust the font size as desired */
+            line-height: 1;
+            /* Adjust the line height as desired */
+            width: 100vw;
+            height: 100vh;
+            overflow: visible;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body align="center" bgcolor="#000">
+    <div id="matrix"></div>
+
+    <script>
+        // Configuration
+        var columns = 50; // Number of columns
+        var speed = 50; // Speed of animation (lower is faster)
+        var colors = ["#00FF00", "Red", "Magenta", "White", "Blue"];
+
+        // Generate random characters
+        function generateCharacters() {
+            var characters = [];
+            for (var i = 0; i < columns; i++) {
+                characters.push(Math.floor(Math.random() * 10)); // Random number from 0 to 9
+            }
+            return characters;
+        }
+
+        // Create matrix animation
+        function createMatrixAnimation() {
+            var matrix = document.getElementById("matrix");
+            var characters = generateCharacters();
+
+            setInterval(function () {
+                // Shift characters down
+                characters.pop();
+                characters.unshift(Math.floor(Math.random() * 10)); // Random number from 0 to 9
+
+                // Update matrix content
+                matrix.innerHTML = characters.map(function (character) {
+                    return "<span style='color: " + colors[Math.floor(Math.random() * colors.length)] + "'>" + character + "</span>";
+                }).join("");
+            }, speed);
+        }
+        // Start the animation
+        createMatrixAnimation();
+    </script>
+</body>
+
+</html>
