@@ -38,5 +38,5 @@ for(let name of names){
 
 log("================================\n");
 
-// for class loop
+// for classic loop
 const games: string[] = ["Hockey", "Cricket", "Football", "Rugby", "Chess"];
