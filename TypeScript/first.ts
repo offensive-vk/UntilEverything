@@ -1,6 +1,7 @@
 /* 
 * Copyright (c) by Vedansh 
 */
+
 console.log("\n\t First Typescript Program !!\n\t");
 console.log("================================\n");
 
@@ -14,7 +15,8 @@ let string: string = "Its me rahul";
 let valid: boolean = true;
 let x: null = null;
 let y: undefined;
-let z:void;
+let z: void;
+let arr: Array<number> = [];
 
 log("1st num : "+num);
 log("2nd rollno : "+rollno);
