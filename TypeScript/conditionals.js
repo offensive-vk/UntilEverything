@@ -7,10 +7,10 @@ log("================================\n");
 var num1 = 423423;
 var num2 = 103423;
 var res = num1 * num2 + num1 / num2 - num1 % num2;
-if (res <= 999999) {
+if (res <= 99999999) {
     log("less than equal to 9999");
 }
-else if (res >= 999999) {
+else if (res >= 99999999) {
     log("greater than equal to 9999");
 }
 else {
@@ -19,3 +19,14 @@ else {
 log("Result is " + res);
 log("================================\n");
 log("\n End of Program !!\n\t");
+// Loops in TypeScript
+var arr = [124, 543, 311, 781, 500];
+for (var i in arr) {
+    log(arr[i] + " ");
+}
+// String array
+var names = ["Rahul", "Manish", "Rupesh", "Payal", "Sneha"];
+for (var _i = 0, names_1 = names; _i < names_1.length; _i++) {
+    var name_1 = names_1[_i];
+    log("My name is " + name_1);
+}

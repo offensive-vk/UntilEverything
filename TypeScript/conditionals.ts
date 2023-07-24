@@ -20,3 +20,23 @@ let res: number = num1 * num2 + num1 / num2 - num1 % num2;
 log("Result is " + res);
 log("================================\n");
 log("\n End of Program !!\n\t");
+
+// Loops in TypeScript
+//for.. in loop
+const arr: number[] = [124,543,311,781,500];
+for (let i in arr){
+    log(arr[i]+" ");
+}
+
+log("================================\n");
+
+// String array for .. of loop
+const names: string[] = ["Rahul","Manish", "Rupesh", "Payal", "Sneha"];
+for(let name of names){
+    log("My name is " + name);
+}
+
+log("================================\n");
+
+// for class loop
+const games: string[] = ["Hockey", "Cricket", "Football", "Rugby", "Chess"];
