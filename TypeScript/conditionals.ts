@@ -63,5 +63,15 @@ arr.forEach(element => {
 });
 
 log("\n================================\n");
-log("\n End of Program !!\n\t");
 
+// while (condition) {
+//     // code block to be executed
+// }
+
+i = 0;
+while (i <= 50) {        
+    log(i);
+    i++;
+}
+log("\n================================\n");
+log("\n End of Program !!\n\t");
