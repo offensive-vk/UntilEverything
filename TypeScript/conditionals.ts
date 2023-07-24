@@ -2,12 +2,12 @@
 * Copyright (c) by Vedansh 
 */
 const log = console.log;
-log("\n\t Second Typescript Program !!\n\t");
+log("\n\t :: Second Typescript Program !!\n\t");
 log("================================\n");
 
-let num1 : number = 423423;
-let num2 : number = 103423;
-let res: number = num1 * num2 + num1 / num2 - num1 % num2;
+let num1 : number = 464348;
+let num2 : number = 100823;
+let res: number = num1 * num2 - num1 % num2;
 
     if(res <= 99999999){
         log("less than equal to 9999");
@@ -18,14 +18,14 @@ let res: number = num1 * num2 + num1 / num2 - num1 % num2;
     }
 
 log("Result is " + res);
-log("================================\n");
-log("\n End of Program !!\n\t");
+log("================================");
+log("\n End of Conditionals !!\n\t");
 
 // Loops in TypeScript
-//for.. in loop
+// for.. in loop
 const arr: number[] = [124,543,311,781,500];
 for (let i in arr){
-    log(arr[i]+" ");
+    log(i+". "+arr[i]+" ");
 }
 
 log("================================\n");
@@ -47,4 +47,7 @@ log(":: Some Games ::\n");
 for(let i = 0; i < games.length; i++){
     log(i+". "+games[i]);
 }
-log("================================\n");
+
+log("\n================================\n");
+log("\n End of Program !!\n\t");
+
