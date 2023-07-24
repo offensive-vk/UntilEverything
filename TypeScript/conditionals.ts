@@ -52,6 +52,10 @@ log(":: Some Games ::\n");
 for(let i = 0; i < games.length; i++){
     log(i+". "+games[i]);
 }
+// foreach loop
+arr.forEach(element => {
+    log(":: " + element);
+});
 
 log("\n================================\n");
 log("\n End of Program !!\n\t");
