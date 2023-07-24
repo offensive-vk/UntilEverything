@@ -32,14 +32,19 @@ log("================================\n");
 
 // String array for .. of loop
 const names: string[] = ["Rahul","Manish", "Rupesh", "Payal", "Sneha"];
+let i = 0;
 for(let name of names){
-    log("My name is " + name);
+    i++;
+    log(i+". "+ name);
 }
 
 log("================================\n");
 
 // for classic loop
 const games: string[] = ["Hockey", "Cricket", "Football", "Rugby", "Chess"];
+
+log(":: Some Games ::\n");
 for(let i = 0; i < games.length; i++){
-    log(""+games[i]);
+    log(i+". "+games[i]);
 }
+log("================================\n");
