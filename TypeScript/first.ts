@@ -16,7 +16,7 @@ let valid: boolean = true;
 let x: null = null;
 let y: undefined;
 let z: void;
-let arr: Array<number> = [];
+let array: Array<number> = [];
 
 log("1st num : "+num);
 log("2nd rollno : "+rollno);

@@ -21,6 +21,11 @@ log("Result is " + res);
 log("================================");
 log("\n End of Conditionals !!\n\t");
 
+const isMailSent = true;
+if (isMailSent) {
+    log('Mail sent to recipient');
+}
+
 // Loops in TypeScript
 // for.. in loop
 const arr: number[] = [124,543,311,781,500];
