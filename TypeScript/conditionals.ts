@@ -1,6 +1,9 @@
 /* 
 * Copyright (c) by Vedansh 
 */
+
+// Conditionals and loops in TypeScript
+
 const log = console.log;
 log("\n\t :: Second Typescript Program !!\n\t");
 log("================================\n");
@@ -52,6 +55,8 @@ log(":: Some Games ::\n");
 for(let i = 0; i < games.length; i++){
     log(i+". "+games[i]);
 }
+log("\n================================\n");
+
 // foreach loop
 arr.forEach(element => {
     log(":: " + element);
