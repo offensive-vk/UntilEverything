@@ -40,3 +40,6 @@ log("================================\n");
 
 // for classic loop
 const games: string[] = ["Hockey", "Cricket", "Football", "Rugby", "Chess"];
+for(let i = 0; i < games.length; i++){
+    log(""+games[i]);
+}

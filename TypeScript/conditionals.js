@@ -20,13 +20,21 @@ log("Result is " + res);
 log("================================\n");
 log("\n End of Program !!\n\t");
 // Loops in TypeScript
+//for.. in loop
 var arr = [124, 543, 311, 781, 500];
 for (var i in arr) {
     log(arr[i] + " ");
 }
-// String array
+log("================================\n");
+// String array for .. of loop
 var names = ["Rahul", "Manish", "Rupesh", "Payal", "Sneha"];
 for (var _i = 0, names_1 = names; _i < names_1.length; _i++) {
     var name_1 = names_1[_i];
     log("My name is " + name_1);
+}
+log("================================\n");
+// for classic loop
+var games = ["Hockey", "Cricket", "Football", "Rugby", "Chess"];
+for (var i = 0; i < games.length; i++) {
+    log("" + games[i]);
 }
