@@ -1,3 +1,4 @@
+// Basics
 interface Person {
     name: string;
     age: number;
@@ -10,6 +11,7 @@ function greet(person: Person) {
 const john = { name: "John Wick", age: 25, occupation: "Engineer" };
 greet(john);
 
+// Some Advanced
 interface User {
     username: string;
     email: string;
