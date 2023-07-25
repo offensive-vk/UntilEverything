@@ -9,3 +9,25 @@ function greet(person: Person) {
 
 const john = { name: "John Wick", age: 25, occupation: "Engineer" };
 greet(john);
+
+interface User {
+    username: string;
+    email: string;
+    password: string;
+}
+
+function registerUser(newUser: User): void {
+    console.log("Username : "+newUser.username);
+    console.log("Password : "+newUser.password);
+    console.log("Email : "+newUser.email);
+
+    console.log("User registered:", newUser);
+}
+
+const newUser: User = {
+    username: "john_wick09",
+    email: "john@ferrari.com",
+    password: "strongP@ssword",
+};
+
+registerUser(newUser);
