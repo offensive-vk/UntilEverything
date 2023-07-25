@@ -13,9 +13,9 @@ let num2 : number = 100823;
 let res: number = num1 * num2 - num1 % num2;
 
     if(res <= 99999999){
-        log("less than equal to 9999");
+        log("less than equal to 99999999");
     }else if(res >= 99999999){
-        log("greater than equal to 9999");
+        log("greater than equal to 99999999");
     }else{
         log("Undesired Result lol!");
     }
@@ -67,6 +67,7 @@ log("\n================================\n");
 // while (condition) {
 //     // code block to be executed
 // }
+// do{}while(condition)
 
 i = 0;
 while (i <= 50) {        
