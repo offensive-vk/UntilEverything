@@ -20,7 +20,8 @@ function registerUser(newUser: User): void {
     console.log("Username : "+newUser.username);
     console.log("Password : "+newUser.password);
     console.log("Email : "+newUser.email);
-
+    
+    // Returns the whole object of the user.
     console.log("User registered:", newUser);
 }
 
