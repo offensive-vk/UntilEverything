@@ -5,6 +5,6 @@ function display(value: string | number) {
     console.log(value);
 }
 
-display("Hello");
-display(42); 
+display("TypeScript is easy to learn");
+display(142); 
 //display(true); // Error: Argument of type 'boolean'.
