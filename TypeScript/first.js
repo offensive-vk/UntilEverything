@@ -1,3 +1,6 @@
+/*
+* Copyright (c) by Vedansh
+*/
 console.log("\n\t First Typescript Program !!\n\t");
 console.log("================================\n");
 // Syntax for type declarations: [keyword] [varName]: [type] = [value];
@@ -10,6 +13,7 @@ var valid = true;
 var x = null;
 var y;
 var z;
+var array = [];
 log("1st num : " + num);
 log("2nd rollno : " + rollno);
 log("3rd string : " + string);
@@ -17,5 +21,5 @@ log("4th valid : " + valid);
 log("5th x : " + x);
 log("6th y : " + y);
 log("7th z : " + z);
-console.log("\nEnd of Program !!\n\t");
 console.log("================================\n");
+console.log("\n End of Program !!\n\t");
