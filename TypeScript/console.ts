@@ -1,4 +1,4 @@
-function consoleFunctionsDemo() {
+function callFunctionsDemo() {
 
     console.log("This is a log message.");
     console.info("This is an info message.");
@@ -31,7 +31,7 @@ function consoleFunctionsDemo() {
 
     console.assert(2 + 2 === 5, "Assertion failed! 2 + 2 is not 5.");
 
-    //console.clear();
+    //console.clear(); // clears the console
 }
 
-consoleFunctionsDemo();
+callFunctionsDemo();
