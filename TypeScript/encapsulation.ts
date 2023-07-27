@@ -2,12 +2,11 @@ class Car {
     private make: string;
     private model: string;
     public src: number;
-    
+
     constructor(make: string, model: string) {
         this.make = make;
         this.model = model;
     }
-
     public getMake(): string {
         return this.make;
     }
