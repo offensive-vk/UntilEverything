@@ -16,6 +16,7 @@ let valid: boolean = true;
 let x: null = null;
 let y: undefined;
 let z: void;
+let array2: string[] = [];
 let array: Array<number> = [];
 const readonlyArray: readonly number[] = [1, 2, 3];
 
