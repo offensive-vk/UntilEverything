@@ -1,0 +1,33 @@
+class Car {
+    private make: string;
+    private model: string;
+    public src: number;
+    
+    constructor(make: string, model: string) {
+        this.make = make;
+        this.model = model;
+    }
+
+    public getMake(): string {
+        return this.make;
+    }
+
+    public getModel(): string {
+        return this.model;
+    }
+
+    public startEngine(): void {
+        console.log(`Starting the engine of ${this.make} ${this.model}.`);
+    }
+
+    private drive(): void {
+        console.log(`${this.make} ${this.model} is being driven.`);
+    }
+}
+
+const myCar = new Car("Toyota", "Camry");
+console.log(`Make: ${myCar.getMake()}`);
+console.log(`Model: ${myCar.getModel()}`); 
+
+myCar.startEngine();
+myCar.drive(); // Error: Property 'drive' is private and only accessible within class 'Car'.
