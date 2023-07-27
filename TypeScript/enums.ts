@@ -29,3 +29,13 @@ console.log(directionName); // Output: "South"
 
 let colorValue: string = Color.Red;
 console.log(colorValue); // Output: "RED"
+
+// You can explicitly set values for enum members, including string and numeric values.
+enum Size {
+    Small = 1,
+    Medium = 2,
+    Large = 4,
+}
+
+let mySize: Size = Size.Large;
+console.log(mySize); // Output: 4
