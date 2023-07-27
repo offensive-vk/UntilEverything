@@ -18,7 +18,14 @@ enum Color {
     Red = "RED",
     Green = "GREEN",
     Blue = "BLUE",
-  }
-  
-  let myColor: Color = Color.Green;
-  console.log(myColor); // Output: "GREEN"  
+}
+
+let myColor: Color = Color.Green;
+console.log(myColor); // Output: "GREEN"  
+
+// You can access enum members by their name or value.
+let directionName: string = Direction[2];
+console.log(directionName); // Output: "South"
+
+let colorValue: string = Color.Red;
+console.log(colorValue); // Output: "RED"
