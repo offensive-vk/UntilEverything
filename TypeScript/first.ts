@@ -17,6 +17,7 @@ let x: null = null;
 let y: undefined;
 let z: void;
 let array: Array<number> = [];
+const readonlyArray: readonly number[] = [1, 2, 3];
 
 log("1st num : "+num);
 log("2nd rollno : "+rollno);
