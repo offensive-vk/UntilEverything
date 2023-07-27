@@ -39,3 +39,12 @@ enum Size {
 
 let mySize: Size = Size.Large;
 console.log(mySize); // Output: 4
+
+// Enums support reverse mapping, allowing you to get the enum member name from its value.
+enum Animals {
+    Dog = 1,
+    Cat = 2,
+    Rabbit = 3,
+}
+let animalName: string = Animals[2];
+console.log(animalName); // Output: "Cat"
