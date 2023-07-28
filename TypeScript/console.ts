@@ -26,11 +26,9 @@ function callFunctionsDemo() {
     for (let i = 0; i < 1000000; i++) {
         sum = i*1/10;
     }
-    console.log("Result: " + sum);
     console.timeEnd("Time measurement");
 
     console.assert(2 + 2 === 5, "Assertion failed! 2 + 2 is not 5.");
-
     //console.clear(); // clears the console
 }
 
