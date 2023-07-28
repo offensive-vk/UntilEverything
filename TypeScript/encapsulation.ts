@@ -29,4 +29,4 @@ console.log(`Make: ${myCar.getMake()}`);
 console.log(`Model: ${myCar.getModel()}`); 
 
 myCar.startEngine();
-myCar.drive(); // Error: Property 'drive' is private and only accessible within class 'Car'.
+//myCar.drive(); // Error: Property 'drive' is private and only accessible within class 'Car'.
