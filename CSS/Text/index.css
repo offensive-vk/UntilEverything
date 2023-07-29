@@ -90,6 +90,7 @@ h1>.magic>.magic-text {
             var(--pink),
             var(--purple));
     background-size: 200%;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
