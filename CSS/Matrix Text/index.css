@@ -14,7 +14,7 @@ h1 {
     /*font-family: 'Space Mono', monospace; */
     font-family: 'IBM Plex Mono', monospace;
     font-size: clamp(2rem, 10vw, 10rem);
-    color: white;
+    margin: 10px;
     padding: 0rem clamp(1rem, 2vw, 3rem);
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
 }
@@ -22,4 +22,26 @@ h1 {
 h1:hover {
     background-color: white;
     color: black;
+}
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+h1 {
+    animation: background-pan 2s linear infinite;
+    background: linear-gradient(to right,
+            cyan,
+            magenta,
+            orange,
+            cyan);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
