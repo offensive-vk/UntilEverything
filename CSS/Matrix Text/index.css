@@ -11,7 +11,6 @@ body {
 }
 
 h1 {
-    /*font-family: 'Space Mono', monospace; */
     font-family: 'IBM Plex Mono', monospace;
     font-size: clamp(2rem, 10vw, 10rem);
     margin: 10px;
@@ -32,10 +31,8 @@ h1:hover {
         rgba(0, 255, 255, 1) rgba(255, 0, 255, 1) rgba(255, 165, 0, 1);
         background-position: 0% center;
     }
-
     to {
-
-        box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
         text-shadow: 0 0 20px rgba(77, 166, 255, 0.8);
         background-position: -200% center;
     }
