@@ -13,13 +13,13 @@
         background-position: -200% center;
     }
 }
-
 body {
     animation: background-pan 10s linear infinite;
-    background: linear-gradient(to right,
+    /* background: linear-gradient(to right,
             var(--g1),
             var(--g2),
-            var(--g1));
+            var(--g1)); */
+    background: linear-gradient(to right, cyan, magenta,orange, cyan);
     background-size: 200%;
     height: 100vh;
     overflow: hidden;
@@ -103,5 +103,4 @@ body.toggled>#tiles>.tile:hover {
     transition: opacity 1200ms ease;
     z-index: 1;
 }
-
 /* End */
