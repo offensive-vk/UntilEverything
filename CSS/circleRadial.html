@@ -14,18 +14,28 @@
             --blue: 30, 136, 229;
             --indigo: 57, 73, 171;
             --violet: 156, 39, 176;
-
             --theme-color: var(--white);
         }
-
         body {
             background-color: black;
-            background-image: radial-gradient(rgba(var(--theme-color), 0.4) 9%,
-                    transparent 9%);
+            background-image: radial-gradient(rgba(var(--theme-color), 0.4) 9%, transparent 9%);
             background-position: 0% 0%;
             background-size: 50px 50px;
             background-attachment: fixed;
             margin: 0px;
+        }
+        .container{
+            background-color: rgba(50, 50, 50, 0.2);
+            backdrop-filter: blur(3px);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            width: min(600px, calc(100% - 2rem));
+            font-size: 4rem;
+            margin: auto;
+            align-items: center;
+            outline: 20px solid red;
+            outline-offset: 10px;
         }
     </style>
 </head>
