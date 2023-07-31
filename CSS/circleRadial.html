@@ -1,8 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="Author" content="Vedansh">
+    <style>
+        :root {
+            --white: 255, 255, 255;
+            --red: 229, 57, 53;
+            --orange: 251, 140, 0;
+            --yellow: 253, 216, 53;
+            --green: 67, 160, 71;
+            --blue: 30, 136, 229;
+            --indigo: 57, 73, 171;
+            --violet: 156, 39, 176;
+
+            --theme-color: var(--white);
+        }
+
+        body {
+            background-color: black;
+            background-image: radial-gradient(rgba(var(--theme-color), 0.4) 9%,
+                    transparent 9%);
+            background-position: 0% 0%;
+            background-size: 50px 50px;
+            background-attachment: fixed;
+            margin: 0px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
