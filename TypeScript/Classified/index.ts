@@ -63,7 +63,14 @@ Supra.stop();
 // log(`Color Name : ${Audi.color}`);
 // End so on one by one ......................
 
+function displayObj(value: FourWheeler): void{
+    log(`${value} is an object of ${FourWheeler} class.`);
+    value.start();
+    value.speed();
+    value.stop();
+}
 
+displayObj(Supra);
 interface Train extends FourWheeler{
     // Future Uses
 }

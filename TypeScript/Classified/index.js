@@ -34,3 +34,15 @@ var Supra = new FourWheeler(4, 2, "Green", "Toyota", 2, "Supra");
 Supra.start();
 Supra.speed();
 Supra.stop();
+// Without constructor
+// 1. We can also initialize the members of the class by manually assigning values;
+// var Audi = new FourWheeler();
+// Audi.brand = "Audi RS6";
+// Audi.color = "Black";
+// log(`Brand Name : ${Audi.brand}`);
+// log(`Color Name : ${Audi.color}`);
+// End so on one by one ......................
+function displayObj(value) {
+    value.start();
+}
+displayObj(Supra);
