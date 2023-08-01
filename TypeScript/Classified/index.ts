@@ -11,7 +11,6 @@ interface Vehicle{
     start(): void;
     stop(): void;
     speed(): void;
-    //changeColor(): void; 
 }
 
 class FourWheeler implements Vehicle{
@@ -63,7 +62,6 @@ Supra.stop();
 // log(`Brand Name : ${Audi.brand}`);
 // log(`Color Name : ${Audi.color}`);
 // End so on one by one ......................
-
 
 
 interface Train extends FourWheeler{
