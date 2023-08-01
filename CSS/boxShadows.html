@@ -17,13 +17,23 @@
         }
         .box{
             /*how to center a div lol */
-            background: linear-gradient(-55deg, limegreen, pink, skyblue);
+            background: skyblue;
             width: 25rem;
             aspect-ratio: 1/1;
             position: fixed;
             inset: 0;
             margin: auto;
-
+            border-radius: 20px;
+            transition: all 700ms ease-in-out;
+            box-shadow: 
+            0 -2rem 0 orange,
+            0 -4rem 0 green, 
+            0 -6rem 0 blue;
+            /* opposite */
+            
+        }
+        .box:hover{
+            box-shadow: none;
         }
     </style>
 </head>
