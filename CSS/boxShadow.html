@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="author" content="Vedansh">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Box Shadows - 1 - CSS</title>
+    <style>
+        body {
+            background-color: rgb(10, 10, 10);
+            /*display: grid;
+            place-items: center; */
+            height: 100vh;
+            margin: 0px;
+            overflow: hidden;
+        }
+        .box{
+            /*how to center a div lol */
+            background: skyblue;
+            width: 25rem;
+            aspect-ratio: 1/1;
+            position: fixed;
+            inset: 0;
+            margin: auto;
+            border-radius: 20px;
+            transition: all 700ms ease-in-out;
+            box-shadow: 
+            /* top */
+            0 -2rem 0 orange,
+            0 -4rem 0 green, 
+            0 -6rem 0 blue,
+            /* bottom - opposite */
+            0 2rem 0 orange,
+            0 4rem 0 green, 
+            0 6rem 0 blue,
+
+            /* left */
+            -2rem 0 0 white,
+            -4rem 0 0 magenta, 
+            -6rem 0 0 red,
+
+            /* right - opposite */
+            2rem 0 0 white,
+            4rem 0 0 magenta, 
+            6rem 0 0 red;
+
+        }
+        .box:hover{
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html> 
