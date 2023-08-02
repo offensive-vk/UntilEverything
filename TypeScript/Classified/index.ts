@@ -12,7 +12,17 @@ interface Vehicle{
     stop(): void;
     speed(): void;
 }
+interface Bike extends Vehicle{
+    tyres: number;
+    doors: boolean;
+    color: string | string[];
+    seats: number;
+    brand: string;
 
+    start(): void;
+    stop(): void;
+    speed(): void;
+}
 class FourWheeler implements Vehicle{
     tyres: number;
     doors: number | boolean;
@@ -72,3 +82,4 @@ function displayObj(value: FourWheeler): void{
     log(`\n=============================\n`);
 }
 const d = displayObj(Supra);
+log(`${d}`);
