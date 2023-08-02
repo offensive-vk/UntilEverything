@@ -30,7 +30,7 @@ var FourWheeler = /** @class */ (function () {
 }());
 // With Constructor
 // We'll use our traditional constructor approach
-var Supra = new FourWheeler(4, 2, "Green", "Toyota", 2, "Supra");
+var Supra = new FourWheeler(4, 2, "Skyblue", "Toyota", 2, "Supra");
 Supra.start();
 Supra.speed();
 Supra.stop();
@@ -43,6 +43,11 @@ Supra.stop();
 // log(`Color Name : ${Audi.color}`);
 // End so on one by one ......................
 function displayObj(value) {
+    log("\n=============================\n");
+    log("".concat(value, " is an object of ").concat(FourWheeler, " class."));
     value.start();
+    value.speed();
+    value.stop();
+    log("\n=============================\n");
 }
 displayObj(Supra);
