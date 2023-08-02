@@ -4,6 +4,9 @@
     <meta name="author" content="Vedansh">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
     <title>Cool Box Shadows - CSS</title>
     <style>
         body {
@@ -17,7 +20,7 @@
         }
         .box{
             /*how to center a div lol */
-            background: skyblue;
+            background: transparent;
             width: 25rem;
             aspect-ratio: 1/1;
             position: fixed;
@@ -49,9 +52,18 @@
         .box:hover{
             box-shadow: none;
         }
+        .box h2{
+            color: rgb(236, 64, 122);
+            font-family: 'Dancing Script', cursive;
+            font-size: 6.6rem;
+            line-height: 1.2em;
+
+        }
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <div class="box">
+        <h2>Joy of Box Shadows</h2>
+    </div>
 </body>
 </html> 
