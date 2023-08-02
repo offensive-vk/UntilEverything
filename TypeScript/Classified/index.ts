@@ -83,3 +83,21 @@ function displayObj(value: FourWheeler): void{
 }
 displayObj(Supra);
 
+
+class TwoWheeler extends FourWheeler implements Bike{
+    Honda: Bike;
+    doors: boolean;
+    tyres: number;
+    color: string | string[];
+    seats: number;
+    brand: string;
+
+    start(): void{}
+    stop(): void{}
+    speed(): void{}
+
+    // constructor(doors: boolean, tyres: number, color: string, seats: number, brand: string){
+        
+    // }
+
+}
