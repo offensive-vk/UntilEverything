@@ -81,5 +81,5 @@ function displayObj(value: FourWheeler): void{
     value.stop();
     log(`\n=============================\n`);
 }
-const d = displayObj(Supra);
-log(`${d}`);
+displayObj(Supra);
+
