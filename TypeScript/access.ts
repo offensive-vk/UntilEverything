@@ -10,7 +10,9 @@ class Greeter {
     public greet() {
         console.log("Hello, " + this.getName());
     }
-    
+    private getAge(){
+        console.log("Age: " + this.getAge);
+    }
     protected getName() {
         return "hi";
     }
@@ -25,4 +27,4 @@ class SpecialGreeter extends Greeter {
 }
 const s = new SpecialGreeter();
 s.greet(); // OK
-s.getName(); // error
+//s.getName(); // error
