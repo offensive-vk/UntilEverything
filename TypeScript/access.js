@@ -1,8 +1,3 @@
-// class Greeter {
-//     public greet() {
-//         console.log("hi!");
-//     }
-// }
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -34,6 +29,7 @@ var Greeter = /** @class */ (function () {
 }());
 var g = new Greeter();
 g.greet();
+//g.getAge(); // Private 
 var SpecialGreeter = /** @class */ (function (_super) {
     __extends(SpecialGreeter, _super);
     function SpecialGreeter() {
