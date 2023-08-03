@@ -1,10 +1,3 @@
-// class Greeter {
-//     public greet() {
-//         console.log("hi!");
-//     }
-// }
-
-
 
 class Greeter {
     public greet() {
@@ -19,7 +12,9 @@ class Greeter {
 }
 const g = new Greeter();
 g.greet();
+//g.getAge(); // Private 
 class SpecialGreeter extends Greeter {
+
     public howdy() {
         // OK to access protected member here
         console.log("Howdy, " + this.getName());
@@ -27,4 +22,5 @@ class SpecialGreeter extends Greeter {
 }
 const s = new SpecialGreeter();
 s.greet(); // OK
+s.howdy();
 //s.getName(); // error
