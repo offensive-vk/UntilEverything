@@ -25,6 +25,10 @@ class MyClass {
     static greeting(){
         return "Hello man what's up!";
     }
+    static reg = {
+        regx: function(){},
+        value: null,
+    };
 }
 class Derived extends MyClass {
     myGreeting = MyClass.greeting();
