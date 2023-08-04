@@ -17,3 +17,17 @@ console.log(s.showMoney());
 console.log(`\t Cash : ${MySafe._money}\n`);
 
 /*Static variables | methods  in typescript */ 
+class MyClass {
+    static x = 0;
+    static printX() {
+        console.log(MyClass.x);
+    }
+    static greeting(){
+        return "Hello man what's up!";
+    }
+}
+class Derived extends MyClass {
+    myGreeting = Derived.Greeting();
+}
+console.log(MyClass.x);
+MyClass.printX();
