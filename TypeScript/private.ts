@@ -27,7 +27,8 @@ class MyClass {
     }
 }
 class Derived extends MyClass {
-    myGreeting = Derived.Greeting();
+    myGreeting = MyClass.greeting();
 }
 console.log(MyClass.x);
 MyClass.printX();
+MyClass.greeting();
