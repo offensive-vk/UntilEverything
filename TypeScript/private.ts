@@ -3,7 +3,7 @@ type money = number | string | boolean;
 class MySafe {
     private secretKey = 12345;
     static pubKey: number = 81023;
-    static _money: number = 10000;
+    static _money: money = '$78203';
     showMoney(): any{
         return `You have total ${MySafe._money}$ of ${typeof this.secretKey} type`;
     }
