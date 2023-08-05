@@ -62,7 +62,7 @@ class Husband {
 }
 
 const wife = new Wife("Sneha", 27);
-const husband = new Husband("Madhav", 29);
+const husband = new Husband("Madhav", 30);
 
 husband.marry(wife);
 wife.addChild("John", 5);
