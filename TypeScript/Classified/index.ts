@@ -73,7 +73,7 @@ Supra.stop();
 // log(`Color Name : ${Audi.color}`);
 // End so on one by one ......................
 
-function displayObj(value: FourWheeler): void{
+function displayObj(value: FourWheeler | TwoWheeler): void{
     log(`\n=============================\n`);
     log(`${value} is an object of ${FourWheeler} class.`);
     value.start();
@@ -82,7 +82,6 @@ function displayObj(value: FourWheeler): void{
     log(`\n=============================\n`);
 }
 displayObj(Supra);
-
 
 class TwoWheeler extends FourWheeler implements Bike{
     Honda: Bike;
