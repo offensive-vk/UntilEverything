@@ -91,13 +91,17 @@ class TwoWheeler extends FourWheeler implements Bike{
     color: string | string[];
     seats: number;
     brand: string;
+    petrol: string;
 
     start(): void{}
     stop(): void{}
     speed(): void{}
 
-    // constructor(doors: boolean, tyres: number, color: string, seats: number, brand: string){
-        
-    // }
-
+    public Petrol(): void{
+        this.petrol = "full";
+        log(`Petrol Tank is Full. `);
+    }
+    public Horn(): void{
+        log(` Honkkkkkk !!!`);
+    }
 }
