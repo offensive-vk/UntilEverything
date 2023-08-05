@@ -1,6 +1,6 @@
 const log = console.log;
 const table = console.table;
-
+const author: string = "Vedansh";
 interface Vehicle{
     tyres:  number;
     doors: number | boolean;
