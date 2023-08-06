@@ -33,3 +33,6 @@ circle.PI = 3.14; // Error: Cannot assign to 'PI' because it is a read-only prop
 circle.radius = 10; // Error: Cannot assign to 'radius' because it is a read-only property
 
 // With Array
+const numbers: ReadonlyArray<number> = [11, 22, 33, 44, 55];
+numbers.push(6); // Error: Property 'push' does not exist on type 'readonly number[]'
+numbers[0] = 10;
