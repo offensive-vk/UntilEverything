@@ -17,3 +17,13 @@ function multiply(a: number, b: number = 1) {
 
 console.log(multiply(5));
 console.log(multiply(5, 2)); 
+
+// Optional Parameters with Default Values
+
+function _greet(name: string, greeting: string = "Hello") {
+    console.log(`${greeting}, ${name}!`);
+}
+
+_greet("John");
+_greet("Jane", "Hi"); 
+  
