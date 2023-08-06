@@ -8,6 +8,12 @@ function greet(name: string, greeting?: string) {
 }
 
 greet("John");
-greet("Jane", "Hi"); 
+greet("Jane", "Hi");
 
 // Default Parameter Values
+function multiply(a: number, b: number = 1) {
+    return a * b;
+}
+
+console.log(multiply(5));
+console.log(multiply(5, 2)); 
