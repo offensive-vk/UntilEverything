@@ -34,6 +34,6 @@ circle.radius = 10; // Error: Cannot assign to 'radius' because it is a read-onl
 
 // With Array
 const numbers: ReadonlyArray<number> = [11, 22, 33, 44, 55];
-table(numbers);
+console.table(numbers);
 numbers.push(6); // Error: Property 'push' does not exist on type 'readonly number[]'
 numbers[0] = 10;
