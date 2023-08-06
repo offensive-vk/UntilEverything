@@ -9,4 +9,23 @@ const john: Person = { name: "John", age: 55 };
 console.log(john.name);
 console.log(john.age);
 
-const Man: Person = {name: "Manish", age: 55};
+const Man: Person = { name: "Manish", age: 55 };
+
+class Circle {
+    readonly PI = 3.14159;
+    readonly radius: number;
+
+    constructor(radius: number) {
+        this.radius = radius;
+    }
+
+    getArea(): number {
+        return this.PI * this.radius * this.radius;
+    }
+}
+
+const circle = new Circle(5);
+console.log(circle.getArea()); 
+
+circle.PI = 3.14; // Error: Cannot assign to 'PI' because it is a read-only property
+circle.radius = 10; // Error: Cannot assign to 'radius' because it is a read-only property
