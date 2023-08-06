@@ -11,6 +11,7 @@ console.log(john.age);
 
 const Man: Person = { name: "Manish", age: 55 };
 
+// With Class
 class Circle {
     readonly PI = 3.14159;
     readonly radius: number;
@@ -29,3 +30,5 @@ console.log(circle.getArea());
 
 circle.PI = 3.14; // Error: Cannot assign to 'PI' because it is a read-only property
 circle.radius = 10; // Error: Cannot assign to 'radius' because it is a read-only property
+
+// With Array
