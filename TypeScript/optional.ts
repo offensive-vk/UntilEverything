@@ -23,7 +23,5 @@ console.log(multiply(5, 2));
 function _greet(name: string, greeting: string = "Hello") {
     console.log(`${greeting}, ${name}!`);
 }
-
 _greet("John");
 _greet("Jane", "Hi"); 
-  
