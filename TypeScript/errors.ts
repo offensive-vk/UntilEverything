@@ -1,3 +1,4 @@
+// Simple error catching 
 function divide(a: number, b: number): number {
     if (b === 0) {
         throw new Error("Division by zero is not allowed.");
@@ -12,7 +13,7 @@ try {
     console.error("Caught an error:", error.message);
 }
 
-
+// with classes
 class CustomError extends Error {
     constructor(message: string) {
         super(message);
@@ -33,3 +34,5 @@ try {
         console.error("Caught an unknown error:", error.message);
     }
 }
+
+// Multiple errors with try and catch.
