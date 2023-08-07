@@ -36,3 +36,23 @@ try {
 }
 
 // Multiple errors with try and catch.
+
+function processNumbers(a: number, b: number): void {
+    try {
+        const result = divide(a, b);
+        console.log("Result:", result);
+    } catch (error) {
+        if (error instanceof Error) {
+            console.error("Caught a general error:", error.message);
+        } else {
+            console.error("Caught an unknown error:", error);
+        }
+    }
+}
+
+try {
+    processNumbers(10, 0);
+    processNumbers(20, 5);
+} catch (error) {
+    console.error("Caught an error outside the function:", error);
+}
