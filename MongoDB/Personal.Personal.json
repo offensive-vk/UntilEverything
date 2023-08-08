@@ -1,0 +1,30 @@
+[
+  {
+    "_id": {
+      "$oid": "64d0dce2c614943a0dd0ad48"
+    },
+    "name": "Vedansh",
+    "charset": "UTF-8",
+    "type": "Administrator",
+    "Section": "BCA - Full Stack",
+    "skills": [
+      false, "Undefined"
+    ],
+    "aim": null
+  },
+  {
+    "_id": {
+      "$oid": "64d0e785e034a2921d9a1721"
+    },
+    "name": "Mahak",
+    "type": "Semi-Administrator",
+    "alive": true,
+    "Section": "BCA",
+    "skills": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "aim": "developer"
+  }
+]
