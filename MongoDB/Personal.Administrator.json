@@ -1,0 +1,36 @@
+[
+  {
+    "_id": {
+      "$oid": "64d22c943089282735c5b99a"
+    },
+    "name": "Administrator | Vedansh",
+    "memberof": "Administrators",
+    "account_type": "root",
+    "password": "root#admin",
+    "regdate": "new Date()",
+    "company": "MongoDB",
+    "cgpa": 9.7,
+    "root": true,
+    "skills": [
+      "SysAdmin",
+      "Network Administrator",
+      "Programming"
+    ],
+    "identity": null,
+    "secretkey": {
+      "key": "64d0e785e034a2921d9a1721",
+      "sha-256": "23ec99955af1b107605a81c0e93d94f7bb0ef0c76ee42e56d2f7392c58eb5d57"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64d22c943089282735c5b99b"
+    },
+    "account-type": "Unknown User",
+    "root": false,
+    "identity": "User",
+    "regdate": "new Date()",
+    "name": "Common User",
+    "cgpa": 7.8
+  }
+]
