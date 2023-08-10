@@ -10,5 +10,7 @@ export function functionA() {
 function functionB() {
     console.log("Function B is called.");
 }
-
+export default function helloWorld() {
+    console.log("Hello, world from another file !");
+}
 export default functionB;
