@@ -8,3 +8,8 @@ console.log(variableA);
 functionA(); 
 functionB();
 helloWorld();
+
+import { pi, phi, absolute } from "./export";
+
+console.log(pi);
+const absPhi = absolute(phi);
