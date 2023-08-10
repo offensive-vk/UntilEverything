@@ -1,0 +1,22 @@
+[
+    {
+        "reg_no" : 1001,
+        "reg_name": "Student 1",
+        "reg_sem" : "III Sem",
+        "reg_dept": "Bachelor of Computer Applications",
+        "reg_type": "Student",
+        "reg_skills": ["HTML", "CSS", "JavaScript"],
+        "reg_cgpa":8.9,
+        "isRegular" : false,
+        "reg_hobbies": null,
+        "reg_fees": 78000,
+        "reg_address" : {
+            "House" : "77A",
+            "Colony": "Some Common Colony",
+            "Street": "102 Anson Road",
+            "City": "Singapore",
+            "Country": "Singapore",
+            "PIN": 16297
+        }
+    }
+]
