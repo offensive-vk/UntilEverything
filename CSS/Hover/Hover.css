@@ -47,7 +47,7 @@ a {
     top: 0;
     height: 100%;
     width: 0%;
-    background: linear-gradient(to right, transparent, var(--blue), var(--light-blue-percent), var(--light-green));
+    background: linear-gradient(65deg, transparent, var(--blue), var(--light-blue-percent), var(--light-green));
 }
 
 .link:hover::before {
