@@ -1,0 +1,15 @@
+{
+    "name": "Dr. Keshav Dev Gupta",
+    "identity": "HOD, Principal",
+    "aliases": ["Professor", "Principal", "Associate Professor"],
+    "room": "1st Floor Office",
+    "PhD": true,
+    "subjects": ["Java", "C/C++", "PHP", "SQL", "ANSI C"],
+    "address": {"isPrivate": true},
+    "sections": ["BCA, MCA, PGDCA"],
+    "experience": "15 Years",
+    "professor": true,
+    "salary": null,
+    "others": "",
+    "dated": "$currentDate()"
+}
