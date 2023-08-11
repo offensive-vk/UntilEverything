@@ -18,5 +18,26 @@
             "Country": "Singapore",
             "PIN": 16297
         }
+    },
+    {
+        "reg_no" : 1999,
+        "reg_name": "Student 99",
+        "reg_sem" : "III Sem",
+        "reg_dept": "Bachelor of Computer Applications",
+        "reg_type": "Student",
+        "reg_skills": [null, "CSS", "Python"],
+        "reg_cgpa":4.2,
+        "isRegular" : true,
+        "reg_hobbies": ["Singing"],
+        "reg_fees": 80000,
+        "reg_address" : {
+            "House" : "17B",
+            "Colony": "Ganesh Colony",
+            "Street": "132 City Road",
+            "City": "Udaipur",
+            "Country": "India",
+            "PIN": 364990
+        }
     }
+
 ]
