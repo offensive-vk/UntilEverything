@@ -45,6 +45,7 @@ function main() {
     console.log(dog.eat());
 }
 main();
+
 // This is the output of the program.
 // Woof!
 // Spot is eating!
