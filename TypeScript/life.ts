@@ -1,3 +1,4 @@
+// Life Cycle Program
 class Kid {
     private name: string;
     private age: number;
@@ -19,7 +20,8 @@ class Wife {
     private name: string;
     private age: number;
     private kids: Kid[];
-    private husband: Husband;
+    private husband: Husband | null;
+
     constructor(name: string, age: number) {
         this.name = name;
         this.age = age;
