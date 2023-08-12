@@ -10,17 +10,23 @@ class Kid {
     getInfo(): string {
         return `${this.name} (${this.age} years old)`;
     }
+    gotoSchool(): string{
+        return `${this.name} going to School`;
+    }
 }
 
 class Wife {
     private name: string;
     private age: number;
     private kids: Kid[];
-
+    private husband: Husband;
     constructor(name: string, age: number) {
         this.name = name;
         this.age = age;
         this.kids = [];
+    }
+    marry(husband: Husband): void {
+        this.husband = husband;
     }
 
     addChild(name: string, age: number): void {
