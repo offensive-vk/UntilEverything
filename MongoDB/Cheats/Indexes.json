@@ -1,0 +1,26 @@
+{
+    db.coll.getIndexes()
+    db.coll.getIndexKeys()
+    db.coll.dropIndex("name_1")
+    db.coll.hideIndex("name_1")
+    db.coll.unhideIndex("name_1")
+    {
+        // Index Types
+        db.coll.createIndex({"name": 1})             // single field index
+        db.coll.createIndex({"name": 1, "date": 1})     // compound index
+        db.coll.createIndex({foo: "text", bar: "text"}) // text index
+        db.coll.createIndex({"$**": "text"})            // wildcard text index
+        db.coll.createIndex({"userMetadata.$**": 1})    // wildcard index
+        db.coll.createIndex({"loc": "2d"})              // 2d index
+        db.coll.createIndex({"loc": "2dsphere"})        // 2dsphere index
+        db.coll.createIndex({"_id": "hashed"})          // hashed index
+
+        // Index Options
+        db.coll.createIndex({"lastModifiedDate": 1}, {expireAfterSeconds: 3600})      // TTL index
+        db.coll.createIndex({"name": 1}, {unique: true})
+        db.coll.createIndex({"name": 1}, {partialFilterExpression: {age: {$gt: 18}}}) // partial index
+        db.coll.createIndex({"name": 1}, {collation: {locale: 'en', strength: 1}})    // case insensitive index with strength = 1 or 2
+        db.coll.createIndex({"name": 1 }, {sparse: true})
+
+    }
+}
