@@ -1,0 +1,41 @@
+{
+        use admin
+        db.createUser({"user": "root", "pwd": passwordPrompt(), "roles": ["root"]})
+        db.dropUser("root")
+        db.auth( "user", passwordPrompt() )
+
+        use test
+        db.getSiblingDB("dbname")
+        db.currentOp()
+        db.killOp(123) // opid
+
+        db.fsyncLock()
+        db.fsyncUnlock()
+
+        db.getCollectionNames()
+        db.getCollectionInfos()
+        db.printCollectionStats()
+        db.stats()
+
+        db.getReplicationInfo()
+        db.printReplicationInfo()
+        db.isMaster()
+        db.hostInfo()
+        db.printShardingStatus()
+        db.shutdownServer()
+        db.serverStatus()
+
+        db.setSlaveOk()
+        db.getSlaveOk()
+
+        db.getProfilingLevel()
+        db.getProfilingStatus()
+        db.setProfilingLevel(1, 200) // 0 == OFF, 1 == ON with slowms, 2 == ON
+
+        db.enableFreeMonitoring()
+        db.disableFreeMonitoring()
+        db.getFreeMonitoringStatus()
+
+        db.createView("viewName", "sourceColl", [{$project:{department: 1}}])
+
+}
