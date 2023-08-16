@@ -1,3 +1,5 @@
+// All JSON related functions.
+
 const originalObject = {
     name: "John Wick",
     age: 30,
