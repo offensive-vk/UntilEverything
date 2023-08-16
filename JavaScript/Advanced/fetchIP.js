@@ -1,3 +1,4 @@
+// JavaScript Program to Fetch IP Address using Async Functions.
 
 async function fetchData(){
     try{
@@ -5,13 +6,13 @@ async function fetchData(){
         const res = await fetch('https://www.ifconfig.me/ip');
         const data = await res.text();
 
-        console.log("Your IP Address is : " + data);
+        console.log("[ Your IP Address is : " + data +" ]");
     }
     catch(err){
-        console.error("Failed to fetch data.", err);
+        console.error("Failed to fetch your IP.", err);
     }
     finally{
-        console.log("Async Function Finished!");
+        console.log("Function Terminated<Fulfilled> ");
     }
 }
 
