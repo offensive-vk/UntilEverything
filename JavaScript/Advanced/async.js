@@ -46,4 +46,4 @@ async function fetchDataAndDisplay() {
 
 // Calling the async function
 fetchDataAndDisplay();
-console.log('After calling fetchDataAndDisplay');
+console.log('Calling the async function:...');
