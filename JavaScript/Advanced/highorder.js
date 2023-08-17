@@ -29,3 +29,6 @@ const triple = multiplier(3);
 
 const result3 = double(5);
 const result4 = triple(5);
+
+console.log("Result 3 : " + result3);
+console.log("Result 4 : " + result4);
