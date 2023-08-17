@@ -13,6 +13,10 @@ function subtract(a, b) {
 const result1 = applyOperation(add, 50, 30);
 const result2 = applyOperation(subtract, 100, 40);
 
+console.log("Result 1 : "+result1);
+console.log("Result 2 : "+result2);
+
+
 // Functional programming
 function multiplier(factor) {
     return function(x) {
