@@ -16,4 +16,11 @@ function startCountdown(seconds) {
         count--;
     }, 1000);
 }
+function delayedMessage() {
+    console.log("This message is delayed by 3 seconds.");
+}
 
+console.log("Starting countdown:");
+startCountdown(5);
+
+setTimeout(delayedMessage, 3000);
