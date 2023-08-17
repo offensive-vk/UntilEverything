@@ -14,3 +14,9 @@ greet.call(person2, "Hi");    // Output: Hi, Bob!
 greet.apply(person1, ["Hey"]); // Output: Hey, Alice!
 greet.apply(person3, ["Hola"]); // Output: Hola, Charlie!
 
+// Using bind() to create a new function with bound `this`
+const greetPerson2 = greet.bind(person2, "Greetings");
+const greetPerson3 = greet.bind(person3, "Salutations");
+
+greetPerson2(); // Output: Greetings, Bob!
+greetPerson3(); // Output: Salutations, Charlie!
