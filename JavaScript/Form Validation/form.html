@@ -8,15 +8,15 @@
 </head>
 <body>
     <h2>Form Validation</h2><br>
-    <form onsubmit="return validateForm(event)">
+    <form onsubmit="return validateForm(event)" onchange="validateForm(event)">
 
         <!-- Name -->
         <input type="text" placeholder="Enter Your Name" id="name"/><br>
         <label id="label-1"></label><br>
 
         <!-- DOB -->
-        <label>DOB</label>
-        <input type="date" id="dob"/><br>
+        <!-- <label>DOB</label> -->
+        <input type="date" id="dob" placeholder="DOB"/><br>
         <div id="res"></div><br>
 
         <!-- Email -->
