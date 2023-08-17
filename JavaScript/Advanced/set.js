@@ -21,6 +21,6 @@ function delayedMessage() {
 }
 
 console.log("Starting countdown:");
-startCountdown(5);
+startCountdown(7);
 
 setTimeout(delayedMessage, 3000);
