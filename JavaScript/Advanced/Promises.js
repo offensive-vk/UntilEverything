@@ -1,16 +1,19 @@
 // Promises using Dominos Pizza Store.
+const { puts } = require('./functions.js');
+
 function orderPizza() {
-    console.log("\t < Welcome To Nominos Pizza ! />\n")
-    console.log("[ Ordering a pizza... ]");
+    puts("\t < Welcome To Nominos Pizza ! />\n");
+    puts("\t ================================\n");
+    puts("[ Ordering a pizza... ]");
 
     const orderPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
             const isPizzaAvailable = Math.random() >= 0.3;
             if (isPizzaAvailable) {
-                console.log("Pizza is ready!");
-                resolve("[ Delicious Pizza ]");
+                puts("Pizza is ready!");
+                resolve("Delicious Pizza");
             } else {
-                console.log("Sorry, the pizza is not available right now.");
+                puts("Sorry, the pizza is not available right now.");
                 reject("[ No Pizza ]");
             }
         }, 2000);
@@ -20,22 +23,22 @@ function orderPizza() {
 }
 
 function bakePizza(pizza) {
-    console.log(`Baking the ${pizza}...`);
+    puts(`Baking the ${pizza}...`);
 
     return new Promise(resolve => {
         setTimeout(() => {
-            console.log(`${pizza} is baked and ready!`);
+            puts(`${pizza} is baked and ready!`);
             resolve(`${pizza} (Baked)`);
         }, 3000);
     });
 }
 
 function deliverPizza(pizza) {
-    console.log(`Delivering the ${pizza}...`);
+    puts(`Delivering the ${pizza}...`);
 
     return new Promise(resolve => {
         setTimeout(() => {
-            console.log(`${pizza} is delivered! Enjoy your meal.`);
+            puts(`${pizza} is delivered! Enjoy your meal.`);
             resolve(`${pizza} (Delivered)`);
         }, 1500);
     });
@@ -53,7 +56,7 @@ orderPizza()
         return deliverPizza(bakedPizza);
     })
     .then(deliveredPizza => {
-        console.log(`Promise chain completed: ${deliveredPizza}`);
+        puts(`<Promise chain completed: ${deliveredPizza} />`);
     })
     .catch(handleError);
 
