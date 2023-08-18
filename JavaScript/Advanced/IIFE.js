@@ -11,3 +11,12 @@
     console.log("Hello from JavaScript IIFE!");
     console.log("Full Name:", getFullName());
 })();
+
+(async () =>{
+    var name = "John";
+    var wrongName = "Jason";
+    console.log(`Name: ${name}`);
+    while(!name.match(/^[a-zA-Z]/g)){console.log(`Name is : ${wrongName}`);}
+    return new Promise.resolve("The name is John");
+
+})();
