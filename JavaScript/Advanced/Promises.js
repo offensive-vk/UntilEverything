@@ -1,6 +1,6 @@
-
 // Promises using Dominos Pizza Store.
 function orderPizza() {
+    console.log("\t < Welcome To Nominos Pizza ! />\n")
     console.log("[ Ordering a pizza... ]");
 
     const orderPromise = new Promise((resolve, reject) => {
