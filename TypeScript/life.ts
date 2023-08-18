@@ -25,6 +25,7 @@ class Wife {
     constructor(name: string, age: number) {
         this.name = name;
         this.age = age;
+        this.husband = null;
         this.kids = [];
     }
     marry(husband: Husband): void {
