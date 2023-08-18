@@ -1,5 +1,5 @@
 
-// 
+// Promises using Dominos Pizza Store.
 function orderPizza() {
     console.log("Ordering a pizza...");
 
