@@ -1,17 +1,17 @@
 
 // Promises using Dominos Pizza Store.
 function orderPizza() {
-    console.log("Ordering a pizza...");
+    console.log("[ Ordering a pizza... ]");
 
     const orderPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
             const isPizzaAvailable = Math.random() >= 0.3;
             if (isPizzaAvailable) {
                 console.log("Pizza is ready!");
-                resolve("Delicious Pizza");
+                resolve("[ Delicious Pizza ]");
             } else {
                 console.log("Sorry, the pizza is not available right now.");
-                reject("No Pizza");
+                reject("[ No Pizza ]");
             }
         }, 2000);
     });
@@ -56,3 +56,5 @@ orderPizza()
         console.log(`Promise chain completed: ${deliveredPizza}`);
     })
     .catch(handleError);
+
+    // i Like Pizza.
