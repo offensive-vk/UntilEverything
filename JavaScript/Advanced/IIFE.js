@@ -17,6 +17,8 @@
     var wrongName = "Jason";
     console.log(`Name: ${name}`);
     while(!name.match(/^[a-zA-Z]/g)){console.log(`Name is : ${wrongName}`);}
-    return new Promise.resolve("The name is John");
+    return new Promise((resolve, reject) =>{
+        resolve(console.log("The name is John"));
+    });
 
 })();
