@@ -12,8 +12,8 @@ console.log(double(5));
 function fetchUserData(Id) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (Id === 1) {
-                resolve({ id: 1, name: "Alice" });
+            if (Id === 101) {
+                resolve({ id: 101, name: "Alicia" });
             } else {
                 reject("User not found");
             }
@@ -21,7 +21,7 @@ function fetchUserData(Id) {
     });
 }
 
-fetchUserData(1)
+fetchUserData(101)
     .then(user => {
         console.log("User:", user);
         return fetchUserData(2);
