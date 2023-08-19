@@ -1,4 +1,3 @@
-
 // arguments is an array-like object accessible inside functions that contains the values of the arguments passed to that function.
 
 function args(a , b, c) {  
@@ -7,6 +6,7 @@ function args(a , b, c) {
     console.log(arguments[1]); // b
     console.log(arguments[2]); // c
     console.log("Function Terminated\n");
+    return a + b + c;
 }
 
 args(90,80,70);
