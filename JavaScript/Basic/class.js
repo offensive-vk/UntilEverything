@@ -8,9 +8,14 @@ class Rectangle {
         return this.width * this.height;
     }
 }
+class Shape{
+    shape = new Rectangle(null, null);
+    constructor(shape){
+        this.shape = shape;
+    }
+}
+const rect1 = new Rectangle(500, 1000);
+console.log(rect1.calculateArea());
 
-const rectangle1 = new Rectangle(5, 10);
-console.log(rectangle1.calculateArea()); // Output: 50
-
-const rectangle2 = new Rectangle(3, 7);
-console.log(rectangle2.calculateArea()); // Output: 21
+const rect2 = new Rectangle(3174, 7521);
+console.log(rect2.calculateArea());
