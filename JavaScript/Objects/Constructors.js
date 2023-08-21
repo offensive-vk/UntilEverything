@@ -16,7 +16,7 @@ const _boxes = [
     { value: 3, __proto__: boxPrototype },
 ];
 
-// A constructor function
+// A constructor function using Functions
 function Box(value) {
     this.value = value;
 }
@@ -28,3 +28,14 @@ Box.prototype.getValue = function () {
 
 const moreboxes = [new Box(1), new Box(2), new Box(3)];
 
+/*Using classes , same */
+class Box {
+    constructor(value) {
+        this.value = value;
+    }
+
+    // Methods are created on Box.prototype
+    getValue() {
+        return this.value;
+    }
+}
