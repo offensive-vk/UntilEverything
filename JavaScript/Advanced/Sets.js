@@ -10,7 +10,7 @@ set.add(pete);
 set.add(mary);
 set.add(john);
 set.add(mary);
-console.log(set.has("john"));
+
 // set keeps only unique values
 console.log(`The Size of Set is : ${set.size}`);
 console.log("\t Displaying Data:");
@@ -19,7 +19,6 @@ for (let user of set) {
 }
 
 // More
-// Creating a Set
 const mySet = new Set();
 
 // Adding elements to the Set
@@ -31,7 +30,7 @@ mySet.add(true);
 console.log('Size of the Set:', mySet.size);
 
 // Checking if an element exists in the Set
-console.log('Has "JavaScript"?', mySet.has('Hello'));
+console.log('Has "JavaScript"?', mySet.has('Javascript'));
 console.log('Has 2?', mySet.has(2));
 
 // Iterating over the Set using forEach
