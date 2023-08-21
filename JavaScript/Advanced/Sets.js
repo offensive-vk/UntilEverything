@@ -10,10 +10,58 @@ set.add(pete);
 set.add(mary);
 set.add(john);
 set.add(mary);
-
+console.log(set.has("john"));
 // set keeps only unique values
-console.log(set.size);
-
+console.log(`The Size of Set is : ${set.size}`);
+console.log("\t Displaying Data:");
 for (let user of set) {
-    console.log(user.name);
+    console.log("\t-> "+user.name);
 }
+
+// More
+// Creating a Set
+const mySet = new Set();
+
+// Adding elements to the Set
+mySet.add(1);
+mySet.add('Javascript');
+mySet.add(true);
+
+// Checking the size of the Set
+console.log('Size of the Set:', mySet.size);
+
+// Checking if an element exists in the Set
+console.log('Has "JavaScript"?', mySet.has('Hello'));
+console.log('Has 2?', mySet.has(2));
+
+// Iterating over the Set using forEach
+console.log('Iterating over the Set:');
+mySet.forEach(item => {
+    console.log(item);
+});
+
+// Deleting an element from the Set
+mySet.delete('Hello');
+
+// Clearing all elements from the Set
+mySet.clear();
+
+// Re-populating the Set
+mySet.add(5);
+mySet.add(10);
+mySet.add(15);
+
+// Converting Set to an Array
+const setToArray = Array.from(mySet);
+console.log('Set converted to Array:', setToArray);
+
+// Creating another Set
+const anotherSet = new Set([1, 2, 3]);
+
+// Performing union of two Sets
+const unionSet = new Set([...mySet, ...anotherSet]);
+console.log('Union of Sets:', unionSet);
+
+// Performing intersection of two Sets
+const intersectionSet = new Set([...mySet].filter(item => anotherSet.has(item)));
+console.log('Intersection of Sets:', intersectionSet);
