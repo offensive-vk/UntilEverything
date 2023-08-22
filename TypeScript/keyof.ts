@@ -1,4 +1,4 @@
-// 
+// keyof operator is used to form a union of keys stored in any interface or object and any other key-value pairs.
 interface Person {
     name: string;
     age: number;
