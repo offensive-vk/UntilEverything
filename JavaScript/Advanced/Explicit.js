@@ -1,4 +1,3 @@
-
 // All Types of Explicit Typecasting in JS
 
 // Typecasting to String
@@ -53,6 +52,7 @@ const parsedInt = parseInt(intString, 10);
 console.log("Parsed Integer:", parsedInt, typeof parsedInt);
 
 // Using parseFloat() to parse floating-point numbers from strings
-const floatString = "3.14";
+const floatString = 3.14;
 const parsedFloat = parseFloat(floatString);
 console.log("Parsed Float:", parsedFloat, typeof parsedFloat);
+console.log(parseFloat(99));
