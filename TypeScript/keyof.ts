@@ -1,3 +1,4 @@
+// 
 interface Person {
     name: string;
     age: number;
@@ -7,18 +8,20 @@ interface Person {
 type PersonKeys = keyof Person;
 
 // PersonKeys is a union of string literals: "name" | "age" | "location"
-const key: PersonKeys = "name"; // Valid
+const key: PersonKeys = "age"; // Valid
 // const invalidKey: PersonKeys = "gender"; // Error: "gender" is not a valid key
+console.log(key);
 
-function getProperty(obj: Person, key: PersonKeys) {
+function getProperty(obj: Person, key: PersonKeys): string | number {
     return obj[key];
 }
 
 const person: Person = {
-    name: "Alice",
-    age: 30,
-    location: "Wonderland",
+    name: "Manish",
+    age: 10,
+    location: "Wakanda",
 };
 
 const personName = getProperty(person, "name"); // Valid
 // const personGender = getProperty(person, "gender"); // Error: "gender" is not a valid key
+console.log(personName);
