@@ -1,0 +1,26 @@
+// Nesting in Sass
+// Parent Selector Reference (&)
+.parent {
+    background-color: #f0f0f0;
+    &:hover {
+        background-color: #ccc;
+    }
+    .child {
+        color: blue;
+        &:hover {
+            color: darkblue;
+        }
+    }
+}
+// Nesting with Media Queries
+.container {
+    width: 100%;
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+        .inner {
+            font-size: 14px;
+        }
+    }
+}
+
+// Complex Nesting
