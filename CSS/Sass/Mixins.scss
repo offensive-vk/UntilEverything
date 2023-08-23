@@ -1,0 +1,54 @@
+/* 
+A mixin lets you make groups of CSS declarations that you want to reuse throughout your site.
+Simply its a parameterized function just like in other languages.
+*/
+
+// Defining Mixins
+@mixin box-shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
+}
+
+@mixin gradient-background($color1, $color2) {
+    background: linear-gradient(to bottom, $color1, $color2);
+}
+
+// Using Mixins
+.button {
+    @include box-shadow(2px, 2px, 5px, #888);
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header {
+    @include gradient-background(#3498db, #2980b9);
+    color: white;
+    padding: 20px;
+}
+
+// Mixins with Parameters and Default Values
+@mixin button-style($background: #3498db, $color: white) {
+    background-color: $background;
+    color: $color;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-button {
+    @include button-style;
+}
+
+.secondary-button {
+    @include button-style($background: #e74c3c);
+}
+
+// Executing Mixins within Selectors
+.article {
+    border: 1px solid #ccc;
+    padding: 20px;
+
+    .button {
+        @include button-style($background: #2ecc71, $color: black);
+    }
+}
