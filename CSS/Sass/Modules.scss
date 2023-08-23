@@ -1,0 +1,33 @@
+@use 'First';
+@use 'Vars';
+@use 'Mixins';
+
+body{
+    background-color: Vars.$extra-color;
+    font-size: Vars.$font-size;
+    margin: 100vmin;
+    box-sizing: border-box;
+}
+
+h1{
+    box-shadow: inset;
+    height: calc(20vmin * 30%);
+    &:hover{
+        color: black;
+        text-transform: capitalize;
+    } 
+    // @include Mixins.$gradient-background();
+    // @include Mixins.$theme;
+}
+section{
+    @include font-size;
+    @include theme($theme: orange);
+}
+*, *::before , *::after{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: content-box;
+    inset: 0;
+    z-index: 0;
+}
