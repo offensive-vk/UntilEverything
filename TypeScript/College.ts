@@ -43,6 +43,25 @@ class University{
     countDepartments(): string | Student[]{
         return `Total Number of Departments in University : ${this.departments.length}\n`;
     }
+    deleteStudent(Id: number): string {
+        const index = this.students.findIndex(student => student.sid === Id);
+        if (index !== -1) {
+            const deletedStudent = this.students.splice(index, 1)[0];
+            return (`-> ${deletedStudent.sname} <${deletedStudent.sid}> removed from University.\n`);
+        } else {
+            return (`Student with ID ${Id} not found.\n`);
+        }
+    }
+
+    deleteDepartment(Id: string): string {
+        const index = this.departments.findIndex(dept => dept.identity === Id);
+        if (index !== -1) {
+            const deletedDept = this.departments.splice(index, 1)[0];
+            return (`-> ${deletedDept.name} <${deletedDept.identity}> removed from University.\n`);
+        } else {
+            return (`Department with ID ${Id} not found.\n`);
+        }
+    }
     // displayData(id: number): Student[] {
     //     return this.students.filter((id) => this.students[id] === id);
     // }
@@ -55,12 +74,31 @@ var Manish: Student = {
     branch: "Computer Science",
     isRegular: true,
 };
-
+var Mahak: Student = {
+    sname : "Mahak",
+    sid: 10002,
+    section : "BCA Full Stack",
+    branch: "Computer Science",
+    isRegular: true,
+};
 var BCA: Department = {
     name: "Bachelor of Computer Application",
     identity : "BCA-AU-0990",
     sections: ["Full Stack", "Data Science", "Cyber Security", "Android"],
     totalStudents: 100,
 };
+var BCom: Department = {
+    name: "Bachelor of Commerce",
+    identity : "BCOM-AU-0880",
+    sections: "B.Com",
+    totalStudents: 60,
+};
 const Apex = new University();
 Apex.addStudent(Manish);
+Apex.addStudent(Mahak);
+
+Apex.addDepartment(BCA);
+Apex.addDepartment(BCom);
+
+puts(Apex.countStudents());
+puts(Apex.countDepartments());
