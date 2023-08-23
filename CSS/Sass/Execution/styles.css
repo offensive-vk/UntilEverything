@@ -1,5 +1,10 @@
 .page {
   width: 100%;
+  height: 80vh;
+  max-height: 1200px;
+  max-width: 2440px;
+  font-size: 3em;
+  color: red;
 }
 .page header {
   background-color: #3498db;
@@ -32,6 +37,7 @@
 }
 .page main {
   padding: 20px;
+  margin: 12px;
 }
 .page main .article {
   border: 1px solid #ccc;
