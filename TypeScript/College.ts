@@ -24,7 +24,7 @@ interface Department{
 interface Teacher{
     uid: number | boolean | null;
     name: string;
-    subjects: Array<string>;
+    subjects: Array<string> | string;
     salary: number;
     sections: Array<string>;
 }
@@ -132,14 +132,14 @@ var Jiya: Teacher = {
     uid: 9001,
     subjects: ["DSA","CA", "OS"],
     salary: 77000,
-    sections: ["BCA-A", "BCA-B", "Ist Year - BCA"],
+    sections: ["2nd Year", "BCA-A & B", "Ist Year - BCA"],
 };
 var Arti: Teacher = {
     name: "Jiya Ma'am",
     uid: 9001,
-    subjects: ["DSA","CA", "OS"],
-    salary: 77000,
-    sections: ["BCA-A", "BCA-B", "Ist Year - BCA"],
+    subjects: "English",
+    salary: 90000,
+    sections: ["2nd Year - BCA", "3rd Year - BCA"],
 };
 // Real Life Execution :
 const Apex = new University("Apex University");
