@@ -1,0 +1,28 @@
+// Interpolation in Sass
+$bgr: linear-gradient;
+$color: orange;
+$size: 20px;
+
+// Using interpolation in selectors
+.#{$color}-background {
+    background-color: $color;
+    color: white;
+    padding: 10px;
+}
+
+// Using interpolation in properties
+.text {
+    font-size: $size;
+    border: 1px solid #{$color};
+}
+
+// Using interpolation in values
+.alert {
+    border: 2px solid #{darken($color, 10%)};
+    background-color: #{lighten($color, 20%)};
+}
+
+div{
+    background: #{$bgr}(40deg, cyan, greenyellow);
+    font-#{$size}: 90px;
+}
