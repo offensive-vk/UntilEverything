@@ -22,7 +22,11 @@ interface Department{
     totalStudents: number | undefined;
 }
 interface Teachers{
-
+    uid: number | boolean | null;
+    name: string;
+    subjects: Array<string>;
+    salary: number;
+    sections: Array<string>;
 }
 class University{
     public static college: string = " University";
