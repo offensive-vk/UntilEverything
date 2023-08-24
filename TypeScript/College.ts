@@ -1,4 +1,10 @@
-type Custom = string | boolean | unknown;
+/* 
+*   @date: Aug, 22, 2023 | G
+*   @author: Vedansh
+*   @description: This is a University Console Management System designed using TypeScript.
+*/
+
+type Custom = string | undefined| unknown;
 const puts = console.log;
 
 interface Student{
@@ -14,11 +20,14 @@ interface Department{
     sections: string | Array<string>;
     totalStudents: number | undefined;
 }
+interface Teachers{
 
+}
 class University{
     public static college: string = " University";
     public students: Array<Student>;
-    public branch: string[];
+    public teachers: Array<Teachers>;
+    public branch: Array<string> | string;
     public departments: Array<Department>;
     public totalStudents: number | Array<number>;
     public totalDepts: Array<number> | number;
@@ -26,6 +35,7 @@ class University{
     constructor(college: string){
         University.college = college;
         this.students = [];
+        this.teachers = [];
         this.branch = [];
         this.totalStudents = [];
         this.totalDepts = [];
@@ -67,7 +77,8 @@ class University{
     displayStudents(): Student[] {
         return this.students;
     }
-    greet(): void{
+    protected greet(): void{
+        puts(`\t ============================== \n`);
         puts(`\n Welcome to ${University.college} !\n`);
     }
 }
@@ -98,6 +109,8 @@ var BCom: Department = {
     sections: "B.Com",
     totalStudents: 60,
 };
+
+// Real Life Execution :
 const Apex = new University("Apex University");
 Apex.addStudent(Manish);
 Apex.addStudent(Mahak);
