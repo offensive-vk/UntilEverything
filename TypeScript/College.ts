@@ -2,6 +2,7 @@
 *   @date: Aug, 22, 2023 | G
 *   @author: Vedansh
 *   @description: This is a University Console Management System designed using TypeScript.
+*   @lang: TypeScript v 5.1.6
 */
 
 type Custom = string | undefined| unknown;
@@ -29,7 +30,7 @@ class University{
     public teachers: Array<Teachers>;
     public branch: Array<string> | string;
     public departments: Array<Department>;
-    public totalStudents: number | Array<number>;
+    public totalStudents: Array<number> | number;
     public totalDepts: Array<number> | number;
 
     constructor(college: string){
@@ -120,3 +121,5 @@ Apex.addDepartment(BCom);
 
 puts(Apex.countStudents());
 puts(Apex.countDepartments());
+
+/* The End */
