@@ -56,7 +56,7 @@ class University{
     }
     addTeacher(teacher: Teacher){
         this.teachers.push(teacher);
-        puts(`-> ${teacher.sname} <${teacher.uid}> added to University.\n`);
+        puts(`-> ${teacher.name} <${teacher.uid}> added to University.\n`);
     }
     countStudents(): string | Student[]{
         return `Total Number of Students in University : ${this.students.length}\n`;
@@ -84,7 +84,7 @@ class University{
         }
     }
     deleteTeacher(Id: number): string {
-        const index = this.teachers.findIndex(dept => dept.identity === Id);
+        const index = this.teachers.findIndex(dept => dept.uid === Id);
         if (index !== -1) {
             const deletedTeacher = this.teachers.splice(index, 1)[0];
             return (`-> ${deletedTeacher.name} <${deletedTeacher.uid}> removed from University.\n`);
