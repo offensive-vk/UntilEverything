@@ -21,7 +21,7 @@ interface Department{
     sections: string | Array<string>;
     totalStudents: number | undefined;
 }
-interface Teachers{
+interface Teacher{
     uid: number | boolean | null;
     name: string;
     subjects: Array<string>;
@@ -31,7 +31,7 @@ interface Teachers{
 class University{
     public static college: string = " University";
     public students: Array<Student>;
-    public teachers: Array<Teachers>;
+    public teachers: Array<Teacher>;
     public branch: Array<string> | string;
     public departments: Array<Department>;
     public totalStudents: Array<number> | number;
@@ -53,6 +53,10 @@ class University{
     addDepartment(dept: Department){
         this.departments.push(dept);
         puts(`-> ${dept.name} <${dept.identity}> added to University.\n`);
+    }
+    addTeacher(teacher: Teacher){
+        this.teachers.push(teacher);
+        puts(`-> ${teacher.sname} <${teacher.uid}> added to University.\n`);
     }
     countStudents(): string | Student[]{
         return `Total Number of Students in University : ${this.students.length}\n`;
@@ -77,6 +81,15 @@ class University{
             return (`-> ${deletedDept.name} <${deletedDept.identity}> removed from University.\n`);
         } else {
             return (`Department with ID ${Id} not found.\n`);
+        }
+    }
+    deleteTeacher(Id: number): string {
+        const index = this.teachers.findIndex(dept => dept.identity === Id);
+        if (index !== -1) {
+            const deletedTeacher = this.teachers.splice(index, 1)[0];
+            return (`-> ${deletedTeacher.name} <${deletedTeacher.uid}> removed from University.\n`);
+        } else {
+            return (`Teacher with UID ${Id} not found.\n`);
         }
     }
     displayStudents(): Student[] {
@@ -114,7 +127,20 @@ var BCom: Department = {
     sections: "B.Com",
     totalStudents: 60,
 };
-
+var Jiya: Teacher = {
+    name: "Jiya Ma'am",
+    uid: 9001,
+    subjects: ["DSA","CA", "OS"],
+    salary: 77000,
+    sections: ["BCA-A", "BCA-B", "Ist Year - BCA"],
+};
+var Arti: Teacher = {
+    name: "Jiya Ma'am",
+    uid: 9001,
+    subjects: ["DSA","CA", "OS"],
+    salary: 77000,
+    sections: ["BCA-A", "BCA-B", "Ist Year - BCA"],
+};
 // Real Life Execution :
 const Apex = new University("Apex University");
 Apex.addStudent(Manish);
@@ -122,6 +148,9 @@ Apex.addStudent(Mahak);
 
 Apex.addDepartment(BCA);
 Apex.addDepartment(BCom);
+
+Apex.addTeacher(Jiya);
+Apex.addTeacher(Arti);
 
 puts(Apex.countStudents());
 puts(Apex.countDepartments());
