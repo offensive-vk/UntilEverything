@@ -1,0 +1,50 @@
+
+// For loop
+@for $i from 1 through 5 {
+    .box-#{$i} {
+        width: 20px * $i;
+        height: 20px * $i;
+        background-color: lighten(blue, 5% * $i);
+    }
+}
+
+// Each loop
+$fruits: apple,
+banana,
+cherry,
+date,
+elderberry;
+
+@each $fruit in $fruits {
+    .fruit-#{$fruit} {
+        background-image: url('images/#{$fruit}.png');
+    }
+}
+
+// While loop
+$i: 1;
+
+@while $i <=5 {
+    .count-#{$i} {
+        counter-reset: count $i;
+    }
+
+    $i: $i+1;
+}
+
+// Conditional statements
+$background: light;
+
+@if $background == light {
+    body {
+        background-color: #f5f5f5;
+        color: #333;
+    }
+}
+
+@else {
+    body {
+        background-color: #333;
+        color: white;
+    }
+}
