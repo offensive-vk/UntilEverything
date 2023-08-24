@@ -16,13 +16,15 @@ interface Department{
 }
 
 class University{
+    public static college: string = " University";
     public students: Array<Student>;
     public branch: string[];
     public departments: Array<Department>;
-    public totalStudents: number | number[];
+    public totalStudents: number | Array<number>;
     public totalDepts: Array<number> | number;
 
-    constructor(){
+    constructor(college: string){
+        University.college = college;
         this.students = [];
         this.branch = [];
         this.totalStudents = [];
@@ -62,9 +64,12 @@ class University{
             return (`Department with ID ${Id} not found.\n`);
         }
     }
-    // displayData(id: number): Student[] {
-    //     return this.students.filter((id) => this.students[id] === id);
-    // }
+    displayStudents(): Student[] {
+        return this.students;
+    }
+    greet(): void{
+        puts(`\n Welcome to ${University.college} !\n`);
+    }
 }
 
 var Manish: Student = {
@@ -93,7 +98,7 @@ var BCom: Department = {
     sections: "B.Com",
     totalStudents: 60,
 };
-const Apex = new University();
+const Apex = new University("Apex University");
 Apex.addStudent(Manish);
 Apex.addStudent(Mahak);
 
