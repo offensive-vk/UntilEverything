@@ -1,13 +1,17 @@
+:root{
+    --vw : 0;
+    --vh : 0;
+}
 .layout {
-    width: 1366px;
-    height: 768px;
+    width: var(--vw);
+    height: var(--vh);
 
     display: grid;
     grid:
         "header header header" auto 
         "leftSide body rightSide" 1fr 
         "footer footer footer" auto / auto 1fr auto;
-    gap: 8px;
+    gap: 10px;
 }
 
 .header {

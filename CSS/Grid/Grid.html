@@ -9,13 +9,17 @@
     <!-- <link rel="stylesheet" href="Common.css"> -->
     <title>Main Grid File</title>
     <style>
-        html, body{
+        body{
+            margin: 0;
+            padding: 1px;
+            overflow: hidden;
             background-color: black;
             height: 100vh;
             width: 100vw;
             font-family: Arial Nova Light;
             font-size: 2.5rem;
             display: grid;
+            inset: 0;
             place-items: center;
             text-align: center;
         }
@@ -38,11 +42,11 @@
 
     <!-- Best Grid -->
     <section class="layout">
-        <div class="header">1</div>
-        <div class="leftSide">2</div>
-        <div class="body">3</div>
-        <div class="rightSide">4</div>
-        <div class="footer">5</div>
+        <div class="header">Header</div>
+        <div class="leftSide">Left</div>
+        <div class="body">Body</div>
+        <div class="rightSide">Right</div>
+        <div class="footer">Footer</div>
     </section>
     <!-- Best Grid -->
 
@@ -79,5 +83,22 @@
 
         })
     </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const root = document.documentElement;
+            const vw = window.innerWidth;
+            const vh = window.innerHeight;
+            root.style.setProperty("--vw", `${vw-15}px`);
+            root.style.setProperty("--vh", `${vh-15}px`);
+
+        });
+        // Update viewport dimensions on window resize
+        window.addEventListener('resize', () => {
+            const newViewportWidth = window.innerWidth;
+            const newViewportHeight = window.innerHeight;
+            console.log(`New Viewport Width: ${newViewportWidth}px`);
+            console.log(`New Viewport Height: ${newViewportHeight}px`);
+        });
+    </script>
 </body>
 </html>
