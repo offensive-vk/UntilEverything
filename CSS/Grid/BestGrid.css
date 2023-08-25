@@ -1,0 +1,31 @@
+.layout {
+    width: 1366px;
+    height: 768px;
+
+    display: grid;
+    grid:
+        "header header header"auto 
+        "leftSide body rightSide"1fr 
+        "footer footer footer"auto / auto 1fr auto;
+    gap: 8px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.leftSide {
+    grid-area: leftSide;
+}
+
+.body {
+    grid-area: body;
+}
+
+.rightSide {
+    grid-area: rightSide;
+}
+
+.footer {
+    grid-area: footer;
+}
