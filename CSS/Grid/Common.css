@@ -12,12 +12,15 @@
 
 .header {
     grid-area: header;
+    background-color: lightgreen;
 }
 
 .main {
     grid-area: main;
+    background-color: magenta;
 }
 
 .footer {
     grid-area: footer;
+    background-color: red;
 }
