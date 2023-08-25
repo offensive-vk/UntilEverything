@@ -4,28 +4,57 @@
 
     display: grid;
     grid:
-        "header header header"auto 
-        "leftSide body rightSide"1fr 
-        "footer footer footer"auto / auto 1fr auto;
+        "header header header" auto 
+        "leftSide body rightSide" 1fr 
+        "footer footer footer" auto / auto 1fr auto;
     gap: 8px;
 }
 
 .header {
     grid-area: header;
+    background-color: aqua;
 }
 
 .leftSide {
+    background-color: lightgreen;
     grid-area: leftSide;
 }
 
 .body {
     grid-area: body;
+    background-color: magenta;
 }
 
 .rightSide {
     grid-area: rightSide;
+    background-color: lightgreen;
+
 }
 
 .footer {
+    background-color: #eee;
     grid-area: footer;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .layout {
+        grid:
+            "header header" auto
+            "leftSide leftSide" 1fr
+            "body body" 1fr
+            "rightSide rightSide" 1fr
+            "footer footer" auto / 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid:
+            "header" auto
+            "leftSide" 1fr
+            "body" 1fr
+            "rightSide" 1fr
+            "footer" auto / 1fr;
+    }
 }
