@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Responsive Grid</title>
+    <style>
+        body {
+            background: #000;
+            font-size: 2rem;
+            letter-spacing: -2px;
+            margin-top: 100px;
+            font-family: Arial Nova Light;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+            grid-template-rows: repeat(2, 2fr);
+            /*
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-rows: auto 100px; */
+            gap: 14px;
+            padding: 20px;
+            text-align: center;
+            justify-items: center;
+            background-color: #000;
+        }
+        
+        .grid-item {
+            height: 150px;
+            width: 440px;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(88deg, orange, magenta, cyan);
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const items =  document.querySelectorAll(".grid-item");
+
+            // Function to generate a random angle between 0 and 360 degrees
+            function getRandomAngle() {
+                return Math.floor(Math.random() * 360);
+            }
+            
+            // Apply random angle to the linear-gradient property of each box
+            items.forEach(box => {
+                const randomAngle = getRandomAngle();
+                box.style.background = `linear-gradient(${randomAngle}deg, orange, magenta, cyan)`;
+            });
+        });
+
+    </script>
+</body>
+</html>
