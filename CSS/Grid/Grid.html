@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="3by3.css">
+    <link rel="stylesheet" href="BestGrid.css">
+    <link rel="stylesheet" href="Common.css"> -->
+    <link rel="stylesheet" href="InfiniteRows.css">
     <title>Main Grid File</title>
+    <style>
+        html, body{
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+            font-family: Arial Nova Light;
+            font-size: 3rem;
+        }
+    </style>
 </head>
 <body>
     <!-- 3by3 -->
-    <section class="layout">
+    <!-- <section class="layout">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -18,25 +30,25 @@
         <div>7</div>
         <div>8</div>
         <div>9</div>
-    </section>    
+    </section>     -->
     <!-- 3by3 -->
 
     <!-- Best Grid -->
-    <section class="layout">
+    <!-- <section class="layout">
         <div class="header">1</div>
         <div class="leftSide">2</div>
         <div class="body">3</div>
         <div class="rightSide">4</div>
         <div class="footer">5</div>
-    </section>
+    </section> -->
     <!-- Best Grid -->
 
     <!-- Common -->
-    <section class="layout">
+    <!-- <section class="layout">
         <div class="header">1</div>
         <div class="main">2</div>
         <div class="footer">3</div>
-    </section>
+    </section>  -->
     <!-- Common -->
 
     <!-- Infinite Rows -->
@@ -55,6 +67,14 @@
         <div>12</div>
     </section>
     <!-- Infinite Rows -->
+    <script>
+        document.querySelectorAll("div").forEach((div) => {
+            div.style.backgroundColor = "orange";
+            div.style.height = "300px";
+            div.style.width = "450px";
+            div.style.textAlign = "center";
 
+        })
+    </script>
 </body>
 </html>
