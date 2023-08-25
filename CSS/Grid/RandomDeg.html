@@ -4,7 +4,7 @@
     <meta name="author" content="Vedansh">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Responsive Grid With Gradients</title>
+    <title>Elegant Grid With Gradients</title>
     <style>
         body {
             background: #000;
@@ -38,17 +38,25 @@
         }
         .grid-item {
             height: 160px;
-            width: 440px;
+            width: 450px;
             padding: 20px;
             text-align: center;
             background-size: 200%;
             
             border: 1px solid #ddd;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            animation: run 3s linear infinite;
+            border-radius: 6px;
+            transition: all 0.3s ease-in-out;
+            /*animation: run 3s linear infinite; */
         }
-
+        .grid-item:not(:hover){
+            filter: blur(0);
+        }
+        .grid-item:hover{
+            scale: 0.8;
+            box-shadow: 0 -3rem -6rem cyan;
+            
+        } 
     </style>
 </head>
 <body>
@@ -58,7 +66,7 @@
         <div class="grid-item">of</div>
         <div class="grid-item">creativity</div>
         <div class="grid-item">using</div>
-        <div class="grid-item">Gradients in CSS</div>
+        <div class="grid-item">Gradients.</div>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
