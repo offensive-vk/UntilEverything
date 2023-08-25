@@ -28,18 +28,27 @@
             justify-items: center;
             background-color: #000;
         }
-        
+        @keyframes run {
+            from{
+                background-position: 0% center;
+            }
+            to{
+                background-position: -200% center;
+            }
+        }
         .grid-item {
-            height: 150px;
+            height: 160px;
             width: 440px;
             padding: 20px;
             text-align: center;
-            background: linear-gradient(88deg, orange, magenta, cyan);
+            background-size: 200%;
+            
             border: 1px solid #ddd;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+            animation: run 3s linear infinite;
         }
-        
+
     </style>
 </head>
 <body>
@@ -60,7 +69,7 @@
             
             items.forEach(box => {
                 const randomAngle = getRandomAngle();
-                box.style.background = `linear-gradient(${randomAngle}deg, orange, magenta, cyan)`;
+                box.style.background = `linear-gradient(${randomAngle}deg, orange, magenta, cyan, orange)`;
             });
         });
 
