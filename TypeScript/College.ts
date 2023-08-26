@@ -5,8 +5,9 @@
 *   @lang: TypeScript v 5.1.6
 */
 
-type Custom = string | undefined| unknown;
+type Custom = string | undefined | unknown;
 const puts = console.log;
+const tb = console.table;
 
 interface Student{
     sname: string;
@@ -96,20 +97,26 @@ class University{
             return (`Teacher with UID ${Id} not found.\n`);
         }
     }
-    displayStudents(): Array<Student> {
+    public displayStudents(): Array<Student> {
+        puts(`\n-> Displaying All Students in ${University.college} : \n`);
         return this.students;
     }
-    displayTeachers(): Array<Teacher> {
+    public displayTeachers(): Array<Teacher> {
+        puts(`\n-> Displaying All Teachers in ${University.college} : \n`);
         return this.teachers;
     }
-    displayDepartments(): Array<Department> {
+    public displayDepartments(): Array<Department> {
+        puts(`\n-> Displaying All Departments in ${University.college} : \n`);
         return this.departments;
     }
-    protected greet(): void{
+    protected greet(): void | undefined{
         puts(`\t ============================== \n`);
         puts(`\n Welcome to ${University.college} !\n`);
+        return;
     }
 }
+// End of Class <University>
+// Real Life Execution :
 
 var Manish: Student = {
     sname : "Manish",
@@ -133,7 +140,7 @@ var BCA: Department = {
 };
 var BCom: Department = {
     name: "Bachelor of Commerce",
-    identity : "BCOM-AU-0880",
+    identity : "B.COM-AU-0880",
     sections: "B.Com",
     totalStudents: 60,
 };
@@ -151,10 +158,20 @@ var Arti: Teacher = {
     salary: 90000,
     sections: ["2nd Year - BCA", "3rd Year - BCA"],
 };
-// Real Life Execution :
+var Del: Student = {
+    sname : "DeleteMe",
+    sid: 11,
+    section : "XYZ",
+    branch: " XYZ",
+    isRegular: false,
+}
+
 const Apex = new University("Apex University");
 Apex.addStudent(Manish);
 Apex.addStudent(Mahak);
+
+Apex.addStudent(Del);
+puts(Apex.deleteStudent(11));
 
 Apex.addDepartment(BCA);
 Apex.addDepartment(BCom);
@@ -162,7 +179,13 @@ Apex.addDepartment(BCom);
 Apex.addTeacher(Jiya);
 Apex.addTeacher(Arti);
 
-puts(Apex.countStudents());
-puts(Apex.countDepartments());
+// puts(Apex.countStudents());
+// puts(Apex.countDepartments());
 
+// puts(Apex.displayStudents());
+// puts(Apex.displayTeachers());
+// puts(Apex.displayDepartments());
+
+puts(`=========================`);
+puts(`\n\t :: The End :: \n\t`);
 /* The End */
