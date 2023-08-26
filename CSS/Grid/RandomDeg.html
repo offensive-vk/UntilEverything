@@ -28,14 +28,6 @@
             justify-items: center;
             background-color: #000;
         }
-        @keyframes run {
-            from{
-                background-position: 0% center;
-            }
-            to{
-                background-position: -200% center;
-            }
-        }
         .grid-item {
             height: 160px;
             width: 450px;
@@ -47,15 +39,13 @@
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
             border-radius: 6px;
             transition: all 0.3s ease-in-out;
-            /*animation: run 3s linear infinite; */
         }
         .grid-item:not(:hover){
-            filter: blur(0);
+            filter: none;
         }
         .grid-item:hover{
             scale: 0.8;
-            box-shadow: 0 -3rem -6rem cyan;
-            
+            filter: none;
         } 
     </style>
 </head>
