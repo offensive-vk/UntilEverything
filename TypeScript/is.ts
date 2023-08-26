@@ -12,3 +12,16 @@ function printLength(value: string | number) {
 
 printLength("hello"); // Output: 5
 printLength(42); // Output: Not a string
+
+function isStringv2(value: unknown): value is string {
+    return typeof value === "string";
+}
+
+function example(x: unknown) {
+    if (isStringv2(x)) {
+        // We can now call any 'string' method on 'x'.
+        x.toUpperCase();
+    } else {
+        console.log(x);
+    }
+}
