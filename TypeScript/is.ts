@@ -21,7 +21,10 @@ function example(x: unknown) {
     if (isStringv2(x)) {
         // We can now call any 'string' method on 'x'.
         x.toUpperCase();
+        console.log(x);
     } else {
         console.log(x);
     }
 }
+example("Crazy");
+example(3.4);
