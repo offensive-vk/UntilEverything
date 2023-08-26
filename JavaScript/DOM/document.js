@@ -15,3 +15,13 @@ console.log('Style sheets in the document:', document.styleSheets);
 console.log('Default view (window):', document.defaultView);
 console.log('Document ready state:', document.readyState);
 console.log('Root element language:', document.documentElement.lang);
+
+console.log("Previous Sibling of <head>:", document.body.previousSibling);
+console.log("Next Sibling of <head>:", document.body.nextSibling);
+console.log("Children of <head>:", document.body.children);
+
+console.log("Parent Node of <head>:", document.head.parentNode);
+console.log("First Element Child of <head>:", document.head.firstElementChild);
+console.log("Last Element Child of <head>:", document.head.lastElementChild);
+console.log("Previous Element Sibling of <head>:", document.head.previousElementSibling);
+console.log("Next Element Sibling of <head>:", document.head.nextElementSibling);
