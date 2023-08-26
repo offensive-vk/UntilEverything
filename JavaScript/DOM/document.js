@@ -2,6 +2,8 @@ console.log('Root element:', document.documentElement);
 console.log('All elements:', document.all);
 console.log('Counts the elements:', document.childElementCount);
 console.log('Design Mode :', document.designMode);
+console.log('Returns true if the fullscreen is enabled: ',document.fullscreenEnabled);
+console.log('Whether the element is hidden : ', document.hidden);
 
 console.log('Body element:', document.body);
 console.log('Head element:', document.head);
