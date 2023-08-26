@@ -39,6 +39,7 @@ class University{
 
     constructor(college: string){
         University.college = college;
+        this.greet();
         this.students = [];
         this.teachers = [];
         this.branch = [];
@@ -135,8 +136,8 @@ var Jiya: Teacher = {
     sections: ["2nd Year", "BCA-A & B", "Ist Year - BCA"],
 };
 var Arti: Teacher = {
-    name: "Jiya Ma'am",
-    uid: 9001,
+    name: "Arti Ma'am",
+    uid: 9002,
     subjects: "English",
     salary: 90000,
     sections: ["2nd Year - BCA", "3rd Year - BCA"],
