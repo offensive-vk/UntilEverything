@@ -1,0 +1,52 @@
+// Inheritance and Extends in Sass
+// Base styles
+%base-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+%blue-button {
+    @extend %base-button;
+    background-color: blue;
+    color: white;
+}
+
+%red-button {
+    @extend %base-button;
+    background-color: red;
+    color: white;
+}
+
+%green-button {
+    @extend %base-button;
+    background-color: green;
+    color: white;
+}
+
+// Applying extends
+.blue {
+    @extend %blue-button;
+}
+
+.red {
+    @extend %red-button;
+}
+
+.green {
+    @extend %green-button;
+}
+
+// Complex inheritance
+.container {
+    border: 1px solid #ccc;
+    padding: 20px;
+
+    .inner {
+        @extend %base-button;
+        background-color: gray;
+        color: black;
+    }
+}
