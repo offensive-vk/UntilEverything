@@ -1,5 +1,6 @@
 // Inheritance and Extends in Sass
-// Base styles
+// Base styles , will act like base class for everyone who extends this.
+
 %base-button {
     display: inline-block;
     padding: 10px 20px;
