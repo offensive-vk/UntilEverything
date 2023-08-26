@@ -1,4 +1,8 @@
 console.log('Root element:', document.documentElement);
+console.log('All elements:', document.all);
+console.log('Counts the elements:', document.childElementCount);
+console.log('Design Mode :', document.designMode);
+
 console.log('Body element:', document.body);
 console.log('Head element:', document.head);
 console.log('Document title:', document.title);
