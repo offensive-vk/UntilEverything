@@ -47,22 +47,25 @@ class University{
         this.totalDepts = [];
         this.departments = [];
     }
-    addStudent(student: Student){
+    addStudent(student: Student): void{
         this.students.push(student);
         puts(`-> ${student.sname} <${student.sid}> added to University.\n`);
     }
-    addDepartment(dept: Department){
+    addDepartment(dept: Department): void{
         this.departments.push(dept);
         puts(`-> ${dept.name} <${dept.identity}> added to University.\n`);
     }
-    addTeacher(teacher: Teacher){
+    addTeacher(teacher: Teacher): void{
         this.teachers.push(teacher);
         puts(`-> ${teacher.name} <${teacher.uid}> added to University.\n`);
     }
     countStudents(): string | Student[]{
         return `Total Number of Students in University : ${this.students.length}\n`;
     }
-    countDepartments(): string | Student[]{
+    countTeachers(): string | Teacher[]{
+        return `Total Number of Teachers in University : ${this.teachers.length}\n`;
+    }
+    countDepartments(): string | Department[]{
         return `Total Number of Departments in University : ${this.departments.length}\n`;
     }
     deleteStudent(Id: number): string {
@@ -93,8 +96,14 @@ class University{
             return (`Teacher with UID ${Id} not found.\n`);
         }
     }
-    displayStudents(): Student[] {
+    displayStudents(): Array<Student> {
         return this.students;
+    }
+    displayTeachers(): Array<Teacher> {
+        return this.teachers;
+    }
+    displayDepartments(): Array<Department> {
+        return this.departments;
     }
     protected greet(): void{
         puts(`\t ============================== \n`);
