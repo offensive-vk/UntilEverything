@@ -30,6 +30,11 @@ interface Teacher{
     salary: number;
     sections: Array<string>;
 }
+interface HOD extends Teacher{
+    post: Array<String>,
+    isTeacher: boolean | null,
+    isHOD: boolean | null,
+}
 class University{
     public static college: string = " University";
     public students: Array<Student>;
@@ -38,7 +43,7 @@ class University{
     public departments: Array<Department>;
     public totalStudents: Array<number> | number;
     public totalDepts: Array<number> | number;
-    private HOD: Object;
+    private HeadOfDept?: HOD | null;
 
     constructor(college: string){
         University.college = college;
@@ -49,7 +54,7 @@ class University{
         this.totalStudents = [];
         this.totalDepts = [];
         this.departments = [];
-        this.HOD = {};
+        this.HeadOfDept = null;
     }
     addStudent(student: Student): void{
         this.students.push(student);
@@ -117,9 +122,9 @@ class University{
         puts(`\n Welcome to ${University.college} !\n`);
         return;
     }
-    public addHOD(Head: Object): void {
-        this.HOD = Head;
-        puts(`\t -> Assigned Head of Department : ${this.HOD}\n`);
+    public addHOD(Head: HOD): void {
+        this.HeadOfDept = Head;
+        puts(`\n-> Assigned New Head of Department : ${Head.name}\n`);
     }
 }
 // End of Class <University>
@@ -184,10 +189,11 @@ const Arti: Teacher = {
     sections: ["2nd Year - BCA", "3rd Year - BCA"],
 };
 // Head of Department
-const HOD: Object = {
+const Head: HOD = {
     name: "Dr. Keshav Dev Gupta",
-    post: "HOD | Senior Assistant Professor",
-    subject: ["PHP", "Java", "C/C++", "SQL"],
+    post: ["HOD | Senior Assistant Professor"],
+    subjects: ["PHP", "Java", "C/C++", "SQL"],
+    sections: ["BCA", "MCA", "PGDCA", "B. Tech"],
     salary: 100000,
     uid: null,
     isTeacher: true,
@@ -207,7 +213,7 @@ Apex.addDepartment(BCom);
 Apex.addTeacher(Jiya);
 Apex.addTeacher(Arti);
 
-Apex.addHOD(HOD);
+Apex.addHOD(Head);
 
 // puts(Apex.countStudents());
 // puts(Apex.countDepartments());
