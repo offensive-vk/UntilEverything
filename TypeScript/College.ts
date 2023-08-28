@@ -15,6 +15,7 @@ interface Student{
     section: string | unknown;
     branch: string | boolean;
     isRegular: boolean;
+    isHead?: boolean;
 }
 interface Department{
     name: string;
@@ -124,13 +125,21 @@ var Manish: Student = {
     section : "BCA Full Stack",
     branch: "Computer Science",
     isRegular: true,
+    isHead: true,
 };
 var Mahak: Student = {
     sname : "Mahak",
     sid: 10002,
     section : "BCA Full Stack",
-    branch: "Computer Science",
+    branch: "Computer Application",
     isRegular: true,
+};
+const Sourabh: Student = {
+    sname : "Sourabh",
+    sid: 10003,
+    section : "BCA Data Science",
+    branch: "Computer Science",
+    isRegular: false,
 };
 var BCA: Department = {
     name: "Bachelor of Computer Application",
