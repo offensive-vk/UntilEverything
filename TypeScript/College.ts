@@ -183,6 +183,7 @@ const Arti: Teacher = {
     salary: 90000,
     sections: ["2nd Year - BCA", "3rd Year - BCA"],
 };
+// Head of Department
 const HOD: Object = {
     name: "Dr. Keshav Dev Gupta",
     post: "HOD | Senior Assistant Professor",
@@ -192,6 +193,7 @@ const HOD: Object = {
     isTeacher: true,
     isHOD: true,
 };
+
 const Apex = new University("Apex University");
 Apex.addStudent(Manish);
 Apex.addStudent(Mahak);
@@ -206,6 +208,7 @@ Apex.addTeacher(Jiya);
 Apex.addTeacher(Arti);
 
 Apex.addHOD(HOD);
+
 // puts(Apex.countStudents());
 // puts(Apex.countDepartments());
 
