@@ -38,6 +38,7 @@ class University{
     public departments: Array<Department>;
     public totalStudents: Array<number> | number;
     public totalDepts: Array<number> | number;
+    private HOD: Object;
 
     constructor(college: string){
         University.college = college;
@@ -48,6 +49,7 @@ class University{
         this.totalStudents = [];
         this.totalDepts = [];
         this.departments = [];
+        this.HOD = {};
     }
     addStudent(student: Student): void{
         this.students.push(student);
@@ -115,6 +117,10 @@ class University{
         puts(`\n Welcome to ${University.college} !\n`);
         return;
     }
+    public addHOD(Head: Object): void {
+        this.HOD = Head;
+        puts(`\t -> Assigned Head of Department : ${this.HOD}\n`);
+    }
 }
 // End of Class <University>
 // Real Life Execution :
@@ -177,7 +183,15 @@ const Arti: Teacher = {
     salary: 90000,
     sections: ["2nd Year - BCA", "3rd Year - BCA"],
 };
-
+const HOD: Object = {
+    name: "Dr. Keshav Dev Gupta",
+    post: "HOD | Senior Assistant Professor",
+    subject: ["PHP", "Java", "C/C++", "SQL"],
+    salary: 100000,
+    uid: null,
+    isTeacher: true,
+    isHOD: true,
+};
 const Apex = new University("Apex University");
 Apex.addStudent(Manish);
 Apex.addStudent(Mahak);
@@ -191,6 +205,7 @@ Apex.addDepartment(BCom);
 Apex.addTeacher(Jiya);
 Apex.addTeacher(Arti);
 
+Apex.addHOD(HOD);
 // puts(Apex.countStudents());
 // puts(Apex.countDepartments());
 
