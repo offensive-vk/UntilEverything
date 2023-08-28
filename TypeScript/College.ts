@@ -119,7 +119,8 @@ class University{
 // End of Class <University>
 // Real Life Execution :
 
-var Manish: Student = {
+    /* Students */
+const Manish: Student = {
     sname : "Manish",
     sid: 10001,
     section : "BCA Full Stack",
@@ -127,7 +128,7 @@ var Manish: Student = {
     isRegular: true,
     isHead: true,
 };
-var Mahak: Student = {
+const Mahak: Student = {
     sname : "Mahak",
     sid: 10002,
     section : "BCA Full Stack",
@@ -141,6 +142,7 @@ const Sourabh: Student = {
     branch: "Computer Science",
     isRegular: false,
 };
+    /* Departments */
 var BCA: Department = {
     name: "Bachelor of Computer Application",
     identity : "BCA-AU-0990",
@@ -153,6 +155,7 @@ var BCom: Department = {
     sections: "B.Com",
     totalStudents: 60,
 };
+    /* Teachers */
 var Jiya: Teacher = {
     name: "Jiya Ma'am",
     uid: 9001,
