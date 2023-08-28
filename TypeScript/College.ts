@@ -142,34 +142,6 @@ const Sourabh: Student = {
     branch: "Computer Science",
     isRegular: false,
 };
-    /* Departments */
-var BCA: Department = {
-    name: "Bachelor of Computer Application",
-    identity : "BCA-AU-0990",
-    sections: ["Full Stack", "Data Science", "Cyber Security", "Android"],
-    totalStudents: 100,
-};
-var BCom: Department = {
-    name: "Bachelor of Commerce",
-    identity : "B.COM-AU-0880",
-    sections: "B.Com",
-    totalStudents: 60,
-};
-    /* Teachers */
-var Jiya: Teacher = {
-    name: "Jiya Ma'am",
-    uid: 9001,
-    subjects: ["DSA","CA", "OS"],
-    salary: 77000,
-    sections: ["2nd Year", "BCA-A & B", "Ist Year - BCA"],
-};
-var Arti: Teacher = {
-    name: "Arti Ma'am",
-    uid: 9002,
-    subjects: "English",
-    salary: 90000,
-    sections: ["2nd Year - BCA", "3rd Year - BCA"],
-};
 var Del: Student = {
     sname : "DeleteMe",
     sid: 11,
@@ -177,6 +149,34 @@ var Del: Student = {
     branch: " XYZ",
     isRegular: false,
 }
+    /* Departments */
+const BCA: Department = {
+    name: "Bachelor of Computer Application",
+    identity : "BCA-AU-0990",
+    sections: ["Full Stack", "Data Science", "Cyber Security", "Android"],
+    totalStudents: 100,
+};
+const BCom: Department = {
+    name: "Bachelor of Commerce",
+    identity : "B.COM-AU-0880",
+    sections: "B.Com",
+    totalStudents: 60,
+};
+    /* Teachers */
+const Jiya: Teacher = {
+    name: "Jiya Ma'am",
+    uid: 9001,
+    subjects: ["DSA","CA", "OS"],
+    salary: 77000,
+    sections: ["2nd Year", "BCA-A & B", "Ist Year - BCA"],
+};
+const Arti: Teacher = {
+    name: "Arti Ma'am",
+    uid: 9002,
+    subjects: "English",
+    salary: 90000,
+    sections: ["2nd Year - BCA", "3rd Year - BCA"],
+};
 
 const Apex = new University("Apex University");
 Apex.addStudent(Manish);
