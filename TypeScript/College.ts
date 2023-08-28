@@ -124,7 +124,7 @@ class University{
     }
     public addHOD(Head: HOD): void {
         this.HeadOfDept = Head;
-        puts(`\n-> Assigned New Head of Department : ${Head.name}\n`);
+        puts(`\n-> Assigned New Head of Department : ${Head.name} <${Head.uid}> \n`);
     }
 }
 // End of Class <University>
@@ -195,7 +195,7 @@ const Head: HOD = {
     subjects: ["PHP", "Java", "C/C++", "SQL"],
     sections: ["BCA", "MCA", "PGDCA", "B. Tech"],
     salary: 100000,
-    uid: null,
+    uid: 1,
     isTeacher: true,
     isHOD: true,
 };
