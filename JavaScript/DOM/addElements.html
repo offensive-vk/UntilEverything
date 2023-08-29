@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Elements Example</title>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Dynamic Elements Example</h2>
+    </div>
+
+    <script>
+        // Get the container element
+        const container = document.getElementById("container");
+
+        // Create a new paragraph element
+        const paragraph = document.createElement("p");
+        paragraph.textContent = "This is a dynamically added paragraph.";
+
+        // Append the paragraph to the container
+        container.appendChild(paragraph);
+
+        // Create a new heading element
+        const heading = document.createElement("h3");
+        heading.textContent = "New Heading";
+
+        // Prepend the heading to the container
+        container.prepend(heading);
+
+        // Create another paragraph element
+        const anotherParagraph = document.createElement("p");
+        anotherParagraph.textContent =
+            "This paragraph will be inserted before the first paragraph.";
+
+        // Insert the paragraph before the first paragraph
+        container.insertBefore(anotherParagraph, paragraph);
+
+        // Use insertAdjacentHTML to add an element after the first paragraph
+        const newElementHTML =
+            "<p>This element is added using insertAdjacentHTML.</p>";
+        paragraph.insertAdjacentHTML("afterend", newElementHTML);
+    </script>
+</body>
+</html>
