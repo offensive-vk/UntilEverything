@@ -1,4 +1,6 @@
-// 
+/* 
+Promise.all() is a high-level method in JavaScript for managing multiple asynchronous operations concurrently. It takes an iterable (usually an array) of promises as input and returns a new promise that fulfills when all the promises in the input iterable are fulfilled. If any of the input promises are rejected, the returned promise is immediately rejected with the reason of the first rejected promise.
+*/
 
 let promise1 = new Promise((resolve) => setTimeout(resolve, 1000, 'Resolves after 1s'));
 let promise2 = new Promise((resolve) => setTimeout(resolve, 2000, 'Resolves after 2s'));
@@ -11,7 +13,11 @@ Promise.all(promises)
     .catch(err => console.log(`Oops ! Error Occurred : ${err} `))
     .finally(() => console.log(`All Promises Fulfilled \n`));
 
-// Promise.allSettled() 
+/* 
+Promise.allSettled()
+It's designed to handle a collection of promises, providing a way to determine the outcome of all promises regardless of whether they fulfill or reject. It takes an iterable (usually an array) of promises as input and returns a new promise that fulfills with an array of objects representing the outcomes of the input promises. Each object in the array contains a status property indicating whether the promise was fulfilled or rejected, and a value or reason property containing the fulfillment value or rejection reason, respectively.
+
+*/
 let promise4 = new Promise((resolve) => setTimeout(resolve, 1000, 'Resolves after 1s'));
 let promise5 = new Promise((resolve) => setTimeout(resolve, 2000, 'Resolves after 2s'));
 let promise6 = new Promise((resolve, reject) => setTimeout(reject, 0, 'Rejects immediately'));
