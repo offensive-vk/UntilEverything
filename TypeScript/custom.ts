@@ -8,6 +8,7 @@ for(let i = 0; i <= 10; i++){
 
 console.table(x);
 
+// We can also create custom datatypes in here.
 type Human = {
         species: string
         cast: string
