@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@types/promise": "^7.1.30"
+  }
+}
