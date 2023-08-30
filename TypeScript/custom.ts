@@ -7,3 +7,18 @@ for(let i = 0; i <= 10; i++){
 }
 
 console.table(x);
+
+type Human = {
+        species: string
+        cast: string
+        label: string
+        planet: string | null
+}
+interface Women{
+        type: Women,
+        maxage: 100,
+        class: Human,
+        maxlife: string | symbol,
+        rest: null,
+        others: undefined | never | unknown | null
+}
