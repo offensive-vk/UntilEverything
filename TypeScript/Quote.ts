@@ -100,3 +100,38 @@ console.log(...myLife);
 
 // myLifeLoop();
 
+// Last
+// interface Life {
+//     code: () => Promise<string>;
+//     rest: () => Promise<string>;
+//     learn: () => Promise<string>;
+// }
+
+// interface Wasted {
+//     wasted: () => Promise<string>;
+//     again: Array<Life>;
+// }
+
+// const vedansh: Life = {
+//     async code() {
+//         return "->< Writing code />";
+//     },
+//     async rest() {
+//         return "->< Resting />";
+//     },
+//     async learn() {
+//         return "->< Learning />";
+//     }
+// };
+
+// const myLife: Array<Promise<string>> = [vedansh.code(), vedansh.rest(), vedansh.learn()];
+
+// Promise.all(myLife)
+//     .then(results => {
+//         console.log(...results);
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     });
+
+// End
