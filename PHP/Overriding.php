@@ -32,7 +32,7 @@ class Square extends Shape {
 $circle = new Circle(5);
 $square = new Square(4);
 
-echo "Circle Area: " . $circle->area() . "\n"; // Outputs: Circle Area: 78.539816339745
-echo "Square Area: " . $square->area() . "\n"; // Outputs: Square Area: 16
+echo "Circle Area: " . $circle->area() . "\n";
+echo "Square Area: " . $square->area() . "\n";
 
 ?>
