@@ -1,13 +1,13 @@
 <?php 
 interface Teacher{
-    public function name();
+    public function getName();
     public function teach();
 }
 
 class Manish implements Teacher{
 
     public function __construct(public string $name, public int $id){}
-    public function name(): string{
+    public function getName(): string{
         return $this->name;
     }
     public function teach(): void{
@@ -15,15 +15,18 @@ class Manish implements Teacher{
     }
 }
 class AnotherTeacher extends Manish implements Teacher{
-    public function __construct($name, $id, public $isExpert){
+    public $isExpert = false;
+    public function __construct($name, $id, $isExpert){
         parent::__construct($name, $id);
         $this->isExpert = true;
     }
+    
 }
 $teacher = new Manish("Manish", 9001);
-echo $teacher->name();
+echo $teacher->getName();
 $teacher->teach();
 
-
+$another = new AnotherTeacher("Suresh",45661 ,false);
+$another
 ?>
 
