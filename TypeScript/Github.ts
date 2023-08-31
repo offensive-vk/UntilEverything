@@ -35,5 +35,4 @@ const myLifeLoop = async () => {
         }
     }
 };
-
 myLifeLoop();
