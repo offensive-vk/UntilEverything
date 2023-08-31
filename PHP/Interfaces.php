@@ -15,11 +15,15 @@ class Manish implements Teacher{
     }
 }
 class AnotherTeacher extends Manish implements Teacher{
-    
+    public function __construct($name, $id, public $isExpert){
+        parent::__construct($name, $id);
+        $this->isExpert = true;
+    }
 }
 $teacher = new Manish("Manish", 9001);
 echo $teacher->name();
 $teacher->teach();
+
 
 ?>
 
