@@ -11,7 +11,7 @@ class Manish implements Teacher{
         return $this->name;
     }
     public function teach(): void{
-        echo $this->name, "is Teaching ...";
+        echo "\n -> ",$this->name, " is Teaching ...\n";
     }
 }
 class AnotherTeacher extends Manish implements Teacher{
@@ -23,7 +23,7 @@ class AnotherTeacher extends Manish implements Teacher{
         $this->salary += 0;
     }
     public function getSalary(): void{
-        echo "Your Salary: ", $this->salary + (30*8000-5000);
+        echo "\n ->Your Salary: ", $this->salary + (30*8000-5000);
     }
 }
 // Parent Class
@@ -31,6 +31,7 @@ $teacher = new Manish("Manish", 9001);
 echo $teacher->getName();
 $teacher->teach();
 
+echo "\n";
 // Child Class:
 $another = new AnotherTeacher("Suresh",45661 ,false);
 $another->teach();
