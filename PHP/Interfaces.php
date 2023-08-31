@@ -21,7 +21,6 @@ class AnotherTeacher extends Manish implements Teacher{
         parent::__construct($name, $id);
         $this->isExpert = $Expert;
         $this->salary += 0;
-        echo "Values Taken from Parent Constructor" ;
     }
     public function getSalary(): void{
         echo "Your Salary: ", $this->salary + (30*8000-5000);
