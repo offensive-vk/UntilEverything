@@ -11,7 +11,7 @@ class Manish implements Teacher{
         return $this->name;
     }
     public function teach(): void{
-        echo $this->name,` is Teaching ...`;
+        echo $this->name, "is Teaching ...";
     }
 }
 class AnotherTeacher extends Manish implements Teacher{
