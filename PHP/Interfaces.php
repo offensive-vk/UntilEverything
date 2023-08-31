@@ -14,8 +14,12 @@ class Manish implements Teacher{
         echo $this->name,` is Teaching ...`;
     }
 }
+class AnotherTeacher extends Manish implements Teacher{
+    
+}
 $teacher = new Manish("Manish", 9001);
 echo $teacher->name();
+$teacher->teach();
 
 ?>
 
