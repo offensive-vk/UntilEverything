@@ -21,7 +21,7 @@ const vedansh: Life = {
     }
 };
 
-const myLife: Array<Promise<Array<Life> | Array<Wasted>>> = [vedansh.code(), vedansh.rest(), vedansh.code()];
+const myLife: Array<Promise<Array<Life> | Array<Wasted>>> = [vedansh.code(), vedansh.rest(), vedansh.learn()];
 console.log(...myLife);
 
 // Another - 2
