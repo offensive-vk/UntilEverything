@@ -1,5 +1,8 @@
 <?php 
-echo "Processing...";
+// Php is Faster than Python lol.
+
+$i = 0;
+echo "Processing...\n";
 while ($i < 1000000000){
     $i++;
 }
