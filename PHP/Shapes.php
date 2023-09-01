@@ -1,10 +1,8 @@
 <?php 
-// Defining an interface
 interface Shape {
     public function calculateArea();
 }
 
-// Defining an abstract class that implements the Shape interface
 abstract class AbstractShape implements Shape {
     protected $name;
     
@@ -20,7 +18,6 @@ abstract class AbstractShape implements Shape {
     }
 }
 
-// Concrete classes that extend the abstract class
 class Circle extends AbstractShape {
     private $radius;
     public function __construct($radius) {
@@ -46,9 +43,8 @@ class Square extends AbstractShape {
     }
 }
 
-// Using the classes
-$circle = new Circle(5);
-$square = new Square(4);
+$circle = new Circle(5103);
+$square = new Square(4393);
 
 $circle->display();
 $square->display();
