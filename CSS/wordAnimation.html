@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Highlight Animation</title>
+    <style>
+        /* CSS for the word highlight animation */
+        .animated-word {
+            animation: colorChange 0.5s ease;
+            display: inline-block;
+            margin-right: 5.9px;
+            font-size: 4rem;
+            letter-spacing: 2px;
+            font-family: Arial Nova Light;
+            
+        }
+
+        /* Keyframes for the word color change animation */
+        @keyframes colorChange {
+            0% {
+                color: black; /* Initial color */
+            }
+            100% {
+                transform: translateY(-20px);
+                color: red; /* Color after animation */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="typewriter-paragraph">
+        <!-- The JavaScript will add content -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const paragraphElement = document.getElementById('typewriter-paragraph');
+            const text = `Coding has become an essential skill in today's world. With the increasing use of technology, software engineers and developers are in high demand. They create applications and programs that make our lives easier, more efficient, and more productive. However, with great power comes great responsibility. As we rely more on technology, we must also take steps to ensure that our information is secure. Cybersecurity is the practice of protecting computers, servers, mobile devices, electronic systems, networks, and data from digital attacks, theft, or damage. Without proper cybersecurity measures, sensitive information such as personal data, financial information, and business secrets can be compromised. Coding and cybersecurity go hand in hand. A skilled programmer can create secure and reliable systems that protect against digital threats. As a result, companies and organizations are always on the lookout for individuals with expertise in coding and cybersecurity.`;
+            // Split the text into words
+            const words = text.split(' ');
+
+            // Function to apply the word highlight animation
+            async function applyWordAnimation() {
+                for (let i = 0; i < words.length; i++) {
+                    const word = words[i];
+                    const spanElement = document.createElement('span');
+                    spanElement.className = 'animated-word';
+                    spanElement.textContent = word + ' ';
+                    paragraphElement.appendChild(spanElement);
+                    await new Promise(resolve => setTimeout(resolve, 100)); // Delay between words
+                }
+            }
+            applyWordAnimation();
+        });
+    </script>
+</body>
+</html>
