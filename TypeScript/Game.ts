@@ -1,4 +1,4 @@
-const puts = console.log;
+var puts = console.log;
 class Game{
     public StartGame(): void{
         
@@ -25,12 +25,18 @@ class Player{
         Player.weapon = null;
     }
     public getPlayer(): void{
-        
+
         puts(`Player Name: ${Player.username}`);
         puts(`Player Health: ${Player.health}`);
         puts(`Player Weapon: ${Player.weapon}`);
 
     } 
+    public Attack(): void{
+
+    }
+    public StopAttack(): void{
+        
+    }
 }
 
 class Weapon{
