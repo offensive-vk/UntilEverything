@@ -1,5 +1,5 @@
 var puts = console.log;
-interface Server{
+interface _Server{
     country: string;
     continent: string;
     address: Array<string> | string;
@@ -9,6 +9,35 @@ interface Server{
     reset(): void;
     restart(): void;
     shutdown(): void;
+}
+class Server implements _Server{
+    country: string;
+    continent: string;
+    address: Array<string> | string;
+    totalPlayers?: Array<Player> | number;
+    range: Array<string>;
+    Server(c: string, cn: string , add: Array<string> | string, tp?: Array<Player> | number, r: Array<string>){
+        this.country = c;
+        this.continent = cn;
+        this.address = add;
+        this.totalPlayers = tp;
+        this.range = r;
+    }
+    public getServerDetails(): void{
+        puts(`\n===============================\n`);
+        puts(`\n:: Showing Server Details ::\n `);
+        puts(`Server Country : ${this.country}`);
+        puts(`Server Continent : ${this.continent}`);
+        puts(`Server Addresses : ${this.address}`);
+        puts(`Total Players Online : ${this.totalPlayers}`);
+        puts(`\n===============================\n`);
+
+    } 
+    isOnline(): boolean | null{}
+    wake(): void{}
+    reset(): void{}
+    restart(): void{}
+    shutdown(): void{}
 }
 class Game{
     public Players: Array<Player> | null = [];
@@ -37,7 +66,7 @@ class Game{
 class Player{
     public static username: string;
     public static health: number;
-    public static weapon: number | null;
+    public static weapon: Weapon | null;
 
     Player(username: string){
         Player.username = username;
@@ -92,4 +121,11 @@ class Weapon{
         }
         puts(`\n===============================\n`);
     }
+}
+
+async function main(): Promise<void> {
+    const P = new Player();
+    const G = new Game();
+    const W = new Weapon();
+
 }
