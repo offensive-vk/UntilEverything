@@ -42,19 +42,26 @@ class Player{
 class Weapon{
     public WeaponName: string;
     public Damage: number;
-    public Recoil: number;
+    public Recoil?: number;
     public isAuto: boolean | undefined;
     public isSniper: boolean | undefined;
 
-    Weapon(_name: string, damage: number , isAuto: boolean , isSniper: boolean){
+    Weapon(_name: string, damage: number , recoil: number , isAuto: boolean , isSniper: boolean){
         this.WeaponName = _name;
         this.Damage = damage;
         this.isAuto = isAuto;
         this.isSniper = isSniper;
-        showWeapon();
-        
+        this.Recoil = recoil;
     }
     public showWeapon(): void {
-            
+        puts(`Weapon Name: ${this.WeaponName}`);
+        puts(`Weapon Damage: ${this.Damage}`);
+        puts(`Weapon Recoil: ${this.Recoil}`);
+        if(this.isAuto == true && this.isSniper == false){
+            puts(`Weapon Type: Assault Rifle `);
+        }
+        else{
+            puts(`Weapon Type: Sniper Rifle .`);
+        }
     }
 }
