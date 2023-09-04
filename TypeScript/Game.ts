@@ -33,7 +33,9 @@ class Server implements _Server{
         puts(`\n===============================\n`);
 
     } 
-    isOnline(): boolean | null{}
+    isOnline(): boolean | null{
+        return true;
+    }
     wake(): void{}
     reset(): void{}
     restart(): void{}
