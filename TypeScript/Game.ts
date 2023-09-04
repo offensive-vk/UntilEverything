@@ -1,5 +1,17 @@
+const puts = console.log;
 class Game{
-
+    public StartGame(): void{
+        
+    }
+    public LoadGame(): void{
+        
+    }
+    public SaveGame(): void{
+        
+    }    
+    public ExitGame(): void{
+        
+    }
 }
 
 class Player{
@@ -12,6 +24,13 @@ class Player{
         Player.health = 100;
         Player.weapon = null;
     }
+    public getPlayer(): void{
+        
+        puts(`Player Name: ${Player.username}`);
+        puts(`Player Health: ${Player.health}`);
+        puts(`Player Weapon: ${Player.weapon}`);
+
+    } 
 }
 
 class Weapon{
