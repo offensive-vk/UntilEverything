@@ -4,6 +4,7 @@ interface Server{
     continent: string;
     address: Array<string> | string;
     totalPlayers?: Array<Player> | number;
+    isOnline(): boolean | null;
     wake(): void;
     reset(): void;
     restart(): void;
