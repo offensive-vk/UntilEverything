@@ -2,6 +2,8 @@ var puts = console.log;
 interface Server{
     country: string;
     continent: string;
+    address: Array<string> | string;
+    totalPlayers?: Array<Player> | number;
     wake(): void;
     reset(): void;
     restart(): void;
@@ -81,8 +83,11 @@ class Weapon{
         if(this.isAuto == true && this.isSniper == false){
             puts(`Weapon Type: Assault Rifle `);
         }
-        else{
+        else if(this.isAuto == false && this.isSniper == true){
             puts(`Weapon Type: Sniper Rifle .`);
+        }
+        else{
+            puts(`Weapon Type: Unknown `);
         }
         puts(`\n===============================\n`);
     }
