@@ -1,5 +1,12 @@
 var puts = console.log;
+interface Server{
+
+}
 class Game{
+    public Players: Array<Player>;
+    public Weapons: Array<Weapon>;
+    public Servers: Array<Server>;
+    
     public StartGame(): void{
         
     }
@@ -25,10 +32,12 @@ class Player{
         Player.weapon = null;
     }
     public getPlayer(): void{
-
+        puts(`\n===============================\n`);
+        puts(`\n:: Showing Player Details ::\n `);
         puts(`Player Name: ${Player.username}`);
         puts(`Player Health: ${Player.health}`);
         puts(`Player Weapon: ${Player.weapon}`);
+        puts(`\n===============================\n`);
 
     } 
     public Attack(): void{
@@ -46,7 +55,7 @@ class Weapon{
     public isAuto: boolean | undefined;
     public isSniper: boolean | undefined;
 
-    Weapon(_name: string, damage: number , recoil: number , isAuto: boolean , isSniper: boolean){
+    Weapon(_name: string, damage: number , recoil?: number , isAuto: boolean , isSniper: boolean){
         this.WeaponName = _name;
         this.Damage = damage;
         this.isAuto = isAuto;
@@ -54,6 +63,8 @@ class Weapon{
         this.Recoil = recoil;
     }
     public showWeapon(): void {
+        puts(`\n===============================\n`);
+        puts("\n :: Showing Weapon Details ::\n");
         puts(`Weapon Name: ${this.WeaponName}`);
         puts(`Weapon Damage: ${this.Damage}`);
         puts(`Weapon Recoil: ${this.Recoil}`);
@@ -63,5 +74,6 @@ class Weapon{
         else{
             puts(`Weapon Type: Sniper Rifle .`);
         }
+        puts(`\n===============================\n`);
     }
 }
