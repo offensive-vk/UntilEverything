@@ -40,8 +40,11 @@ class Player{
 }
 
 class Weapon{
+    public WeaponName: string;
+    public Damage: number;
+    public Recoil: number;
+    public isAuto: boolean | undefined;
+    public isSniper: boolean | undefined;
+
     
-    public PrimaryWeapon(): void{
-        
-    }
 }
