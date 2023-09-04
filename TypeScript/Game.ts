@@ -46,5 +46,15 @@ class Weapon{
     public isAuto: boolean | undefined;
     public isSniper: boolean | undefined;
 
-    
+    Weapon(_name: string, damage: number , isAuto: boolean , isSniper: boolean){
+        this.WeaponName = _name;
+        this.Damage = damage;
+        this.isAuto = isAuto;
+        this.isSniper = isSniper;
+        showWeapon();
+        
+    }
+    public showWeapon(): void {
+            
+    }
 }
