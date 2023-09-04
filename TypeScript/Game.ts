@@ -40,5 +40,8 @@ class Player{
 }
 
 class Weapon{
-
+    
+    public PrimaryWeapon(): void{
+        
+    }
 }
