@@ -1,11 +1,16 @@
 var puts = console.log;
 interface Server{
-
+    country: string;
+    continent: string;
+    wake(): void;
+    reset(): void;
+    restart(): void;
+    shutdown(): void;
 }
 class Game{
-    public Players: Array<Player> | null;
-    public Weapons: Array<Weapon> | null;
-    public Servers: Array<Server> | null;
+    public Players: Array<Player> | null = [];
+    public Weapons: Array<Weapon> | null = [];
+    public Servers: Array<Server> | null = [];
 
     Game(){
         this.Players = [];
