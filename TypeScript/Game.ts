@@ -3,10 +3,15 @@ interface Server{
 
 }
 class Game{
-    public Players: Array<Player>;
-    public Weapons: Array<Weapon>;
-    public Servers: Array<Server>;
-    
+    public Players: Array<Player> | null;
+    public Weapons: Array<Weapon> | null;
+    public Servers: Array<Server> | null;
+
+    Game(){
+        this.Players = [];
+        this.Weapons = [];
+        this.Servers = [];
+    }
     public StartGame(): void{
         
     }
