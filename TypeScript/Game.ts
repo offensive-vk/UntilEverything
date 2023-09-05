@@ -84,6 +84,9 @@ class Player{
         puts(`\n===============================\n`);
 
     } 
+    public getReady(): void{
+        puts(`${Player.username} is ready .`);
+    }
     public Attack(): void{
 
     }
