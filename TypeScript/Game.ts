@@ -13,10 +13,10 @@ interface _Server{
 class Server implements _Server{
     country: string;
     continent: string;
-    address: Array<string> | string;
+    address: Array<string> | string = [];
     totalPlayers?: Array<Player> | number;
-    range: Array<string>;
-    Server(c: string, cn: string , add: Array<string> | string, tp?: Array<Player> | number, r: Array<string>){
+    range: Array<string> = [];
+    Server(c: string, cn: string , add: Array<string> | string, r: Array<string>, tp?: Array<Player> | number){
         this.country = c;
         this.continent = cn;
         this.address = add;
@@ -34,7 +34,8 @@ class Server implements _Server{
 
     } 
     isOnline(): boolean | null{
-        return true;
+        const is = [true, false, null];
+        return is[Math.floor(Math.random() * 1)];
     }
     wake(): void{}
     reset(): void{}
