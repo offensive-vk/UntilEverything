@@ -40,7 +40,11 @@ class Server implements _Server{
     wake(): void{}
     reset(): void{}
     restart(): void{}
-    shutdown(): void{}
+    shutdown(): void{
+        setTimeout(()=>{
+            puts(`Server is Shutting Down... `);
+        }, 1500)
+    }
 }
 class Game{
     public Players: Array<Player> | null = [];
@@ -135,3 +139,4 @@ async function main(): Promise<void> {
     const W = new Weapon();
 
 }
+main();
