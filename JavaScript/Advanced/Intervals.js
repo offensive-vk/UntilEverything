@@ -22,3 +22,27 @@ function repeatedFunction() {
 }
 
 const intervalId = setInterval(repeatedFunction, 1000);
+
+// Use Case 3: Clearing a setTimeout
+console.log("\nUse Case 3: Clearing a setTimeout");
+
+function clearTimeoutExample() {
+    console.log("This function won't be executed because the timeout is cleared.");
+}
+
+const timeoutId = setTimeout(clearTimeoutExample, 3000);
+clearTimeout(timeoutId);
+
+// Use Case 4: Clearing an Interval
+console.log("\nUse Case 4: Clearing an Interval");
+
+function clearIntervalExample() {
+    console.log("This function won't be executed more than 2 times.");
+}
+
+const intervalToClear = setInterval(clearIntervalExample, 1000);
+
+setTimeout(() => {
+    clearInterval(intervalToClear);
+    console.log("Interval cleared after 2 seconds.");
+}, 2000);
