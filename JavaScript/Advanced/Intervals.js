@@ -1,3 +1,5 @@
+// setTimeout and setInterval() functions
+
 // Use Case 1: setTimeout for Delayed Execution
 console.log("Use Case 1: setTimeout for Delayed Execution");
 
