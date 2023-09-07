@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade-In and Scroll Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .item {
+            width: 600px;
+            height: 600px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            margin-bottom: 40px;
+        }
+
+        .item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <div class="item"> <!-- Item 1 -->
+            <h2 class="item-title">Item 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="item"> <!-- Item 2 -->
+            <h2 class="item-title">Item 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="item"> <!-- Item 3 -->
+            <h2 class="item-title">Item 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="item"> <!-- Item 4 -->
+            <h2 class="item-title">Item 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to trigger the fade-in animation when scrolling
+        const items = document.querySelectorAll('.item');
+
+        function checkScroll() {
+            items.forEach((item) => {
+                const itemPosition = item.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight;
+
+                if (itemPosition < screenHeight * 0.75) {
+                    item.classList.add('active');
+                }
+                else{
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+        </script>
+</body>
+</html>
