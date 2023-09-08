@@ -14,3 +14,18 @@ function promiseWithArrayOfPromises(): Promise<Array<Promise<void>>> {
 
     return Promise.resolve(promises);
 }
+
+// Execution
+promiseWithArrayOfPromises()
+    .then((promiseArray) => {
+        console.log("Array of promises:", promiseArray);
+
+        // Execute all promises in parallel using Promise.all
+        return Promise.all(promiseArray);
+    })
+    .then(() => {
+        console.log("All promises resolved.");
+    })
+    .catch((error) => {
+        console.error(error);
+    });  
