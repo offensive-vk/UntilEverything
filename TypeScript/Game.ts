@@ -71,7 +71,13 @@ class Game{
         this.Weapons = [];
         this.Servers = [];
     }
-    public StartGame(): void{
+    public async StartGame(): Promise<void>{
+        const Servers = new Server();
+        const Weapons = new Weapon();
+        const Players = new Player();
+
+        Servers.wake();
+        Players.getReady();
         
     }
     public LoadGame(): void{
