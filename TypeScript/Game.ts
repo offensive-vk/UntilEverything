@@ -43,7 +43,12 @@ class Server implements _Server{
             puts(`${this.address} is online. `);
         }, 1500);
     }
-    reset(): void{}
+    reset(): void{
+        setTimeout(() => {
+            puts(`Clearing All Data From ${this.address} ... `);
+            puts(`${this.address} is offline. `);
+        }, 3000);
+    }
     restart(): void{}
     shutdown(): void{
         setTimeout(()=>{
