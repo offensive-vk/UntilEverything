@@ -49,7 +49,12 @@ class Server implements _Server{
             puts(`${this.address} is offline. `);
         }, 3000);
     }
-    restart(): void{}
+    restart(): void{
+        setTimeout(() => {
+            puts(`Restarting ${this.address}... `);
+            puts(`${this.address} is online. `);
+        }, 4500);
+    }
     shutdown(): void{
         setTimeout(()=>{
             puts(`Server is Shutting Down... `);
