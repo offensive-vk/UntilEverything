@@ -142,6 +142,8 @@ async function main(): Promise<void> {
     const P = new Player();
     const G = new Game();
     const W = new Weapon();
+    const S = new Server();
 
 }
+
 main();
