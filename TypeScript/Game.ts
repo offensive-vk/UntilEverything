@@ -98,10 +98,14 @@ class Player{
         puts(`${Player.username} is ready .`);
     }
     public Attack(): void{
-
+        setTimeout(()=>{
+            puts(`Attacks Incoming from ${Player.username}... `);
+        }, 2500);
     }
     public StopAttack(): void{
-        
+        setTimeout(()=>{
+            puts(`Stopping All Attacks from ${Player.username}... `);
+        }, 2500);
     }
 }
 
