@@ -38,3 +38,20 @@ asyncPromise()
     .catch((error) => {
         console.error(error.message);
     });
+
+
+// Complex Promise returns a array
+// Function that returns a resolved promise with an array of numbers
+function promiseWithArray(): Promise<Array<number>> {
+    const numbers = [1, 2, 3, 4, 5];
+    return Promise.resolve(numbers);
+}
+
+// Using the promise with Array<number> return type
+promiseWithArray()
+    .then((result) => {
+        console.log("Array of numbers:", result);
+    })
+    .catch((error) => {
+        console.error(error);
+    });
