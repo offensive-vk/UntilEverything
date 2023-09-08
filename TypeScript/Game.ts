@@ -78,7 +78,7 @@ class Game{
 
         Servers.wake();
         Players.getReady();
-        
+
     }
     public LoadGame(): void{
         
@@ -155,6 +155,13 @@ class Weapon{
             puts(`Weapon Type: Unknown `);
         }
         puts(`\n===============================\n`);
+    }
+    public SpawnWeapon(): void {
+        setTimeout(() => {
+            this.showWeapon();
+            puts(`Spawning All Weapons... \n Please Wait .. `);
+            puts(`${this.WeaponName} has been spawned ... `);
+        }, 3500);
     }
 }
 
