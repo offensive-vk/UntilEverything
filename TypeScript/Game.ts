@@ -10,54 +10,71 @@ interface _Server{
     restart(): void;
     shutdown(): void;
 }
-class Server implements _Server{
-    country: string;
-    continent: string;
-    address: Array<string> | string = [];
-    totalPlayers?: Array<Player> | number;
-    range: Array<string> = [];
-    Server(c: string, cn: string , add: Array<string> | string, r: Array<string>, tp?: Array<Player> | number){
-        this.country = c;
-        this.continent = cn;
-        this.address = add;
-        this.totalPlayers = tp;
-        this.range = r;
-    }
-    public getServerDetails(): void{
-        puts(`\n===============================\n`);
-        puts(`\n:: Showing Server Details ::\n `);
-        puts(`Server Country : ${this.country}`);
-        puts(`Server Continent : ${this.continent}`);
-        puts(`Server Addresses : ${this.address}`);
-        puts(`Total Players Online : ${this.totalPlayers}`);
-        puts(`\n===============================\n`);
+/**
+ * The `Server` class represents a server in a game.
+ */
+class Server implements _Server {
+    /**
+     * Creates a new instance of the `Server` class.
+     * @param country - The country of the server.
+     * @param continent - The continent of the server.
+     * @param address - The address(es) of the server.
+     * @param range - The range of the server's IP addresses.
+     * @param totalPlayers - The total players online.
+     */
+    constructor(
+        public country: string,
+        public continent: string,
+        public address: Array<string> | string = [],
+        public range: Array<string> = [],
+        public totalPlayers?: Array<Player> | number
+    ) { }
 
-    } 
-    isOnline(): boolean | null{
+    /**
+     * Prints the details of the server, including country, continent, address, and total players online.
+     */
+    public getServerDetails(): void {
+        console.log("\n===============================\n");
+        console.log(":: Showing Server Details ::");
+        console.log(`Server Country: ${this.country}`);
+        console.log(`Server Continent: ${this.continent}`);
+        console.log(`Server Addresses: ${this.address}`);
+        console.log(`Total Players Online: ${this.totalPlayers}`);
+        console.log("\n===============================\n");
+    }
+
+    /**
+     * Checks if the server is online.
+     * @returns A boolean value indicating if the server is online.
+     */
+    isOnline(): boolean | null {
         const is = [true, false, null];
         return is[Math.floor(Math.random() * 1)];
     }
-    wake(): void{
-        setTimeout(()=>{
-            puts(`Starting the Server ... `);
-            puts(`${this.address} is online. `);
+
+    wake(): void {
+        setTimeout(() => {
+            console.log("Starting the Server...");
+            console.log(`${this.address} is online.`);
         }, 1500);
     }
-    reset(): void{
+    reset(): void {
         setTimeout(() => {
-            puts(`Clearing All Data From ${this.address} ... `);
-            puts(`${this.address} is offline. `);
+            console.log(`Clearing All Data From ${this.address}...`);
+            console.log(`${this.address} is offline.`);
         }, 3000);
     }
-    restart(): void{
+
+    restart(): void {
         setTimeout(() => {
-            puts(`Restarting ${this.address}... `);
-            puts(`${this.address} is online. `);
+            console.log(`Restarting ${this.address}...`);
+            console.log(`${this.address} is online.`);
         }, 4500);
     }
-    shutdown(): void{
-        setTimeout(()=>{
-            puts(`Server is Shutting Down... `);
+
+    shutdown(): void {
+        setTimeout(() => {
+            console.log("Server is Shutting Down...");
         }, 1500);
     }
 }
