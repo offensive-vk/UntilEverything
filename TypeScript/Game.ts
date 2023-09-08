@@ -77,16 +77,17 @@ class Game{
         const Players = new Player();
 
         Servers.wake();
+        Weapons.SpawnWeapon();
         Players.getReady();
 
     }
-    public LoadGame(): void{
+    public async LoadGame(): Promise<void>{
         
     }
-    public SaveGame(): void{
+    public async SaveGame(): Promise<void>{
         
     }    
-    public ExitGame(): void{
+    public async ExitGame(): Promise<void>{
         
     }
 }
