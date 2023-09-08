@@ -37,13 +37,18 @@ class Server implements _Server{
         const is = [true, false, null];
         return is[Math.floor(Math.random() * 1)];
     }
-    wake(): void{}
+    wake(): void{
+        setTimeout(()=>{
+            puts(`Starting the Server ... `);
+            puts(`${this.address} is online. `);
+        }, 1500);
+    }
     reset(): void{}
     restart(): void{}
     shutdown(): void{
         setTimeout(()=>{
             puts(`Server is Shutting Down... `);
-        }, 1500)
+        }, 1500);
     }
 }
 class Game{
