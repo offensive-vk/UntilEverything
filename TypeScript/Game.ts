@@ -202,7 +202,6 @@ async function main(): Promise<void> {
     const G = new Game();
     const W = new Weapon();
     const S = new Server();
-
 }
 
 main();
