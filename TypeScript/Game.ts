@@ -78,36 +78,6 @@ class Server implements _Server {
         }, 1500);
     }
 }
-class Game {
-    public Players: Array<Player> | null = [];
-    public Weapons: Array<Weapon> | null = [];
-    public Servers: Array<Server> | null = [];
-
-    Game() {
-        this.Players = [];
-        this.Weapons = [];
-        this.Servers = [];
-    }
-    public async StartGame(): Promise<void> {
-        const Servers = new Server();
-        const Weapons = new Weapon();
-        const Players = new Player();
-
-        Servers.wake();
-        Weapons.SpawnWeapon();
-        Players.getReady();
-
-    }
-    public async LoadGame(): Promise<void> {
-
-    }
-    public async SaveGame(): Promise<void> {
-
-    }
-    public async ExitGame(): Promise<void> {
-
-    }
-}
 
 class Player {
     public static username: string;
@@ -142,32 +112,46 @@ class Player {
         }, 2500);
     }
 }
+class Game {
+    public Players: Array<Player> | null;
+    public Weapons: Array<Weapon> | null;
+    public Servers: Array<Server> | null;
 
+    constructor() {
+        this.Players = [];
+        this.Weapons = [];
+        this.Servers = [];
+    }
+    public async StartGame(): Promise<void> {
+        const Servers = new Server();
+        const Weapons = new Weapon();
+        const Players = new Player();
+
+        Servers.wake();
+        Weapons.SpawnWeapon();
+        Players.getReady();
+
+    }
+    public async LoadGame(): Promise<void> {
+
+    }
+    public async SaveGame(): Promise<void> {
+
+    }
+    public async ExitGame(): Promise<void> {
+
+    }
+}
 /**
  * The `Weapon` class represents a weapon in a game.
  */
 class Weapon {
-    /**
-     * The name of the weapon.
-     */
-    public WeaponName: string;
-    /**
-     * The damage inflicted by the weapon.
-     */
-    public Damage: number;
-    /**
-     * The recoil of the weapon (optional).
-     */
-    public Recoil?: number;
-    /**
-     * A boolean value indicating if the weapon is automatic.
-     */
-    public isAuto: boolean;
-    /**
-     * A boolean value indicating if the weapon is a sniper rifle.
-     */
-    public isSniper: boolean;
 
+    public WeaponName: string;
+    public Damage: number;
+    public Recoil?: number;
+    public isAuto: boolean;
+    public isSniper: boolean;
     /**
      * Creates a new instance of the `Weapon` class.
      * @param _name - The name of the weapon.
@@ -176,14 +160,13 @@ class Weapon {
      * @param isAuto - A boolean value indicating if the weapon is automatic.
      * @param isSniper - A boolean value indicating if the weapon is a sniper rifle.
      */
-    constructor(_name: string, damage: number, recoil?: number, isAuto: boolean, isSniper: boolean) {
+    constructor(_name: string, damage: number, isAuto: boolean, isSniper: boolean, recoil?: number) {
         this.WeaponName = _name;
         this.Damage = damage;
         this.isAuto = isAuto;
         this.isSniper = isSniper;
         this.Recoil = recoil;
     }
-
     /**
      * Displays the details of the weapon, including the name, damage, recoil, and type.
      */
