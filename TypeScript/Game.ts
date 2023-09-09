@@ -84,7 +84,7 @@ class Player {
     public static health: number;
     public static weapon: Weapon | null;
 
-    Player(username: string) {
+    constructor(username: string) {
         Player.username = username;
         Player.health = 100;
         Player.weapon = null;
@@ -112,6 +112,9 @@ class Player {
         }, 2500);
     }
 }
+/* 
+* This class represents the Main Game Object in program.
+*/
 class Game {
     public Players: Array<Player> | null;
     public Weapons: Array<Weapon> | null;
@@ -123,13 +126,13 @@ class Game {
         this.Servers = [];
     }
     public async StartGame(): Promise<void> {
-        const Servers = new Server();
-        const Weapons = new Weapon();
-        const Players = new Player();
+        // const Servers = new Server();
+        // const Weapons = new Weapon();
+        // const Players = new Player();
 
-        Servers.wake();
-        Weapons.SpawnWeapon();
-        Players.getReady();
+        // Servers.wake();
+        // Weapons.SpawnWeapon();
+        // Players.getReady();
 
     }
     public async LoadGame(): Promise<void> {
@@ -185,10 +188,6 @@ class Weapon {
         }
         console.log("\n===============================\n");
     }
-
-    /**
-     * Simulates the spawning of the weapon in the game, showing the weapon details and a message indicating that the weapon has been spawned.
-     */
     public SpawnWeapon(): void {
         setTimeout(() => {
             this.showWeapon();
