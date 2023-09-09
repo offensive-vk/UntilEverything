@@ -1,17 +1,19 @@
 // Function overloads
-function greet(): string {
-    return `Hello user !`;
-}
+function greet(): string;
 function greet(person: string): string;
 function greet(person: string, age: number): string;
 
 // Implementation of the overloaded function
 function greet(person: string, age?: number): string {
-    if (age === undefined) {
+    if(person === undefined && age === undefined){
+        return `Hello user !`;
+    }
+    else if (age === undefined) {
         return `Hello, ${person}!`;
     } else {
         return `Hello, ${person}! You are ${age} years old.`;
     }
+    
 }
 
 // Using the overloaded function
