@@ -1,4 +1,5 @@
 // Awaited type
+// This type is meant to model operations like await in async functions, or the .then() method on Promises - specifically, the way that they recursively unwrap Promises.
 type Awaited<T> = T extends Promise<infer R> ? R : T;
 
 // Test cases
