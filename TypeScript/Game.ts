@@ -119,8 +119,10 @@ class Game {
     public Players: Array<Player> | null;
     public Weapons: Array<Weapon> | null;
     public Servers: Array<Server> | null;
-
-    constructor() {
+    public static Name: string | null;
+    constructor(_name: string) {
+        Game.Name = _name;
+        puts(`Initializing a new Game : ${Game.Name}\n`);
         this.Players = [];
         this.Weapons = [];
         this.Servers = [];
