@@ -1,5 +1,5 @@
 var puts = console.log;
-interface _Server{
+interface _Server {
     country: string;
     continent: string;
     address: Array<string> | string;
@@ -78,17 +78,17 @@ class Server implements _Server {
         }, 1500);
     }
 }
-class Game{
+class Game {
     public Players: Array<Player> | null = [];
     public Weapons: Array<Weapon> | null = [];
     public Servers: Array<Server> | null = [];
 
-    Game(){
+    Game() {
         this.Players = [];
         this.Weapons = [];
         this.Servers = [];
     }
-    public async StartGame(): Promise<void>{
+    public async StartGame(): Promise<void> {
         const Servers = new Server();
         const Weapons = new Weapon();
         const Players = new Player();
@@ -98,28 +98,28 @@ class Game{
         Players.getReady();
 
     }
-    public async LoadGame(): Promise<void>{
-        
+    public async LoadGame(): Promise<void> {
+
     }
-    public async SaveGame(): Promise<void>{
-        
-    }    
-    public async ExitGame(): Promise<void>{
-        
+    public async SaveGame(): Promise<void> {
+
+    }
+    public async ExitGame(): Promise<void> {
+
     }
 }
 
-class Player{
+class Player {
     public static username: string;
     public static health: number;
     public static weapon: Weapon | null;
 
-    Player(username: string){
+    Player(username: string) {
         Player.username = username;
         Player.health = 100;
         Player.weapon = null;
     }
-    public getPlayer(): void{
+    public getPlayer(): void {
         puts(`\n===============================\n`);
         puts(`\n:: Showing Player Details ::\n `);
         puts(`Player Name: ${Player.username}`);
@@ -127,58 +127,90 @@ class Player{
         puts(`Player Weapon: ${Player.weapon}`);
         puts(`\n===============================\n`);
 
-    } 
-    public getReady(): void{
+    }
+    public getReady(): void {
         puts(`${Player.username} is ready .`);
     }
-    public Attack(): void{
-        setTimeout(()=>{
+    public Attack(): void {
+        setTimeout(() => {
             puts(`Attacks Incoming from ${Player.username}... `);
         }, 2500);
     }
-    public StopAttack(): void{
-        setTimeout(()=>{
+    public StopAttack(): void {
+        setTimeout(() => {
             puts(`Stopping All Attacks from ${Player.username}... `);
         }, 2500);
     }
 }
 
-class Weapon{
+/**
+ * The `Weapon` class represents a weapon in a game.
+ */
+class Weapon {
+    /**
+     * The name of the weapon.
+     */
     public WeaponName: string;
+    /**
+     * The damage inflicted by the weapon.
+     */
     public Damage: number;
+    /**
+     * The recoil of the weapon (optional).
+     */
     public Recoil?: number;
-    public isAuto: boolean | undefined;
-    public isSniper: boolean | undefined;
+    /**
+     * A boolean value indicating if the weapon is automatic.
+     */
+    public isAuto: boolean;
+    /**
+     * A boolean value indicating if the weapon is a sniper rifle.
+     */
+    public isSniper: boolean;
 
-    Weapon(_name: string, damage: number , recoil?: number , isAuto: boolean , isSniper: boolean){
+    /**
+     * Creates a new instance of the `Weapon` class.
+     * @param _name - The name of the weapon.
+     * @param damage - The damage inflicted by the weapon.
+     * @param recoil - The recoil of the weapon (optional).
+     * @param isAuto - A boolean value indicating if the weapon is automatic.
+     * @param isSniper - A boolean value indicating if the weapon is a sniper rifle.
+     */
+    constructor(_name: string, damage: number, recoil?: number, isAuto: boolean, isSniper: boolean) {
         this.WeaponName = _name;
         this.Damage = damage;
         this.isAuto = isAuto;
         this.isSniper = isSniper;
         this.Recoil = recoil;
     }
+
+    /**
+     * Displays the details of the weapon, including the name, damage, recoil, and type.
+     */
     public showWeapon(): void {
-        puts(`\n===============================\n`);
-        puts("\n :: Showing Weapon Details ::\n");
-        puts(`Weapon Name: ${this.WeaponName}`);
-        puts(`Weapon Damage: ${this.Damage}`);
-        puts(`Weapon Recoil: ${this.Recoil}`);
-        if(this.isAuto == true && this.isSniper == false){
-            puts(`Weapon Type: Assault Rifle `);
+        console.log("\n===============================\n");
+        console.log("\n :: Showing Weapon Details ::\n");
+        console.log(`Weapon Name: ${this.WeaponName}`);
+        console.log(`Weapon Damage: ${this.Damage}`);
+        console.log(`Weapon Recoil: ${this.Recoil}`);
+        if (this.isAuto && !this.isSniper) {
+            console.log(`Weapon Type: Assault Rifle`);
+        } else if (!this.isAuto && this.isSniper) {
+            console.log(`Weapon Type: Sniper Rifle`);
+        } else {
+            console.log(`Weapon Type: Unknown`);
         }
-        else if(this.isAuto == false && this.isSniper == true){
-            puts(`Weapon Type: Sniper Rifle .`);
-        }
-        else{
-            puts(`Weapon Type: Unknown `);
-        }
-        puts(`\n===============================\n`);
+        console.log("\n===============================\n");
     }
+
+    /**
+     * Simulates the spawning of the weapon in the game, showing the weapon details and a message indicating that the weapon has been spawned.
+     */
     public SpawnWeapon(): void {
         setTimeout(() => {
             this.showWeapon();
-            puts(`Spawning All Weapons... \n Please Wait .. `);
-            puts(`${this.WeaponName} has been spawned ... `);
+            console.log("Spawning All Weapons...\nPlease Wait...");
+            console.log(`${this.WeaponName} has been spawned...`);
         }, 3500);
     }
 }
