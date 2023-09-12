@@ -17,8 +17,12 @@ class Global<T>{
     }
 }
 
+const G: Global<Number> = new Global<Number>(9001, 87000, 'Manish');
+G.showPrivateData();
+G.showPublicData();
 
-function Sample<T>(anything?: T): T {
+console.log(`\n =================== \n`);
+function Sample<T>(anything: T): T {
     return anything;
 }
 
