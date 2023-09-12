@@ -39,7 +39,6 @@ class Animal {
 function createInstance<T extends new (name: string) => any>(ctor: T, name: string): InstanceType<T> {
     return new ctor(name);
 }
-
 const doggo = createInstance(Animal, "Fluffy");
 
 
