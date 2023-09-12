@@ -1,3 +1,14 @@
+// 1. Type Constraint: You can constrain a generic type to a specific type or a set of types. For example, you can create a function that only accepts numbers as its generic type:
+function add<T extends number>(a: T, b: T): T {
+    return a + b;
+}
+
+const result = add(1, 2); // Valid
+const textResult = add("Hello", "World"); // Error: Argument of type 'string' is not assignable to parameter of type 'number'.
+
+// 2. 
+
+
 /* Detailed Program */
 // Define the Lengthwise interface
 interface Lengthwise {
