@@ -28,8 +28,10 @@ function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 
 const person = { name: "John", age: 30 };
 
-const name = getProperty(person, "name"); // Valid
-const gender = getProperty(person, "gender"); // Error: Argument of type '"gender"' is not assignable to parameter of type '"name" | "age"'.
+const _n = getProperty(person, "name"); // Valid
+// const gender = getProperty(person, "gender"); 
+console.log(`Key of person : ${_n}`);
+// Error: Argument of type '"gender"' is not assignable to parameter of type '"name" | "age"'.
 
 // 4. Class Constraint: You can constrain a type parameter to a specific class or constructor function:
 class Animal {
