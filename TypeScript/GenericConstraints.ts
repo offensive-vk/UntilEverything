@@ -31,7 +31,19 @@ const person = { name: "John", age: 30 };
 const name = getProperty(person, "name"); // Valid
 const gender = getProperty(person, "gender"); // Error: Argument of type '"gender"' is not assignable to parameter of type '"name" | "age"'.
 
+// 4. Class Constraint: You can constrain a type parameter to a specific class or constructor function:
+class Animal {
+    constructor(public name: string) {}
+}
 
+function createInstance<T extends new (name: string) => any>(ctor: T, name: string): InstanceType<T> {
+    return new ctor(name);
+}
+
+const doggo = createInstance(Animal, "Fluffy");
+
+
+/* *************************************************** */
 /* Detailed Program */
 // Define the Lengthwise interface
 interface Lengthwise {
