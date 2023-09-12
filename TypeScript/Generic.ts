@@ -23,4 +23,7 @@ function Sample<T>(anything?: T): T {
 }
 
 let _sample = Sample<string>('TypeScript');
-console.log(_sample);
+console.log(`String Value : ${_sample}`);
+
+let sample_ = Sample<boolean>(true);
+console.log(`Boolean Value : ${sample_}`);
