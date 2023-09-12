@@ -6,7 +6,30 @@ function add<T extends number>(a: T, b: T): T {
 const result = add(1, 2); // Valid
 const textResult = add("Hello", "World"); // Error: Argument of type 'string' is not assignable to parameter of type 'number'.
 
-// 2. 
+// 2. Interface Constraint: You can constrain a type parameter to a type that implements a particular interface. This ensures that the type passed as an argument has specific properties or methods:
+interface Printable {
+    print(): void;
+}
+function printItem<T extends Printable>(item: T) {
+    item.print();
+}
+
+const obj = {
+    print() {
+        console.log("Printing...");
+    },
+};
+printItem(obj); // Valid
+
+// 3. Keyof Constraint: You can use keyof to constrain a type parameter to a specific set of keys of another type:
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+    return obj[key];
+}
+
+const person = { name: "John", age: 30 };
+
+const name = getProperty(person, "name"); // Valid
+const gender = getProperty(person, "gender"); // Error: Argument of type '"gender"' is not assignable to parameter of type '"name" | "age"'.
 
 
 /* Detailed Program */
