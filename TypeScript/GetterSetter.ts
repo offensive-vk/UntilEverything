@@ -57,3 +57,5 @@ console.log(`Age: ${person.age}`);   // Getting age...
 // Trying to set an invalid name and age
 person.name = "A";      // Setting name... (Error: Name should be at least 3 characters long.)
 person.age = -5;        // Setting age... (Error: Age should be between 0 and 120.)
+
+const PrivKeyX: string | Array<string> = "6D33 866E DD8F FA41 C014  3AED DCC9 EFBF 77E1 1517";
