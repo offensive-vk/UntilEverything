@@ -1,7 +1,7 @@
-class Global<T>{
+class XGlobal<T>{
     private value: T | undefined;
     private reg: T | undefined;
-    static check: boolean | string;
+    static check: boolean | string = false;
 
     constructor (
         public id: number,
@@ -17,9 +17,10 @@ class Global<T>{
     }
 }
 
-const G: Global<Number> = new Global<Number>(9001, 87000, 'Manish');
+const G: XGlobal<number> = new XGlobal<number>(9001, 87000, 'Manish');
 G.showPrivateData();
 G.showPublicData();
+XGlobal.check = true;
 
 console.log(`\n =================== \n`);
 function Sample<T>(anything: T): T {
