@@ -16,4 +16,8 @@ const dup = arr => [...new Set(arr)];
 
 const clone = obj => JSON.parse(JSON.stringify(obj));
 
-// 5. 
+// 5. Check if an array contains a certain value
+
+const hasValue = (arr, value) => arr.includes(value);
+
+// 
