@@ -8,4 +8,5 @@ console.log(`Fake Manish : ${Fake_Manish}`);
 console.log(`Real Manish : ${Real_Manish}`);
 
 
-var Both_Manish = [...Real_Manish, ...Fake_Manish]
+var Both_Manish = Fake_Manish+ '\n'+ Real_Manish;
+console.log(`\n -> Both Manish : \n ${Both_Manish}`);
