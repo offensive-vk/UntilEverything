@@ -3,9 +3,11 @@ const fs = require('fs');
 
 // Create an HTTP server that serves an external HTML file
 const server = http.createServer((req, res) => {
+    
     res.statusCode = 200;
+    res.statusMessage = 'OK';
+
     res.setHeader('Content-Type', 'text/html');
-    console.log(`HTTP Server Version : ${req.httpVersion}`);
 
     // Read the content of the external HTML file
     fs.readFile('index.html', 'utf8', (err, data) => {
@@ -22,6 +24,7 @@ const server = http.createServer((req, res) => {
 
 const port = 5000
 server.listen(port, () => {
+    console.log(`HTTP Server Version : ${req.httpVersion}`);
     console.log(`Sucessfully started NodeJS HTTP Server. \n`);
     console.log(`Server is running at http://localhost:${port}/`);
 });
