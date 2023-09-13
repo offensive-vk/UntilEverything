@@ -1,3 +1,5 @@
+// Custom HTTP Server In NodeJS 
+
 const http = require('http');
 const fs = require('fs');
 
@@ -17,6 +19,7 @@ const server = http.createServer((req, res) => {
             res.end('Internal Server Error');
             return;
         }
+
         // Send the HTML content as the response
         res.end(data);
     });
@@ -25,6 +28,6 @@ const server = http.createServer((req, res) => {
 const port = 5000
 server.listen(port, () => {
     console.log(`HTTP Server Version : ${req.httpVersion}`);
-    console.log(`Sucessfully started NodeJS HTTP Server. \n`);
+    console.log(`Successfully started NodeJS HTTP Server. \n`);
     console.log(`Server is running at http://localhost:${port}/`);
 });
