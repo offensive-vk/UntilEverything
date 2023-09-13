@@ -1,7 +1,7 @@
-// Generic class that represents a stack of elements of type T
+// 1. Generic class that represents a stack of elements of type T
 class Stack<T> {
     private elements: T[] = [];
-    public static StackName: string | undefined  = '';
+    public static StackName: string | undefined = '';
 
     push(element: T): void {
         this.elements.push(element);
@@ -24,7 +24,7 @@ numberStack.push(3);
 
 while (!numberStack.isEmpty()) {
     const num = numberStack.pop();
-    console.log(num); // Output: 3, 2, 1
+    console.log(num);
 }
 
 // Create a stack of strings
@@ -36,3 +36,29 @@ while (!stringStack.isEmpty()) {
     const str = stringStack.pop();
     console.log(str);
 }
+
+// 2. Functional Approach
+// Generic interface for a key-value pair
+interface KeyValuePair<K, V> {
+    key: K;
+    value: V;
+}
+
+// Generic function to create a KeyValuePair
+function createKeyValuePair<K, V>(key: K, value: V): Promise<KeyValuePair<K, V>> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({ key, value });
+        }, 2000);
+    });
+}
+
+// Create a KeyValuePair with number key and string value
+const numberStringPair = createKeyValuePair<number, string>(1, "TypeScript");
+
+// Create a KeyValuePair with string key and boolean value
+const stringBooleanPair = createKeyValuePair<string, boolean>("isTrue", true);
+
+// Print the key-value pairs
+console.log(numberStringPair);
+console.log(stringBooleanPair); 
