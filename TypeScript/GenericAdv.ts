@@ -45,7 +45,7 @@ interface KeyValuePair<K, V> {
 }
 
 // Generic function to create a KeyValuePair
-function createKeyValuePair<K, V>(key: K, value: V): Promise<KeyValuePair<K, V>> {
+async function createKeyValuePair<K, V>(key: K, value: V): Promise<KeyValuePair<K, V>> {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve({ key, value });
@@ -53,12 +53,17 @@ function createKeyValuePair<K, V>(key: K, value: V): Promise<KeyValuePair<K, V>>
     });
 }
 
-// Create a KeyValuePair with number key and string value
-const numberStringPair = createKeyValuePair<number, string>(1, "TypeScript");
+async function main(): Promise<void> {
+    // Create a KeyValuePair with number key and string value
+    const numberStringPair = await createKeyValuePair<number, string>(1, "TypeScript");
 
-// Create a KeyValuePair with string key and boolean value
-const stringBooleanPair = createKeyValuePair<string, boolean>("isTrue", true);
+    // Create a KeyValuePair with string key and boolean value
+    const stringBooleanPair = await createKeyValuePair<string, boolean>("isTrue", true);
 
-// Print the key-value pairs
-console.log(numberStringPair);
-console.log(stringBooleanPair); 
+    // Print the key-value pairs
+    console.log(numberStringPair);
+    console.log(stringBooleanPair); 
+
+}
+
+main();
