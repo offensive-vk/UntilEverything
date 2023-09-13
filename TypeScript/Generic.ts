@@ -3,16 +3,16 @@ class XGlobal<T>{
     private reg: T | undefined;
     static check: boolean | string = false;
 
-    constructor (
+    constructor(
         public id: number,
         public salary: number,
         public name: string
-    ) {}
+    ) { }
 
-    public showPrivateData(): void{
+    public showPrivateData(): void {
         console.log(`${this.value}\n ${this.reg}\n`);
     }
-    public showPublicData(): void{
+    public showPublicData(): void {
         console.log(`${this.id}\n ${this.salary}\n ${this.name}\n`);
     }
 }
@@ -32,3 +32,17 @@ console.log(`String Value : ${_sample}`);
 
 let sample_ = Sample<boolean>(true);
 console.log(`Boolean Value : ${sample_}`);
+
+// Generic function that takes an array of any type and returns the first element
+function getFirstElement<T>(arr: T[]): T | undefined {
+    return arr.length > 0 ? arr[0] : undefined;
+}
+
+const _numbers = [1, 2, 3, 4, 5];
+const firstNumber = getFirstElement(_numbers); // inferred type: number
+
+const _names = ["Alice", "Bob", "Charlie"];
+const firstName = getFirstElement(_names); // inferred type: string
+
+console.log(firstNumber); // Output: 1
+console.log(firstName); // Output: "Alice"
