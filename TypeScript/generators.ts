@@ -14,5 +14,19 @@ console.log(generator.next().value); // Output: 0
 console.log(generator.next().value); // Output: 1
 console.log(generator.next().value); // Output: 2
 
-
+/* 
+In TypeScript (TS), generators are a feature that allows you to define functions that can be paused and resumed. They are defined using a special syntax with an asterisk (*) after the function keyword. When a generator function is called, it returns an iterator object that can be used to control the execution of the generator.
+*/
 // yield 
+function* generateSequence() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const iterator = generateSequence();
+
+console.log(iterator.next()); // { value: 1, done: false }
+console.log(iterator.next()); // { value: 2, done: false }
+console.log(iterator.next()); // { value: 3, done: false }
+console.log(iterator.next()); // { value: undefined, done: true }
