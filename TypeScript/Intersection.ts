@@ -23,4 +23,23 @@ const personWithAddress: PersonWithAddress = {
 };
 
 console.log(personWithAddress.name);
-console.log(personWithAddress.street);  
+console.log(personWithAddress.street);
+
+
+// Use Case 2: Combining Function Signatures
+type Loggable = {
+    log(message: string): void;
+};
+
+type Sendable = {
+    send(data: string): void;
+};
+
+// Create an intersection type
+type LoggerAndSender = Loggable & Sendable;
+
+// Usage
+const loggerAndSender: LoggerAndSender = {
+    log(message: "Log message"),
+    send(data: "Send data"),
+};
