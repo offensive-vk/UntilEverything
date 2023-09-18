@@ -14,3 +14,16 @@ console.log(greeting1);
 
 const greeting2: WelcomeMessage<"Bob"> = generateWelcomeMessage("Bob");
 console.log(greeting2); 
+
+// more
+// Define a template literal type for creating URLs
+type URLPattern = `${string}://www.${string}.${string}`;
+
+// Create a function that constructs URLs
+function constructURL(protocol: string, domain: string, extension: string): URLPattern {
+    return `${protocol}://www.${domain}.${extension}`;
+}
+
+// Usage
+const websiteURL: URLPattern = constructURL("https", "example", "com");
+console.log(websiteURL); // "https://www.example.com"
