@@ -43,3 +43,20 @@ const loggerAndSender: LoggerAndSender = {
     log(message: "Log message"),
     send(data: "Send data"),
 };
+
+
+// Use Case 3: Extending Existing Types
+type Car = {
+    brand: string;
+    model: string;
+};
+
+type ElectricCar = Car & {
+    electricMotor: boolean;
+};
+
+const electricCar: ElectricCar = {
+    brand: "Tesla",
+    model: "Model S",
+    electricMotor: true,
+};
