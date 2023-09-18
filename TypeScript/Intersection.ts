@@ -16,11 +16,11 @@ type PersonWithAddress = Person & Address;
 
 // Usage
 const personWithAddress: PersonWithAddress = {
-    name: "Alice",
+    name: "Ryan",
     age: 30,
     street: "123 Main St",
-    city: "Exampleville",
+    city: "Example",
 };
 
-console.log(personWithAddress.name);    // "Alice"
-console.log(personWithAddress.street);  // "123 Main St"
+console.log(personWithAddress.name);
+console.log(personWithAddress.street);  
