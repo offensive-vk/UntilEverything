@@ -205,12 +205,14 @@ class Game {
      * Starts the game by waking up servers, spawning weapons, and getting players ready.
      */
     public async StartGame(): Promise<void> {
-        const Players = new Player('Player');
-        const Weapons = new Weapon('AKM', 80, true, false)
-        const Servers = new Server('Singapore', 'Asia', ['127.0.0.1 ', '127.0.0.2 ', '127.0.0.3 '], '127.0.0.1/48 ', 0);
-        
+        const Players = new Player('Player 1 ');
+    
+        const AKM = new Weapon('AKM', 80, true, false);
         const AWM = new Weapon('AWM', 250, false, true);
-        this.AddWeapons(AWM);
+        this.Weapons?.push(AKM);
+        this.Weapons?.push(AWM);
+
+        const Servers = new Server('Singapore', 'Asia', ['127.0.0.1 ', '127.0.0.2 ', '127.0.0.3 '], '127.0.0.1/48 ', 0);
 
         Servers.wake();
         Weapons.SpawnWeapon();
