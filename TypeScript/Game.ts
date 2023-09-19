@@ -99,7 +99,7 @@ class Player {
 
     }
     public getReady(): void {
-        puts(`${Player.username} is ready .`);
+        puts(`${this.username} is ready .`);
     }
     public Attack(): void {
         setTimeout(() => {
@@ -120,42 +120,7 @@ class Player {
         }
     }
 }
-/* 
-* This class represents the Main Game Object in program.
-*/
-class Game {
-    public Players: Array<Player> | null;
-    public Weapons: Array<Weapon> | null;
-    public Servers: Array<Server> | null;
-    public static Name: string | null;
-    constructor(_name: string) {
-        Game.Name = _name;
-        puts(`Initializing a new Game : ${Game.Name}\n`);
-        this.Players = [];
-        this.Weapons = [];
-        this.Servers = [];
-    }
-    public async StartGame(): Promise<void> {
-        // const Servers = new Server();
-        // const Weapons = new Weapon();
-        // const Players = new Player();
-
-        // Servers.wake();
-        // Weapons.SpawnWeapon();
-        // Players.getReady();
-
-    }
-    public async LoadGame(): Promise<void> {
-
-    }
-    public async SaveGame(): Promise<void> {
-
-    }
-    public async ExitGame(): Promise<void> {
-
-    }
-}
-/**
+/*
  * The `Weapon` class represents a weapon in a game.
  */
 class Weapon {
@@ -206,13 +171,48 @@ class Weapon {
         }, 3500);
     }
 }
+/* 
+* This class represents the Main Game Object in program.
+*/
+class Game {
+    public Players: Array<Player> | null;
+    public Weapons: Array<Weapon> | null;
+    public Servers: Array<Server> | null;
+    public static Name: string | null;
+    constructor(_name: string) {
+        Game.Name = _name;
+        puts(`Initializing a new Game : ${Game.Name}\n`);
+        this.Players = [];
+        this.Weapons = [];
+        this.Servers = [];
+    }
+    public async StartGame(): Promise<void> {
+        // const Servers = new Server();
+        // const Weapons = new Weapon();
+        // const Players = new Player();
+
+        // Servers.wake();
+        // Weapons.SpawnWeapon();
+        // Players.getReady();
+
+    }
+    public async LoadGame(): Promise<void> {
+
+    }
+    public async SaveGame(): Promise<void> {
+
+    }
+    public async ExitGame(): Promise<void> {
+
+    }
+}
 
 async function main(): Promise<void> {
     const P = new Player('Player');
     const G = new Game('New Game');
     const W = new Weapon('AKM', 80, true, false);
     const S = new Server('Singapore', 'Asia', ['127.0.0.1', '127.0.0.2', '127.0.0.3'], '127.0.0.1/48');
-    
+
 }
 
 main();
