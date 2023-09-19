@@ -133,6 +133,7 @@ class Weapon {
     public isAuto: boolean;
     public isSniper: boolean;
     public Recoil?: number;
+    
     /**
      * Creates a new instance of the `Weapon` class.
      * @param _name - The name of the weapon.
@@ -188,19 +189,28 @@ class Game {
      */
     constructor(_name: string) {
         Game.Name = _name;
-        console.log(`Initializing a new Game: ${Game.Name}\n`);
+        console.log(`============================\n`);
+        console.log(`\n Initializing a new Game: ${Game.Name}\n`);
         this.Players = [];
         this.Weapons = [];
         this.Servers = [];
+    }
+    public async AddWeapons(gun: Weapon): Promise<void>{
+        setTimeout(() =>{
+            this.Weapons?.push(gun);
+            puts(` ${gun} has been added to Game. \n`);
+        }, 1500);
     }
     /**
      * Starts the game by waking up servers, spawning weapons, and getting players ready.
      */
     public async StartGame(): Promise<void> {
-        const Start = new Game('New Game');
         const Players = new Player('Player');
-        const Weapons = new Weapon('AKM', 80, true, false);
+        const Weapons = new Weapon('AKM', 80, true, false)
         const Servers = new Server('Singapore', 'Asia', ['127.0.0.1 ', '127.0.0.2 ', '127.0.0.3 '], '127.0.0.1/48 ', 0);
+        
+        const AWM = new Weapon('AWM', 250, false, true);
+        this.AddWeapons(AWM);
 
         Servers.wake();
         Weapons.SpawnWeapon();
