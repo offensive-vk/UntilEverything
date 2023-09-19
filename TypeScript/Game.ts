@@ -26,7 +26,7 @@ class Server implements _Server {
         public country: string,
         public continent: string,
         public address: Array<string> | string = [],
-        public range: Array<string> = [],
+        public range: string | Array<string> = [],
         public totalPlayers?: Array<Player> | number
     ) { }
 
@@ -80,21 +80,21 @@ class Server implements _Server {
 }
 
 class Player {
-    public static username: string;
-    public static health: number;
-    public static weapon: Weapon | null;
+    public username: string;
+    public health: number;
+    public weapon: Weapon | null;
 
     constructor(username: string) {
-        Player.username = username;
-        Player.health = 100;
-        Player.weapon = null;
+        this.username = username;
+        this.health = 100;
+        this.weapon = null;
     }
     public getPlayer(): void {
         puts(`\n===============================\n`);
         puts(`\n:: Showing Player Details ::\n `);
-        puts(`Player Name: ${Player.username}`);
-        puts(`Player Health: ${Player.health}`);
-        puts(`Player Weapon: ${Player.weapon}`);
+        puts(`Player Name: ${this.username}`);
+        puts(`Player Health: ${this.health}`);
+        puts(`Player Weapon: ${this.weapon}`);
         puts(`\n===============================\n`);
 
     }
@@ -103,13 +103,21 @@ class Player {
     }
     public Attack(): void {
         setTimeout(() => {
-            puts(`Attacks Incoming from ${Player.username}... `);
+            puts(`Attacks Incoming from ${this.username}... `);
         }, 2500);
     }
     public StopAttack(): void {
         setTimeout(() => {
-            puts(`Stopping All Attacks from ${Player.username}... `);
+            puts(`Stopping All Attacks from ${this.username}... `);
         }, 2500);
+    }
+    public showWeapon(): void | null{
+        if(this.weapon!= null){
+            puts(`${this.username} Does not have a weapon. `);
+        }
+        else{
+            puts(`${this.username} has ${this.weapon} weapon. `);
+        }
     }
 }
 /* 
@@ -200,10 +208,11 @@ class Weapon {
 }
 
 async function main(): Promise<void> {
-    const P = new Player();
-    const G = new Game();
-    const W = new Weapon();
-    const S = new Server();
+    const P = new Player('Player');
+    const G = new Game('New Game');
+    const W = new Weapon('AKM', 80, true, false);
+    const S = new Server('Singapore', 'Asia', ['127.0.0.1', '127.0.0.2', '127.0.0.3'], '127.0.0.1/48');
+    
 }
 
 main();
