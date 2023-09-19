@@ -127,9 +127,9 @@ class Weapon {
 
     public WeaponName: string;
     public Damage: number;
-    public Recoil?: number;
     public isAuto: boolean;
     public isSniper: boolean;
+    public Recoil?: number;
     /**
      * Creates a new instance of the `Weapon` class.
      * @param _name - The name of the weapon.
@@ -178,7 +178,7 @@ class Game {
     public Players: Array<Player> | null;
     public Weapons: Array<Weapon> | null;
     public Servers: Array<Server> | null;
-    public static Name: string | null;
+    public static Name: string | null | 'Unknown Game'; 
     /**
      * Initializes a new instance of the Game class with the given name.
      * @param _name - The name of the game.
