@@ -23,8 +23,8 @@ class Server implements _Server {
      * @param totalPlayers - The total players online.
      */
     constructor(
-        public country: string,
-        public continent: string,
+        public country: string | undefined,
+        public continent: string | undefined,
         public address: Array<string> | string = [],
         public range: string | Array<string> = [],
         public totalPlayers?: Array<Player> | number
