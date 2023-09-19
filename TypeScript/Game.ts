@@ -194,13 +194,14 @@ class Game {
      * Starts the game by waking up servers, spawning weapons, and getting players ready.
      */
     public async StartGame(): Promise<void> {
-        // const Servers = new Server();
-        // const Weapons = new Weapon();
-        // const Players = new Player();
+        const Start = new Game('New Game');
+        const Players = new Player('Player');
+        const Weapons = new Weapon('AKM', 80, true, false);
+        const Servers = new Server('Singapore', 'Asia', ['127.0.0.1', '127.0.0.2', '127.0.0.3'], '127.0.0.1/48', 0);
 
-        // Servers.wake();
-        // Weapons.SpawnWeapon();
-        // Players.getReady();
+        Servers.wake();
+        Weapons.SpawnWeapon();
+        Players.getReady();
     }
 
     /**
@@ -224,12 +225,15 @@ class Game {
     }
 }
 
-async function main(): Promise<void> {
-    const P = new Player('Player');
-    const G = new Game('New Game');
-    const W = new Weapon('AKM', 80, true, false);
-    const S = new Server('Singapore', 'Asia', ['127.0.0.1', '127.0.0.2', '127.0.0.3'], '127.0.0.1/48');
+// async function main(): Promise<void> {
+//     const P = new Player('Player');
+//     const G = new Game('New Game');
+//     const W = new Weapon('AKM', 80, true, false);
+//     const S = new Server('Singapore', 'Asia', ['127.0.0.1', '127.0.0.2', '127.0.0.3'], '127.0.0.1/48');
 
-}
+// }
 
-main();
+// main();
+
+const _G = new Game('New Game');
+_G.StartGame();
