@@ -25,7 +25,7 @@ class Server implements _Server {
     constructor(
         public country: string | undefined,
         public continent: string | undefined,
-        public address: Array<string> | string = [],
+        public address: string | Array<string> = [],
         public range: string | Array<string> = [],
         public totalPlayers?: Array<Player> | number
     ) { }
@@ -55,7 +55,10 @@ class Server implements _Server {
     wake(): void {
         setTimeout(() => {
             console.log("Starting the Server...");
+            console.log(`${this.country} Server is online.`);
             console.log(`${this.address} is online.`);
+            console.log(`${this.range} Range is online.`);
+            console.log(`There are ${this.totalPlayers} players are online. `);
         }, 1500);
     }
     reset(): void {
@@ -197,7 +200,7 @@ class Game {
         const Start = new Game('New Game');
         const Players = new Player('Player');
         const Weapons = new Weapon('AKM', 80, true, false);
-        const Servers = new Server('Singapore', 'Asia', ['127.0.0.1', '127.0.0.2', '127.0.0.3'], '127.0.0.1/48', 0);
+        const Servers = new Server('Singapore', 'Asia', ['127.0.0.1 ', '127.0.0.2 ', '127.0.0.3 '], '127.0.0.1/48 ', 0);
 
         Servers.wake();
         Weapons.SpawnWeapon();
