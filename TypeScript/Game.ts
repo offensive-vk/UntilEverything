@@ -171,21 +171,28 @@ class Weapon {
         }, 3500);
     }
 }
-/* 
-* This class represents the Main Game Object in program.
-*/
+/**
+ * This class represents the main game object in the program.
+ */
 class Game {
     public Players: Array<Player> | null;
     public Weapons: Array<Weapon> | null;
     public Servers: Array<Server> | null;
     public static Name: string | null;
+    /**
+     * Initializes a new instance of the Game class with the given name.
+     * @param _name - The name of the game.
+     */
     constructor(_name: string) {
         Game.Name = _name;
-        puts(`Initializing a new Game : ${Game.Name}\n`);
+        console.log(`Initializing a new Game: ${Game.Name}\n`);
         this.Players = [];
         this.Weapons = [];
         this.Servers = [];
     }
+    /**
+     * Starts the game by waking up servers, spawning weapons, and getting players ready.
+     */
     public async StartGame(): Promise<void> {
         // const Servers = new Server();
         // const Weapons = new Weapon();
@@ -194,16 +201,26 @@ class Game {
         // Servers.wake();
         // Weapons.SpawnWeapon();
         // Players.getReady();
-
     }
+
+    /**
+     * Loads the game from a saved state.
+     */
     public async LoadGame(): Promise<void> {
-
+        // TODO: Implement game loading logic
     }
+
+    /**
+     * Saves the current game state.
+     */
     public async SaveGame(): Promise<void> {
-
+        // TODO: Implement game saving logic
     }
+    /**
+     * Exits the game.
+     */
     public async ExitGame(): Promise<void> {
-
+        // TODO: Implement game exit logic
     }
 }
 
