@@ -41,7 +41,7 @@ function getFirstElement<T>(arr: T[]): T | undefined {
 const _numbers = [1, 2, 3, 4, 5];
 const firstNumber = getFirstElement(_numbers); // inferred type: number
 
-const _names = ["Alice", "Bob", "Charlie"];
+const _names = ["Manish", "Ram", "Don"];
 const firstName = getFirstElement(_names); // inferred type: string
 
 console.log(firstNumber); // Output: 1
