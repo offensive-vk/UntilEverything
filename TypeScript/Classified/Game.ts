@@ -1,7 +1,7 @@
 var puts = console.log;
 interface _Server {
-    country: string;
-    continent: string;
+    country: string | undefined;
+    continent: string | undefined;
     address: Array<string> | string;
     totalPlayers?: Array<Player> | number;
     isOnline(): boolean | null;
@@ -77,7 +77,7 @@ class Server implements _Server {
 
     shutdown(): void {
         setTimeout(() => {
-            console.log("Server is Shutting Down...");
+            console.log(`${this.address} Server is Shutting Down...`);
         }, 1500);
     }
 }
