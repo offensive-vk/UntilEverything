@@ -39,10 +39,10 @@ function getFirstElement<T>(arr: T[]): T | undefined {
 }
 
 const _numbers = [1, 2, 3, 4, 5];
-const firstNumber = getFirstElement(_numbers); // inferred type: number
+const firstNumber = getFirstElement(_numbers); 
 
 const _names = ["Manish", "Ram", "Don"];
-const firstName = getFirstElement(_names); // inferred type: string
+const firstName = getFirstElement(_names); 
 
-console.log(firstNumber); // Output: 1
-console.log(firstName); // Output: "Alice"
+console.log(firstNumber);
+console.log(firstName); 
