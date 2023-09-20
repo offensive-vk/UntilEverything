@@ -10,7 +10,10 @@ class __{
         console.log("\tNon Static Display Function Called! ");
     }
     display(val){
-        console.log(`Value of given arguments is : ${arguments[0]}`);
+        console.log(`Value of given arguments is :\n`);
+        for(let val of arguments){
+            console.log(val);
+        }
     }
     constructor(){console.log("\t Object Created !!")}
 }
@@ -18,5 +21,5 @@ class __{
 const _ = new __();
 
 __.display(); // Static
-_.display(500); // non static with arguments
+_.display(500, 20, 400); // non static with arguments
 _.display(); // non static without arguments
