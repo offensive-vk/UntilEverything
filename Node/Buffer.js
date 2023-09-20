@@ -1,4 +1,4 @@
-
+// Buffer Module in Node.js for performing operations on binary data.
 const Buffer = require('buffer').Buffer;
 
 var Arr = [543,547,731,851,458];
