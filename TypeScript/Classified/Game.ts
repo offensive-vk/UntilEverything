@@ -209,8 +209,10 @@ class Game {
     
         const AKM = new Weapon('AKM', 80, true, false);
         const AWM = new Weapon('AWM', 250, false, true);
-        this.Weapons?.push(AKM);
-        this.Weapons?.push(AWM);
+        // this.Weapons?.push(AKM);
+        // this.Weapons?.push(AWM);
+        this.AddWeapons(AWM);
+        this.AddWeapons(AKM);
 
         const Servers = new Server('Singapore', 'Asia', ['127.0.0.1 ', '127.0.0.2 ', '127.0.0.3 '], '127.0.0.1/48 ', 0);
 
@@ -237,6 +239,7 @@ class Game {
      */
     public async ExitGame(): Promise<void> {
         // TODO: Implement game exit logic
+        
     }
 }
 
