@@ -9,10 +9,10 @@ class XGlobal<T>{
         public name: string
     ) { }
 
-    public showPrivateData(): void {
+    public showPrivateData(): T | void {
         console.log(`${this.value}\n ${this.reg}\n`);
     }
-    public showPublicData(): void {
+    public showPublicData(): T | void {
         console.log(`${this.id}\n ${this.salary}\n ${this.name}\n`);
     }
 }
