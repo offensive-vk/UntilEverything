@@ -54,6 +54,7 @@ async function createKeyValuePair<K, V>(key: K, value: V): Promise<KeyValuePair<
 }
 
 async function main(): Promise<void> {
+    
     // Create a KeyValuePair with number key and string value
     const numberStringPair = await createKeyValuePair<number, string>(1, "TypeScript");
 
