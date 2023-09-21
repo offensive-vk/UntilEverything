@@ -4,3 +4,9 @@ async function main<T>(x: number | T, y: T | number, ...args: (unknown | undefin
     const resultArray: T[] = [];
     return resultArray;
 }
+main<number>(42, 56).then(result => {
+    // 'result' is of type 'number[]'
+    console.log(result);
+});
+
+/* More Detailed */
