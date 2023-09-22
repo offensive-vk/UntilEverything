@@ -1,3 +1,7 @@
+/* 
+Exploring different scenarios of 'await' keyword in async functions.
+*/
+
 // Scenario 1: Waiting for a Promise to Resolve
 async function waitOneSecond(): Promise<void> {
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -8,7 +12,7 @@ async function waitOneSecond(): Promise<void> {
 async function rejectPromise(): Promise<void> {
     try {
         await Promise.reject(new Error("Promise rejection"));
-    } catch (error) {
+    } catch (error: any) {
         console.error("Caught an error:", error.message);
     }
 }
@@ -103,3 +107,4 @@ async function asyncWithOtherAsyncFunction(): Promise<void> {
     console.log("\nScenario 9:");
     await asyncWithOtherAsyncFunction();
 })();
+/* The End of Await.ts */
