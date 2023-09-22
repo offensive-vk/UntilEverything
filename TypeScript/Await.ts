@@ -46,7 +46,7 @@ async function concurrentOperations(): Promise<void> {
 
 // Scenario 6: Using async/await with for...of Loop
 async function iterateOverArray(): Promise<void> {
-    const items = [1, 2, 3, 4, 5];
+    const items = [11, 22, 33, 44, 55];
     for (const item of items) {
         await waitOneSecond();
         console.log("Item:", item);
