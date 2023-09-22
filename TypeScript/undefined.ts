@@ -1,5 +1,4 @@
 async function main<T>(x: number | T, y: T | number, ...args: (unknown | undefined)[]): Promise<T[]> {
-    // Your asynchronous function logic here
 
     const resultArray: T[] = [];
     return resultArray;
@@ -19,7 +18,7 @@ async function _main<T>(x: number | T, y: T | number, ...args: (unknown | undefi
     return resultArray;
 }
 
-async function exampleUsage() {
+async function exampleUsage(): Promise<void> {
     try {
         const result: number[] = await _main<number>(42, 56, undefined, 70);
         console.log(result);
