@@ -13,3 +13,21 @@ class ExampleClass { }
 
 // Creating an instance of the decorated class
 const Example = new ExampleClass();
+
+// 2. Another example
+// Decorator function
+function simpleDecorator(target: any, key: string) {
+    console.log(`Decorator applied to ${key} of ${target.constructor.name}`);
+}
+
+// Class using the decorator
+class ExampleClass2 {
+    @simpleDecorator
+    greet() {
+        console.log('Hello, world!');
+    }
+}
+
+// Creating an instance of the decorated class
+const exampleInstance = new ExampleClass2();
+exampleInstance.greet();
