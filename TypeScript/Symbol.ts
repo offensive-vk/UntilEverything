@@ -36,4 +36,25 @@ console.log(myInstance.getValue()); // Output: Hello, Symbol!
 const incrementSymbol = Symbol('increment');
 const decrementSymbol = Symbol('decrement');
 
+class Counter {
+    private count = 0;
 
+    [incrementSymbol]() {
+        this.count++;
+    }
+
+    [decrementSymbol]() {
+        this.count--;
+    }
+
+    getCount() {
+        return this.count;
+    }
+}
+
+const counter = new Counter();
+counter[incrementSymbol]();
+counter[incrementSymbol]();
+counter[decrementSymbol]();
+
+console.log(counter.getCount());
