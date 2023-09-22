@@ -26,8 +26,8 @@ class Person {
     }
 }
 
-const person = new Person("John Doe");
-console.log(person.name); // Output: JOHN DOE
+const _person = new Person("John Doe");
+console.log(_person.name); 
 
 person.name = "Jane Smith";
-console.log(person.name); // Output: JANE SMITH
+console.log(_person.name);
