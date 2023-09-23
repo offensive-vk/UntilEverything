@@ -23,3 +23,25 @@ divide(10, 2, (result) => {
 }, (error) => {
     console.error("Error:", error);
 });
+
+// Use Case 3: Callback chaining
+function fetchData(callback: (data: string) => void) {
+    setTimeout(() => {
+        const data = "First data";
+        callback(data);
+    }, 2000);
+}
+
+function processData(data: string, callback: (processedData: string) => void) {
+    setTimeout(() => {
+        const processedData = data.toUpperCase();
+        callback(processedData);
+    }, 1000);
+}
+
+fetchData((data) => {
+    processData(data, (processedData) => {
+        console.log("Processed data:", processedData);
+    });
+});
+
