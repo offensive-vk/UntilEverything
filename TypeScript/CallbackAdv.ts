@@ -45,3 +45,34 @@ fetchData((data) => {
     });
 });
 
+// Use Case 4: Callback with context binding
+class Counter {
+    private count = 0;
+
+    increment(callback: () => void) {
+        setTimeout(() => {
+            this.count++;
+            callback();
+        }, 1000);
+    }
+
+    getCount() {
+        console.log("Count:", this.count);
+    }
+}
+
+const counter = new Counter();
+counter.increment(counter.getCount.bind(counter));
+
+// Use Case 5: Callback for asynchronous iteration
+function asyncForEach<T>(array: T[], callback: (item: T, index: number, array: T[]) => Promise<void>) {
+    array.reduce((promise, item, index) => {
+        return promise.then(() => callback(item, index, array));
+    }, Promise.resolve());
+}
+
+const items = [1, 2, 3, 4, 5];
+asyncForEach(items, async (item) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log("Processed item:", item);
+});
