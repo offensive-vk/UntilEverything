@@ -9,12 +9,12 @@ main<number>(42, 56).then(result => {
 });
 
 /* More Detailed */
-async function _main<T>(x: number | T, y: T | number, ...args: (unknown | undefined)[]): Promise<T[]> {
+async function _main<T>(x: number | T, y: T | number, ...args: (unknown | undefined)[]): Promise<Array<T>> {
     
     await new Promise(resolve => setTimeout(resolve, 1500)); 
 
     // Create and return an array of type T
-    const resultArray: T[] = [x, y, ...args.filter(arg => typeof arg !== 'undefined')] as T[];
+    const resultArray: T[] = [x, y, ...args.filter(arg => typeof arg !== 'undefined')] as Array<T>;
     return resultArray;
 }
 
