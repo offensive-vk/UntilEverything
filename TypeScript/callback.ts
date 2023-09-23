@@ -20,3 +20,25 @@ delayedGreeting("Vedansh", () => {
     console.log("Greeting displayed after 2 seconds.");
 });
 
+// Use Case 4: Callback for event handling
+function handleClick(callback: () => void) {
+    console.log("Button clicked!");
+    callback();
+}
+
+handleClick(() => {
+    console.log("Callback executed after button click.");
+});
+
+// Use Case 5: Callback for asynchronous operations
+function fetchData(callback: (data: string) => void) {
+    // Simulating an asynchronous API call
+    setTimeout(() => {
+        const data = "Sample data";
+        callback(data);
+    }, 3000);
+}
+
+fetchData((data) => {
+    console.log(`Fetched data: ${data}`);
+});
