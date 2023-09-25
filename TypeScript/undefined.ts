@@ -1,5 +1,7 @@
 async function main<T>(x: number | T, y: T | number, ...args: (unknown | undefined)[]): Promise<T[]> {
-
+    console.log(`Value of X: ${x}, Y: ${y}`);
+    console.log(`Extra Arguments: ${args}`);
+    
     const resultArray: T[] = [];
     return resultArray;
 }
