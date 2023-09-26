@@ -3,7 +3,7 @@ Decorators are a feature of TypeScript that allow you to modify the behavior of 
 
 */
 // Decorator function
-function logClass(target: Function) {
+function logClass(target: Function, descriptor?: PropertyDescriptor) {
     console.log(`Class ${target.name} is instantiated.`);
 }
 
@@ -16,7 +16,7 @@ const Example = new ExampleClass();
 
 // 2. Another example
 // Decorator function
-function simpleDecorator(target: any, key: string) {
+function simpleDecorator(target: any, key?: string) {
     console.log(`Decorator applied to ${key} of ${target.constructor.name}`);
 }
 
