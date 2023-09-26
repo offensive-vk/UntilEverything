@@ -24,7 +24,6 @@ function binarySearch(Arr: number[], target: number): number {
     return -1; // Return -1 if the element is not found
 }
 
-
 // 3. Array Methods (indexOf, includes, find, findIndex):
 const Arr = [1, 2, 3, 4, 5];
 
@@ -39,3 +38,5 @@ const foundValue = Arr.find((item) => item === 2);
 
 // findIndex: Returns the index of the first element that satisfies a condition, or -1 if not found
 const foundIndex = Arr.findIndex((item) => item === 5);
+
+// End 
