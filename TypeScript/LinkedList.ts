@@ -1,13 +1,13 @@
-class Node<T> {
-    constructor(public data: T, public next: Node<T> | null = null) { }
+class _Node<T> {
+    constructor(public data: T, public next: _Node<T> | null = null) { }
 }
 
 class LinkedList<T> {
-    private head: Node<T> | null = null;
+    private head: _Node<T> | null = null;
 
     // Insert a new node at the end of the list
     insert(data: T): void {
-        const newNode = new Node(data);
+        const newNode = new _Node(data);
         if (!this.head) {
             this.head = newNode;
         } else {
