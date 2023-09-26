@@ -1,3 +1,4 @@
+// 1. Linear Search:
 function linearSearch(Arr: number[], target: number): number {
     for (let i = 0; i < Arr.length; i++) {
         if (Arr[i] === target) {
@@ -6,6 +7,7 @@ function linearSearch(Arr: number[], target: number): number {
     }
     return -1; // Return -1 if the element is not found
 }
+//  2. Binary Search (for Sorted Arrays):
 function binarySearch(Arr: number[], target: number): number {
     let left = 0;
     let right = Arr.length - 1;
@@ -22,6 +24,8 @@ function binarySearch(Arr: number[], target: number): number {
     return -1; // Return -1 if the element is not found
 }
 
+
+// 3. Array Methods (indexOf, includes, find, findIndex):
 const Arr = [1, 2, 3, 4, 5];
 
 // indexOf: Returns the index of the first occurrence of an element, or -1 if not found
