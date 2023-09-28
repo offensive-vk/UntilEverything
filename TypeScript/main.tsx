@@ -21,6 +21,21 @@ export function generatePlayerId(): Promise<string | void> | string | null {
     }
     return result ? result : null;
 }
+// const random: any = generatePlayerId();
+// info(random);
 
-const random: any = generatePlayerId();
-info(random);
+
+function handleError(test: () => void, ...args: any[]): string | void {
+    try
+    {
+        test();
+    }
+    catch(error: any)
+    {
+        console.log(`Some Error Occurred : ${error.message}`);
+    }
+    finally
+    {
+
+    }
+}
