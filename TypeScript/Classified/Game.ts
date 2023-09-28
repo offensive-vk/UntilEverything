@@ -84,28 +84,32 @@ class Server implements _Server {
 
 class Player {
     public username: string;
+    public playerId: string | null;
     public health: number;
     public weapon: Weapon | null;
 
     constructor(username: string) {
         this.username = username;
         this.health = 100;
+        this.playerId = this.generatePlayerId();
         this.weapon = null;
     }
     public getPlayer(): Object {
         puts(`\n===============================\n`);
         puts(`\n:: Showing Player Details ::\n `);
         puts(`Player Name: ${this.username}`);
+        puts(`Player Name: ${this.playerId}`);
         puts(`Player Health: ${this.health}`);
         puts(`Player Weapon: ${this.weapon}`);
         puts(`\n===============================\n`);
         return {
             username: this.username,
+            playerId: this.playerId,
             health: this.health,
             weapon: this.weapon
         };
     }
-    public generatePlayerId(): Promise<string> | string | null {
+    public generatePlayerId(): string | null {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         let result = '';
         let numCount = 0;
