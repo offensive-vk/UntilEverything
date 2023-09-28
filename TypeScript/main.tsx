@@ -21,24 +21,21 @@ export function generatePlayerId(): Promise<string | void> | string | null {
     }
     return result ? result : null;
 }
-// const random: any = generatePlayerId();
-// info(random);
-
-
-function handleError(test: () => void, ...args: any[]): string | void {
-    try
-    {   
+/**
+ * Executes a callback function and handles any errors that occur during its execution.
+ * @param test - The callback function that contains the code to be tested.
+ * @param args - Additional arguments that can be passed to the callback function.
+ * @returns void
+ */
+function handleError(test: () => void, ...args: any[]): void {
+    try {
         info('Begin Testing');
         test();
         info('End Testing');
-    }
-    catch(error: any)
-    {
+    } catch (error: any) {
         console.log(`Some Error Occurred : ${error.message}`);
-    }
-    finally
-    {
+    } finally {
         console.log(`[ Function Has Successfully Executed and All the Errors are Handled. ]`);
     }
     return void(0);
-}
+}     
