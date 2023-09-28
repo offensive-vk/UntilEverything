@@ -5,6 +5,14 @@
 export function info(...args: any[]): void{
     console.log(`[info] >> [ ${args} ] << [info]`);
 }
+function _info(...args: any[]): void{
+    const currentDate = new Date();
+    const hours = currentDate.getHours() > 12 ? currentDate.getHours() - 12 : currentDate.getHours();
+    const minutes = currentDate.getMinutes() < 10 ? `0${currentDate.getMinutes()}` : currentDate.getMinutes();
+    const seconds = currentDate.getSeconds() < 10 ? `0${currentDate.getSeconds()}` : currentDate.getSeconds();
+    const ampm = currentDate.getHours() >= 12 ? 'PM' : 'AM';
+    console.log(`${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()} ${hours}:${minutes}:${seconds}.${currentDate.getMilliseconds()} ${ampm} [info] >> [ ${args} ] << [info]`);
+}
 /**
  * Generates a random player ID.
  * @returns A promise that resolves to a string or void, or a string, or null.
