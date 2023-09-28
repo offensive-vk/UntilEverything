@@ -13,7 +13,7 @@ export function info(...args: any[]): void{
  * console.log(playerId); // e.g. "AbC123xyz"
  */
 export function generatePlayerId(): Promise<string | void> | string | null {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let result = '';
     let numCount = 0;
     let charCount = 0;
@@ -51,9 +51,4 @@ function handleError(test: () => void, ...args: any[]): void {
         console.log(`\n ======================= \n`);
     }
     return void(0);
-}     
-
-handleError(() => {
-    let div = 1/0x000143002;
-    info(div);
-})
+}
