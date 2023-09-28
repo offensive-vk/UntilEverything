@@ -92,14 +92,38 @@ class Player {
         this.health = 100;
         this.weapon = null;
     }
-    public getPlayer(): void {
+    public getPlayer(): Object {
         puts(`\n===============================\n`);
         puts(`\n:: Showing Player Details ::\n `);
         puts(`Player Name: ${this.username}`);
         puts(`Player Health: ${this.health}`);
         puts(`Player Weapon: ${this.weapon}`);
         puts(`\n===============================\n`);
-
+        return {
+            username: this.username,
+            health: this.health,
+            weapon: this.weapon
+        };
+    }
+    public generatePlayerId(): Promise<string> | string | null {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let result = '';
+        let numCount = 0;
+        let charCount = 0;
+        for (let i = 0; i < 10; i++) {
+            if (numCount < 7 || (numCount >= 7 && charCount < 3 && Math.random() < 0.5)) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+                if (/[0-9]/.test(result.charAt(result.length - 1))) {
+                    numCount++;
+                } else {
+                    charCount++;
+                }
+            } else {
+                result += characters.charAt(Math.floor(Math.random() * 26) + 26);
+                charCount++;
+            }
+        }
+        return result ? result : null;
     }
     public getReady(): void {
         puts(`${this.username} is ready .`);
