@@ -1,3 +1,7 @@
+/**
+ * Logs a customized message to the console that looks like a info.
+ * @param args - An array of arguments that will be logged to the console.
+ */
 export function info(...args: any[]): void{
     console.log(`[info] >> [ ${args} ] << [info]`);
 }
