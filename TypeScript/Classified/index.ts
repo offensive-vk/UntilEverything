@@ -82,25 +82,3 @@ function displayObj(value: FourWheeler | TwoWheeler): void{
     log(`\n=============================\n`);
 }
 displayObj(Supra);
-
-class TwoWheeler extends FourWheeler implements Bike{
-    Honda: Bike;
-    doors: boolean;
-    tyres: number;
-    color: string | string[];
-    seats: number;
-    brand: string;
-    petrol: string;
-
-    start(): void{}
-    stop(): void{}
-    speed(): void{}
-
-    public Petrol(): void{
-        this.petrol = "full";
-        log(`Petrol Tank is Full. `);
-    }
-    public Horn(): void{
-        log(` Honkkkkkk !!!`);
-    }
-}
