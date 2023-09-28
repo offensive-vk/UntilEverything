@@ -5,6 +5,13 @@
 export function info(...args: any[]): void{
     console.log(`[info] >> [ ${args} ] << [info]`);
 }
+/**
+ * Generates a random player ID.
+ * @returns A promise that resolves to a string or void, or a string, or null.
+ * @example
+ * const playerId = generatePlayerId();
+ * console.log(playerId); // e.g. "AbC123xyz"
+ */
 export function generatePlayerId(): Promise<string | void> | string | null {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
