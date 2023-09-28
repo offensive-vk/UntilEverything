@@ -27,8 +27,10 @@ export function generatePlayerId(): Promise<string | void> | string | null {
 
 function handleError(test: () => void, ...args: any[]): string | void {
     try
-    {
+    {   
+        info('Begin Testing');
         test();
+        info('End Testing');
     }
     catch(error: any)
     {
@@ -36,6 +38,7 @@ function handleError(test: () => void, ...args: any[]): string | void {
     }
     finally
     {
-
+        console.log(`[ Function Has Successfully Executed and All the Errors are Handled. ]`);
     }
+    return void(0);
 }
