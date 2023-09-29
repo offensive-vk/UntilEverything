@@ -16,10 +16,12 @@ const todo: TodoPreview = {
     completed: false,
     createdAt: 1615544252770,
 };
+console.log(todo);
 
 type TodoInfo = Omit<Todo, 'completed' | 'createdAt'>;
-
 const todoInfo: TodoInfo = {
     title: 'Pick up kids',
     description: 'Kindergarten closes at 5pm',
 };
+
+console.log(todoInfo);
