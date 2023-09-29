@@ -1,4 +1,6 @@
-// Define a sample interface
+/* 
+Pick constructs a type by picking the set of properties Keys (string literal or union of string literals) from Type.
+*/
 interface Person {
     name: string;
     age: number;
