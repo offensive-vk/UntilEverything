@@ -24,3 +24,27 @@ const person: PersonRecord = {
 
 console.log(person);
 
+// Example 3: Creating a record with dynamically generated keys
+function createRecord<T>(keys: string[], defaultValue: T): Record<string, T> {
+    const record: Record<string, T> = {};
+
+    keys.forEach((key) => {
+        record[key] = defaultValue;
+    });
+
+    return record;
+}
+
+const dynamicRecord = createRecord(['one', 'two', 'three'], 0);
+console.log(dynamicRecord);
+
+// Example 4: Using Record to define a dictionary-like object
+type Dictionary<T> = Record<string, T>;
+
+const colors: Dictionary<string> = {
+    red: 'FF0000',
+    green: '00FF00',
+    blue: '0000FF',
+};
+
+console.log(colors);
