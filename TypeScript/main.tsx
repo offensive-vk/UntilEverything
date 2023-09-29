@@ -55,7 +55,7 @@ export function generatePlayerId(): Promise<string | void> | string | null {
  * @param args - Additional arguments that can be passed to the callback function.
  * @returns void
  */
-function handleError(test: () => void, ...args: any[]): void {
+export function handleError(test: () => void, ...args: any[]): void {
     try {
         console.log(`\n ======================= \n`);
         info('Begin Testing');
@@ -69,3 +69,4 @@ function handleError(test: () => void, ...args: any[]): void {
     }
     return void(0);
 }
+/* The End */
