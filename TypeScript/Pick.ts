@@ -9,18 +9,18 @@ interface Person {
 // Example 1: Select specific properties from an interface
 type BasicInfo = Pick<Person, 'name' | 'age'>;
 const basicInfo: BasicInfo = {
-    name: 'Alice',
+    name: 'Alicia',
     age: 30,
 };
 console.log(basicInfo);
 
 // Example 2: Create a read-only version of an interface
 type ReadOnlyPerson = Readonly<Person>;
-const readOnlyPerson: ReadOnlyPerson = {
-    name: 'Bob',
+const readOnly: ReadOnlyPerson = {
+    name: 'Ray',
     age: 25,
     address: '123 Main St',
     email: 'bob@example.com',
 };
 // readOnlyPerson.age = 26; // Error: Cannot assign to 'age' because it is a read-only property
-console.log(readOnlyPerson);
+console.log(readOnly);
