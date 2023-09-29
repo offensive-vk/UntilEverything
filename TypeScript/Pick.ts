@@ -24,3 +24,26 @@ const readOnly: ReadOnlyPerson = {
 };
 // readOnlyPerson.age = 26; // Error: Cannot assign to 'age' because it is a read-only property
 console.log(readOnly);
+
+// Example 3: Use Pick with predefined types
+type HTMLProps = Pick<React.HTMLProps<HTMLDivElement>, 'className' | 'style'>;
+const htmlProps: HTMLProps = {
+    className: 'container',
+    style: { color: 'blue' },
+};
+console.log(htmlProps);
+
+// Example 4: Select no properties (empty type)
+type Empty = Pick<Person, never>;
+const empty: Empty = {}; // Allowed because it has no properties
+console.log(empty);
+
+// Example 5: Select all properties using keyof and Pick
+type AllProperties = Pick<Person, keyof Person>;
+const allProps: AllProperties = {
+    name: 'Charlie',
+    age: 35,
+    address: '456 Elm St',
+    email: 'charlie@example.com',
+};
+console.log(allProps);
