@@ -16,9 +16,7 @@ async function animate() {
         // Move to the previous frame or wrap around
         currentFrameIndex = (currentFrameIndex + 1) % frames.length;
 
-        // Wait for a short period (e.g., 100 milliseconds)
         await sleep(100);
     }
 }
-
 animate();
