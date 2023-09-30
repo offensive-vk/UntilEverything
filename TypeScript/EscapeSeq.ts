@@ -3,7 +3,7 @@ function sleep(ms: number) {
 }
 
 async function animate() {
-    const frames = ['|', '/', '-', '\\']; // Frames for animation
+    const frames = ['|', '/', '-', '\\']; 
     let currentFrameIndex = 0;
 
     while (true) {
