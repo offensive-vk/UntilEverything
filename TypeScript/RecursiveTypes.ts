@@ -20,3 +20,15 @@ const tree: TreeNode<number> = {
     },
 };
 
+// Function to recursively traverse and print the tree.
+function printTree(node: TreeNode<number> | undefined) {
+    if (node) {
+        console.log(node.value);
+        printTree(node.left);
+        printTree(node.right);
+    }
+}
+
+// Print the binary tree using a recursive function.
+console.log("Binary Tree:");
+printTree(tree);
