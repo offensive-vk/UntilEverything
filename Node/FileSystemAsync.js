@@ -82,3 +82,13 @@ fs.readFile('example.txt', 'utf8', (err, data) => {
     });
 });
 
+// Watching Files and Directories (Asynchronous)
+const watcher = fs.watch('.', { recursive: true }, (event, filename) => {
+    console.log(`File ${filename} has been ${event}`);
+});
+
+// Close the watcher after some time
+setTimeout(() => {
+    watcher.close();
+    console.log('Watcher closed.');
+}, 10000); // Close after 10 seconds
