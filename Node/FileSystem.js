@@ -1,3 +1,7 @@
+/* 
+The fs module (File System module) in Node.js is a built-in module that provides a set of functions for interacting with the file system. These functions allow you to perform various file-related operations such as reading, writing, deleting, and manipulating files and directories.
+*/
+
 const fs = require('fs');
 
 // Reading Files (Asynchronous)
