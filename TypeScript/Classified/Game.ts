@@ -110,7 +110,7 @@ class Player {
         };
     }
     public generatePlayerId(): string | null {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         let result = '';
         let numCount = 0;
         let charCount = 0;
@@ -234,7 +234,7 @@ class Game {
      */
     public async StartGame(): Promise<void> {
         const Players = new Player('Player 1 ');
-    
+        // const Weapons = new Weapon();
         const AKM = new Weapon('AKM', 80, true, false);
         const AWM = new Weapon('AWM', 250, false, true);
         // this.Weapons?.push(AKM);
@@ -245,7 +245,7 @@ class Game {
         const Servers = new Server('Singapore', 'Asia', ['127.0.0.1 ', '127.0.0.2 ', '127.0.0.3 '], '127.0.0.1/48 ', 0);
 
         Servers.wake();
-        Weapons.SpawnWeapon();
+        // Weapons.SpawnWeapon();
         Players.getReady();
     }
 
@@ -278,7 +278,6 @@ class Game {
 //     const S = new Server('Singapore', 'Asia', ['127.0.0.1', '127.0.0.2', '127.0.0.3'], '127.0.0.1/48');
 
 // }
-
 // main();
 
 const _G = new Game('New Game');
