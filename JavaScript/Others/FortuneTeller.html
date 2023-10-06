@@ -82,15 +82,26 @@
             text-align: center;
             height: 500px;
             width: 400px;
+            transition: background-color 900ms ease-in-out;
+        }
+        .box:hover{
+            background-color: darkcyan;
         }
         h1{
             color: var(--c1);
         }
         input{
-            
+            height: 20px;
+            width: 100px;
+            padding: 10px;
+            margin: 15px;
         }
         button{
-
+            font-size: 23px;
+            padding: 7px;
+            margin: 15px;
+            height: 35px;
+            width: 185px;
         }
     </style>
 </head>
@@ -99,7 +110,7 @@
         <h1> Fortune Teller </h1><br>
         <form onsubmit="event.preventDefault(); checkChoice();">
             <h3> Pass A Floating Point Value Greater than 1.0 and less than 21.0. </h3><br>
-            <input type="text" id="inputField" required>
+            <input type="text" id="inputField" required><br>
             <button type="submit">Curse My Fortune</button>
         </form>
         <p id="result"></p>
