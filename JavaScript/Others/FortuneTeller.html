@@ -3,7 +3,7 @@
 <head>
     <title>Choice Matching</title>
     <script>
-        function checkChoice() {
+        async function checkChoice() {
             const input = parseFloat(document.getElementById("inputField").value);
             let result = "";
 
@@ -49,10 +49,11 @@
                 result = "Star";
             } else if (input >= 19.8 && input <= 20.0) {
                 result = "Chocolate";
+            } else if (input >= 20.0){
+                result = 'Absolutely, You';
             } else {
                 result = "Undefined";
             }
-
             document.getElementById("result").innerHTML = result;
         }
     </script>
@@ -60,18 +61,22 @@
         :root {
             --border: rgb(3, 169, 244);
             --c1: rgb(98, 0, 234);
-            --c2: rgb(236, 64, 122);
+            --c2: rgb(121, 208, 167);
             --c3: rgb(253, 216, 53);
         }
+        *{
+            font-family: 'Source Code Pro', monospace !important;
+        }
+        
         body {
-            background-color: rgb(10, 10, 10);
+            background-color: rgb(10, 10, 10); 
             display: grid;
             height: 100vh;
             margin: 0px;
             overflow: hidden;
             place-items: center;
-            color: white;
-            font-family: 'Source Code Pro', monospace;
+            color: #fff;
+            transition: background 900ms ease-in;
         }
         .box{
             border: 1px solid var(--border);
@@ -83,8 +88,9 @@
             text-align: center;
             height: 500px;
             width: 400px;
-            transition: background-color 900ms ease-in-out;
+            padding: 12px;
             cursor: pointer;
+            transition: background-color 850ms ease-in-out;
 
         }
         .box:hover{
@@ -98,12 +104,13 @@
             width: 100px;
             padding: 10px;
             margin: 15px;
+            font-size: 2.2ch;
         }
         button{
             font-size: 23px;
             padding: 7px;
             margin: 15px;
-            height: 35px;
+            height: 65px;
             width: 185px;
             color: red;
         }
@@ -115,9 +122,18 @@
         <form onsubmit="event.preventDefault(); checkChoice();">
             <h3> Pass A Floating Point Value Greater than 1.0 and less than 21.0. </h3><br>
             <input type="text" id="inputField" required><br>
-            <button type="submit">Curse My Fortune</button>
+            <button type="submit" id="btn">Curse My Fortune</button>
         </form>
         <p id="result"></p>
     </div>
+    <script>
+        const bg =  'human.jpg';
+        document.getElementById('btn').addEventListener("click", async() => {
+            await checkChoice();
+            document.body.style.backgroundImage = `url(${bg})`;
+            document.body.style.backgroundPosition = 'center';
+            document.body.style.backgroundSize = 'cover';
+        });
+    </script>
 </body>
 </html>
