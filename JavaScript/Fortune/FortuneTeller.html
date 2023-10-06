@@ -41,14 +41,17 @@
             color: var(--c1);
         }
         input{
+            border-radius: 10px;
+            border: 2.2px double var(--border);
             height: 20px;
             width: 100px;
             padding: 10px;
             margin: 15px;
             font-size: 2.2ch;
+            transition: all 700ms ease-in-out;
         }
         input:focus{
-            box-shadow: 0 0 1.5rem #fff; 
+            box-shadow: 0 0 2.5rem #fff; 
         }
         button{
             font-size: 23px;
@@ -68,10 +71,6 @@
             background-color: #000;
             color: #fff;
         }
-        p{
-            
-        }
-
     </style>
 </head>
 <body>
@@ -85,6 +84,38 @@
         <p id="result"></p>
     </div>
     <script>
+        const fortune = [
+        "Human",
+        "RTX 3060",
+        "Hitler",
+        "Dirt bike",
+        "Pizza",
+        "Rainbow",
+        "Mountain",
+        "Guitar",
+        "Coffee",
+        "Beach",
+        "Book",
+        "Sunflower",
+        "Moon",
+        "Ice cream",
+        "Fireworks",
+        "Camera",
+        "Rain",
+        "Football",
+        "Music",
+        "Star",
+        "Chocolate",
+        "Absolutely, You",
+        "Undefined"
+        ];
+        document.querySelector("h1").addEventListener("mouseover", function(event) {
+            const curse = fortune[Math.floor(Math.random() * fortune.length)];
+            this.innerHTML = `${curse} is cursed. `;
+            if(curse == "Death") {
+                this.style.color = "red";
+            }
+        });
         async function checkChoice() {
             const input = parseFloat(document.getElementById("inputField").value);
             let result = "";
@@ -131,15 +162,18 @@
                 result = "Star";
             } else if (input >= 19.8 && input <= 20.0) {
                 result = "Chocolate";
+            } else if(input == 99.9 && input <= 99.9){
+                result = "Death";
             } else {
                 result = "Undefined";
+                console.log(result);
             }
             document.getElementById("result").innerHTML = result;
             return result;
         }
         document.getElementById('btn').addEventListener("click", async() => {
             const res = await checkChoice();
-            var image = `${res.toLowerCase().replace(" ", "")}.jpg`
+            var image = `${res.toLowerCase().replace(" ", "")}.jpg`;
             document.title = ` ${res} | Please Refresh To Do It Again !`;
             document.querySelector('.box').innerHTML = res;
             document.querySelector('.box').style.border = 'none'; 
@@ -147,10 +181,9 @@
             document.body.style.backgroundImage = `url(${image})`;
             document.body.style.backgroundPosition = 'center';
             document.body.style.backgroundSize = 'cover';
-            console.log(`url(${image})`);
+            console.log(`${image}`);
         });
 
-        
     </script>
 </body>
 </html>
