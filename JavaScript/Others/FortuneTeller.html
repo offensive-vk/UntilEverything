@@ -56,15 +56,27 @@
             document.getElementById("result").innerHTML = result;
         }
     </script>
+    <style>
+        body {
+            background-color: rgb(10, 10, 10);
+            display: grid;
+            height: 100vh;
+            margin: 0px;
+            overflow: hidden;
+            place-items: center;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1> Fortune Teller </h1><br>
-    <h3> Pass A Floating Point Value Greater than 1.0 and less than 21.0. </h3><br>
-    <form onsubmit="event.preventDefault(); checkChoice();">
-        <label for="inputField">Enter a Floating Value from 1.0 to 20.0:</label>
-        <input type="text" id="inputField" required>
-        <button type="submit">Curse My Fortune</button>
-    </form>
-    <p id="result"></p>
+    <div class="box">
+        <h1> Fortune Teller </h1><br>
+        <form onsubmit="event.preventDefault(); checkChoice();">
+            <h3> Pass A Floating Point Value Greater than 1.0 and less than 21.0. </h3><br>
+            <input type="text" id="inputField" required>
+            <button type="submit">Curse My Fortune</button>
+        </form>
+        <p id="result"></p>
+    </div>
 </body>
 </html>
