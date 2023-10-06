@@ -185,7 +185,17 @@
             document.body.style.backgroundSize = 'cover';
             console.log(`${image}`);
         });
-
+        window.addEventListener('keydown', (event) => {
+            if (event.code === 'KeyS' && event.altKey && event.shiftKey) {
+                const verify = prompt("Is this you ? ");
+                if(verify == 'letmein' || verify == "yeah"){
+                    document.querySelector('.box').innerHTML = `You are special. `;
+                    alert(`Access Granted.`);
+                }
+                
+            }
+        });
+        
     </script>
 </body>
 </html>
