@@ -36,11 +36,6 @@
             width: 400px;
             padding: 12px;
             cursor: pointer;
-            transition: background-color 850ms ease-in-out;
-
-        }
-        .box:hover{
-            background-color: var(--c2);
         }
         h1{
             color: var(--c1);
@@ -52,15 +47,31 @@
             margin: 15px;
             font-size: 2.2ch;
         }
+        input:focus{
+            box-shadow: 0 0 1.5rem #fff; 
+        }
         button{
             font-size: 23px;
             padding: 7px;
             margin: 15px;
             height: 70px;
             width: 185px;
-            color: red;
+            color: #000;
+            background-color: azure;
             cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            transition: all 700ms ease-in-out;
         }
+        button:hover{
+            box-shadow: 0rem 0rem 2.5rem red;
+            background-color: #000;
+            color: #fff;
+        }
+        p{
+            
+        }
+
     </style>
 </head>
 <body>
@@ -120,8 +131,6 @@
                 result = "Star";
             } else if (input >= 19.8 && input <= 20.0) {
                 result = "Chocolate";
-            } else if (input >= 20.0){
-                result = 'Absolutely, You';
             } else {
                 result = "Undefined";
             }
@@ -130,13 +139,15 @@
         }
         document.getElementById('btn').addEventListener("click", async() => {
             const res = await checkChoice();
+            var image = `${res.toLowerCase().replace(" ", "")}.jpg`
             document.title = ` ${res} | Please Refresh To Do It Again !`;
             document.querySelector('.box').innerHTML = res;
             document.querySelector('.box').style.border = 'none'; 
             document.querySelector('.box').style.transition = 'none';
-            document.body.style.backgroundImage = `url(${res.toLowerCase()}.jpg)`;
+            document.body.style.backgroundImage = `url(${image})`;
             document.body.style.backgroundPosition = 'center';
             document.body.style.backgroundSize = 'cover';
+            console.log(`url(${image})`);
         });
 
         
