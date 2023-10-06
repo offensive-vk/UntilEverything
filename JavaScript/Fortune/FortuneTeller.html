@@ -25,7 +25,7 @@
             transition: background 900ms ease-in;
         }
         .box{
-            border: 1px solid var(--border);
+            border: 1.5px double var(--border);
             border-radius: 15px;
             display: flex;
             flex-wrap: wrap;
@@ -98,7 +98,7 @@
         "Book",
         "Sunflower",
         "Moon",
-        "Ice cream",
+        "Ice Cream",
         "Fireworks",
         "Camera",
         "Rain",
@@ -106,7 +106,8 @@
         "Music",
         "Star",
         "Chocolate",
-        "Absolutely, You",
+        "You",
+        "Neutron",
         "Undefined"
         ];
         document.querySelector("h1").addEventListener("mouseover", function(event) {
@@ -114,6 +115,8 @@
             this.innerHTML = `${curse} is cursed. `;
             if(curse == "Death") {
                 this.style.color = "red";
+                document.body.style.backgroundColor = "red";
+                this.removeEventListener("mouseover");
             }
         });
         async function checkChoice() {
@@ -147,7 +150,7 @@
             } else if (input >= 11.8 && input < 12.5) {
                 result = "Moon";
             } else if (input >= 12.5 && input < 13.2) {
-                result = "Ice cream";
+                result = "Ice Cream";
             } else if (input >= 13.2 && input < 14.7) {
                 result = "Fireworks";
             } else if (input >= 14.7 && input < 15.4) {
@@ -177,7 +180,6 @@
             document.title = ` ${res} | Please Refresh To Do It Again !`;
             document.querySelector('.box').innerHTML = res;
             document.querySelector('.box').style.border = 'none'; 
-            document.querySelector('.box').style.transition = 'none';
             document.body.style.backgroundImage = `url(${image})`;
             document.body.style.backgroundPosition = 'center';
             document.body.style.backgroundSize = 'cover';
