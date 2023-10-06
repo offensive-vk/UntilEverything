@@ -1,63 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Choice Matching</title>
+    <script>
+        function checkChoice() {
+            const input = parseFloat(document.getElementById("inputField").value);
+            let result = "";
+
+            if (input >= 1.0 && input < 1.2) {
+                result = "Human";
+            } else if (input >= 1.2 && input < 1.5) {
+                result = "RTX 3060";
+            } else if (input >= 1.5 && input < 2.5) {
+                result = "Hitler";
+            } else if (input >= 2.5 && input < 3.0) {
+                result = "Dirt bike";
+            } else if (input >= 3.0 && input < 4.7) {
+                result = "Pizza";
+            } else if (input >= 4.7 && input < 5.2) {
+                result = "Rainbow";
+            } else if (input >= 5.2 && input < 6.9) {
+                result = "Mountain";
+            } else if (input >= 6.9 && input < 7.4) {
+                result = "Guitar";
+            } else if (input >= 7.4 && input < 8.1) {
+                result = "Coffee";
+            } else if (input >= 8.1 && input < 9.6) {
+                result = "Beach";
+            } else if (input >= 9.6 && input < 10.3) {
+                result = "Book";
+            } else if (input >= 10.3 && input < 11.8) {
+                result = "Sunflower";
+            } else if (input >= 11.8 && input < 12.5) {
+                result = "Moon";
+            } else if (input >= 12.5 && input < 13.2) {
+                result = "Ice cream";
+            } else if (input >= 13.2 && input < 14.7) {
+                result = "Fireworks";
+            } else if (input >= 14.7 && input < 15.4) {
+                result = "Camera";
+            } else if (input >= 15.4 && input < 16.9) {
+                result = "Rain";
+            } else if (input >= 16.9 && input < 17.6) {
+                result = "Football";
+            } else if (input >= 17.6 && input < 18.3) {
+                result = "Music";
+            } else if (input >= 18.3 && input < 19.8) {
+                result = "Star";
+            } else if (input >= 19.8 && input <= 20.0) {
+                result = "Chocolate";
+            } else {
+                result = "Undefined";
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
 </head>
 <body>
-    <script>
-    var input = prompt('Enter A Floating Point Value from 1.0 to 20.0.');
-    
-        if (input >= 1.0 && input < 1.2) {
-            console.log("Human");
-        } else if (input >= 1.2 && input < 1.5) {
-            console.log("RTX 3060");
-        } else if (input >= 1.5 && input < 2.5) {
-            console.log("Hitler");
-        } else if (input >= 2.5 && input < 3.0) {
-            console.log("Dirt bike");
-        } else if (input >= 3.0 && input < 4.7) {
-            console.log("Pizza");
-        } else if (input >= 4.7 && input < 5.2) {
-            console.log("Rainbow");
-        } else if (input >= 5.2 && input < 6.9) {
-            console.log("Mountain");
-        } else if (input >= 6.9 && input < 7.4) {
-            console.log("Guitar");
-        } else if (input >= 7.4 && input < 8.1) {
-            console.log("Coffee");
-        } else if (input >= 8.1 && input < 9.6) {
-            console.log("Beach");
-        } else if (input >= 9.6 && input < 10.3) {
-            console.log("Book");
-        } else if (input >= 10.3 && input < 11.8) {
-            console.log("Sunflower");
-        } else if (input >= 11.8 && input < 12.5) {
-            console.log("Moon");
-        } else if (input >= 12.5 && input < 13.2) {
-            console.log("Ice cream");
-        } else if (input >= 13.2 && input < 14.7) {
-            console.log("Fireworks");
-        } else if (input >= 14.7 && input < 15.4) {
-            console.log("Camera");
-        } else if (input >= 15.4 && input < 16.9) {
-            console.log("Rain");
-        } else if (input >= 16.9 && input < 17.6) {
-            console.log("Football");
-        } else if (input >= 17.6 && input < 18.3) {
-            console.log("Music");
-        } else if (input >= 18.3 && input < 19.8) {
-            console.log("Star");
-        } else if (input >= 19.8 && input <= 20.0) {
-            console.log("Chocolate");
-        } else {
-            console.log("Undefined");
-        }
-
-        rl.close();
-    });
-
-    </script>
+    <h1>Choice Matching</h1>
+    <form onsubmit="event.preventDefault(); checkChoice();">
+        <label for="inputField">Enter a Floating Value from 1.0 to 20.0:</label>
+        <input type="text" id="inputField" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
 </body>
 </html>
