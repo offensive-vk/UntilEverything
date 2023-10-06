@@ -55,6 +55,7 @@
                 result = "Undefined";
             }
             document.getElementById("result").innerHTML = result;
+            return result;
         }
     </script>
     <style>
@@ -110,9 +111,10 @@
             font-size: 23px;
             padding: 7px;
             margin: 15px;
-            height: 65px;
+            height: 70px;
             width: 185px;
             color: red;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -129,7 +131,8 @@
     <script>
         const bg =  'human.jpg';
         document.getElementById('btn').addEventListener("click", async() => {
-            await checkChoice();
+            const res = await checkChoice();
+            document.title = ` ${res} | Please Refresh To Do It Again !`;
             document.body.style.backgroundImage = `url(${bg})`;
             document.body.style.backgroundPosition = 'center';
             document.body.style.backgroundSize = 'cover';
