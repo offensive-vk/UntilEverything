@@ -1,0 +1,67 @@
+:root {
+    --border: rgb(3, 169, 244);
+    --c1: rgb(98, 0, 234);
+    --c2: rgb(121, 208, 167);
+    --c3: rgb(253, 216, 53);
+}
+*{
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+body {
+    background-color: rgb(10, 10, 10); 
+    display: grid;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    place-items: center;
+    color: #fff;
+    transition: background 900ms ease-in;
+}
+.box{
+    border: 1.5px double var(--border);
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 500px;
+    width: 400px;
+    padding: 12px;
+    cursor: pointer;
+}
+h1{
+    color: var(--c1);
+}
+input{
+    border-radius: 10px;
+    border: 2.2px double var(--border);
+    height: 20px;
+    width: 100px;
+    padding: 10px;
+    margin: 15px;
+    font-size: 2.2ch;
+    transition: all 700ms ease-in-out;
+}
+input:focus{
+    box-shadow: 0 0 2.5rem #fff; 
+}
+button{
+    font-size: 23px;
+    padding: 7px;
+    margin: 15px;
+    height: 70px;
+    width: 185px;
+    color: #000;
+    background-color: azure;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: all 700ms ease-in-out;
+}
+button:hover{
+    box-shadow: 0rem 0rem 2.5rem red;
+    background-color: #000;
+    color: #fff;
+}
