@@ -1,5 +1,6 @@
 /* 
 * @author <admin@offensive-vk.org>
+* @isPrivate: true
 */
 const fortune = [
     "Human",
@@ -36,7 +37,13 @@ document.querySelector("h1").addEventListener("mouseover", function(event) {
         this.removeEventListener("mouseover");
     }
 });
+/**
+ * Takes an input value from an HTML input field, performs a series of comparisons on the input value, and returns a corresponding result based on the comparisons.
+ * 
+ * @returns {string} The result of the comparisons.
+ */
 async function checkChoice() {
+
     const input = parseFloat(document.getElementById("inputField").value);
     let result = "";
 
