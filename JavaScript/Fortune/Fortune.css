@@ -3,6 +3,13 @@
     --c1: rgb(98, 0, 234);
     --c2: rgb(121, 208, 167);
     --c3: rgb(253, 216, 53);
+    --c4: rgb(255, 0, 0);
+    --c5: rgb(0, 255, 0);
+    --c6: rgb(0, 0, 255);
+    --c7: rgb(255, 255, 0);
+    --c8: rgb(255, 0, 255);
+    --c9: rgb(239, 215, 151);
+
 }
 *{
     font-family: 'Source Code Pro', monospace !important;
@@ -19,7 +26,6 @@ body {
     transition: background 900ms ease-in;
 }
 .box{
-    border: 1.5px double var(--border);
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -30,6 +36,25 @@ body {
     width: 400px;
     padding: 12px;
     cursor: pointer;
+    border: 2px solid var(--border);
+    animation: border-animation 3s infinite;
+}
+@keyframes border-animation {
+    0% {
+        border-color: var(--c1);
+    }
+    25% {
+        border-color: var(--c2);
+    }
+    50% {
+        border-color: var(--c3);
+    }
+    75% {
+        border-color: var(--c2);
+    }
+    100% {
+        border-color: var(--c1);
+    }
 }
 h1{
     color: var(--c1);
