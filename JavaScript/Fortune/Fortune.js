@@ -1,6 +1,8 @@
 /* 
 * @author <admin@offensive-vk.org>
 * @isPrivate: true
+* @lang : Vanilla JavaScript
+* @description : It Tells your fortune or fate. Believe me or not.
 */
 const fortune = [
     "Human",
@@ -21,6 +23,7 @@ const fortune = [
     "Camera",
     "Rain",
     "Football",
+    "Your Death",
     "Music",
     "Star",
     "Chocolate",
