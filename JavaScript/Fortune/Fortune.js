@@ -110,13 +110,24 @@ document.getElementById('btn').addEventListener("click", async() => {
 });
 window.addEventListener('keydown', (event) => {
     if (event.code === 'KeyS' && event.altKey && event.shiftKey) {
-        const verify = prompt("Is this you ? ");
-        if(verify == 'letmein' || verify == "yeah"){
-            document.querySelector('.box').innerHTML = `You are special. `;
-            alert(`Access Granted.`);
-        }
-        else{
-            alert(`Access Denied.`);
+        const verify = confirm("Is this you ? ");
+        if(verify){
+            const auth = prompt(`Verify your identity then`);
+            if(auth == 'letmein' || auth == "itsme" || auth == 7474784){
+                alert(`Access Granted.`);
+                document.querySelector('.box').innerHTML = `You are special. `;
+                setTimeout(() => {
+                    document.querySelector('.box').style.display = 'none';
+                    document.title = 'Congratulations ! You Made It .';
+                    document.body.style.backgroundImage = `url(special.jpg)`;
+                    document.body.style.backgroundRepeat = 'no-repeat';
+                    document.body.style.backgroundSize = `cover`;
+                }, 3000);
+            }
+            else{
+                alert(`Access Denied.`);
+                alert(`Good Luck !`);
+            }
         }
     }
 });
