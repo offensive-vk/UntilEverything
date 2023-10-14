@@ -1,0 +1,28 @@
+/* Define a basic grid layout for all screen sizes */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-item {
+    background-color: aqua;
+}
+
+/* Media query to adjust the number of columns on smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Media query to change the gap and font size for larger screens */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-gap: 30px;
+    }
+
+    .grid-item {
+        font-size: 1.2rem;
+    }
+}
