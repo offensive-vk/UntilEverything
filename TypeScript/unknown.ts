@@ -45,4 +45,23 @@ async function processUnknownArray<T, U>(
     return Promise.all(resultPromises);
 }
 
+// Example usage of the functions
+const inputArray: unknown[] = [1, 2, 3, '4', '5', 6, undefined, 7];
 
+const mappedArray = mapUnknownArray<number, string>(inputArray, (value) => `Value: ${value}`);
+console.log('Mapped Array:', mappedArray);
+
+const filteredArray = filterUnknownArray<string>(inputArray, (value) => typeof value === 'string');
+console.log('Filtered Array:', filteredArray);
+
+const asyncProcessor = (value: number) => new Promise<string>((resolve) => {
+    setTimeout(() => resolve(`Processed: ${value}`), 100);
+});
+
+processUnknownArray<number, string>(inputArray, asyncProcessor)
+    .then((result) => {
+        console.log('Async Processed Array:', result);
+    })
+    .catch((error) => {
+        console.error('Error:', error.message);
+    });
