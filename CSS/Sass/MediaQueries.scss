@@ -1,0 +1,86 @@
+/* Basic Usage: Adjusting Styles for Different Screen Sizes */
+body {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Orientation-based Styling */
+@media (orientation: landscape) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        background-color: lightpink;
+    }
+}
+
+/* Device Pixel Ratio (Retina Displays) */
+@media (min-resolution: 2dppx) {
+    img {
+        width: 50%;
+    }
+}
+
+/* Combining Media Features */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    body {
+        font-size: 16px;
+        background-color: lightgreen;
+    }
+}
+
+/* Changing Layout for Print */
+@media print {
+    body {
+        font-size: 12pt;
+        background: white;
+    }
+}
+
+/* High DPI and Orientation for Mobile Devices */
+@media (min-resolution: 2dppx) and (orientation: portrait) {
+    img {
+        width: 75%;
+    }
+}
+
+/* Adaptive Typography and Layout */
+@media (min-width: 320px) and (max-width: 768px) {
+    body {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 448));
+    }
+}
+
+/* Using Media Features for Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
+/* Targeting Specific Devices */
+@media screen and (device-width: 414px) and (device-height: 896px) and (orientation: portrait) {
+    /* Specific styles for iPhone 11 in portrait orientation */
+}
+
+/* Conditional Loading of External Resources */
+@media (min-resolution: 2dppx) {
+    body {
+        background-image: url('high-res-background.jpg');
+    }
+}
