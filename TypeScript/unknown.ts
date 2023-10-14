@@ -28,3 +28,21 @@ function filterUnknownArray<T>(
         return filtered;
     }, [] as T[]);
 }
+// Define a function to asynchronously process an array of unknown values using promises
+async function processUnknownArray<T, U>(
+    arr: unknown[],
+    asyncProcessor: (value: T) => Promise<U>
+): Promise<U[]> {
+    if (!Array.isArray(arr)) {
+        throw new Error('Input is not an array');
+    }
+    const resultPromises = arr.map(async (item) => {
+        if (typeof item === 'undefined') {
+            throw new Error('Array contains undefined values');
+        }
+        return asyncProcessor(item as T);
+    });
+    return Promise.all(resultPromises);
+}
+
+
