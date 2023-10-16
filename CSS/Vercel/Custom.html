@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vedansh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Text Preview</title>
+    <style>
+        body {
+            background-color: rgb(10, 10, 10);
+            display: grid;
+            height: 100vh;
+            margin: 0px;
+            overflow: visible;
+            place-items: center;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            font-size: 5rem;
+            letter-spacing: -.06em;
+            margin: 0 0 40px;
+            /* Inherit */
+            font-family: "Rubik", sans-serif;
+            padding: 20px;
+        }
+        span{
+            font-size: 7rem;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            color: #fff;
+        }
+        .code, .test, .deploy{
+            background: linear-gradient(45deg, cyan, magenta, orange);
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            
+        }
+        @keyframes code {
+            0%{
+                opacity: 0;
+                background-position: top left;
+            }
+            25%{
+                opacity: 0.25;
+                background-position: top left;
+            }
+            50%{
+                opacity: 0.5;
+                background-position: bottom right;
+            }
+            75%{
+                opacity: 0.75;
+                background-position: bottom right;
+            }
+            100%{
+                opacity: 1;
+                background-position: top left;
+            }
+        }/*
+        @keyframes code {
+            0%{
+                opacity: 0;
+            }
+            10%{
+                opacity: 0.2;
+            }
+            49.999%{
+                opacity: 0.5;
+            }
+            69.999%{
+                opacity: 0.7;
+            }
+            99.999%{
+                opacity: 0.9;
+            }
+            100%{
+                opacity: 1;
+                background-position: -200% 0;
+            }
+        }*/
+    </style>
+</head>
+<body>
+    <h1>
+        <span class="code">Code.</span>
+        <span class="test">Test.</span>
+        <span class="deploy">Deploy.</span>
+    </h1>
+    <script>
+        async function runAnimation(){
+            const spans = document.querySelectorAll('span');
+            let delay = 0;
+            for (let i = 0; i < spans.length; i++) {
+                spans[i].style.animation = `code 5s ${delay}s ease`;
+                delay += 5;
+            }
+            await new Promise((resolve, reject) => {
+                setTimeout(() => resolve(`Done`), delay);
+            })
+        }
+        
+        async function startAnimation(){
+            await runAnimation();
+            return null;
+        }
+
+        window.addEventListener("DOMContentLoaded", startAnimation);
+        document.querySelector('span').addEventListener('animationend', () => {
+            startAnimation();
+        });
+    </script>
+</body>
+</html>
