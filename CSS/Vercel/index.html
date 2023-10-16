@@ -10,23 +10,31 @@
             display: grid;
             height: 100vh;
             margin: 0px;
-            overflow: hidden;
+            overflow: visible;
             place-items: center;
         }
+
         h1 {
-            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            font-size: 5rem;
+            line-height: 1;
+            font-weight: 800;
+            letter-spacing: -.06em;
+            margin: 0 0 40px;
+            /* Inherit */
             font-family: "Rubik", sans-serif;
             font-size: clamp(2em, 2vw, 4em);
-            font-weight: 400;
-            margin: 0px;
             padding: 20px;
-            text-align: center;
             outline: 2px solid #fff;
         }
         span{
-            font-size: 3rem;
+            font-size: 5rem;
             padding-left: 0.5em;
             padding-right: 0.5em;
+            color: #fff;
         }
         .code::before, .test::before, .deploy::before{
             content: '';
@@ -41,6 +49,20 @@
         }
         .code{
             background: linear-gradient(45deg, cyan, magenta, orange);
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .test{
+            background: linear-gradient(135deg, orange, magenta);
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .deploy{
+            background: linear-gradient(85deg, magenta, orange);
             background-size: 200%;
             background-clip: text;
             -webkit-background-clip: text;
