@@ -26,18 +26,18 @@
             margin: 0 0 40px;
             /* Inherit */
             font-family: "Rubik", sans-serif;
-            font-size: clamp(2em, 2vw, 4em);
             padding: 20px;
             outline: 2px solid #fff;
         }
         span{
-            font-size: 5rem;
+            font-size: 7rem;
             padding-left: 0.5em;
             padding-right: 0.5em;
             color: #fff;
-        }
+        }/*
         .code::before, .test::before, .deploy::before{
             content: '';
+            width: 100%;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -47,12 +47,16 @@
             animation: run 7s infinite;
             z-index: 1;
         }
+        .test::before{
+            content: 'Test';
+        }*/
         .code{
             background: linear-gradient(45deg, cyan, magenta, orange);
             background-size: 200%;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            position: relative;
         }
         .test{
             background: linear-gradient(135deg, orange, magenta);
@@ -60,13 +64,14 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            position: relative;
         }
         .deploy{
             background: linear-gradient(85deg, magenta, orange);
-            background-size: 200%;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            position: relative;
         }
         @keyframes run {
             0%, 100%{
@@ -76,7 +81,7 @@
                 opacity: 1;
             }
             99.9999%{
-                opacity: 0.5;
+                opacity: 0;
             }
         }
     </style>
@@ -87,5 +92,8 @@
         <span class="test">Test</span>
         <span class="deploy">Deploy</span>
     </h1>
+    <script>
+        
+    </script>
 </body>
 </html>
