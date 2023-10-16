@@ -21,6 +21,41 @@
             margin: 0px;
             padding: 20px;
             text-align: center;
+            outline: 2px solid #fff;
+        }
+        span{
+            font-size: 3rem;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+        .code::before, .test::before, .deploy::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            font-size: 3rem;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            animation: run 7s infinite;
+            z-index: 1;
+        }
+        .code{
+            background: linear-gradient(45deg, cyan, magenta, orange);
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes run {
+            0%, 100%{
+                opacity: 0;
+            }
+            49.9999%{
+                opacity: 1;
+            }
+            99.9999%{
+                opacity: 0.5;
+            }
         }
     </style>
 </head>
