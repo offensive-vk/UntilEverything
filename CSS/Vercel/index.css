@@ -6,7 +6,6 @@ body {
     overflow: visible;
     place-items: center;
 }
-
 h1 {
     display: flex;
     justify-content: center;
@@ -16,7 +15,7 @@ h1 {
     letter-spacing: -.06em;
     margin: 0 0 40px;
     /* Inherit */
-    font-family: "Rubik", sans-serif;
+    font-family: Arial Nova, sans-serif;
     padding: 20px;
 }
 span{
@@ -32,9 +31,32 @@ span{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
-    
+    transition: -webkit-text-fill-color 0.4s ease;
 }
 @keyframes code {
+    0% {
+        -webkit-text-fill-color: transparent;
+        background-position: top left;
+    }
+    25% {
+        -webkit-text-fill-color: transparent;
+        background-position: top left;
+    }
+    50% {
+        -webkit-text-fill-color: #fff;
+        background-position: bottom right; 
+    }
+    75% {
+        -webkit-text-fill-color: transparent;
+        background-position: bottom right;
+    }
+    100% {
+        -webkit-text-fill-color: transparent;
+        background-position: top left;
+    }
+}
+
+/* @keyframes code {
     0%{
         opacity: 0;
         background-position: top left;
@@ -55,4 +77,4 @@ span{
         opacity: 1;
         background-position: top left;
     }
-}
+} */
