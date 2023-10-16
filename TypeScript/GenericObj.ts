@@ -16,3 +16,18 @@ function findGreatestValue<T extends Record<string, number>>(obj: T): number | u
 
     return greatest;
 }
+
+// Example usage:
+const numericObject = {
+    a: 42,
+    b: 17,
+    c: 99,
+    // d: 'not a number', // This value will be ignored
+};
+
+const greatestValue = findGreatestValue(numericObject);
+if (greatestValue !== undefined) {
+    console.log(`The greatest value in the object is: ${greatestValue}`);
+} else {
+    console.log(`The object does not contain any valid numbers.`);
+}
