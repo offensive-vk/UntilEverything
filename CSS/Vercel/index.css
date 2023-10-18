@@ -23,6 +23,7 @@ span{
     padding-left: 0.5em;
     padding-right: 0.5em;
     color: #fff;
+    transition: -webkit-text-fill-color 0.4s ease;
 }
 .code, .test, .deploy{
     background: linear-gradient(45deg, cyan, magenta, orange);
