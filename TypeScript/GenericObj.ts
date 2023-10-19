@@ -13,7 +13,6 @@ function findGreatestValue<T extends Record<string, number>>(obj: T): number | u
             }
         }
     }
-
     return greatest;
 }
 
