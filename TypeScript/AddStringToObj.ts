@@ -14,3 +14,5 @@ const productWithSuffix = appendStringToProperty(Item, 'name', ' Plus');
 
 console.log(personWithSuffix); // { name: 'John Doe', age: 30 }
 console.log(productWithSuffix); // { name: 'Widget Plus', price: 19.99 }
+
+console.log(appendStringToProperty(Index, 'distance', 'Distance was deleted.'));
