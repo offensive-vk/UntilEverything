@@ -7,6 +7,7 @@ function appendStringToProperty<T, K extends keyof T>(obj: T, prop: K, appendStr
 // Example usage:
 const Banana = { name: 'John', age: 30 };
 const Item = { name: 'Widget', price: 19.99 };
+const Index = { start : 1, end: 99, distance: 55, nullable: true };
 
 const personWithSuffix = appendStringToProperty(Banana, 'name', ' Doe');
 const productWithSuffix = appendStringToProperty(Item, 'name', ' Plus');
