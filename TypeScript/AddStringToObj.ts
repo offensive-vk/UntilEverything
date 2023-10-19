@@ -8,9 +8,9 @@
  * @param {string} appendString - The string to append to the property.
  * @returns {T} - The updated object with the string appended to the specified property.
  */
-function appendStringToProperty<T, K extends keyof T>(obj: T, prop: K, appendString: string): T {
+function appendDataToProperty<T, K extends keyof T>(obj: T, prop: K, append: any | string): T {
     const updatedObj = { ...obj };
-    updatedObj[prop] = updatedObj[prop] + appendString as T[K];
+    updatedObj[prop] = updatedObj[prop] + append as T[K];
     return updatedObj;
 }
 
@@ -19,10 +19,11 @@ const Boi = { name: 'John', age: 30 };
 const Item = { name: 'Pizza', price: 19.99 };
 const Index = { start : 1, end: 99, distance: 55, nullable: true };
 
-const personWithSuffix = appendStringToProperty(Boi, 'name', ' Wick');
-const productWithSuffix = appendStringToProperty(Item, 'price', '$');
+const personWithSuffix = appendDataToProperty(Boi, 'name', ' Wick');
+const productWithSuffix = appendDataToProperty(Item, 'price', '$');
 
 console.log(personWithSuffix); // { name: 'John Doe', age: 30 }
 console.log(productWithSuffix); // { name: 'Widget Plus', price: 19.99 }
 
-console.log(appendStringToProperty(Index, 'distance', ' km'));
+console.log(appendDataToProperty(Index, 'distance', ' km'));
+console.log(appendDataToProperty(Index, 'nullable', false));
