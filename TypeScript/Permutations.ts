@@ -1,6 +1,15 @@
-/* 
-A permutation is an arrangement of items in a specific order. In mathematics and combinatorics, a permutation is a rearrangement of a set of elements without repetition. The concept of permutations is widely used in various fields, including mathematics, computer science, statistics, and more.
-*/
+/**
+ * Generates all possible permutations of an array without repetition.
+ * 
+ * @template T - The type of elements in the array.
+ * @param {T[]} arr - The input array for which permutations need to be generated.
+ * @returns {T[][]} - An array containing all possible permutations of the input array.
+ * @example
+ * const arr = [1, 2, 3];
+ * const result = permute(arr);
+ * console.log(result);
+ * // Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 2, 1], [3, 1, 2]]
+ */
 function permute<T>(arr: T[]): T[][] {
     const result: T[][] = [];
 
@@ -30,3 +39,7 @@ console.log("All Permutations:");
 permutations.forEach((permutation) => {
     console.log(permutation);
 });
+
+/* 
+A permutation is an arrangement of items in a specific order. In mathematics and combinatorics, a permutation is a rearrangement of a set of elements without repetition. The concept of permutations is widely used in various fields, including mathematics, computer science, statistics, and more.
+*/
