@@ -1,3 +1,6 @@
+/* 
+A permutation is an arrangement of items in a specific order. In mathematics and combinatorics, a permutation is a rearrangement of a set of elements without repetition. The concept of permutations is widely used in various fields, including mathematics, computer science, statistics, and more.
+*/
 function permute<T>(arr: T[]): T[][] {
     const result: T[][] = [];
 
