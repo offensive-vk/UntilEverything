@@ -19,3 +19,11 @@ function permute<T>(arr: T[]): T[][] {
     backtrack(0, []);
     return result;
 }
+// Example usage:
+const test = [1, 2, 3];
+const permutations = permute(test);
+
+console.log("All Permutations:");
+permutations.forEach((permutation) => {
+    console.log(permutation);
+});
