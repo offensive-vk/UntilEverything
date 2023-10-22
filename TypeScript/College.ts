@@ -1,9 +1,8 @@
-/* 
-*   @date: Aug, 22, 2023 | G
-*   @author: Vedansh
-*   @description: This is a University Console Management System designed using TypeScript.
-*   @lang: TypeScript v 5.1.6
-*/
+/**
+ * @author Vedansh
+ * @description This is a University Console Management System designed using TypeScript.
+ * @license MIT License
+ */
 
 type Custom = string | undefined | unknown;
 const puts = console.log;
@@ -217,7 +216,6 @@ Apex.addHOD(Head);
 
 // puts(Apex.countStudents());
 // puts(Apex.countDepartments());
-
 // puts(Apex.displayStudents());
 // puts(Apex.displayTeachers());
 // puts(Apex.displayDepartments());

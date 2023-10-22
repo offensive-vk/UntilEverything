@@ -15,6 +15,7 @@ if (import.meta.hot && !inWebWorker) {
   window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
 }
 import logo from "/src/assets/logo.jpg?import";
+import { HashTable } from "../JavaScript/Others/DSA";
 function Footer() {
   return /* @__PURE__ */ jsxDEV("footer", { children: [
     /* @__PURE__ */ jsxDEV("div", { className: "company", children: [
