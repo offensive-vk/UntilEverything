@@ -8,8 +8,8 @@ declare global {
         key: TKey;
         value: TValue;
 
-        resolveHashValue(key: TKey): {}[];
-        resolveHashKey(key: TValue): {}[];
+        resolveHashValue(key: TKey): [TKey, TValue] | void;
+        resolveHashKey(value: TValue): [TKey, TValue] | void;
     }
 }
 
