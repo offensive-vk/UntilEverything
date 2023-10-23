@@ -22,8 +22,8 @@ const Index = { start : 1, end: 99, distance: 55, nullable: true };
 const personWithSuffix = appendDataToProperty(Boi, 'name', ' Wick');
 const productWithSuffix = appendDataToProperty(Item, 'price', '$');
 
-console.log(personWithSuffix); // { name: 'John Doe', age: 30 }
-console.log(productWithSuffix); // { name: 'Widget Plus', price: 19.99 }
+console.log(personWithSuffix);
+console.log(productWithSuffix);
 
 console.log(appendDataToProperty(Index, 'distance', ' km'));
 console.log(appendDataToProperty(Index, 'nullable', false));
