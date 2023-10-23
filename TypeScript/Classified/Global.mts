@@ -2,8 +2,9 @@
 declare global {
     interface Array<T> {
         shuffle(): void;
+        reset(): void;
     }
-    
+
 }
 
 // Implement the shuffle method
@@ -13,7 +14,9 @@ Array.prototype.shuffle = function () {
         [this[i], this[j]] = [this[j], this[i]];
     }
 };
-
+Array.prototype.reset = function () {
+    this.length = 0;
+}
 // Usage
 const myArray: number[] = [1, 2, 3, 4, 5];
 console.log("Original Array:", myArray);
