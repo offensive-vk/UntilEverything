@@ -1,4 +1,9 @@
-// Create a custom method to shuffle an array using global augmentation
+/**
+ * @author Vedansh
+ * @param  undefined
+ * @returns {abstract}
+ * @description Demonstrates the use of Augmentation in TypeScript.
+ */
 declare global {
     interface Array<T> {
         shuffle(): void;
@@ -13,7 +18,6 @@ declare global {
     }
 }
 
-// Implement the shuffle method
 Array.prototype.shuffle = function () {
     for (let i = this.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -23,8 +27,8 @@ Array.prototype.shuffle = function () {
 Array.prototype.reset = function () {
     this.length = 0;
 }
-// Usage
-const myArray: number[] = [1, 2, 3, 4, 5];
+
+const myArray: number[] = [11, 22, 33, 44, 55];
 console.log("Original Array:", myArray);
 
 myArray.shuffle();
