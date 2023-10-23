@@ -23,3 +23,6 @@ console.log("Original Array:", myArray);
 
 myArray.shuffle();
 console.log("Shuffled Array:", myArray);
+
+myArray.reset();
+console.log("Reset The Array:", myArray);
