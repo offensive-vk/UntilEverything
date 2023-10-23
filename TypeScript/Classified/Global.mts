@@ -4,7 +4,13 @@ declare global {
         shuffle(): void;
         reset(): void;
     }
+    interface HashMap<TKey, TValue>{
+        key: TKey;
+        value: TValue;
 
+        resolveHashValue(key: TKey): {}[];
+        resolveHashKey(key: TValue): {}[];
+    }
 }
 
 // Implement the shuffle method
