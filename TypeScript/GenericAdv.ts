@@ -14,6 +14,10 @@ class Stack<T> {
     isEmpty(): boolean {
         return this.elements.length === 0;
     }
+    delete(): void{
+        this.elements.length = 0;
+        console.log(`Stack is empty.`);
+    }
 }
 
 // Create a stack of numbers
@@ -53,7 +57,7 @@ async function createKeyValuePair<K, V>(key: K, value: V): Promise<KeyValuePair<
     });
 }
 
-async function main(): Promise<void> {
+(async () => {
 
     // Create a KeyValuePair with number key and string value
     const numberStringPair = await createKeyValuePair<number, string>(1, "TypeScript");
@@ -64,6 +68,5 @@ async function main(): Promise<void> {
     // Print the key-value pairs
     console.log(numberStringPair);
     console.log(stringBooleanPair); 
+})();
 
-}
-main();
