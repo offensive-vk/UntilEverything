@@ -12,8 +12,9 @@
   <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="200" height="200"/> </a> 
   <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="200" height="200"/> </a> 
   <a href="https://jquery.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg" width="200" height="200"/> </a>
+  <a href="https://mdxjs.com" target="_blank" rel="noreferrer" ><img alt="MDX" src="https://mdx-logo.now.sh" width="200" height="100" /></a>
 </p>
-
+ 
 </div>
 
 # WebDev
