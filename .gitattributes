@@ -1,0 +1,7 @@
+# Markdown
+*.md linguist-detectable=true
+*.md linguist-documentation=false
+
+# Markdown X
+*.mdx linguist-detectable=true
+*.mdx linguist-documentation=false
