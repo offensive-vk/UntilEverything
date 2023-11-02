@@ -1,4 +1,3 @@
 *.html linguist-language=EJS
 *.mdx linguist-language=MDX
-*.md* linguist-language=MDX
 *.css linguist-language=CSS
