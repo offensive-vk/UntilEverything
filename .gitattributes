@@ -1,2 +1,3 @@
+*.html linguist-language=EJS
 *.mdx linguist-language=MDX
 *.md linguist-language=Markdown
