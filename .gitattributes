@@ -1,3 +1,5 @@
 *.html linguist-language=EJS
 *.mdx linguist-language=MDX
 *.md linguist-language=Markdown
+*.md* linguist-language=Markdown
+*.css linguist-language=CSS
