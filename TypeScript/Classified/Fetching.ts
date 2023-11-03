@@ -1,4 +1,4 @@
-import * as over from 'override.ps1';
+import { CreateKeyValuePair, Permute, trace, info } from 'override.ps1';
 /**
  * @description Type Helper for fetching data in format with types.
  * @since v1.7.5
@@ -12,16 +12,32 @@ type UserData<T extends number, U extends string> = { userid: T, username: U };
  * @param url Root URL of the Server.
  * @param casualname may be username or person's name
  * @param callback extra error handling funtion which is optional in nature.
- * @returns {UserData} as primary output.
+ * @returns {UserData} as primary output like key value pairs.
  */
-function fetchUserData<Type>(url: Type | string, casualname: string , callback?: () => void | Object): UserData<number, string>{
+function fetchUserData<Type>(
+        url: Type | string, 
+        casualname: Type | string , 
+        callback?: (err: Error) => void | Object
+    ): UserData<number, string>{
     const server: unknown = fetch("https://getuserstats.org/temp/");
     var userid: number | undefined = Math.floor(Math.random() * 99999);
     var username: string | undefined = `${casualname}`.concat("@override.ps1");
-    over.trace(server);
+    trace(server);
+    const finaluserid = CreateKeyValuePair("UserID ", userid);
+    const finalusername = CreateKeyValuePair("Username ", username);
     
     return {userid, username} as UserData<number, string>;
 }
 
 var X = fetchUserData<unknown>("https://special-login.aspx/", "demonslayer90");
-console.log(X)
+var Y = fetchUserData<string>("https://special-login.aspx/", "sampleuser10", (err) => {
+    if(err){
+        console.error(`Some Error Occurred. : ${err}\n`);
+        return;
+    }
+    console.log(` == Callback Success == \n`);
+});
+
+console.log(` ========= `);
+console.dir(X);
+console.dir(Y);
