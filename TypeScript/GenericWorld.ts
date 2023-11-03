@@ -18,5 +18,7 @@ function getValue<TObj, TKey extends keyof TObj>(obj: TObj, key: TKey, ...args: 
     return obj[key] as TKey;
 }
 
-const S = getValue({api: "api:cool", back: "api:back"}, "api");
-console.log(`S : ${S}\n`);
+// Testing
+const Search = getValue({first: true, last: false, middle: "middle"}, "middle");
+console.log(`Searching Result : ${Search}\n`);
+
