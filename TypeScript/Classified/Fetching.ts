@@ -5,6 +5,7 @@ import { CreateKeyValuePair, Permute, trace, info } from 'override.ps1';
  * @access Public
  */
 type UserData<T extends number, U extends string> = { userid: T, username: U };
+
 /**
  * @author Vedansh Khandelwal
  * @lang TypeScript 
@@ -15,9 +16,19 @@ type UserData<T extends number, U extends string> = { userid: T, username: U };
  * @returns {UserData} as primary output like key value pairs.
  */
 
-async function Validate(data: UserData<number, string>): Promise<boolean> {
-    const userid = await JSON.stringify(data.userid);
-    const username = await JSON.stringify(data.username);
+function fetchUserData<Type>(
+    url: Type | string, 
+    casualname: Type | string , 
+    callback?: (err: Error) => void | Object
+): UserData<number, string> {
 
-    return data ? Promise.resolve(true) : Promise.reject(false);
+    var server: unknown = url? fetch(url as string) : fetch("https://getuserstats.org/temp/");
+    var userid: number | undefined = Math.floor(Math.random() * 99999);
+    var username: string | undefined = `${casualname}`.concat("@override.ps1");
+    // trace(server);
+
+    const FINAL_DATA = {"UserID ": userid, "Username ": username};
+    console.dir(FINAL_DATA);
+
+    return {userid, username} as UserData<number, string>;
 }
