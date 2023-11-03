@@ -62,8 +62,11 @@ async function Validate(data: UserData<number, string>): Promise<boolean> {
         }
         console.log(` == Callback Success == \n`);
     });
-
-    console.log(` ========= `);
+    const Z = Validate(X);
+    console.log(`\n ========= \n`);
+    console.dir(Z);
     console.dir(X);
     console.dir(Y);
+    console.log(`\n ========= \n`);
+
 })();
