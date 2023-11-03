@@ -25,10 +25,26 @@ function fetchUserData<Type>(
     var server: unknown = url? fetch(url as string) : fetch("https://getuserstats.org/temp/");
     var userid: number | undefined = Math.floor(Math.random() * 99999);
     var username: string | undefined = `${casualname}`.concat("@override.ps1");
-    // trace(server);
 
     const FINAL_DATA = {"UserID ": userid, "Username ": username};
     console.dir(FINAL_DATA);
 
     return {userid, username} as UserData<number, string>;
 }
+
+
+/**@testing  */
+(async () => {
+    var X = fetchUserData<unknown>("https://special-login.aspx/", "demonslayer90");
+    var Y = fetchUserData<string>("https://special-login.aspx/", "sampleuser10", (err) => {
+        if(err){
+            console.error(`Some Error Occurred. : ${err}\n`);
+            return;
+        }
+        console.log(` == Callback Success == \n`);
+    });
+
+    console.log(` ========= `);
+    console.dir(X);
+    console.dir(Y);
+})();
