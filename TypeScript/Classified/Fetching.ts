@@ -40,10 +40,12 @@ function fetchUserData<Type>(
  * @returns {true} if data is correct else returns {false}.
  */
 async function Validate(data: UserData<number, string>): Promise<boolean> {
-    const userid = await JSON.stringify(data.userid);
-    const username = await JSON.stringify(data.username);
+    const userid = await `UserID : `.concat(JSON.stringify(data.userid));
+    const username = await `Username : `.concat(JSON.stringify(data.username));
 
-    fs.appendFile('data.txt', userid, 'utf-8', (err) => {
+    const WritableData = userid + "\n" + username;
+    
+    fs.appendFile('data.txt', WritableData, 'utf-8', (err) => {
         handleError(() => {
             if(err) throw err;
         });
