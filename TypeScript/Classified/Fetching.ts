@@ -42,7 +42,7 @@ function fetchUserData<Type>(
  * @returns {true} if data is correct else returns {false}.
  */
 async function Validate(data: UserData<number, string>): Promise<boolean> {
-    const userid = await `UserID : `.concat(JSON.stringify(data.userid));
+    const userid = await `UserID : ASN`.concat(JSON.stringify(data.userid));
     const username = await `Username : `.concat(JSON.stringify(data.username));
 
     const WritableData =  "\n" + userid + "\n" + username;
