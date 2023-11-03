@@ -15,5 +15,8 @@ function getValue<TObj, TKey extends keyof TObj>(obj: TObj, key: TKey, ...args: 
         console.log(`OOPS ! The Object Doesn't Consist The Key: ${key as string}\n`);
         return key;
     }
-    return obj[key];
+    return obj[key] as TKey;
 }
+
+const S = getValue({api: "api:cool", back: "api:back"}, "api");
+console.log(`S : ${S}\n`);
