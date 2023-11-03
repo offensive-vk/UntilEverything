@@ -14,30 +14,4 @@ type UserData<T extends number, U extends string> = { userid: T, username: U };
  * @param callback extra error handling funtion which is optional in nature.
  * @returns {UserData} as primary output like key value pairs.
  */
-function fetchUserData<Type>(
-        url: Type | string, 
-        casualname: Type | string , 
-        callback?: (err: Error) => void | Object
-    ): UserData<number, string>{
-    const server: unknown = fetch("https://getuserstats.org/temp/");
-    var userid: number | undefined = Math.floor(Math.random() * 99999);
-    var username: string | undefined = `${casualname}`.concat("@override.ps1");
-    trace(server);
-    const finaluserid = CreateKeyValuePair("UserID ", userid);
-    const finalusername = CreateKeyValuePair("Username ", username);
-    
-    return {userid, username} as UserData<number, string>;
-}
 
-var X = fetchUserData<unknown>("https://special-login.aspx/", "demonslayer90");
-var Y = fetchUserData<string>("https://special-login.aspx/", "sampleuser10", (err) => {
-    if(err){
-        console.error(`Some Error Occurred. : ${err}\n`);
-        return;
-    }
-    console.log(` == Callback Success == \n`);
-});
-
-console.log(` ========= `);
-console.dir(X);
-console.dir(Y);
