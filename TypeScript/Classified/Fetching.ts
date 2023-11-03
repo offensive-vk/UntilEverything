@@ -15,3 +15,9 @@ type UserData<T extends number, U extends string> = { userid: T, username: U };
  * @returns {UserData} as primary output like key value pairs.
  */
 
+async function Validate(data: UserData<number, string>): Promise<boolean> {
+    const userid = await JSON.stringify(data.userid);
+    const username = await JSON.stringify(data.username);
+
+    return data ? Promise.resolve(true) : Promise.reject(false);
+}
