@@ -1,6 +1,9 @@
 const log = console.log;
-const table = console.table;
-
+/**
+ * @interface Vehicle
+ * @satisfies All The Vehicles.
+ * @author Vedansh
+ */
 interface Vehicle{
     tyres:  number;
     doors: number | boolean;
@@ -141,7 +144,7 @@ Supra.stop();
 // log(`Color Name : ${Audi.color}`);
 // End so on one by one ......................
 
-function displayObj(value: FourWheeler): void{
+function displayObj(value: FourWheeler | TwoWheeler): void{
     log(`\n=============================\n`);
     log(`${value} is has type of ${FourWheeler} class.`);
     value.start();
@@ -150,3 +153,8 @@ function displayObj(value: FourWheeler): void{
     log(`\n=============================\n`);
 }
 displayObj(Supra);
+
+// Two Wheeler :  Bike
+var Honda = new TwoWheeler(2, "Black", "Hero Honda", 2, "CD Deluxe");
+Honda.getDetails();
+displayObj(Honda);
