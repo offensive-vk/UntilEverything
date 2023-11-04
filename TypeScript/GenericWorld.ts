@@ -10,15 +10,69 @@
  * @returns {TKey | TObj[TKey]} - The value corresponding to the specified key if it exists in the object,
  * otherwise the key itself.
  */
-function getValue<TObj, TKey extends keyof TObj>(obj: TObj, key: TKey, ...args: Array<TKey>): TKey {
+
+// function getValue<TObj, TKey extends keyof TObj>(
+//         obj: TObj, key: TKey, ...args: Array<TKey>
+//     ): TKey | TObj[TKey] {
+//     if (!obj?.hasOwnProperty(key)) {
+//         console.log(`Error ! The Object Doesn't Consist The Key: ${key as string}\n`);
+//         return key;
+//     }
+//     for (const arg of args) {
+//         if (!obj.hasOwnProperty(arg)) {
+//             console.log(`OOPS ! The Object Doesn't Consist The Key: ${arg as string}\n`);
+//             return arg;
+//         }
+//     }
+//     return obj[key] as TKey | TObj[TKey];
+// }
+// // Testing
+// var Test = {
+//     nothing: null,
+//     first: "first",
+//     second: 2,
+//     middle: "something",
+//     last: false
+// };
+// const Search = getValue(Test, "middle");
+// // console.log(`Searching Result : ${Search}\n`);
+// console.log(Search);
+
+function getValue<TObj, TKey extends keyof TObj>(
+    obj: TObj, key: TKey, ...args: Array<TKey>
+): TObj[TKey] | Record<string, TObj[TKey]> {
     if (!obj?.hasOwnProperty(key)) {
-        console.log(`OOPS ! The Object Doesn't Consist The Key: ${key as string}\n`);
-        return key;
+        console.log(`Error! The Object Doesn't Consist The Key: ${key as string}\n`);
+        if (args.length === 0) {
+            return {} as Record<string, TObj[TKey]>;
+        }
     }
-    return obj[key] as TKey;
+
+    const result: Record<string, TObj[TKey]> = {} as Record<string, TObj[TKey]>;
+
+    if (obj?.hasOwnProperty(key)) {
+        result[key as string] = obj[key] as TObj[TKey];
+    }
+
+    for (const arg of args) {
+        if (!obj?.hasOwnProperty(arg)) {
+            console.log(`OOPS! The Object Doesn't Consist The Key: ${arg as string}\n`);
+        } else {
+            result[arg as string] = obj[arg] as TObj[TKey];
+        }
+    }
+
+    return result;
 }
 
 // Testing
-const Search = getValue({first: true, last: false, middle: "middle"}, "middle");
-console.log(`Searching Result : ${Search}\n`);
+var Test = {
+    nothing: null,
+    first: true,
+    second: 2,
+    middle: "something",
+    last: false
+};
 
+const Search = getValue(Test, "middle", "second");
+console.log(Search);

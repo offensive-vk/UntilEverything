@@ -146,7 +146,6 @@ Supra.stop();
 
 function displayObj(value: FourWheeler | TwoWheeler): void{
     log(`\n=============================\n`);
-    log(`${value} is has type of ${FourWheeler} class.`);
     value.start();
     value.speed();
     value.stop();
