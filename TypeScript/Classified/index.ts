@@ -15,6 +15,15 @@ interface Vehicle{
 
 interface Bike extends Omit<Vehicle, "doors"> {}
 class TwoWheeler implements Bike {
+    /**
+     * Represents a two-wheeled vehicle.
+     * 
+     * @param tyres - The number of tyres of the two-wheeler.
+     * @param color - The color of the two-wheeler. It can be a single string or an array of strings.
+     * @param brand - The brand of the two-wheeler.
+     * @param seats - The number of seats of the two-wheeler.
+     * @param name - The name of the two-wheeler. It can be a single string or an array of strings.
+     */
     constructor(
         public tyres: number,
         public color: string | string[],
@@ -22,16 +31,38 @@ class TwoWheeler implements Bike {
         public seats: number,
         public name: string | string[]
     ) { }
-    start(): void {
-        throw new Error("Method not implemented.");
+
+    /**
+     * Prints a message indicating that the vehicle is starting up.
+     */
+    public start(): void {
+        log(`${this.name} is starting up.`);
     }
-    stop(): void {
-        throw new Error("Method not implemented.");
+
+    /**
+     * Prints a message indicating that the vehicle is stopping.
+     */
+    public stop(): void {
+        log(`${this.name} is stopping.`);
     }
-    speed(): void {
-        throw new Error("Method not implemented.");
+
+    /**
+     * Prints a random speed in kilometers per hour.
+     */
+    public speed(): void {
+        log(`Current Speed : ${Math.floor(Math.random() * 900) + 100}km/h`);
     }
-    
+
+    /**
+     * Prints the number of doors, seats, tires, brand, and color of the vehicle.
+     */
+    public getDetails(): void{
+        log(`Number of Seats : ${this.seats}`);
+        log(`Number of Tyres : ${this.tyres}`);
+        log(`Brand Name : ${this.brand}`);
+        log(`Vehicle Name : ${this.name}`);
+        log(`Vehicle Color : ${this.color}`);
+    }
 }
 
 class FourWheeler implements Vehicle {
