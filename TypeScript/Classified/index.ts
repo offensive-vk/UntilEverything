@@ -14,8 +14,27 @@ interface Vehicle{
 }
 
 interface Bike extends Omit<Vehicle, "doors"> {}
+class TwoWheeler implements Bike {
+    constructor(
+        public tyres: number,
+        public color: string | string[],
+        public brand: string,
+        public seats: number,
+        public name: string | string[]
+    ) { }
+    start(): void {
+        throw new Error("Method not implemented.");
+    }
+    stop(): void {
+        throw new Error("Method not implemented.");
+    }
+    speed(): void {
+        throw new Error("Method not implemented.");
+    }
+    
+}
 
-class FourWheeler implements Vehicle{
+class FourWheeler implements Vehicle {
     tyres: number;
     doors: number | boolean;
     color: string | string[];
@@ -74,7 +93,7 @@ class FourWheeler implements Vehicle{
         log(`Vehicle Color : ${this.color}`);
     }
 }
-}
+
 // With Constructor
 // We'll use our traditional constructor approach
 var Supra = new FourWheeler(4, 2, "Skyblue", "Toyota", 2, "Supra");
