@@ -16,7 +16,19 @@
             margin-right: auto;
             margin-left: auto;
             height: 100vh;
+            display: grid;
+            place-items: center;
             overflow: hidden;
+        }
+        div{
+            font-size: 3.5dvi;
+            font-family: Arial Nova , monospace;
+            letter-spacing: 5px;
+            height: calc(10dpi - 70px);
+            width: 20dpi;
+            border: 1px solid #fff;
+            backdrop-filter: blur(12px);
+            color: rgb(14, 228, 107);
         }
         @keyframes dotScroll {
             0% {
@@ -24,7 +36,7 @@
             }
         
             to {
-                background-position-y: 0
+                background-position-y: 0px;
             }
         }
     </style>
