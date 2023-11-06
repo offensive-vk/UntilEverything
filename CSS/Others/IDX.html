@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+            animation: dotScroll 16s linear infinite;
+            background-image: radial-gradient(circle,#2e3c51 2px ,transparent 0);
+            background-size: calc(14.2857142857% - 1px) 100px;
+            background-position: -60px 0;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            height: 100vh;
+        }
+        @keyframes dotScroll {
+            0% {
+                background-position-y: 140px
+            }
+        
+            to {
+                background-position-y: 0
+            }
+        }
+    </style>
+</head>
+<body>
+    <pre>hello</pre>
+</body>
+</html>
