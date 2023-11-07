@@ -78,3 +78,14 @@ async function Validate(data: UserData<number, string>): Promise<boolean> {
     console.log(`\n ========= \n`);
 
 })();
+
+/**@interface for all */
+interface INominal<T> {
+    DefaultName: T | undefined;
+    DefaultPort:  T | number | undefined;
+    DefaultClass: T | undefined;
+    DefaultType: `User` | `Guest`;
+    
+    setDetails<K = string>(...args: Array<T>): T | void;
+    getDetails<K>(): T | void;
+}
