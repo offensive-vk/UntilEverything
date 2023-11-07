@@ -58,17 +58,18 @@ async function Validate(data: UserData<number, string>): Promise<boolean> {
     return data ? Promise.resolve(true) : Promise.reject(false);
 }
 
-/**@testing  */
+/**@testing  IIFE */
 (async () => {
-    var X = fetchUserData<unknown>("https://special-login.aspx/", "demonslayer90");
-    var Y = fetchUserData<string>("https://special-login.aspx/", "sampleuser10", (err) => {
+
+    var Y = fetchUserData<string>("https://ifconfig.me/", "sampleuser10", (err) => {
         if(err){
             console.error(`Some Error Occurred. : ${err}\n`);
             return;
         }
         console.log(` == Callback Success == \n`);
     });
-
+    var X = fetchUserData<unknown>("https://special-login.aspx/", "demonslayer90");
+    
     const Z = Validate(X);
     console.log(`\n ========= \n`);
     console.dir(Z);
