@@ -21,19 +21,19 @@ type UserData<T extends number, U extends string> = { userid: T, username: U };
  * @returns {UserData} as primary output like key value pairs.
  */
 function fetchUserData<Type>(
-    url: Type | string, 
-    casualname: Type | string , 
-    callback?: (err: Error) => void | Object
-): UserData<number, string>{
-var server: unknown = url? fetch(url as string) : fetch("https://getuserstats.org/temp/");
-var userid: number | undefined = Math.floor(Math.random() * 99999);
-var username: string | undefined = `${casualname}`.concat("@override.ps1");
-// trace(server);
+        url: Type | string, 
+        casualname: Type | string , 
+        callback?: (err: Error) => void | Object
+    ): UserData<number, string>{
+    var server: unknown = url? fetch(url as string) : fetch("https://getuserstats.org/temp/");
+    var userid: number | undefined = Math.floor(Math.random() * 99999);
+    var username: string | undefined = `${casualname}`.concat("@override.ps1");
+    // trace(server);
 
-const FINAL_DATA = {"UserID ": userid, "Username ": username};
-console.dir(FINAL_DATA);
+    const FINAL_DATA = {"UserID ": userid, "Username ": username};
+    console.dir(FINAL_DATA);
 
-return {userid, username} as UserData<number, string>;
+    return {userid, username} as UserData<number, string>;
 }
 
 /**
@@ -80,11 +80,13 @@ async function Validate(data: UserData<number, string>): Promise<boolean> {
 })();
 
 /**
- * @interface INominal
+ * @interface INominal<T>
  * @description Structured Data Format/Pattern For All Normal Users.
- * @template T Important Data Structure to manage all the data.
+ * @template T Important Data Structure/Type to manage all the data.
  * @author Vedansh Khandelwal
  * @lang TypeScript v5.2.2
+ * @since v1.8.0
+ * @see https:://npmjs.org/package/override.ps1/
  */
 interface INominal<T> {
     DefaultName: T | undefined;
@@ -93,8 +95,9 @@ interface INominal<T> {
     DefaultType: `User` | `Guest`;
     
     setDetails<K = string>(...args: Array<T>): T | void;
-    getDetails<K>(): T | void;
+    getDetails<K>(Obj: K): T | void;
 }
+
 function GetPrimaryData<Type>(User: INominal<unknown>) : Type | string | void{
     console.log(`UserType : ${User.DefaultType}`);
     if(typeof User.DefaultPort == 'number'){
@@ -104,13 +107,25 @@ function GetPrimaryData<Type>(User: INominal<unknown>) : Type | string | void{
     }
     console.log(`User Name: ${User.DefaultName}\n`);
 }
-
-interface Administrator<Power, Rules> extends INominal<string> {
-
+/**
+ * @extends INominal
+ * @interface Administrator<Power, Rules>
+ * @template Power Manages all the permissions for Admins
+ * @template Level Limitations for Admins and Top Level Member Functions
+ * @since v1.8.0
+ */
+interface Administrator<Power, Level> extends INominal<string> {
+    Role: `Administrator`
+    AdminVerification: boolean | undefined;
+    UserVerification:  boolean | undefined;
+    Permissions: Array<Power> | Array<string>;
+    LevelofAccess: Level | undefined;
+    DeniedAccess?: Partial<Power> | undefined;
 }
 
+/**@class Nominal */
 class Nominal extends Error implements INominal<string>{
-    // Make em private
+    // Make em private and set a T
     constructor(
         DefaultName: T | undefined,
         DefaultPort:  T | number | undefined,
@@ -118,6 +133,8 @@ class Nominal extends Error implements INominal<string>{
         DefaultType: `User` | `Guest`,
     ) { super() }
 
-    public setDetails<K = string>(...args: Array<T>): T | void{}
-    public getDetails<K>(): T | void{}
+    public setDetails<K = string>(...args: Array<T>): T | void {}
+    public getDetails<K>(Obj: K): K | void {
+        
+    }
 }
