@@ -89,3 +89,12 @@ interface INominal<T> {
     setDetails<K = string>(...args: Array<T>): T | void;
     getDetails<K>(): T | void;
 }
+function GetPrimaryData<Type>(User: INominal<unknown>) : Type | string | void{
+    console.log(`UserType : ${User.DefaultType}`);
+    if(typeof User.DefaultPort == 'number'){
+        
+        var globalPort: number = User.DefaultPort;
+        return (User.DefaultPort == 5500) ? globalPort: 4500 | 404;
+    }
+    console.log(`User Name: ${User.DefaultName}\n`);
+}
