@@ -8,7 +8,7 @@ interface Person {
 
 type PersonKeys = keyof Person;
 
-// PersonKeys is a union of string literals: "name" | "age" | "location"
+// PersonKeys is a union of string literals: "name" | "age" | "location" | "isHuman"
 const key: PersonKeys = "age"; // Valid
 // const invalidKey: PersonKeys = "gender"; // Error: "gender" is not a valid key
 console.log(key);
@@ -23,6 +23,7 @@ const person: Person = {
     name: "Manish",
     age: 10,
     location: "Wakanda",
+    isHuman: true
 };
 /**
  * @type Alien
