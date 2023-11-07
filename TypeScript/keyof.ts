@@ -3,6 +3,7 @@ interface Person {
     name: string;
     age: number;
     location: string;
+    isHuman: boolean;
 }
 
 type PersonKeys = keyof Person;
@@ -12,16 +13,29 @@ const key: PersonKeys = "age"; // Valid
 // const invalidKey: PersonKeys = "gender"; // Error: "gender" is not a valid key
 console.log(key);
 
-function getProperty(obj: Person, key: PersonKeys): string | number {
+function getProperty(obj: Person, key: PersonKeys): string | number | boolean {
     return obj[key];
 }
-
+/**
+ * @type Human
+ */
 const person: Person = {
     name: "Manish",
     age: 10,
     location: "Wakanda",
 };
+/**
+ * @type Alien
+ * @test for Alien
+ */
+const alien: readonly Person = {
+    name: "Alien",
+    age: Infinity,
+    location: "Mars",
+    isHuman: false,
+};
 
-const personName = getProperty(person, "name"); // Valid
+const personName = getProperty(person, "age"); // Valid
+const ishuman = getProperty(alien);
 // const personGender = getProperty(person, "gender"); // Error: "gender" is not a valid key
 console.log(personName);
