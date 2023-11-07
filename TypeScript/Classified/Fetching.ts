@@ -98,3 +98,20 @@ function GetPrimaryData<Type>(User: INominal<unknown>) : Type | string | void{
     }
     console.log(`User Name: ${User.DefaultName}\n`);
 }
+
+interface Administrator<Power, Rules> extends INominal<string> {
+
+}
+
+class Nominal extends Error implements INominal<string>{
+    // Make em private
+    constructor(
+        DefaultName: T | undefined,
+        DefaultPort:  T | number | undefined,
+        DefaultClass: T | undefined,
+        DefaultType: `User` | `Guest`,
+    ) { super() }
+
+    public setDetails<K = string>(...args: Array<T>): T | void{}
+    public getDetails<K>(): T | void{}
+}
