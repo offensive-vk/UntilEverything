@@ -1,6 +1,8 @@
 import { CreateKeyValuePair, Permute, trace, handleError } from 'override.ps1';
+import { getValue, Swap, appendDataToProperty} from 'override.ps1';
+import * as cursed from 'override.ps1';
 import * as fs from 'fs';
-import { isFunctionOrConstructorTypeNode } from 'typescript';
+import { ExtendedConfigCacheEntry, isFunctionOrConstructorTypeNode } from 'typescript';
 
 type WritableData<T extends number | boolean, U extends string | boolean> =  `\n ${T} \n ${U} \n`;
 /**
