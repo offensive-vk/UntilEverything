@@ -79,7 +79,13 @@ async function Validate(data: UserData<number, string>): Promise<boolean> {
 
 })();
 
-/**@interface for all */
+/**
+ * @interface INominal
+ * @description Structured Data Format/Pattern For All Normal Users.
+ * @template T Important Data Structure to manage all the data.
+ * @author Vedansh Khandelwal
+ * @lang TypeScript v5.2.2
+ */
 interface INominal<T> {
     DefaultName: T | undefined;
     DefaultPort:  T | number | undefined;
