@@ -32,3 +32,33 @@ class StringContainer extends AbstractContainer<string> {
 
 // Subclass for a container of numbers
 
+class NumberContainer extends AbstractContainer<number> {
+    // Implementation of addItem for numbers
+    addItem(item: number): void {
+        this.items.push(item);
+    }
+
+    // Implementation of getItem for numbers
+    getItem(index: number): number {
+        if (index >= 0 && index < this.getLength()) {
+            return this.items[index];
+        } else {
+            throw new Error("Index out of bounds.");
+        }
+    }
+}
+
+// Usage of the generic containers
+const stringContainer = new StringContainer();
+stringContainer.addItem("Apple");
+stringContainer.addItem("Banana");
+console.log("String Container Items:");
+console.log(stringContainer.getItem(0));
+console.log(stringContainer.getItem(1));
+
+const numberContainer = new NumberContainer();
+numberContainer.addItem(42);
+numberContainer.addItem(7);
+console.log("Number Container Items:");
+console.log(numberContainer.getItem(0));
+console.log(numberContainer.getItem(1));
