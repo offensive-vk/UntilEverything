@@ -20,3 +20,35 @@ class Cat extends Animal {
     }
 }
 
+class Snake extends Animal {
+    makeSound(): void {
+        console.log('Hisss!');
+    }
+    move(): void {
+        console.log('The snake is slithering.');
+    }
+}
+
+abstract class Action<T extends Animal> {
+    abstract execute(animal: T): void;
+}
+
+class MakeSound<T extends Animal> extends Action<T> {
+    execute(animal: T): void {
+        animal.makeSound();
+    }
+}
+
+class Move<T extends Animal> extends Action<T> {
+    execute(animal: T): void {
+        animal.move();
+    }
+}
+
+class TestAnimal<T extends Animal> {
+    constructor(private action: Action<T>, private animal: T) { }
+
+    performAction(): void {
+        this.action.execute(this.animal);
+    }
+}
