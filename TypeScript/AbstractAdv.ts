@@ -9,7 +9,7 @@ abstract class AbstractContainer<T> {
     abstract getItem(index: number): T;
 
     // Concrete method for getting the number of items
-    getLength(): number {
+    public getLength(): number {
         return this.items.length;
     }
 }
@@ -34,12 +34,12 @@ class StringContainer extends AbstractContainer<string> {
 
 class NumberContainer extends AbstractContainer<number> {
     // Implementation of addItem for numbers
-    addItem(item: number): void {
+    public addItem(item: number): void {
         this.items.push(item);
     }
 
     // Implementation of getItem for numbers
-    getItem(index: number): number {
+    public getItem(index: number): number {
         if (index >= 0 && index < this.getLength()) {
             return this.items[index];
         } else {
