@@ -12,3 +12,21 @@ function performAction<T extends { [key: string]: any }>(input: any, constructor
     }
 }
 
+// Example usage
+class Animal {
+    constructor(public name: string) { }
+}
+
+class Dog extends Animal {
+    constructor(name: string, public breed: string) {
+        super(name);
+    }
+}
+
+const myDog = new Dog('Max', 'Labrador');
+
+// This will pass validation and return the dog instance
+const validDog = performAction<Dog>(myDog, Dog);
+
+// This will throw an error because a Cat is not a Dog
+const invalidDog = performAction<Dog>({ name: 'Fluffy', breed: 'Cat' }, Dog);
