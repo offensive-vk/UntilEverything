@@ -11,3 +11,12 @@ class Dog extends Animal {
         console.log('The dog is walking.');
     }
 }
+class Cat extends Animal {
+    makeSound(): void {
+        console.log('Meow!');
+    }
+    move(): void {
+        console.log('The cat is jumping.');
+    }
+}
+
