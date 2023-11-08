@@ -13,3 +13,22 @@ abstract class AbstractContainer<T> {
         return this.items.length;
     }
 }
+// Subclass for a container of strings
+class StringContainer extends AbstractContainer<string> {
+    // Implementation of addItem for strings
+    addItem(item: string): void {
+        this.items.push(item);
+    }
+
+    // Implementation of getItem for strings
+    getItem(index: number): string {
+        if (index >= 0 && index < this.getLength()) {
+            return this.items[index];
+        } else {
+            throw new Error("Index out of bounds.");
+        }
+    }
+}
+
+// Subclass for a container of numbers
+
