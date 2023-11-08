@@ -124,7 +124,7 @@ interface Administrator<Power, Level> extends INominal<string> {
 }
 
 /**@class Nominal */
-class Nominal extends Error implements INominal<string>{
+class Nominal<T> extends Error implements INominal<string>{
     // Make em private and set a T
     constructor(
         DefaultName: T | undefined,
@@ -133,8 +133,21 @@ class Nominal extends Error implements INominal<string>{
         DefaultType: `User` | `Guest`,
     ) { super() }
 
-    public setDetails<K = string>(...args: Array<T>): T | void {}
+    public setDetails(...args: Array<T>): {} | void {
+        // Destructuring them.
+        const [Name, Port, Class, Type] = args;
+
+        return {
+            DefaultName: Name,
+            DefaultPort: Port,
+            DefaultClass: Class,
+            DefaultType: Type, 
+        }
+    }
     public getDetails<K>(Obj: K): K | void {
-        
+        if(Obj instanceof Nominal){
+            if(typeof Obj == "string"){}
+        }
+        return this as unknown as K;
     }
 }
