@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@types/node": "^20.9.0",
     "@types/promise": "^7.1.30"
   }
 }
