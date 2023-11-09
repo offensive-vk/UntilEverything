@@ -25,15 +25,18 @@ abstract class Container {
     abstract function getItem($index);
 }
 class ParentContainer extends Container {
-    function addItem($item){
+    public function addItem($item){
         $this->items[] = array_push($this->items, $item);
     }
     /**
      * @abstract method getLength();
      */
-    function getLength(){
+    public function getLength(){
         echo "The Length of Items is : ".count($this->items);
         return count($this->items);
+    }
+    public function getArray() {
+        return $this->items;
     }
     /**
      * @abstract method getItem($index);
@@ -43,6 +46,13 @@ class ParentContainer extends Container {
     }
 }
 $num = new ParentContainer();
+$num->addItem(5000);
+$num->addItem(6000);
+$num->addItem(7000);
+$num->addItem(8000);
 $num->getLength();
-
+$arr = $num->getArray();
+for($i = 0; $i < $num->getLength(); $i++){
+    echo $arr[$i] ."";
+}
 ?>
