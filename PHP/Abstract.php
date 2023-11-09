@@ -4,8 +4,13 @@ echo "== Abstraction is PHP. ==";
  * @abstract class Container 
  * @global Container class for all child classes.
  */
-abstract class Container{
-    private $items = [];
+abstract class Container {
+    /**
+     * @code Simple Class Members.
+     */
+    protected $items = [];
+    protected static $className = 'Container';
+
     /**
      * @abstract method addItem();
      */
@@ -19,5 +24,22 @@ abstract class Container{
      */
     abstract function getItem($index);
 }
+class NumberContainer extends Container {
+    function addItem($item){
+        $this->items[] = array_push($this->items, $item);
+    }
+    /**
+     * @abstract method getLength();
+     */
+    function getLength(){
+        echo "The Length of Items is : ".count($this->items);
+        return count($this->items);
+    }
+    /**
+     * @abstract method getItem($index);
+     */
+    function getItem($index){
 
+    }
+}
 ?>
