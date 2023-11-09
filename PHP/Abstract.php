@@ -10,7 +10,14 @@ abstract class Container{
      * @abstract method addItem();
      */
     abstract function addItem($item);
+    /**
+     * @abstract method getLength();
+     */
     abstract function getLength();
+    /**
+     * @abstract method getItem($index);
+     */
+    abstract function getItem($index);
 }
 
 ?>
