@@ -1,5 +1,5 @@
 <?php 
-echo "== Abstraction is PHP. ==";
+echo "== Abstraction is PHP. == \n";
 /**
  * @abstract class Container 
  * @global Container class for all child classes.
@@ -24,7 +24,7 @@ abstract class Container {
      */
     abstract function getItem($index);
 }
-class NumberContainer extends Container {
+class ParentContainer extends Container {
     function addItem($item){
         $this->items[] = array_push($this->items, $item);
     }
@@ -42,4 +42,7 @@ class NumberContainer extends Container {
 
     }
 }
+$num = new ParentContainer();
+$num->getLength();
+
 ?>
