@@ -1,9 +1,16 @@
 <?php 
-echo "Hello";
-$arr = array();
-$x = 0;
-for ($c = 0; $c<=99; $c++){
-    array_push($arr, $c);
+echo "== Abstraction is PHP. ==";
+/**
+ * @abstract class Container 
+ * @global Container class for all child classes.
+ */
+abstract class Container{
+    private $items = [];
+    /**
+     * @abstract method addItem();
+     */
+    abstract function addItem($item);
+    abstract function getLength();
 }
-echo "".$arr;
+
 ?>
