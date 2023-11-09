@@ -20,12 +20,12 @@ abstract class Container {
     /**
      * @abstract method getLength();
      */
-    abstract function getLength();
+    abstract function getLength(): int;
 
     /**
      * @abstract method getItem($index);
      */
-    abstract function getItem($index);
+    abstract function getItem(int $index);
 }
 
 class ParentContainer extends Container {
@@ -40,10 +40,12 @@ class ParentContainer extends Container {
     /**
      * @abstract method getLength();
      */
-    public function getLength(){
+    public function getLength(): int{
         return count($this->items);
     }
-
+    /**
+     * @return array
+     */
     public function getArray() {
         return $this->items;
     }
@@ -51,11 +53,14 @@ class ParentContainer extends Container {
     /**
      * @abstract method getItem($index);
      */
-    function getItem($index){
+    function getItem(int $index){
 
     }
 }
-
+interface IContainer{
+    function get(): void;
+    function set(): void;
+}
 $num = new ParentContainer();
 $num->addItem(5000);
 $num->addItem(6000);
