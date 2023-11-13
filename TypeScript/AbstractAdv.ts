@@ -1,6 +1,6 @@
 // Abstract class with generics
 abstract class AbstractContainer<T> {
-    private items: T[] = [];
+    protected items: T[] = [];
 
     // Abstract method for adding an item of type T
     abstract addItem(item: T): void;
