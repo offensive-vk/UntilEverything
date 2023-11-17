@@ -1,4 +1,15 @@
+/**
+The number 1089 is an integer. It is not commonly referred to as a "magic number" in the programming context. Instead, it's a positive integer that has some interesting mathematical properties.
 
+One notable property is related to a mathematical trick known as the "1089 magic trick" or "number reversal trick." Here's how it works:
+
+1. Choose a three-digit number where the digits are not all the same (e.g., 123).
+2. Reverse the digits to form a new number (e.g., 321).
+3. Subtract the smaller number from the larger one (321 - 123 = 198).
+4. Reverse the result and add it to the original result (198 + 891 = 1089).
+5. No matter what three-digit number you start with (as long as the digits are not all the same), 
+    following these steps will always lead to the result 1089. It's a fun mathematical curiosity! 
+ */
 function reverseNumber(num: number): number {
     return parseInt(num.toString().split('').reverse().join(''));
 }
