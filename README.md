@@ -1,6 +1,7 @@
-# Programs for Different Frameworks and Web Technologies 
+# Various Programs for Different Frameworks and Web Technologies 
+
 <div align="center">
-<h2>Languages and Frameworks are as follows : </h2>
+  <h2>Languages and Frameworks are as follows : </h2>
 <p align="center">  
   <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="200" height="200"/> </a> 
   <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="200" height="200"/> </a> 
