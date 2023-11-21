@@ -1,4 +1,17 @@
 # Programs for Different Frameworks and Web Technologies 
+
+> `Bootstrap`
+> `CSS`
+> `HTML`
+> `JavaScript`
+> `Node JS`
+> `PHP`
+> `Python`
+> `Sass`
+> `TypeScript`
+> `jQuery`
+> `MDX`
+
 <div align="center">
 <h2>Languages and Frameworks are as follows : </h2>
 <p align="center">  
@@ -11,11 +24,11 @@
   <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/php/php-original.svg" alt="php" width="200" height="200"/> </a>   <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/python/python-original.svg" alt="python" width="200" height="200"/> </a> 
   <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/sass/sass-original.svg" alt="sass" width="200" height="200"/> </a> 
   <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/typescript/typescript-original.svg" alt="typescript" width="200" height="200"/> </a> 
-  <a href="https://jquery.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/icons/jquery/jquery-plain-wordmark.svg" width="200" height="200"/> </a>
+  <a href="https://jquery.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/jquery/jquery-plain-wordmark.svg" width="200" height="200"/> </a>
   <a href="https://mdxjs.com" target="_blank" rel="noreferrer" ><img alt="MDX" src="https://mdx-logo.now.sh" width="200" height="100" /></a>
 </p>
 </div>
 
 # WebDev
-Web Development Projects and Webpages
-Brought To You By Vedansh ✨
+- Web Development Projects and Webpages <br>
+- Brought To You By Vedansh ✨
