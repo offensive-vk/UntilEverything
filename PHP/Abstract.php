@@ -54,7 +54,7 @@ class ParentContainer extends Container {
      * @abstract method getItem($index);
      */
     function getItem(int $index){
-
+        return $this->items[$index];
     }
 }
 interface IContainer{

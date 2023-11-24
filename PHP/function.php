@@ -11,6 +11,10 @@
         echo "Hello, " . $name . "! Welcome to our website.";
     }
     greet("John"); //Calling 
+
+    function sayHello($name) {
+        
+    }
 ?>
 
 </body>
