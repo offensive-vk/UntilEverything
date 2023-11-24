@@ -13,7 +13,7 @@
     greet("John"); //Calling 
 
     function sayHello($name) {
-        
+        echo "Hello ! ". $name. "What is up. ";
     }
 ?>
 
