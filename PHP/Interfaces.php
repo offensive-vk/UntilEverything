@@ -4,17 +4,17 @@ interface Teacher{
     public function teach();
 }
 
-class Manish implements Teacher{
+class Manish implements Teacher {
 
-    public function __construct(public string $name, public int $id){}
-    public function getName(): string{
+    public function __construct(public string $name, public int $id){ }
+    public function getName(): string {
         return $this->name;
     }
-    public function teach(): void{
+    public function teach(): void {
         echo "\n -> ",$this->name, " is Teaching ...\n";
     }
 }
-class AnotherTeacher extends Manish implements Teacher{
+class AnotherTeacher extends Manish implements Teacher {
     public $isExpert = false;
     private $salary = 0;
     public function __construct($name, $id, $Expert){
@@ -22,7 +22,7 @@ class AnotherTeacher extends Manish implements Teacher{
         $this->isExpert = $Expert;
         $this->salary += 0;
     }
-    public function getSalary(): void{
+    public function getSalary(): void {
         echo "\n ->Your Salary: ", $this->salary + (30*8000-5000);
     }
 }
