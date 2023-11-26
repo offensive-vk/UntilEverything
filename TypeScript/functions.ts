@@ -39,6 +39,13 @@ function multiply(a: number, b: number): number {
     return a * b;
 }
 
+// Arrow functions
+async (params: unknown) => {
+    return `${params} Hello. From Arrow Function.`;
+}
+
+const _arr = () => console.log(`Hello `);
+
 // Calling the functions
 greet();
 sayHello("Alice");
@@ -50,3 +57,5 @@ greetWithOptional("Charlie");
 sumAllNumbers(1, 2, 3, 4, 5);
 const result = multiply(2, 3);
 console.log(`Multiplication result: ${result}`);
+
+
