@@ -23,6 +23,17 @@
             background-size: 50px 50px;
             background-attachment: fixed;
             margin: 0px;
+            animation: dotScroll 15s linear infinite;
+
+        }
+        @keyframes dotScroll {
+            0% {
+                background-position-y: 140px
+            }
+        
+            to {
+                background-position-y: 0px;
+            }
         }
         .container{
             background-color: rgba(50, 50, 50, 0.2);

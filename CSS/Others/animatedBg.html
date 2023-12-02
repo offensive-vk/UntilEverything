@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Vedansh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Dots</title>
+    <style>
+        body {
+            background-color: black;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.4) 9%, transparent 9%);
+            background-position: 0% 0%;
+            background-size: 50px 50px;
+            background-attachment: fixed;
+            margin: 0px;
+            animation: dotScroll 30s linear infinite; /* Increased animation duration */
+        
+            /* Added these properties for a smoother transition */
+            transition-timing-function: linear;
+            transition-duration: 30s; /* Should match the animation duration */
+        }
+        
+        @keyframes dotScroll {
+            0% {
+                background-position-y: 140px;
+            }
+        
+            100% {
+                background-position-y: 0px; /* Use 100% instead of 'to' for compatibility */
+            }
+        }        
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
