@@ -15,15 +15,11 @@ html {
 
 .character {
     font-family: 'Courier New', monospace;
-    font-size: 20px;
+    font-size: 1.2rem;
     text-align: center;
-    transition: all 5s;
+    transition: all 3s;
+    font-weight: bold;
     /* Smooth transition for all properties */
-}
-
-.color-change {
-    color: magenta;
-
 }
 
 .smooth-transition {

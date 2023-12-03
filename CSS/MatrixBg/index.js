@@ -64,15 +64,22 @@ window.addEventListener('resize', updateMatrix);
 
 // Update matrix every 5 seconds with smooth transition
 setInterval(() => {
+    // Generate a random color
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+
+    // Update the matrix with the new color
     matrixContainer.classList.add('smooth-transition');
     updateMatrix();
+
+    // Delay the color change to match the CSS transition duration
     setTimeout(() => {
         matrixContainer.classList.remove('smooth-transition');
+
+        // Update the color of all characters
         const characters = document.querySelectorAll('.character');
         characters.forEach(character => {
-            character.classList.remove('color-change');
+            character.style.color = randomColor;
             void character.offsetWidth; // Trigger reflow to apply transition smoothly
-            character.classList.add('color-change');
         });
-    }, 500); // The same duration as the CSS transition
-}, 5000);
+    }, 500); // Duration of the CSS transition
+}, 5000); // Refresh the matrix every 5 seconds
