@@ -28,6 +28,8 @@ function permute(nums: number[]): number[][] {
 }
 
 // Example usage:
-const nums = [1, 2, 3];
+// const nums = ['m', 'v', 's'];
+const nums = [645,8354,282]
+// const permutations = permute(nums as unknown as number[]);
 const permutations = permute(nums);
 console.log(permutations);
