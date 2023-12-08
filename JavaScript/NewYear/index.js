@@ -47,7 +47,7 @@ function handleSuccess(person) {
 
     alert(`Yay! 🎉 Happy New Year! ${capitalize(person)}`);
     const h1 = document.querySelector('h1');
-    h1.innerHTML = `Wishing you a very very Happy New Year !! <br>
+    h1.innerHTML = `Wishing You A Very Very Happy New Year ! <br>
     <span class='name'>${capitalize(person)}</span>`;
     document.body.style.display = 'grid';
 }
