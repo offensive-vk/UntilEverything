@@ -1,35 +1,13 @@
 const url = `https://images.wallpapersden.com/image/download/new-year-4k-2023_bW1qZ22UmZqaraWkpJRramVlrWloZ24.jpg`;
+var person = '';
 
-function handleError() {
-    document.body.style.backgroundColor = '#000';
-    document.body.style.color = '#fff';
-    document.body.style.fontSize = '10rem';
-    document.body.innerHTML = `Oops Something isn't right. <br> Try Refreshing The Page..`;
-}
-function celebrate() {
-    // document.body.style.display = 'none';
-    var name = prompt("Please Enter Your Beautiful Name.")
-    if(name.length >= 3 || name.length == 0) {
-        handleError();
-    }
-    else {
-        alert(`Yay! 🎉 Happy New Year! ${name}`);
-        const h1 = document.querySelector('h1');
-        h1.innerHTML = `Wishing you a very very Happy New Year !! <br>
-        <span class='name'>${capitalize(name)}</span>`;
-        document.body.style.display = 'grid';
-    }
-}
-async function load(url) {  
-    const img = await fetch(url)
-    return img;
-}
 async function button () {
-    await load(url);
     setTimeout(() => {
         document.body.innerHTML = ``
-        document.body.style.backgroundImage = `url(${url})`;
-    }, 1500)
+        document.body.style.backgroundImage = `url('newyear.jpg')`;
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundSize = 'cover';
+    }, 500)
 }
 function capitalize(inputString) {
     const words = inputString.split(' ');
@@ -41,6 +19,32 @@ function capitalize(inputString) {
     const resultString = capitalizedWords.join(' ');
 
     return resultString;
+}
+function handleError() {
+    document.body.innerHTML = `Oops Something isn't right. <br> Try Refreshing The Page..`;
+    document.body.style.backgroundColor = '#000';
+    document.body.style.color = '#fff';
+    document.body.style.fontSize = '6rem';
+}
+function handleSuccess(person) {
+    alert(`Yay! 🎉 Happy New Year! ${capitalize(person)}`);
+    const h1 = document.querySelector('h1');
+    h1.innerHTML = `Wishing you a very very Happy New Year !! <br>
+    <span class='name'>${capitalize(person)}</span>`;
+    document.body.style.display = 'grid';
+}
+function celebrate() {
+    // document.body.style.display = 'none';
+    var person = prompt("Can I See Your Beautiful Name ?")
+    if (person === null) {
+        handleError()
+    }
+    if (person.length <= 3 || person.length == 0 ) {
+        handleError();
+    }
+    else {
+        handleSuccess(person);
+    }
 }
 
 document.querySelector('button').addEventListener('click', button);
