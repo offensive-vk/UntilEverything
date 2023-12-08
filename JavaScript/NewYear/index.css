@@ -3,7 +3,7 @@ body {
     background-color: #000;
     animation: dotScroll 16s linear infinite;
     background-image: radial-gradient(circle,#2e3c51 2.5px ,transparent 0);
-    background-size: calc(14.2857142857% - 1px) 150px;
+    background-size: calc(14.2857142857% - 5px) 150px;
     background-position: -60px 0px;
     width: 100%;
     margin-right: auto;
@@ -26,13 +26,18 @@ body {
 .container {
     text-align: center;
     padding: 20px;
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    box-shadow: 0 0 0.5rem 0.1rem white;
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    box-shadow: 
+    0 0 1rem 0.2rem cyan, 
+    0 0 2rem 0.3rem magenta;
     max-width: 400px;
     width: 90%;
+    transition: box-shadow 800ms ease;
 }
-
+.container:hover {
+    box-shadow: 0 0 1rem 0.2rem #ff66b2;
+}
 h1 {
     color: #ff66b2;
 }
