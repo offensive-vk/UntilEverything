@@ -2,3 +2,4 @@
 *.mdx linguist-language=MDX
 *.css linguist-language=CSS
 *.php linguist-language=PHP
+*.json linguist-language=JSON
