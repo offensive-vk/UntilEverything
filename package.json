@@ -1,0 +1,17 @@
+{
+  "name": "webdev",
+  "version": "10.0.0",
+  "author": "Vedansh Khandelwal <https://github.com/offensive-vk/>",
+  "main": "",
+  "homepage": "https://github.com/offensive-vk/webdev/",
+  "private": true,
+  "packageManager": "npm@10.1.0",
+  "license": "ISC",
+  "scripts": {
+    "install": "npm install typescript sass bootstrap express",
+    "dev": "echo Started development server ...",
+    "test": "echo Tests were successful."
+  },
+  "keywords": ["CSS", "HTML", "JavaScript", "PHP", "Python", "Sass", "TypeScript", "MDX"],
+  "description": "> `Bootstrap`\r > `CSS`\r > `HTML`\r > `JavaScript`\r > `Node JS`\r > `PHP`\r > `Python`\r > `Sass`\r > `TypeScript`\r > `jQuery`\r > `MDX`"
+}
