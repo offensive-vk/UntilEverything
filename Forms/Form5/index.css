@@ -1,3 +1,12 @@
+body {
+    height: 100dvh;
+    width: 100dvw;
+    display: grid;
+    place-items: center;
+    background-color: #161616;
+    color: #ffffff;
+    overflow: hidden;
+}
 .form {
     display: flex;
     flex-direction: column;
