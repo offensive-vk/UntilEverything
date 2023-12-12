@@ -1,5 +1,12 @@
 *.html linguist-language=EJS
-*.mdx linguist-language=MDX
 *.css linguist-language=CSS
 *.php linguist-language=PHP
 *.json linguist-language=JSON
+
+*.php linguist-detectable=true
+
+*.md linguist-detectable=true
+*.md linguist-documentation=false
+
+*.mdx linguist-detectable=true
+*.mdx linguist-documentation=false
