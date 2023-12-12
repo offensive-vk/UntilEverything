@@ -1,0 +1,126 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    animation: dotScroll 16s linear infinite;
+    background-image: radial-gradient(circle,#2e3c51 2.5px ,transparent 0);
+    background-size: calc(14.2857142857% - 5px) 150px;
+    background-position: -60px 0px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+@keyframes dotScroll {
+    0% {
+        background-position-y: 140px
+    }
+
+    to {
+        background-position-y: 0px;
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    box-shadow: 
+    0 0 1rem 0.2rem cyan, 
+    0 0 2rem 0.3rem magenta;
+    max-width: 400px;
+    width: 90%;
+    transition: box-shadow 800ms ease;
+}
+.container:hover {
+    box-shadow: 0 0 1rem 0.2rem #ff66b2;
+}
+h1 {
+    color: #ff66b2;
+    margin: 0.66rem;
+}
+h1 > .name {
+    font-size: 2.5rem;
+    font-family: 'Dancing Script';
+    margin: 2rem;
+    padding: 1rem;
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(to right,
+            cyan,
+            magenta,
+            orange,
+            cyan);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    transition: all 0.6s ease-in-out;
+}
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+h1 > .name:hover{
+    transform: scale(1.49);
+    font-size: 5.5rem;
+    user-select: none;
+}
+h1.me {
+    margin-top: 5rem;
+    font-size: 12.1px;
+    color: #2e3c51;
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+p {
+    text-align: justify;
+    color: #666;
+    letter-spacing: 1.3px;
+    margin-bottom: 20px;
+}
+p::first-letter {
+    color: #ff66b2;
+    font-style: italic;
+    text-decoration: dotted;
+}
+button {
+    padding: 10px 20px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    background: #000;
+    /* background-color: #ff66b2; */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    width: 230px;
+    height: 60px;
+    color: rgb(236, 64, 122);
+    font-family: 'Dancing Script', cursive;
+    /* font-size: 1.5em; */
+    /* line-height: 0.9em; */
+
+    transition: all 750ms ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 1rem 0.21rem #ff66b2;
+}
