@@ -1,3 +1,4 @@
+export {};
 // Creating a 2D array and initializing it with values
 const matrix: number[][] = [
     [1, 2, 3],
