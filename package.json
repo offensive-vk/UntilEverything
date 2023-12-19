@@ -3,13 +3,14 @@
   "version": "10.0.0",
   "author": "Vedansh Khandelwal <https://github.com/offensive-vk/>",
   "main": "",
-  "homepage": "https://github.com/offensive-vk/webdev/",
+  "homepage": "https://github.com/offensive-vk/UntilEverything/",
   "private": true,
   "packageManager": "npm@10.1.0",
   "license": "ISC",
   "scripts": {
+    "start": "node JavaScript/Advanced/Promises.js",
     "install": "npm install typescript sass bootstrap express",
-    "dev": "echo Started development server ...",
+    "dev": "echo Started development server && node JavaScript/Advanced/Promises.js",
     "test": "echo Tests were successful."
   },
   "keywords": ["CSS", "HTML", "JavaScript", "PHP", "Python", "Sass", "TypeScript", "MDX"],
