@@ -1,12 +1,3 @@
-
-//Sending binary data over a network:
-const net = require('net');
-net.Server
-const server = net.createServer((socket) => {
-    socket.write(Buffer.from('Hello, world!'));
-
-});
-
 // Import the events module
 const EventEmitter = require('events');
 
@@ -15,8 +6,23 @@ const myEmitter = new EventEmitter();
 
 // Subscribe to an event
 myEmitter.on('myEvent', (data) => {
-  console.log('Event occurred with data:', data);
+    setTimeout(() => {
+        console.log('Event occurred with data: ', data);
+    }, 1500);
 });
+
+// another event
+myEmitter.on('sayHello', () => {
+    setTimeout(() => {
+        console.log(`Saying Hello from Event.`);
+    }, 1500)
+})
 
 // Emit the event
 myEmitter.emit('myEvent', { message: 'Hello, EventEmitter!' });
+
+myEmitter.emit('sayHello');
+
+myEmitter.addListener('sayHello', () => {
+    console.log(`Well, Hello !!`);
+});
