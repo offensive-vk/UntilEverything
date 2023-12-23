@@ -18,11 +18,17 @@ myEmitter.on('sayHello', () => {
     }, 1500)
 })
 
+// listener 1
+myEmitter.addListener('myEvent', () => {
+    console.log(`Well, Hello from first listener !!`);
+});
+
+// listener 2
+myEmitter.addListener('sayHello', () => {
+    console.log(`Well, Hello from second listener !!`);
+});
+
 // Emit the event
 myEmitter.emit('myEvent', { message: 'Hello, EventEmitter!' });
 
 myEmitter.emit('sayHello');
-
-myEmitter.addListener('sayHello', () => {
-    console.log(`Well, Hello !!`);
-});
