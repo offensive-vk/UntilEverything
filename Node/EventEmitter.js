@@ -28,7 +28,7 @@ myEmitter.addListener('sayHello', () => {
     console.log(`Well, Hello from second listener !!`);
 });
 
-// Emit the event
+// Emit the events
 myEmitter.emit('myEvent', { message: 'Hello, EventEmitter!' });
 
 myEmitter.emit('sayHello');
