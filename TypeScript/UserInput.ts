@@ -18,7 +18,7 @@ async function main() {
 
         process.stdout.write(`Hello, ${name}! You are ${age} years old.\n`);
     } catch (error) {
-        process.stderr.write(`An error occurred: ${error.message}\n`);
+        process.stderr.write(`An error occurred: ${error instanceof Error? error.message : null}\n`);
         process.exit(1);
     } finally {
         process.stdin.end();
