@@ -14,6 +14,10 @@ body {
     overflow: hidden;
     margin: 0 auto;
 }
+*::selection {
+    background-color: #ff66b2;
+    color: #000;
+}
 @keyframes dotScroll {
     0% {
         background-position-y: 140px
@@ -123,4 +127,9 @@ button {
 
 button:hover {
     box-shadow: 0 0 1rem 0.21rem #ff66b2;
+}
+
+.svg {
+    width: 5rem;
+    height: 5rem;
 }
