@@ -29,6 +29,6 @@
 </p>
 </div>
 
-# WebDev
+# UntilEverything - (Formally WebDev) 
 - Web Development Projects and Webpages <br>
 - Brought To You By Vedansh ✨
