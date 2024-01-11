@@ -1,0 +1,25 @@
+body {
+    font-family: monospace , 'Arial', sans-serif;
+    background-color:rgb(20, 15, 20);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+#years {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#months, #days, #hours, #minutes, #seconds, #milliseconds {
+    font-size: 1.5em;
+}
