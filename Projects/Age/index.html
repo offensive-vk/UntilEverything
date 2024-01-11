@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator</title>
+    <title>Live Age Calculator - 2024</title>
     <link rel="stylesheet" href="index.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
+    <span id="text" class="start" contenteditable="true">You are </span><br>
     <div id="container">
-        <div id="years"></div>
-        <div id="months"></div>
-        <div id="days"></div>
-        <div id="hours"></div>
-        <div id="minutes"></div>
-        <div id="seconds"></div>
-        <div id="milliseconds"></div>
+        <div class="number" id="years"></div>
+        <div class="number" id="months"></div>
+        <div class="number" id="days"></div>
+        <div class="number" id="hours"></div>
+        <div class="number" id="minutes"></div>
+        <div class="number" id="seconds"></div>
+        <div class="number" id="milliseconds"></div>
     </div>
+    <span id="text" class="end">old.</span>
 
     <script src="index.js"></script>
 </body>

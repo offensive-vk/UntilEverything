@@ -1,7 +1,11 @@
-// Function to calculate age and update the display
+/**
+ * 
+ * @returns DOB
+ */
 function calculateAge() {
     // Prompt user for birth year
-    const birthYear = prompt("Enter your birth year (YYYY):");
+    // const birthYear = prompt("Please Enter Your birth year (YYYY):");
+    const birthYear = 2000;
 
     if (!birthYear || isNaN(birthYear)) {
         alert("Invalid input. Please enter a valid year.");
@@ -34,11 +38,28 @@ function calculateAge() {
 
         const milliseconds = (currentDate - birthDate);
         document.getElementById('milliseconds').innerText = milliseconds + ' milliseconds';
+
+        document.title = `${milliseconds} milliseconds , Your Time is running out.`;
     }
     // Call the updateDisplay function every 100 milliseconds
     setInterval(updateDisplay, 100);
+    return birthYear;
 }
 
 // Call the calculateAge function on page load
 document.addEventListener('DOMContentLoaded', calculateAge);
 
+document.addEventListener('DOMContentLoaded', async () => {
+
+    var px = 100;
+    var rem = 2.1;
+    var content = document.querySelectorAll('.number');
+    console.log(content.length);
+    for(let i = 0; i < content.length; i++) {
+        content[i].style.fontSize = `${rem}rem`;
+        content[i].style.transform = `translateX(${px}px)`;
+        px += 50;
+        rem -= 0.2;
+    }
+
+})

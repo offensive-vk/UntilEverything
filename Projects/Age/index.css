@@ -1,5 +1,5 @@
 body {
-    font-family: monospace , 'Arial', sans-serif;
+    font-family:  'Arial', sans-serif;
     background-color:rgb(20, 15, 20);
     color: #fff;
     display: flex;
@@ -7,19 +7,74 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    flex-direction: column;
 }
-
+#text {
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-style: italic;
+    border-top: 1.2px solid #000;
+}
+#text:hover {
+    border-top: 1.2px solid #fff;
+}
+.start {
+    transform: translateX(-250px);
+}
+.end {
+    transform: translateX(250px);
+}
+.number {
+    font-size: 1rem;
+    letter-spacing: 1.32px;
+    transition: all 3s ease-in-out;
+}
+.number:hover {
+    transform: scale(1.5);
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(to left,
+            rgb(130, 251, 102),
+            rgb(238, 23, 238),
+            rgb(51, 120, 248),
+            rgb(130, 251, 102)
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 #container {
+    transform: translateX(-220px);
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
+    gap: 15px;
+    cursor: pointer;
 }
-
-#years {
-    font-size: 2em;
+/* #years {
+    font-size: 1.5rem;
     font-weight: bold;
+} */
+#text {
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(to left,
+            rgb(130, 251, 102),
+            rgb(238, 23, 238),
+            rgb(51, 120, 248),
+            rgb(130, 251, 102));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
 
-#months, #days, #hours, #minutes, #seconds, #milliseconds {
-    font-size: 1.5em;
+    to {
+        background-position: -200% center;
+    }
 }
