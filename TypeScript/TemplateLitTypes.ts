@@ -1,4 +1,4 @@
-
+export {};
 
 // Define a template literal type for creating welcome messages
 type WelcomeMessage<Name extends string> = `Hello, ${Name}! Welcome to our website.`;
