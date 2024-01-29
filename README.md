@@ -5,17 +5,17 @@ UntilEverything is a Github Repository that is completely Filled with Programs a
 
 ### Languages and Frameworks:
 
-- [Bootstrap](https://github.com/offensive-vk/UntilEverything/blob/master/Bootstrap/)
-- [CSS](https://github.com/offensive-vk/UntilEverything/blob/master/CSS/)
-- [HTMl](https://github.com/offensive-vk/UntilEverything/blob/master/HTML/)
-- [Bootstrap](https://github.com/offensive-vk/UntilEverything/blob/master/JavaScript/)
-- [Node JS](https://github.com/offensive-vk/UntilEverything/blob/master/Node/)
-- [PHP](https://github.com/offensive-vk/UntilEverything/blob/master/PHP/)
-- [Python](https://github.com/offensive-vk/UntilEverything/blob/master/Python/)
-- [Sass](https://github.com/offensive-vk/UntilEverything/blob/master/CSS/Sass/)
-- [TypeScript](https://github.com/offensive-vk/UntilEverything/blob/master/TypeScript/)
-- [jQuery](https://github.com/offensive-vk/UntilEverything/blob/master/jQuery/)
-- [MDX](https://github.com/offensive-vk/UntilEverything/blob/master/Markdown/)
+- [Bootstrap](https://github.com/offensive-vk/UntilEverything/blob/master/Bootstrap/) is a popular front-end framework for building responsive and mobile-first websites.
+- [CSS](https://github.com/offensive-vk/UntilEverything/blob/master/CSS/) stands for Cascading Style Sheets, used to style the layout and appearance of web pages.
+- [HTML](https://github.com/offensive-vk/UntilEverything/blob/master/HTML/) stands for HyperText Markup Language, used to create and structure content on web pages.
+- [JavaScript](https://github.com/offensive-vk/UntilEverything/blob/master/JavaScript/) is a programming language used to add interactivity and dynamic behavior to web pages.
+- [Node JS](https://github.com/offensive-vk/UntilEverything/blob/master/Node/) is a JavaScript runtime environment that allows developers to run JavaScript code server-side, outside of a web browser.
+- [PHP](https://github.com/offensive-vk/UntilEverything/blob/master/PHP/) is a server-side scripting language primarily used for web development to create dynamic and interactive web pages.
+- [Python](https://github.com/offensive-vk/UntilEverything/blob/master/Python/) is a high-level programming language known for its simplicity and versatility.
+- [Sass](https://github.com/offensive-vk/UntilEverything/blob/master/CSS/Sass/) (Syntactically Awesome Style Sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
+- [TypeScript](https://github.com/offensive-vk/UntilEverything/blob/master/TypeScript/) is a superset of JavaScript that adds static typing and other features to the language, making it easier to build and maintain large-scale JavaScript applications.
+- [jQuery](https://github.com/offensive-vk/UntilEverything/blob/master/jQuery/) is a fast, small, and feature-rich JavaScript library that simplifies various tasks like HTML document traversal and manipulation, event handling, animation, and Ajax interactions for web development.
+- [MDX](https://github.com/offensive-vk/UntilEverything/blob/master/Markdown/) is a lightweight markup language with plain-text formatting syntax, often used to format readme files, documentation, and notes, commonly supported in platforms like GitHub and Stack Overflow.
 
 ## Quick Links and Navigation:
 For Any Information About Contribution and Documentation of This Repo. <br>
