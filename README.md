@@ -1,7 +1,7 @@
 # UntilEverything ✨
 ### Programs for Different Frameworks and Trending Web Technologies.
 
-UntilEverything is one of Those Thousand Github Repository that is completely Filled with Programs and Examples of Various Programming Topics from Various Programming Languages like TypeScript, Sass, JavaScript, Nodejs .etc. Containing and Covering all the important concepts and topics of various Programming Languages, we also have various approach based Problems and their solutions that will help you to improve your coding knowledge and enhance your coding style, workflow, passion and interest.
+UntilEverything is one of those thousand Github Repository that is completely filled with Programs and Examples of Various Programming Topics from Various Programming Languages like TypeScript, Sass, JavaScript, Nodejs .etc. Containing and Covering all the important concepts and topics of various Programming Languages, we also have various approach based Problems and their solutions that will help you to improve your coding knowledge and enhance your coding style, workflow, passion and interest.
 
 
 ### Languages and Frameworks:
@@ -46,7 +46,7 @@ Programming paradigms refer to different styles or approaches to programming, ea
 
 
 <div align="center">
-<h3>Languages and Frameworks Logos : <i>(For Better Understanding)</i></h3>
+<h3>Languages and Frameworks Logos : <i>(Click on Icons to learn more.)</i></h3>
 <p align="center">  
   <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="200" height="150"/> </a> 
   <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/css3/css3-original-wordmark.svg" alt="css3" width="200" height="150"/> </a> 
