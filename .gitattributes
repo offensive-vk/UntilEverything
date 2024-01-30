@@ -1,14 +1,29 @@
+# GitHub Linguist Settings for better visualization.
+# ==== START ====
 *.html linguist-language=PHP
 *.css linguist-language=CSS
 
 *.json linguist-language=MDX
 *.xml linguist-language=XML
 
+*.tsx linguist-language=TypeScript
+*.jsx linguist-language=TypeScript
+*.d.ts linguist-language=TypeScript
+*.*ts linguist-language=TypeScript
+
 *.php linguist-detectable=true
+*.php linguist-language=PHP
 
 *.md linguist-language=MDX
 *.md linguist-detectable=true
 *.md linguist-documentation=false
 
+*.mdx linguist-language=MDX
 *.mdx linguist-detectable=true
 *.mdx linguist-documentation=false
+
+*.png linguist-detectable=false
+*.jpg linguist-detectable=false
+*.jpeg linguist-detectable=false
+*.svg linguist-detectable=false
+# ==== END ====
