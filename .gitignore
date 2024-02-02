@@ -1,6 +1,6 @@
-node_modules
+node_modules/
 *.exe
 *.out
-.vscode
+.vscode/
 settings.json
-CSS/Gradients
+CSS/Gradients/
