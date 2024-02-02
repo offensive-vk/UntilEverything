@@ -1,4 +1,5 @@
 # GitHub Linguist Settings for better visualization.
+
 # ==== START ====
 *.html linguist-language=PHP
 *.css linguist-language=CSS
