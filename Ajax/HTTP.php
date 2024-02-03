@@ -23,52 +23,52 @@
 
     function getMethod() {
         makeRequest('GET', 'https://jsonplaceholder.typicode.com/posts/1', null, function(err, response) {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log('GET Response:', response);
-        }
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('GET Response:', response);
+            }
         });
     }
 
     function postMethod() {
         var postData = {
-        title: 'foo',
-        body: 'bar',
-        userId: 1
+            title: 'foo',
+            body: 'bar',
+            userId: 1
         };
         makeRequest('POST', 'https://jsonplaceholder.typicode.com/posts', postData, function(err, response) {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log('POST Response:', response);
-        }
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('POST Response:', response);
+            }
         });
     }
 
     function putMethod() {
         var putData = {
-        id: 1,
-        title: 'foo',
-        body: 'bar',
-        userId: 1
+            id: 1,
+            title: 'foo',
+            body: 'bar',
+            userId: 1
         };
         makeRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', putData, function(err, response) {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log('PUT Response:', response);
-        }
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('PUT Response:', response);
+            }
         });
     }
 
     function deleteMethod() {
         makeRequest('DELETE', 'https://jsonplaceholder.typicode.com/posts/1', null, function(err, response) {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log('DELETE Response:', response);
-        }
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('DELETE Response:', response);
+            }
         });
     }
 </script>
