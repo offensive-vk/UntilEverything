@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta name="author" content="Vedansh" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIfferent Gradients In CSS</title>
+    <title>Different Colored Gradients In CSS</title>
 </head>
-
 <body align="center">
-    <h2>This is some text</h2>
     <div class="container">
         <section class="item one"></section>
         <section class="item two"></section>
@@ -16,67 +14,77 @@
         <section class="item four"></section>
         <section class="item five"></section>
     </div>
+    <script>
+        var items = document.querySelectorAll('.item');
+            items.forEach((e) => {
+                e.addEventListener('mouseover', () => {
+                    document.body.style.display = 'none;'
+                    const property = window.getComputedStyle(e);
+                    const color = property.getPropertyValue('background');
+                    document.body.style.transition = 'background 600ms ease-in-out'; 
+                    document.body.style.background = color;
+                    console.log(color);
+                    e.textContent = color;
+                });
+                e.addEventListener('mouseout', () => {
+                    document.body.style.transition = 'background 600ms ease-in-out'; 
+                    document.body.style.background = "#000";
+                    e.textContent = '';
+                });
+            });
+
+    </script>
     <style>
         body {
-            margin: 30px;
+            margin: 40px;
             height: 100vh;
-            background-image: linear-gradient(120deg, red, orange, yellow, green, blue, indigo, violet);
+            background: #000;
+            overflow-y: hidden;
         }
         .container {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 1fr);
-            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         .item {
-            background-color: #000;
-            padding: 10px;
+            flex: 1;
+            height: 90vh;
+            width: 100vw;
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
+
+            font-size: 27px;
+            font-family: monospace;
             text-align: center;
-            height: calc(500px - 100%);
+            padding-top: 100px;
         }
-        @media (max-width: 600px) {
-            .container {
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(5, 1fr);
-            }
+        .item:hover{
+            filter: opacity(0.7);
+            border-radius: 20px;
+            transform: scale(1.2);
+            z-index: 1;
         }
-        
-        @media (max-width: 400px) {
-            .container {
-                grid-template-columns: repeat(1, 1fr);
-                grid-template-rows: repeat(5, 1fr);
-            }
+        .item:not(:hover) {
+            transform: scale(0.9);
         }
         .one {
-            background: linear-gradient(45deg, #808080 25%, transparent 25%, transparent 50%, #808080 50%, #808080 75%, transparent 75%, transparent),
-            linear-gradient(-45deg, #808080 25%, transparent 25%, transparent 50%, #808080 50%, #808080 75%, transparent 75%, transparent);
-            background-size: 10px 10px;
-
+            background: linear-gradient(-60deg, #FF5722, #4CAF50);        
         }
-
+        
         .two {
-            background: linear-gradient(45deg, #E91E63 25%, transparent 25%, transparent 75%, #E91E63 75%, #E91E63),
-                linear-gradient(-45deg, #E91E63 25%, transparent 25%, transparent 75%, #E91E63 75%, #E91E63),
-                linear-gradient(90deg, #FF9800 25%, transparent 25%, transparent 75%, #FF9800 75%, #FF9800),
-                linear-gradient(0deg, #FF9800 25%, transparent 25%, transparent 75%, #FF9800 75%, #FF9800);
-            background-size: 15px 15px;
+            background: linear-gradient(135deg, #2196F3, #FFEB3B, #F44336);
         }
+        
         .three {
-            background: linear-gradient(45deg, #FFC107 50%, transparent 50%, transparent),
-            linear-gradient(-45deg, #FFC107 50%, transparent 50%, transparent);
-            background-size: 20px 20px;
+            background: linear-gradient(45deg, #FF4081, #00E676);        
         }
-
+        
         .four {
-            background: linear-gradient(45deg, #FF4081 25%, transparent 25%, transparent 75%, #FF4081 75%, #FF4081),
-            linear-gradient(-45deg, #FF4081 25%, transparent 25%, transparent 75%, #FF4081 75%, #FF4081);
-            background-size: 15px 15px;
+            background: linear-gradient(90deg, #F44336, #9C27B0);
         }
-
+        
         .five {
-            background: linear-gradient(45deg, #4CAF50 25%, transparent 25%, transparent 50%, #4CAF50 50%, #4CAF50 75%, transparent 75%, transparent),
-            linear-gradient(-45deg, #4CAF50 25%, transparent 25%, transparent 50%, #4CAF50 50%, #4CAF50 75%, transparent 75%, transparent);
-            background-size: 15px 15px;
+            background: linear-gradient(-135deg, #FFC107, #3F51B5);
         }
     </style>
 </body>
