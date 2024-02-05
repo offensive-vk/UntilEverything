@@ -39,7 +39,6 @@ function Animation() {
         };
     }, []);
 
-    return <div>{/* Your JSX for the animation container */ } < /div>;
+    
 }
-
 export default Animation;
