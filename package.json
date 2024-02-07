@@ -1,6 +1,6 @@
 {
   "name": "UntilEverything",
-  "version": "10.0.0",
+  "version": "11.0.5",
   "author": "Vedansh Khandelwal <https://github.com/offensive-vk/>",
   "main": "",
   "homepage": "https://github.com/offensive-vk/UntilEverything/",
@@ -10,9 +10,11 @@
   "scripts": {
     "start": "node JavaScript/Advanced/Promises.js",
     "install": "npm install typescript sass bootstrap express",
-    "dev": "echo Started development server && node JavaScript/Advanced/Promises.js",
-    "test": "echo Tests were successful."
+    "dev": "echo Powering Up Server... && node JavaScript/Advanced/Promises.js",
+    "test": "echo Tests were successful.",
+    "build": "echo Build Success ✨",
+    "lint": "echo Linter isn't available."
   },
-  "keywords": ["CSS", "HTML", "JavaScript", "PHP", "Python", "Sass", "TypeScript", "MDX"],
-  "description": "> `Bootstrap`\r > `CSS`\r > `HTML`\r > `JavaScript`\r > `Node JS`\r > `PHP`\r > `Python`\r > `Sass`\r > `TypeScript`\r > `jQuery`\r > `MDX`"
+  "keywords": ["CSS", "HTML", "JavaScript", "PHP", "Python", "Sass", "TypeScript", "MDX", "jQuery", "Express"],
+  "description": "Language Specific Examples and Various Web Development Projects & Pages. \n > `Bootstrap`\r > `CSS`\r > `HTML`\r > `JavaScript`\r > `Node JS`\r > `PHP`\r > `Python`\r > `Sass`\r > `TypeScript`\r > `jQuery`\r > `MDX`"
 }
