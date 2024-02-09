@@ -3,9 +3,11 @@ The function is executed when the form field gets focus -->
 
 <!DOCTYPE html>
 <html>
-
 <head>
-    <script src="jQuery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         //const name = document.querySelector("#name").value;
         //const email = document.querySelector("#email").value;
@@ -22,15 +24,11 @@ The function is executed when the form field gets focus -->
                 document.body.style.backgroundColor = "magenta";
             });
         });
-
     </script>
 </head>
-
 <body>
-
     Name: <input type="text" name="fullname" id="name"><br>
     Email: <input type="text" name="email" id="email">
     <p id="res"></p>
 </body>
-
 </html>
