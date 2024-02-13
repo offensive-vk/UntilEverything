@@ -21,6 +21,5 @@
         db.coll.createIndex({"name": 1}, {partialFilterExpression: {age: {$gt: 18}}}) // partial index
         db.coll.createIndex({"name": 1}, {collation: {locale: 'en', strength: 1}})    // case insensitive index with strength = 1 or 2
         db.coll.createIndex({"name": 1 }, {sparse: true})
-
     }
 }
