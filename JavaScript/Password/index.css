@@ -1,0 +1,67 @@
+body {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: monospace;
+    color: lawngreen;
+    background-color: #000000;
+
+}
+
+.progress-bar {
+    width: 500px;
+    height: 50px;
+    background-color: #000000;
+    margin: 10px 0;
+}
+
+input {
+    font-size: 1.99rem;
+    height: 40px;
+    width: 500px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    background-color: #9bb8ed;
+    font-family: monospace;
+}
+input::selection {
+    background: #000;
+    color: #fff;
+}
+input:hover {
+    filter: opacity(0.7);
+}
+.text {
+    background: linear-gradient(130deg, aqua, magenta, orange);
+    background-color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.weak {
+    background-color: red;
+}
+
+.good {
+    background-color: orange;
+}
+
+.very-good {
+    background-color: yellow;
+}
+
+.excellent {
+    background-color: green;
+}
+
+.perfect {
+    background: linear-gradient(45deg, cyan, magenta);
+}
