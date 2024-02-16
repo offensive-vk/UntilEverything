@@ -1,27 +1,29 @@
-/* Styling for Stopwatch */
-body{
+body {
     background-color: #000;
     margin: 100px;
     padding: 100px;
     overflow: hidden;
     box-sizing: border-box;
     font-family: monospace;
-    /* display: inline-flex; */
     border: 2px solid black;
     align-items: center;
     justify-content: center;
 }
-.box{
+
+.box {
+    cursor: pointer;
     border: 5px double black;
     text-align: center;
     padding: 40px;
     margin: auto;
 }
-h1{
+
+h1 {
     color: #fff;
     font-size: 3.2rem;
 }
-input{
+
+input {
     background-color: aqua;
     color: black;
     border: none;
@@ -29,4 +31,7 @@ input{
     width: 110px;
     height: 40px;
     border-radius: 12px;
+}
+input:focus {
+    filter: brightness(50%);
 }
