@@ -9,13 +9,13 @@
 </head>
 <body align="center">
     <h3>Solve The Captcha</h3>
-	<h3 id="eqn"></h3> 
-    <input type="number" id="answer" placeholder="Your Answer"/><br>
+    <h3 id="eqn"></h3>
+    <input type="number" id="answer" placeholder="Your Answer" /><br>
     <button onclick="check()">Verify</button>
     <div id="res"></div>
 
     <script>
-        document.body.style.margin = "120px";
+        document.body.style.margin = "20px";
         document.body.style.padding = "50px";
         document.querySelector("input").style.width = "210px";
         document.querySelector("input").style.height = "30px";
@@ -26,17 +26,14 @@
         document.body.style.fontFamily = "monospace";
         document.getElementById("res").style.color = "green";
 
+        var n1 = parseInt(Math.random() * 90) + 10;
+        var n2 = parseInt(Math.random() * 90) + 10;
 
-        var n1 = parseInt(Math.random() * 90)+10;
-        var n2 = parseInt(Math.random() * 90)+10;
-        //document.getElementById("num1").innerHTML = n1;
-        //document.getElementById("num2").innerHTML = n2;
-
-        const arr = ["+", "-", "*","/"];
+        const arr = ["+", "-", "*", "/"];
         var x = arr[Math.floor(Math.random() * arr.length)];
         var op = n1 + x + n2;
         document.getElementById("eqn").innerHTML = op;
-        
+
         function check() {
             var answer = Number(document.getElementById("answer").value);
             var result;
@@ -54,12 +51,12 @@
                     result = Math.round(n1 / n2);
                     break;
                 default:
-                document.getElementById("res").innerHTML = "Cannot Calculate Result";
+                    document.getElementById("res").innerHTML = "Cannot Calculate Result";
             }
-            if(result == answer){
+            if (result == answer) {
                 document.getElementById("res").innerHTML = "Yay ! Correct Answer !";
-            }else{
-                document.getElementById("res").innerHTML = "Oops ! Incorrect Answer<br> "+"The Correct Answer is "+result;
+            } else {
+                document.getElementById("res").innerHTML = "Oops ! Incorrect Answer<br> " + "The Correct Answer is " + result;
             }
         }
     </script>
