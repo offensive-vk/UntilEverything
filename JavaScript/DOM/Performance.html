@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Performance Example</title>
+    <style>
+        #container {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        // Get reference to the container div
+        var container = document.getElementById('container');
+
+        // Define a function to create a large number of elements
+        function createElements() {
+            var fragment = document.createDocumentFragment(); // Use a document fragment for performance
+            for (var i = 0; i < 1000; i++) {
+                var div = document.createElement('div');
+                div.textContent = 'Item ' + i;
+                fragment.appendChild(div);
+            }
+            container.appendChild(fragment); // Append all elements at once
+        }
+
+        // Measure time taken to create elements
+        console.time('createElement');
+
+        // Create a large number of elements
+        createElements();
+
+        // End time measurement
+        console.timeEnd('createElement');
+    </script>
+
+</body>
+</html>

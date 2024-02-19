@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Delegation Example</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="parentList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        document.getElementById('parentList').addEventListener('click', function (event) {
+            // Check if the clicked element is an <li> element
+            if (event.target.tagName === 'LI') {
+                // Toggle the 'highlight' class on the clicked <li> element
+                event.target.classList.toggle('highlight');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
