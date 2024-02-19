@@ -2,10 +2,6 @@
 <html>
 <head>
     <title>Coordinate Tracker</title>
-</head>
-<body>
-    <div id="coordinates">Move your mouse to track coordinates</div>
-    <div id="res"></div>
     <style>
         body {
             font-family: monospace;
@@ -14,7 +10,7 @@
             transition: background-color 0.5s;
             transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
         }
-        body:hover{
+        body:hover {
             background-color: aqua;
         }
         #coordinates {
@@ -36,6 +32,10 @@
             translate: var(--x) var(--y);
         }
     </style>
+</head>
+<body>
+    <div id="coordinates">Move your mouse to track coordinates</div>
+    <div id="res"></div>
     <script>
         const root = document.documentElement;
         document.addEventListener("DOMContentLoaded", function() {
