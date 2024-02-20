@@ -18,3 +18,12 @@ console.log("Java Enabled:", navigator.javaEnabled());
 
 // Check if geolocation is available
 console.log("Geolocation Available:", !!navigator.geolocation);
+
+// Check if pdf viewer in allowed
+console.log("PDF Viewer Enabled : " , navigator.pdfViewerEnabled);
+
+// Supported languages in browser
+console.log("Languages : ", navigator.languages); 
+
+// System Processor
+console.log("Total Logical Processors: ", navigator.hardwareConcurrency);
