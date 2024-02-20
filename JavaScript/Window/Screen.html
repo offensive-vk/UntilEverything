@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Window Screen Methods</title>
+</head>
+<body>
+    <h1>Window Screen Methods Example</h1>
+    <p>Click the buttons below to display information about the screen.</p>
+
+    <button onclick="displayScreenSize()">Display Screen Size</button>
+    <button onclick="displayColorDepth()">Display Color Depth</button>
+    <button onclick="displayPixelDepth()">Display Pixel Depth</button>
+    <button onclick="displayAvailableSize()">Display Available Size</button>
+    
+    <script>
+        function displayScreenSize() {
+            alert('Screen width: ' + window.screen.width + 'px\n' + 'Screen height: ' + window.screen.height + 'px');
+        }
+
+        function displayColorDepth() {
+            alert('Color depth: ' + window.screen.colorDepth + ' bits');
+        }
+
+        function displayPixelDepth() {
+            alert('Pixel depth: ' + window.screen.pixelDepth + ' bits');
+        }
+
+        function displayAvailableSize() {
+            alert('Available width: ' + window.screen.availWidth + 'px\n' + 'Available height: ' + window.screen.availHeight + 'px');
+        }
+    </script>
+</body>
+</html>
