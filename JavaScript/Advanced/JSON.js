@@ -27,6 +27,7 @@ const customJsonString = JSON.stringify(originalObject, (key, value) => {
     }
     return value;
 });
+
 console.log("Custom JSON String:", customJsonString);
 
 // JSON.parse() with a custom reviver function
@@ -36,6 +37,7 @@ const customParsedObject = JSON.parse(customJsonString, (key, value) => {
     }
     return value;
 });
+
 console.log("Custom Parsed Object:", customParsedObject);
 
 // JSON.stringify() with pretty printing (spacing)

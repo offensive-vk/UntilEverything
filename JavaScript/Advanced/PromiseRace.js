@@ -21,7 +21,6 @@ Promise.race([promise1, promise2])
         console.error(error); // This will be the error of the first promise that rejects
     });
 
-
 /**
  * @description Promise.race() is used to return the result or error of the first promise that resolves or rejects.
  */
