@@ -52,11 +52,9 @@ async function main() {
         console.error('Error:', error);
     });
 
-    // Perform the asynchronous operation
     await asyncOperation.performAsyncOperation();
 
     console.log('Main program continues...');
 }
 
-// Run the main program
 main();
