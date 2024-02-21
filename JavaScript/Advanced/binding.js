@@ -2,21 +2,21 @@ function greet(message) {
     console.log(`${message}, ${this.name}!`);
 }
 
-const person1 = { name: "Alice" };
-const person2 = { name: "Bob" };
-const person3 = { name: "Charlie" };
+const person1 = { name: "Ali" };
+const person2 = { name: "Python" };
+const person3 = { name: "Char" };
 
 // Using call() to explicitly bind `this`
-greet.call(person1, "Hello"); // Output: Hello, Alice!
-greet.call(person2, "Hi");    // Output: Hi, Bob!
+greet.call(person1, "Hello"); 
+greet.call(person2, "Hi");   
 
 // Using apply() to explicitly bind `this`
-greet.apply(person1, ["Hey"]); // Output: Hey, Alice!
-greet.apply(person3, ["Hola"]); // Output: Hola, Charlie!
+greet.apply(person1, ["Hey"]); 
+greet.apply(person3, ["Hola"]);
 
 // Using bind() to create a new function with bound `this`
 const greetPerson2 = greet.bind(person2, "Greetings");
 const greetPerson3 = greet.bind(person3, "Salutations");
 
-greetPerson2(); // Output: Greetings, Bob!
-greetPerson3(); // Output: Salutations, Charlie!
+greetPerson2();
+greetPerson3(); 

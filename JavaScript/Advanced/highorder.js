@@ -1,3 +1,4 @@
+// High Order Functions
 function applyOperation(operation, x, y) {
     return operation(x, y);
 }
