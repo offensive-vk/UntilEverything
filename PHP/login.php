@@ -55,7 +55,7 @@ function authenticateUser($email, $password) {
 }
 
 // Usage examples
-registerUser("John Doe", "john@example.com", "password123");
+registerUser("John", "john@example.com", "password123");
 authenticateUser("john@example.com", "password123");
 
 // Close the connection
