@@ -33,14 +33,14 @@ class ParentContainer extends Container {
         $this->items = [];
     }
 
-    public function addItem($item){
+    public function addItem($item) {
         array_push($this->items, $item);
     }
 
     /**
      * @abstract method getLength();
      */
-    public function getLength(): int{
+    public function getLength(): int {
         return count($this->items);
     }
     /**
@@ -53,14 +53,15 @@ class ParentContainer extends Container {
     /**
      * @abstract method getItem($index);
      */
-    function getItem(int $index){
+    function getItem(int $index) {
         return $this->items[$index];
     }
 }
-interface IContainer{
+interface IContainer {
     function get(): void;
     function set(): void;
 }
+
 $num = new ParentContainer();
 $num->addItem(5000);
 $num->addItem(6000);

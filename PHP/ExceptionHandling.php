@@ -18,7 +18,7 @@
         $result = $numerator / $denominator;
 
         echo "Result: " . $result;
-        } catch (Exception $e) {
+    } catch (Exception $e) {
             echo "Exception caught: " . $e->getMessage();
     }
 ?>
