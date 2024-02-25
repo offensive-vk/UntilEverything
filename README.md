@@ -3,7 +3,6 @@
 
 UntilEverything is one of those thousand Github Repository that is completely filled with Programs and Examples of Various Programming Topics from Various Programming Languages like TypeScript, Sass, JavaScript, Nodejs .etc. Containing and Covering all the important concepts and topics of various Programming Languages, we also have various approach based Problems and their solutions that will help you to improve your coding knowledge and enhance your coding style, workflow, passion and interest.
 
-
 ### Languages and Frameworks:
 
 - [Ajax](https://github.com/offensive-vk/UntilEverything/blob/master/Ajax/) (Asynchronous JavaScript and XML) is a set of web development techniques used to create asynchronous web applications by sending and receiving data from a web server without reloading the entire page.
@@ -14,6 +13,7 @@ Express is a minimal and flexible Node.js web application framework that provide
 - [HTML](https://github.com/offensive-vk/UntilEverything/blob/master/HTML/) stands for HyperText Markup Language, used to create and structure content on web pages.
 - [jQuery](https://github.com/offensive-vk/UntilEverything/blob/master/jQuery/) is a fast, small, and feature-rich JavaScript library that simplifies various tasks like HTML document traversal and manipulation, event handling, animation, and Ajax interactions for web development.
 - [JavaScript](https://github.com/offensive-vk/UntilEverything/blob/master/JavaScript/) is a programming language used to add interactivity and dynamic behavior to web pages.
+- [Markdown](https://github.com/offensive-vk/UntilEverything/blob/master/Markdown/) is a lightweight markup language for creating formatted text using a plain-text editor. Markdown is widely used for blogging and instant messaging, and also used elsewhere in online forums, collaborative software, documentation pages, and readme files.
 - [MDX](https://github.com/offensive-vk/UntilEverything/blob/master/Markdown/) is a lightweight markup language with plain-text formatting syntax, often used to format readme files, documentation, and notes, commonly supported in platforms like GitHub and Stack Overflow.
 - [MongoDB](https://github.com/offensive-vk/UntilEverything/blob/master/MongoDB/) is a NoSQL database management system that uses a document-oriented data model to store data in flexible, JSON-like documents, commonly used for scalable, high-performance applications.
 - [Node JS](https://github.com/offensive-vk/UntilEverything/blob/master/Node/) is a JavaScript runtime environment that allows developers to run JavaScript code server-side, outside of a web browser.
@@ -22,31 +22,44 @@ Express is a minimal and flexible Node.js web application framework that provide
 - [Sass](https://github.com/offensive-vk/UntilEverything/blob/master/CSS/Sass/) (Syntactically Awesome Style Sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
 - [TypeScript](https://github.com/offensive-vk/UntilEverything/blob/master/TypeScript/) is a superset of JavaScript that adds static typing and other features to the language, making it easier to build and maintain large-scale JavaScript applications.
 
-## Quick Links and Navigation :
-For Any Information About Contribution and Documentation of This Repo. <br>
-### Please Refer to : 
-- [Documentation 📖](https://github.com/offensive-vk/UntilEverything/blob/master/README.md) <br>
-- [Contribution Guidelines ✨](https://github.com/offensive-vk/UntilEverything/blob/master/CONTRIBUTING.md) <br>
-- [Security Guidelines ⚠️](https://github.com/offensive-vk/UntilEverything/blob/master/SECURITY.md) <br>
-- [Author 🧑‍💻](https://github.com/offensive-vk/) <br>
+## Quick Links and Navigation
 
-## Programming Paradigms:
+For Any Information About Contribution Guidelines and Documentation of This Project.
+
+### Please Refer to
+
+- [Code of Conduct 🤗](https://github.com/offensive-vk/UntilEverything/blob/master/CODE_OF_CONDUCT)
+- [Documentation 📖](https://github.com/offensive-vk/UntilEverything/blob/master/README.md)
+- [Contribution Guidelines ✨](https://github.com/offensive-vk/UntilEverything/blob/master/CONTRIBUTING.md)
+- [Security Guidelines ⚠️](https://github.com/offensive-vk/UntilEverything/blob/master/SECURITY.md)
+- [Author 🧑‍💻](https://github.com/offensive-vk/)
+
+## Programming Paradigms
+
 Programming paradigms refer to different styles or approaches to programming, each with its own set of principles, concepts, and practices. Like -
 
-#### Generic Programming
+### Generic Programming
+
 > Generic programming is a programming paradigm that aims to create reusable, flexible, and efficient code by writing algorithms and data structures in a way that they can work with any data type. The term "generic" refers to the fact that algorithms and data structures are written in a way that they are not specific to any particular data type.
-#### Aspect Oriented Programming
+
+### Aspect Oriented Programming
+
 > AOP aims to increase modularity by allowing the separation of cross-cutting concerns such as logging, security, and transaction management from the main logic of the program.
-#### Object Oriented Programming
+
+### Object Oriented Programming
+
 > OOP is based on the concept of objects, which are instances of classes. It emphasizes the organization of software as a collection of objects that encapsulate data and behavior. Key principles include encapsulation, inheritance, and polymorphism.
-#### Functional Programming
+
+### Functional Programming
+
 > Functional programming treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. It emphasizes immutable data and first-class functions. Key concepts include higher-order functions, pure functions, and recursion.
-#### Asynchronous Programming
+
+### Asynchronous Programming
+
 > Asynchronous programming is a specific form of concurrent programming where tasks can run independently of the main program flow. Asynchronous operations allow a program to continue executing other tasks while waiting for certain operations (like I/O operations or network requests) to complete.
 
-
 <div align="center">
-<h3>Languages and Frameworks Logos : <i>(Click on Icons to learn more.)</i></h3>
+<h3>Languages and Frameworks Logos - <i>(Click on Icons to learn more.)</i></h3>
 <p align="center">  
   <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="200" height="150"/> </a> 
   <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/css3/css3-original-wordmark.svg" alt="css3" width="200" height="150"/> </a> 
@@ -65,7 +78,9 @@ Programming paradigms refer to different styles or approaches to programming, ea
 </div>
 
 ## UntilEverything - (Formally WebDev) 
-- Web Development Projects and Webpages <br>
+
+- Examples for Various Frameworks and Languages.
+- Web Development Projects and Webpages.
 - Brought To You By [Vedansh ✨](https://github.com/offensive-vk/)
 - Happy Coding. 🤗
-- &copy; Copyright by [Vedansh ✨](https://github.com/offensive-vk/) 2024. All Right Reserved.
+- &copy; Copyright by [Vedansh](https://github.com/offensive-vk/) 2024. All Right Reserved.
