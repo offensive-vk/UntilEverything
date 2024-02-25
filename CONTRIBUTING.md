@@ -17,6 +17,8 @@ For Information about Concepts and Languages that are available to contribute, p
 - Thank you.
 
 ### When contributing to this repository, please follow these rules: (For Expert Contributors)
-- First of all create an issue for the change you wish to make via [GitHub](https://github.com/offensive-vk/UntilEverything/issues)
-- If you want to contribute in any programming language to this repository please consider submitting a [PR](https://github.com/offensive-vk/UntilEverything/pulls) here.
+
+- Firstly, create an issue for the change you wish to make via [GitHub](https://github.com/offensive-vk/UntilEverything/issues)
+- If you want to contribute in any programming language to this repository please consider submitting a [Pull Request](https://github.com/offensive-vk/UntilEverything/pulls) here.
+- Review from Code Owner is required for good contributions.
 - Code review is required on every push / pr, minimum 1 or more reviewers should be assigned.
