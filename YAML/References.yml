@@ -1,0 +1,40 @@
+- Sequences aka arrays or lists
+- Scalars aka strings or numbers
+- Mappings aka hashes or dictionaries
+
+%	- Directive indicator
+---	- Document header
+...	- Document terminator
+
+!!map	{Hash table, dictionary, mapping}
+!!seq	{List, array, tuple, vector, sequence}
+!!str	Unicode string
+
+=	- Default "value" mapping key
+<<	- Merge keys from another mapping
+
+&	Anchor property
+*	Alias indicator
+
+?	Key indicator
+:	Value indicator
+-	Nested series entry indicator
+,	Separate in-line branch entries
+[]	Surround in-line series branch
+{}	Surround in-line keyed branch
+
+''	Surround in-line unescaped scalar
+"	Surround in-line escaped scalar
+|	Block scalar indicator
+>	Folded scalar indicator
+-	Strip chomp modifier (|- or >-)
++	Keep chomp modifier (|+ or >+)
+1-9	Explicit indentation modifier (|1 or >2).
+Modifiers can be combined (|2-, >+1)
+
+
+#	Throwaway comment indicator
+`@	Both reserved for future use
+
+!!set	{cherries, plums, apples}
+!!omap	[one: 1, two: 2]
