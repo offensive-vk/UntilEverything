@@ -8,3 +8,12 @@
 - Type of format - Data interchange
 - Open format? - Yes
 - Official Website - <https://yaml.org>
+
+YAML targets many of the same communications applications as Extensible Markup Language (XML) but has a minimal syntax that intentionally differs from Standard Generalized Markup Language (SGML). It uses Python-style indentation to indicate nesting and does not require quotes around most string values (it also supports JSON style [...] for lists and {...} mixed in the same file).
+
+## Points to be noted : 
+
+- YAML is CASE sensitive
+- YAML does not allow the use of tabs
+- Must be space between the element parts
+- YAML is a superset of JSON
