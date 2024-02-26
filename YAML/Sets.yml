@@ -1,0 +1,4 @@
+set1: !!set
+  ? one
+  ? two
+set2: !!set {'one', "two"}

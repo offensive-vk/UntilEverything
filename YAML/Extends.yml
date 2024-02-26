@@ -1,0 +1,8 @@
+parent: &defaults
+  a: 2
+  b: 3
+  x: 99
+
+child:
+  <<: *defaults
+  b: 4

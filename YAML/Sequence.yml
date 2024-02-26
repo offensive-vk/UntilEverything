@@ -1,0 +1,31 @@
+# Example of a sequence (list) in YAML
+fruits:
+  - Apple
+  - Orange
+  - Banana
+
+# Another example of a sequence (list) in YAML
+colors:
+  - Red
+  - Green
+  - Blue
+  - Yellow
+
+
+# Example of nested sequences (lists) in YAML
+nested_list:
+  - - 1
+    - 2
+    - 3
+  - - a
+    - b
+    - c
+
+children:
+  - name: Jimmy Smith
+    age: 15
+  - name: Jimmy Smith
+    age: 15
+  -
+    name: Sammy Sosa
+    age: 12
