@@ -1,0 +1,8 @@
+# First YAML file
+person:
+  name: Vedansh
+  age: 20
+  city: Singapore
+  hobbies:
+    - Reading
+    - Coding
