@@ -1,0 +1,9 @@
+# Example of multiline strings in YAML
+description: |
+  This is a multiline string in YAML.
+  It can span multiple lines without the need for escaping special characters.
+  Useful for preserving line breaks and formatting.
+
+script: |
+  apt-get update
+  apt-get upgrade -y

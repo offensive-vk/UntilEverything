@@ -1,0 +1,2 @@
+some_thing: &VAR_NAME foobar
+other_thing: *VAR_NAME
