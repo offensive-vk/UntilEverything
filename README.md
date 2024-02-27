@@ -4,7 +4,7 @@
 
 UntilEverything is one of those thousand Github Repository that is completely filled with Programs and Examples of Various Programming Topics from Various Programming Languages like TypeScript, Sass, JavaScript, Nodejs .etc. Containing and Covering all the important concepts and topics of various Programming Languages, we also have various approach based Problems and their solutions that will help you to improve your coding knowledge and enhance your coding style, workflow, passion and interest.
 
-### Languages and Frameworks:
+### Languages and Frameworks
 
 - [Ajax](https://github.com/offensive-vk/UntilEverything/blob/master/Ajax/) (Asynchronous JavaScript and XML) is a set of web development techniques used to create asynchronous web applications by sending and receiving data from a web server without reloading the entire page.
 - [Bootstrap](https://github.com/offensive-vk/UntilEverything/blob/master/Bootstrap/) is a popular front-end framework for building responsive and mobile-first websites.
@@ -22,8 +22,9 @@ Express is a minimal and flexible Node.js web application framework that provide
 - [Python](https://github.com/offensive-vk/UntilEverything/blob/master/Python/) is a high-level programming language known for its simplicity and versatility.
 - [Sass](https://github.com/offensive-vk/UntilEverything/blob/master/CSS/Sass/) (Syntactically Awesome Style Sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
 - [TypeScript](https://github.com/offensive-vk/UntilEverything/blob/master/TypeScript/) is a superset of JavaScript that adds static typing and other features to the language, making it easier to build and maintain large-scale JavaScript applications.
+- [YAML](https://github.com/offensive-vk/UntilEverything/blob/master/YAML/) (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files and data exchange. It uses indentation to represent data structures and is often used in applications where data needs to be easily readable by humans as well as machines.
 
-## Quick Links and Navigation
+## Quick Links and Navigation 🧭
 
 For Any Information About Contribution Guidelines and Documentation of This Project.
 
@@ -33,6 +34,7 @@ For Any Information About Contribution Guidelines and Documentation of This Proj
 - [Documentation 📖](https://github.com/offensive-vk/UntilEverything/blob/master/README.md)
 - [Contribution Guidelines ✨](https://github.com/offensive-vk/UntilEverything/blob/master/CONTRIBUTING.md)
 - [Security Guidelines ⚠️](https://github.com/offensive-vk/UntilEverything/blob/master/SECURITY.md)
+- [Language Information 🧭](https://github.com/offensive-vk/UntilEverything/blob/master/LANGUAGES.md)
 - [Author 🧑‍💻](https://github.com/offensive-vk/)
 
 ## Programming Paradigms
@@ -75,10 +77,11 @@ Programming paradigms refer to different styles or approaches to programming, ea
   <a href="https://jquery.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/jquery/jquery-plain-wordmark.svg" width="200" height="150"/> </a>
   <a href="https://www.markdownguide.org/" target="_blank" rel="noreferrer" ><img alt="MDX" src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/markdown/markdown-original.svg" width="200" height="150" /></a>
   <a href="https://mdxjs.com" target="_blank" rel="noreferrer" ><img alt="MDX" src="https://mdx-logo.now.sh" width="200" height="100" /></a>
+  <a href="https://yaml.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/yaml/yaml-original.svg" width="200" height="150"/>      </a>
 </p>
 </div>
 
-## UntilEverything - (Formally WebDev) 
+## UntilEverything - (Formally WebDev)
 
 - Examples for Various Frameworks and Languages.
 - Web Development Projects and Webpages.
