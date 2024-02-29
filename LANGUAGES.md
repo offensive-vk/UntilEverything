@@ -21,7 +21,7 @@ Here are the Languages that are available to contribute and you can add your own
 - [TypeScript](https://github.com/offensive-vk/UntilEverything/blob/master/TypeScript/) is a superset of JavaScript that adds static typing and other features to the language, making it easier to build and maintain large-scale JavaScript applications.
 - [YAML](https://github.com/offensive-vk/UntilEverything/blob/master/YAML/) (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files and data exchange. It uses indentation to represent data structures and is often used in applications where data needs to be easily readable by humans as well as machines.
 
-## To Learn More About Particular Language / Framework-
+## To Learn More About Particular Language / Framework / Technology
 
 ### [Ajax](https://github.com/offensive-vk/UntilEverything/blob/master/Ajax/Readme.md)
 

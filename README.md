@@ -30,7 +30,7 @@ For Any Information About Contribution Guidelines and Documentation of This Proj
 
 ### Please Refer to
 
-- [Code of Conduct 🤗](https://github.com/offensive-vk/UntilEverything/blob/master/CODE_OF_CONDUCT)
+- [Code of Conduct 🤗](https://github.com/offensive-vk/UntilEverything/blob/master/CODE_OF_CONDUCT.md)
 - [Documentation 📖](https://github.com/offensive-vk/UntilEverything/blob/master/README.md)
 - [Contribution Guidelines ✨](https://github.com/offensive-vk/UntilEverything/blob/master/CONTRIBUTING.md)
 - [Security Guidelines ⚠️](https://github.com/offensive-vk/UntilEverything/blob/master/SECURITY.md)
@@ -83,7 +83,8 @@ Programming paradigms refer to different styles or approaches to programming, ea
 
 ## UntilEverything - (Formally WebDev)
 
-- Examples for Various Frameworks and Languages.
+- *Lets Learn Something New and Trendy Today*.
+- Examples for Various Frameworks and Programming Languages.
 - Web Development Projects and Webpages.
 - Brought To You By [Vedansh ✨](https://github.com/offensive-vk/)
 - Happy Coding. 🤗

@@ -9,12 +9,12 @@
   "license": "ISC",
   "scripts": {
     "start": "node JavaScript/Advanced/Promises.js",
-    "install": "",
+    "install": "npm i @types/node @types/promise",
     "dev": "echo Powering Up Server... && node JavaScript/Advanced/Promises.js",
     "test": "echo Tests were successful.",
     "build": "echo Build Success ✨",
     "lint": "echo Linter isn't available."
   },
-  "keywords": ["Ajax", "Bootstrap","CSS", "HTML", "JavaScript", "PHP", "Python", "Sass", "TypeScript", "MDX", "jQuery", "Express", "Markdown"],
+  "keywords": ["Ajax", "Bootstrap","CSS", "HTML", "JavaScript", "PHP", "Python", "Sass", "TypeScript", "MDX", "jQuery", "Express", "Markdown", "YAML"],
   "description": "Language Specific Examples and Various Web Development Projects & Pages."
 }
