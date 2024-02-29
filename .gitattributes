@@ -7,6 +7,10 @@
 *.json linguist-language=MDX
 *.xml linguist-language=XML
 
+*.yml linguist-detectable=true
+*.yml linguist-language=YAML
+*.yaml linguist-language=YAML
+
 *.tsx linguist-language=TypeScript
 *.jsx linguist-language=TypeScript
 *.d.ts linguist-language=TypeScript
@@ -27,4 +31,5 @@
 *.jpg linguist-detectable=false
 *.jpeg linguist-detectable=false
 *.svg linguist-detectable=false
+
 # ==== END ====
