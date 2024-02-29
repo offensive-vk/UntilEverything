@@ -1,6 +1,6 @@
 body {
-    font-family:  'Arial', sans-serif;
-    background-color:rgb(20, 15, 20);
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(20, 15, 20);
     color: #fff;
     display: flex;
     align-items: center;
@@ -9,6 +9,7 @@ body {
     margin: 0;
     flex-direction: column;
 }
+
 #text {
     font-family: 'Playfair Display', serif;
     text-decoration: none;
@@ -18,20 +19,25 @@ body {
     font-style: italic;
     border-top: 1.2px solid #000;
 }
+
 #text:hover {
     border-top: 1.2px solid #fff;
 }
+
 .start {
     transform: translateX(-250px);
 }
+
 .end {
     transform: translateX(250px);
 }
+
 .number {
     font-size: 1rem;
     letter-spacing: 1.32px;
     transition: all 3s ease-in-out;
 }
+
 .number:hover {
     transform: scale(1.5);
     animation: background-pan 10s linear infinite;
@@ -39,13 +45,13 @@ body {
             rgb(130, 251, 102),
             rgb(238, 23, 238),
             rgb(51, 120, 248),
-            rgb(130, 251, 102)
-    );
+            rgb(130, 251, 102));
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 #container {
     transform: translateX(-220px);
     display: flex;
@@ -53,6 +59,7 @@ body {
     gap: 15px;
     cursor: pointer;
 }
+
 /* #years {
     font-size: 1.5rem;
     font-weight: bold;
@@ -69,6 +76,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 @keyframes background-pan {
     from {
         background-position: 0% center;
