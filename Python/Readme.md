@@ -9,19 +9,20 @@ Python is a high-level, general-purpose programming language. Its design philoso
 Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.
 
 - Multi-paradigm - Object-oriented, Procedural (Imperative), Functional, Structured, Reflective
-- Designed by	- **Guido van Rossum**
+- Designed by - **Guido van Rossum** [@gvanrossum](https://github.com/gvanrossum)
 - Developer & Maintainer - Python Software Foundation
-- First appeared	20 February 1991; 33 years ago
+- Source - <https://github.com/python/cpython>
+- First appeared - 20 February 1991; 33 years ago
 - OS - Windows, macOS, Linux/UNIX, Android, Unix-like systems, BSD variants and a few other platforms.
-- License	- Python Software Foundation License
-- Filename extensions	- .py, .pyw, .pyz, .pyi, .pyc, .pyd
-- Website	<https://python.org>
+- License - Python Software Foundation License
+- Filename extensions - .py, .pyw, .pyz, .pyi, .pyc, .pyd
+- Website <https://python.org>
 
 
 ## However, This Repository (UntilEverything) doesn't contains all basic and advanced python programs.
 
 Here, you'll find some Advanced programs only.
 
-Users will need to navigate to this Repository to get the same experience.
+You will need to navigate to this Repository to get the same experience.
 
-Click [here](https://github.com/offensive-vk/Python/) to see what's there and Start Learning Python Today !
+Click [here](https://github.com/offensive-vk/Learn-Python/) to see what's there and Start Learning Python Today !
