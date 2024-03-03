@@ -1,36 +1,3 @@
-// const matrixContainer = document.getElementById('matrix-container');
-// const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:\'",.<>/?`~';
-
-// function generateRandomCharacter() {
-//   return characters[Math.floor(Math.random() * characters.length)];
-// }
-
-// function generateMatrix(rows, columns) {
-//   let matrix = '';
-//   for (let i = 0; i < rows * columns; i++) {
-//     matrix += `<div class="character">${generateRandomCharacter()}</div>`;
-//   }
-//   return matrix;
-// }
-
-// function updateMatrix() {
-//   const viewportWidth = window.innerWidth;
-//   const viewportHeight = window.innerHeight;
-//   const characterSize = 20; // Adjust as needed
-//   const columns = Math.floor(viewportWidth / characterSize);
-//   const rows = Math.floor(viewportHeight / characterSize);
-
-//   matrixContainer.innerHTML = generateMatrix(rows, columns);
-// }
-
-// // Initial update
-// updateMatrix();
-
-// // Update on window resize
-// window.addEventListener('resize', updateMatrix);
-
-
-/**Update */
 const matrixContainer = document.getElementById('matrix-container');
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:\'",.<>/?`~';
 
