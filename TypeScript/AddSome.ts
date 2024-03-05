@@ -1,3 +1,8 @@
+/**
+ * @author Vedansh
+ * @param input Any type of object to be modified.
+ * @returns new object of Type with added Id
+ */
 function addRandomId<T>(input: T): T & { id: string } {
     const randomId = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
     return {

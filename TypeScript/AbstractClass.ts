@@ -37,6 +37,7 @@ function main() {
     console.log(dog.speak());
     console.log(dog.eat());
 }
+
 main();
 // This is the output of the program.
 // Woof!

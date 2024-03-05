@@ -1,4 +1,3 @@
-
 class Greeter {
     public greet() {
         console.log("Hello, " + this.getName());
@@ -10,11 +9,11 @@ class Greeter {
         return "Hello from Protected!";
     }
 }
+
 const g = new Greeter();
 g.greet();
 //g.getAge(); // Private 
 class SpecialGreeter extends Greeter {
-
     public howdy() {
         // we can access protected member here
         console.log("Howdy, " + this.getName());
