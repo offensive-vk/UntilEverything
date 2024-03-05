@@ -15,7 +15,7 @@ function binarySearch(arr: number[], target: number): number {
         const mid = Math.floor((left + right) / 2);
         if (arr[mid] === target) {
             return mid; // Return the index of the found element
-        } else if (Arr[mid] < target) {
+        } else if (arr[mid] < target) {
             left = mid + 1;
         } else {
             right = mid - 1;
@@ -39,4 +39,4 @@ const foundValue = arr.find((item) => item === 2);
 // findIndex: Returns the index of the first element that satisfies a condition, or -1 if not found
 const foundIndex = arr.findIndex((item) => item === 5);
 
-// End 
+export {}
