@@ -8,7 +8,7 @@ type Custom = string | undefined | unknown;
 const puts = console.log;
 const tb = console.table;
 
-interface Student{
+interface Student {
     sname: string;
     sid: number | null;
     section: string | unknown;
@@ -16,25 +16,25 @@ interface Student{
     isRegular: boolean;
     isHead?: boolean;
 }
-interface Department{
+interface Department {
     name: string;
     identity: string | number | null;
     sections: string | Array<string>;
     totalStudents: number | undefined;
 }
-interface Teacher{
+interface Teacher {
     uid: number | boolean | null;
     name: string;
     subjects: Array<string> | string;
     salary: number;
     sections: Array<string>;
 }
-interface HOD extends Teacher{
+interface HOD extends Teacher {
     post: Array<String>,
     isTeacher: boolean | null,
     isHOD: boolean | null,
 }
-class University{
+class University {
     public static college: string = " University";
     public students: Array<Student>;
     public teachers: Array<Teacher>;
@@ -44,7 +44,7 @@ class University{
     public totalDepts: Array<number> | number;
     private HeadOfDept?: HOD | null;
 
-    constructor(college: string){
+    constructor(college: string) {
         University.college = college;
         this.greet();
         this.students = [];
@@ -55,25 +55,25 @@ class University{
         this.departments = [];
         this.HeadOfDept = null;
     }
-    addStudent(student: Student): void{
+    addStudent(student: Student): void {
         this.students.push(student);
         puts(`-> ${student.sname} <${student.sid}> added to University.\n`);
     }
-    addDepartment(dept: Department): void{
+    addDepartment(dept: Department): void {
         this.departments.push(dept);
         puts(`-> ${dept.name} <${dept.identity}> added to University.\n`);
     }
-    addTeacher(teacher: Teacher): void{
+    addTeacher(teacher: Teacher): void {
         this.teachers.push(teacher);
         puts(`-> ${teacher.name} <${teacher.uid}> added to University.\n`);
     }
-    countStudents(): string | Student[]{
+    countStudents(): string | Student[] {
         return `Total Number of Students in University : ${this.students.length}\n`;
     }
-    countTeachers(): string | Teacher[]{
+    countTeachers(): string | Teacher[] {
         return `Total Number of Teachers in University : ${this.teachers.length}\n`;
     }
-    countDepartments(): string | Department[]{
+    countDepartments(): string | Department[] {
         return `Total Number of Departments in University : ${this.departments.length}\n`;
     }
     deleteStudent(Id: number): string {
@@ -116,7 +116,7 @@ class University{
         puts(`\n-> Displaying All Departments in ${University.college} : \n`);
         return this.departments;
     }
-    protected greet(): void | undefined{
+    protected greet(): void | undefined {
         puts(`\t ============================== \n`);
         puts(`\n Welcome to ${University.college} !\n`);
         return;
@@ -126,57 +126,58 @@ class University{
         puts(`\n-> Assigned New Head of Department : ${Head.name} <${Head.uid}> \n`);
     }
 }
+
 // End of Class <University>
 // Real Life Execution :
 
-    /* Students */
+/* Students */
 const Manish: Student = {
-    sname : "Manish",
+    sname: "Manish",
     sid: 10001,
-    section : "BCA Full Stack",
+    section: "BCA Full Stack",
     branch: "Computer Science",
     isRegular: true,
     isHead: true,
 };
 const Mahak: Student = {
-    sname : "Mahak",
+    sname: "Mahak",
     sid: 10002,
-    section : "BCA Full Stack",
+    section: "BCA Full Stack",
     branch: "Computer Application",
     isRegular: true,
 };
 const Sourabh: Student = {
-    sname : "Sourabh",
+    sname: "Sourabh",
     sid: 10003,
-    section : "BCA Data Science",
+    section: "BCA Data Science",
     branch: "Computer Science",
     isRegular: false,
 };
 var Del: Student = {
-    sname : "DeleteMe",
+    sname: "DeleteMe",
     sid: 11,
-    section : "XYZ",
+    section: "XYZ",
     branch: " XYZ",
     isRegular: false,
 }
-    /* Departments */
+/* Departments */
 const BCA: Department = {
     name: "Bachelor of Computer Application",
-    identity : "BCA-AU-0990",
+    identity: "BCA-AU-0990",
     sections: ["Full Stack", "Data Science", "Cyber Security", "Android"],
     totalStudents: 100,
 };
 const BCom: Department = {
     name: "Bachelor of Commerce",
-    identity : "B.COM-AU-0880",
+    identity: "B.COM-AU-0880",
     sections: "B.Com",
     totalStudents: 60,
 };
-    /* Teachers */
+/* Teachers */
 const Jiya: Teacher = {
     name: "Jiya Ma'am",
     uid: 9001,
-    subjects: ["DSA","CA", "OS"],
+    subjects: ["DSA", "CA", "OS"],
     salary: 77000,
     sections: ["2nd Year", "BCA-A & B", "Ist Year - BCA"],
 };
