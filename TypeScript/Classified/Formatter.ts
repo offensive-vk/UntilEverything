@@ -1,3 +1,6 @@
+/**
+ * @description This function, processString, takes either a string or an array of strings as input and processes it according to your requirements. It uses a regular expression to remove numbers, spaces, [], (), and (.) from the beginning of the string until it reaches a character. Finally, it trims any leading or trailing spaces from the result.
+ */
 function processString(input: string | string[]): string {
     const inputString = Array.isArray(input) ? input.join(' ') : input;
 
@@ -15,6 +18,3 @@ const output = processString(input);
 
 // Output the result
 console.log(output);
-/**
- * @description This function, processString, takes either a string or an array of strings as input and processes it according to your requirements. It uses a regular expression to remove numbers, spaces, [], (), and (.) from the beginning of the string until it reaches a character. Finally, it trims any leading or trailing spaces from the result.
- */

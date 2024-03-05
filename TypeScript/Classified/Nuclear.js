@@ -163,6 +163,7 @@ var Arti = {
     salary: 90000,
     sections: ["2nd Year - BCA", "3rd Year - BCA"],
 };
+
 // Real Life Execution :
 var Apex = new University("Apex University");
 Apex.addStudent(Manish);
@@ -173,4 +174,5 @@ Apex.addTeacher(Jiya);
 Apex.addTeacher(Arti);
 puts(Apex.countStudents());
 puts(Apex.countDepartments());
+
 /* The End */ 
