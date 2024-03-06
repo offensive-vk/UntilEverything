@@ -1,7 +1,7 @@
 /* 
-Exclude constructs a type by excluding from UnionType all union members that are assignable to ExcludedMembers.
-The Exclude<Type, ExcludedUnion> utility type in TypeScript is used to create a new type by excluding types from another type. It removes types from Type that are assignable to ExcludedUnion.
-
+    Exclude constructs a type by excluding from UnionType all union members that are assignable to ExcludedMembers.
+    The Exclude<Type, ExcludedUnion> utility type in TypeScript is used to create a new type by excluding types from another type. 
+    It removes types from Type that are assignable to ExcludedUnion.
 */
 // Example 1: Exclude specific types from a union type
 type Numbers = 1 | 2 | 3 | 4 | 5;
@@ -47,6 +47,7 @@ const cat: OnlyCat = {
     type: 'cat',
     meow: () => console.log('Meow!'),
 };
+
 // const dog: OnlyCat = { type: 'dog', bark: () => console.log('Woof!') }; // Error: 'Dog' is not assignable to 'OnlyCat'
 
 console.log(cat);

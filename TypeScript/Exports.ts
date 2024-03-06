@@ -1,4 +1,5 @@
-// moduleA.ts
+// Modules to export some stuff.
+
 export const variableA = "This is variable A.";
 
 const variableB = "This is variable B.";
