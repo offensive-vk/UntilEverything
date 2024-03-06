@@ -1,4 +1,3 @@
-
 // Use Case 1: Combining Two or More Object Types
 // Define two object types
 type Person = {
@@ -41,7 +40,7 @@ type LoggerAndSender = Loggable & Sendable;
 // Usage
 const loggerAndSender: LoggerAndSender = {
     log(message: "Log message"),
-    send(data: "Send data"),
+    send(data: "Send data")
 };
 
 

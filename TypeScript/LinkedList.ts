@@ -56,6 +56,5 @@ linkedList.insert(1);
 linkedList.insert(2);
 linkedList.insert(3);
 linkedList.display(); 
-
 linkedList.delete(2);
 linkedList.display();
