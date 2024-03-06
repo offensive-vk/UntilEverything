@@ -1,4 +1,5 @@
-// Function overloads
+// Function overloading
+
 function greet(): string;
 function greet(person: string): string;
 function greet(person: string, age: number): string;
