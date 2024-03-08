@@ -1,5 +1,7 @@
 /*
-Recursive types in TypeScript are a way to define a type that references itself. Recursive types are used to define complex data structures, such as trees or linked lists, where a value can contain one or more values of the same type.
+Recursive types in TypeScript are a way to define a type that references itself. 
+Recursive types are used to define complex data structures, such as trees or linked lists, 
+where a value can contain one or more values of the same type.
 */
 
 // Define a type for a binary tree node that may have left and right children.

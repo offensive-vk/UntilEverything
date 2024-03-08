@@ -59,3 +59,5 @@ const electricCar: ElectricCar = {
     model: "Model S",
     electricMotor: true,
 };
+
+export { }
