@@ -89,3 +89,17 @@ Programming paradigms refer to different styles or approaches to programming, ea
 - Brought To You By [Vedansh ✨](https://github.com/offensive-vk/)
 - Happy Coding. 🤗
 - &copy; Copyright by [Vedansh](https://github.com/offensive-vk/) 2024. All Right Reserved.
+
+
+***
+***
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
+  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <sup>Thanks for visiting :)</sup>
+</p>
+
+***
+***
