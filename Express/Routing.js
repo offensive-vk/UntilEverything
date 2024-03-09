@@ -29,6 +29,7 @@ app.get('/search', (req, res) => {
     res.send(`Searching for: ${query}`);
 });
 
+// Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });

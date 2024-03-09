@@ -11,5 +11,4 @@ $(document).ready(function() {
         $("#root").css("backgroundColor",color[i]);
         $("title").text("Color is "+color[i]);
     });
-  });
-  
+});

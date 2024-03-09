@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Dynamic To-Do List</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
   <style>
     body {
       background-color: #333;
@@ -12,17 +12,20 @@
       overflow-x: hidden;
       font-size: 1rem
     }
+
     input {
       width: 30%;
       padding: 20px;
       font-size: 22px;
     }
+
     button {
       width: 150px;
       height: 50px;
     }
   </style>
 </head>
+
 <body>
   <h1>To-Do List</h1>
   <input type="text" id="taskInput" placeholder="Enter a task"><br>
@@ -30,13 +33,13 @@
   <ul id="taskList"></ul>
 
   <script>
-    $(document).ready(function() {
-      $('#addTaskBtn').click(function() {
+    $(document).ready(function () {
+      $('#addTaskBtn').click(function () {
         var task = $('#taskInput').val().trim();
         if (task !== '') {
           var listItem = $('<li>').text(task);
           var removeBtn = $('<button>').text('Remove');
-          removeBtn.click(function() {
+          removeBtn.click(function () {
             $(this).parent().remove();
           });
           listItem.append(removeBtn);

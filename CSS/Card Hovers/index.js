@@ -1,5 +1,5 @@
-// const fs = require('fs');
-import fs from 'fs';
+const fs = require('fs');
+
 document.querySelector(".btn").addEventListener("click", () => {
     var oldValue = '';
     fs.readFile('index.css', 'utf-8', (err, data) => {

@@ -6,7 +6,6 @@ let columns = 0,
 
 const toggle = () => {
     toggled = !toggled;
-
     document.body.classList.toggle("toggled");
 }
 
@@ -58,3 +57,4 @@ const createGrid = () => {
 createGrid();
 
 window.onresize = () => createGrid();
+/**@end */
