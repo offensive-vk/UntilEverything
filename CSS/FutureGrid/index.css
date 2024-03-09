@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
 :root {
     --g1: rgb(98, 0, 234);
     --g2: rgb(236, 64, 122);
 }
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
 
 @keyframes background-pan {
     from {

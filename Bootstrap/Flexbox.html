@@ -5,25 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Using Flexbox in Bootstrap</title>
-    <link rel="stylesheet" href="bootstrap.css" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="Bootstrap.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <style>
-        .d-flex{
+        .d-flex {
             background-color: cyan;
         }
-        .p-2{
+
+        .p-2 {
             background-color: orange;
         }
-        .align-self-start{
+
+        .align-self-start {
             background-color: red;
         }
     </style>
 </head>
+
 <body>
 
     <section>
         <div class="d-flex m-2 p-2 bg-primary">I'm a flexbox container!</div>
-        <div class="d-inline-flex m-2 p-2 bg-primary">I'm an inline flexbox container!</div>    
+        <div class="d-inline-flex m-2 p-2 bg-primary">I'm an inline flexbox container!</div>
         <!-- basic -->
         <main>
             <div class="d-flex flex-row mb-3">
@@ -61,5 +68,5 @@
         <div class="align-self-baseline">Aligned flex item</div>
         <div class="align-self-stretch">Aligned flex item</div>
     </section>
-</body> 
+</body>
 </html>
