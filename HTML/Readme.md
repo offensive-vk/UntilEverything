@@ -23,3 +23,16 @@ HTML elements are the building blocks of HTML pages. With HTML constructs, image
 - Internet media type - `text/html`
 - Website - https://html.spec.whatwg.org/
 - Filename extensions - .html , .htm
+
+***
+***
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
+  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <sup>Thanks for visiting :)</sup>
+</p>
+
+***
+***
