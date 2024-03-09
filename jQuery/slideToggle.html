@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="jQuery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
             $("#flip").click(function () {
@@ -13,6 +13,8 @@
     <style>
         #panel,
         #flip {
+            cursor: pointer;
+            transition: background 0.2s ease;
             padding: 5px;
             text-align: center;
             background-color: #e5eecc;
@@ -21,6 +23,9 @@
         #panel {
             padding: 50px;
             display: none;
+        }
+        #flip:hover {
+            background: #e5ee;
         }
     </style>
 </head>

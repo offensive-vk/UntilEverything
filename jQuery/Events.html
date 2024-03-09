@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
+    <script>
+        // A mouse event 'click'
+        $('#menu-button').on('click', () => {
+            $('#menu').show();
+        });
+
+        // A keyboard event 'keyup'
+        $('#textbox').on('keyup', () => {
+            $('#menu').show();
+        });
+
+        // A scroll event 'scroll'
+        $('#menu-button').on('scroll', () => {
+            $('#menu').show();
+        });
+
+        $('#menu').on('click', event => {
+            $(event.currentTarget).hide();
+        });
+
+    </script>
+    <script>
+    $('#menu-btn').on('mouseenter', () => {
+        $('#menu').show();
+    }).on('mouseleave', () => {
+        $('#menu').hide();
+    });
+
+    </script>
+</head>
+<body>
+    <h1>Events</h1>
+
+</body>
+</html>

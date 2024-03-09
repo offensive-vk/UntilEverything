@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <!-- refreshes every 5 seconds -->
-    <!-- <meta http-equiv="refresh" content="5">  -->
-    <script src="jQuery.js"></script>
+    <meta http-equiv="refresh" content="5"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -20,18 +21,13 @@
         $('#myButton1').click(function () {
             console.log('Button clicked!');
         });
-    </script>
-    <script>
 
         $('#myButton2').on('click', function() {
             console.log('Button clicked!');
         });
-        
-    </script>
-    <script>
+
         $('#myButton').trigger('click');
-    </script>
-    <script>
+
         $('#myButton').on('click', function() {
             console.log('Button clicked!');
         });
