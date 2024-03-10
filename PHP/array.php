@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Arrays in PHP</title>
-</head>
-<body>
-    <?php
+<?php
         // Creating an array
         $fruits = array("Apple", "Banana", "Orange");
 
@@ -62,6 +54,3 @@
         print_r($numbers);
         // Output: Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 )
     ?>
-
-</body>
-</html>

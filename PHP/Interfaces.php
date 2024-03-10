@@ -38,4 +38,3 @@ $another->teach();
 echo $another->getName();
 
 ?>
-
