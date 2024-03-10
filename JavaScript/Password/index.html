@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vedansh">
+    <title>Password Strength Validation</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2>Password Strength Validation</h2>
+    <form>
+        <label for="password">Password: </label>
+        <input type="text" id="password" onkeyup="validatePasswordStrength()" />
+        <br>
+        <div class="strength"></div>
+        <div class="progress-bar">
+            <span id="progress"></span>
+        </div>
+    </form>
+    <div class="text" id="d"></div>
+    <div class="text" id="s"></div>
+    <div class="text" id="l"></div>
+    <div class="text" id="u"></div>
+    <div class="text" id="sp"></div>
+    <div class="text" id="a"></div>
+    <script src="index.js"></script>
+</body>
+</html>

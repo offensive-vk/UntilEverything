@@ -1,4 +1,4 @@
-// All Types of Explicit Typecasting in JS
+// All Types of Explicit Typecasting in JavaScript
 
 // Typecasting to String
 const number = 42;

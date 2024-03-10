@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard API Example</title>
+    <script src="All.js"></script>
+</head>
+<body>
+    <textarea id="copy-text" rows="4" cols="50">Text to copy to clipboard</textarea><br>
+    <button onclick="copyToClipboard()">Copy Text</button><br>
+    <button onclick="pasteFromClipboard()">Paste Text</button>
+    
+    <script>
+        function copyToClipboard() {
+            const textToCopy = document.getElementById('copy-text').value;
+            
+            navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                console.log('Text copied to clipboard:', textToCopy);
+                alert('Text copied to clipboard!');
+            })
+            .catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+        function pasteFromClipboard() {
+            navigator.clipboard.readText()
+            .then(text => {
+                console.log('Text pasted from clipboard:', text);
+                alert('Text pasted from clipboard:\n' + text);
+            })
+            .catch(err => {
+                console.error('Failed to paste text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>

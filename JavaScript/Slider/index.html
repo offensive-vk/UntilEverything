@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <script>
+        var res;
+        var arr = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"];
+        var index = 1;
+        function changeSlider() {
+            if (index < 7) {
+                document.images[0].src = arr[index];
+                index++;
+            }
+            else {
+                index = 0;
+            }
+
+        }
+        function startSlider() {
+            res = setInterval(changeSlider, 2000);
+        }
+        function stop() {
+            clearInterval(res);
+        }
+    </script>
+</head>
+<body align="center" onload="startSlider()">
+    <img src="1.jpg" height="500px" width="1000px" onmouseover="stop()" onmouseleave="startSlider()">
+</body>
+</html>

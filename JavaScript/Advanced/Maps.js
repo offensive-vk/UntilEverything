@@ -45,4 +45,11 @@ console.log(`Size after deleting 'key2': ${myMap.size}`);
 myMap.clear();
 console.log(`Size after clearing: ${myMap.size}`);
 
+// Converting an Object to Map
+const obj = {
+    'key': 'value'
+}
+const ObjMap = new Map(Object.entries(obj));
+console.log(ObjMap);
+
 // End 

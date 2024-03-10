@@ -21,14 +21,14 @@ function Box(value) {
     this.value = value;
 }
 // Properties all boxes created from the Box() constructor
-// will have
+
 Box.prototype.getValue = function () {
     return this.value;
 };
 
 const moreboxes = [new Box(1), new Box(2), new Box(3)];
 
-/*Using classes , same */
+// Using classes
 class Box {
     constructor(value) {
         this.value = value;

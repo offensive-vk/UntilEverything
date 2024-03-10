@@ -1,6 +1,4 @@
-
-
-//Checks if the field is empty or not
+// Checks if the field is empty or not
 let isEmpty = () => {
     var flag = true;        
     var ob1 = document.getElementById("label-1");
@@ -76,8 +74,6 @@ let validateEmail = () => {
 }
 
 // Number section
-
-// Number section
 let validateNumber = () => {
     var flag = true;
     var number = document.getElementById("number").value;
@@ -103,8 +99,6 @@ let validateNumber = () => {
     }
     return flag;
 }
-
-
 
 // Password section
 let validatePassword = () => {     

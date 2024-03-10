@@ -1,7 +1,0 @@
-REST STANDS for
-
-Representational State Transfer
-it is an archietectural style for providing standards between computer systems and the web making it easier for systems to communicate with each other.
-
-it revolves around a resource where every component is a resource  and a resource is accessed by a common interface using HTTP standard methods.
-REST was first introduced in 2000 by Roy Fielding
