@@ -1,0 +1,9 @@
+some_thing: &VAR_NAME foobar
+other_thing: *VAR_NAME
+
+values: &ref
+  - Will be
+  - reused below
+  
+other_values:
+  i_am_ref: *ref

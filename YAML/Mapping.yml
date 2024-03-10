@@ -1,0 +1,21 @@
+attributes:
+  - a1
+  - a2
+methods: [getter, setter]
+
+# More
+Mark McGwire: {hr: 65, avg: 0.278}
+Sammy Sosa: {
+    hr: 63,
+    avg: 0.288
+  }
+
+
+# Example of mapping (dictionary) in YAML
+person:
+  name: Alice
+  age: 25
+  address:
+    street: 123 Main St
+    city: Anytown
+    country: USA
