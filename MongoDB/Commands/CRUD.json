@@ -1,6 +1,6 @@
 [
     { 
-        // insert
+        // Insert
         db.coll.insertOne({name: "Max"})
         db.coll.insertMany([{name: "Max"}, {name:"Alex"}]) // ordered bulk insert
         db.coll.insertMany([{name: "Max"}, {name:"Alex"}], {ordered: false}) // unordered bulk insert
