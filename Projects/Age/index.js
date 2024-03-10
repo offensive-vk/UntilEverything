@@ -50,7 +50,6 @@ function calculateAge() {
 document.addEventListener('DOMContentLoaded', calculateAge);
 
 document.addEventListener('DOMContentLoaded', async () => {
-
     var px = 100;
     var rem = 2.1;
     var content = document.querySelectorAll('.number');
@@ -61,5 +60,4 @@ document.addEventListener('DOMContentLoaded', async () => {
         px += 50;
         rem -= 0.2;
     }
-
 })
