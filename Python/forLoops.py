@@ -1,5 +1,5 @@
+# Simple Array For Loop
 
-#Simple Array For Loop
 fruits = ["apple", "banana", "orange", "grape"]
 print("Using for loop with a list:")
 for fruit in fruits:
@@ -11,7 +11,7 @@ for char in message:
     print(char)
 
 # Specifying a range
-#for variable_name in range(start, end):
+# for variable_name in range(start, end):
 
 print("\nUsing for loop with a range:")
 for num in range(1, 10):
