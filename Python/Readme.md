@@ -18,11 +18,23 @@ Python is dynamically typed and garbage-collected. It supports multiple programm
 - Filename extensions - .py, .pyw, .pyz, .pyi, .pyc, .pyd
 - Website <https://python.org>
 
-
-## However, This Repository (UntilEverything) doesn't contains all basic and advanced python programs.
+## However, This Repository (UntilEverything) doesn't contains all basic and advanced python programs
 
 Here, you'll find some Advanced programs only.
 
 You will need to navigate to this Repository to get the same experience.
 
-Click [here](https://github.com/offensive-vk/Learn-Python/) to see what's there and Start Learning Python Today !
+Click [here](https://github.com/offensive-vk/Learn-Python/) to see what's there and Start Learning Python Today.
+
+***
+***
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
+  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <sup>Thanks for visiting :)</sup>
+</p>
+
+***
+***

@@ -1,5 +1,10 @@
 <div align="center">
-    <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/bootstrap/bootstrap-original.svg" height=200 width=200 alt="bootstrap" >
+    <img
+    src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/bootstrap/bootstrap-original.svg"
+    height=200
+    width=200
+    alt="bootstrap"
+    >
 </div>
 
 # **What is Bootstrap** ?
@@ -14,12 +19,12 @@ In addition, developers can take advantage of CSS classes defined in Bootstrap t
 
 - Original author(s) - [Mark Otto](https://github.com/mdo), [Jacob Thornton](https://github.com/fat)
 - Developer(s) - Bootstrap Core Team
-- Initial release	- August 19, 2011; 12 years ago
+- Initial release - August 19, 2011; 12 years ago
 - Repository - Bootstrap [Repository](https://github.com/twbs/bootstrap)
 - Written in - HTML, CSS, Less (v3), Sass (v4) and JavaScript
 - Platform - Web platform
-- License	- MIT License (Apache License 2.0 prior to 3.1.0)
-- Website	- https://getbootstrap.com 
+- License - MIT License (Apache License 2.0 prior to 3.1.0)
+- Website - <https://getbootstrap.com>
 
 ***
 ***
@@ -28,7 +33,7 @@ In addition, developers can take advantage of CSS classes defined in Bootstrap t
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
   <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
   <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
-  <sup>Thanks for visiting :)</sup>
+  <kbd>Thanks for visiting :)</kbd>
 </p>
 
 ***

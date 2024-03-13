@@ -1,9 +1,9 @@
 <div align="center">
-    <img 
-        src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/jquery/jquery-original-wordmark.svg" 
-        height=200 
-        width=200 
-        alt="jquery" 
+    <img
+        src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/jquery/jquery-original-wordmark.svg"
+        height=200
+        width=200
+        alt="jquery"
     >
 </div>
 
@@ -21,7 +21,7 @@ The set of jQuery core features—DOM element selections, traversal, and manipul
 - Source Repository - https://github.com/jquery/jquery
 - Type - JavaScript library
 - Written in - JavaScript
-- Website - https://jquery.com
+- Website - <https://jquery.com>
 - License - MIT
 
 ***
@@ -31,7 +31,7 @@ The set of jQuery core features—DOM element selections, traversal, and manipul
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
   <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
   <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
-  <sup>Thanks for visiting :)</sup>
+  <kbd>Thanks for visiting :)</kbd>
 </p>
 
 ***

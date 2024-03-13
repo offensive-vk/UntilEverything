@@ -1,9 +1,9 @@
 <div align="center">
-    <img 
-        src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/css3/css3-original.svg" 
-        height=200 
-        width=200 
-        alt="css" 
+    <img
+        src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/css3/css3-original.svg"
+        height=200
+        width=200
+        alt="css"
     >
 </div>
 
@@ -29,7 +29,7 @@ CSS is designed to enable the separation of content and presentation, including 
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
   <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
   <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
-  <sup>Thanks for visiting :)</sup>
+  <kbd>Thanks for visiting :)</kbd>
 </p>
 
 ***
