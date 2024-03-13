@@ -48,13 +48,13 @@ function createPerson(name: string) {
 }
 
 // Creating instances with closures for person details
-const person1 = createPerson("Alice");
-const person2 = createPerson("Bob");
+const person1 = createPerson("Lissy");
+const person2 = createPerson("Roy");
 
 // Interacting with closures to access and update details
-person1.getDetails(); // Output: Name: Alice, Age: 0
-person1.birthday();   // Output: Alice is now 1 years old.
-person1.getDetails(); // Output: Name: Alice, Age: 1
+person1.getDetails(); 
+person1.birthday();  
+person1.getDetails();
 
-person2.birthday();   // Output: Bob is now 1 years old.
-person2.getDetails(); // Output: Name: Bob, Age: 1
+person2.birthday();  
+person2.getDetails(); 

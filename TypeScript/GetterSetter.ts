@@ -41,7 +41,7 @@ class Person {
 }
 
 // Create a new Person instance
-const person = new Person("Alice", 30);
+const person = new Person("Lissy", 30);
 
 // Use the getters to access property values
 console.log(`Name: ${person.name}`); // Getting name...
@@ -58,4 +58,5 @@ console.log(`Age: ${person.age}`);   // Getting age...
 person.name = "A";      // Setting name... (Error: Name should be at least 3 characters long.)
 person.age = -5;        // Setting age... (Error: Age should be between 0 and 120.)
 
-const PrivKeyX: string | Array<string> = "6D33 866E DD8F FA41 C014  3AED DCC9 EFBF 77E1 1517";
+const PRIVATE_KEY_RSA : string | Array<string> = "6D33 866E DD8F FA41 C014  3AED DCC9 EFBF 77E1 1517";
+export { PRIVATE_KEY_RSA as const }

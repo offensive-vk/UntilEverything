@@ -37,3 +37,4 @@ Promise.all() is a high-level method in TypeScript for managing multiple asynchr
         .finally(() => console.log(`Promises Fulfilled \n`));
 })();
 
+/**@end */

@@ -7,9 +7,9 @@ interface User {
 
 function createUser(user: Partial<User> = {}): User {
     const defaultUser: User = {
-        name: 'John Doe',
+        name: 'Admin',
         age: 30,
-        email: 'john.doe@example.com',
+        email: 'admin@example.com',
     };
 
     return {
@@ -18,6 +18,7 @@ function createUser(user: Partial<User> = {}): User {
     };
 }
 
-const newUser = createUser({ name: 'Jane Doe', age: 25, email: 'jane.doe@example.com' });
+const newUser = createUser({ name: 'Madhav', age: 25, email: 'example@example.com' });
 
 console.log(newUser);
+export { }

@@ -22,6 +22,7 @@ function magicTrick(originalNumber: number): number {
     const result = difference + reversedDifference;
     return result;
 }
+
 function getNumber(): number {
     return Math.floor(Math.random() * (999 - 100 + 1)) + 100;
 }

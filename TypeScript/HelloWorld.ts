@@ -1,5 +1,5 @@
 /* 
-* Copyright (c) by Vedansh 
+* Copyright (c) by Vedansh (joke)
 */
 
 console.log("\n\t First Typescript Program !!\n\t");

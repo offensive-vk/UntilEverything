@@ -4,10 +4,11 @@ class MySafe {
     private secretKey = 12345;
     static pubKey: number = 81023;
     static _money: money = '$78203';
-    showMoney(): any{
+    showMoney(): any {
         return `You have total ${MySafe._money}$ of ${typeof this.secretKey} type`;
     }
 }
+
 const safe = new MySafe();
 const s = new MySafe();
 // console.log(s.secretKey); Property 'secretKey' is private and only accessible within class 'MySafe'.
@@ -16,23 +17,26 @@ console.log(s["secretKey"]);
 console.log(s.showMoney());
 console.log(`\t Cash : ${MySafe._money}\n`);
 
-/*Static variables | methods  in typescript */ 
+/* Static variables | methods  in typescript */
 class MyClass {
     static x = 0;
     static printX() {
         console.log(MyClass.x);
     }
-    static greeting(){
+    static greeting() {
         return "Hello man what's up!";
     }
     static reg = {
-        regx: function(){},
+        regx: function () { },
         value: null,
     };
 }
+
 class Derived extends MyClass {
     myGreeting = MyClass.greeting();
 }
+
 console.log(MyClass.x);
 MyClass.printX();
 MyClass.greeting();
+export { }

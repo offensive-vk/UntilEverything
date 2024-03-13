@@ -1,3 +1,8 @@
+/**
+ * @description Traditional Bubble Sort Algorithm.
+ * @param arr Array to be sorted
+ * @returns new sorted array
+ */
 function bubbleSort(arr: number[]): number[] {
     const n = arr.length;
 

@@ -1,4 +1,9 @@
-// Basics
+/***
+ * @description Person interface for testing
+ * @interface Person
+ * @returns {name, age} string
+ */
+
 interface Person {
     name: string;
     age: number;

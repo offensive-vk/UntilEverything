@@ -1,8 +1,9 @@
-/* 
-Parameters constructs a tuple type from the types used in the parameters of a function type Type.
-OR
-The Parameters<Type> utility type in TypeScript is used to extract the parameter types of a function or constructor type. 
+/** 
+ * Parameters constructs a tuple type from the types used in the parameters of a function type Type.
+    OR
+ * The Parameters<Type> utility type in TypeScript is used to extract the parameter types of a function or constructor type. 
 */
+
 // Define a sample function
 function greet(name: string, age: number): void {
     console.log(`Hello, ${name}! You are ${age} years old.`);
@@ -18,5 +19,5 @@ function logParameters(params: GreetParams): void {
 }
 
 // Call the logParameters function with the parameter types
-const params: GreetParams = ['Alice', 30];
+const params: GreetParams = ['Lissy', 30];
 logParameters(params);

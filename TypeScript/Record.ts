@@ -1,5 +1,6 @@
 /* 
-Record constructs an object type whose property keys are Keys and whose property values are Type. This utility can be used to map the properties of a type to another type.
+Record constructs an object type whose property keys are Keys and whose property values are Type. 
+This utility can be used to map the properties of a type to another type.
 
 */
 // Example 1: Creating a record with specific keys and a common value type

@@ -1,4 +1,5 @@
-// Function overloads
+// Function overloading
+
 function greet(): string;
 function greet(person: string): string;
 function greet(person: string, age: number): string;
@@ -15,8 +16,8 @@ function greet(person?: string, age?: number): string {
 }
 
 // Using the overloaded function
-const greeting1 = greet("Alice"); 
-const greeting2 = greet("Bob", 30);
+const greeting1 = greet("Lissy"); 
+const greeting2 = greet("Roy", 30);
 const greeting3 = greet();
 
 console.log(greeting1);

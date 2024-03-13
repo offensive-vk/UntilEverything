@@ -13,7 +13,7 @@ function callFunctionsDemo() {
     const fruits = ["apple", "banana", "orange"];
     console.table(fruits);
 
-    const person = { name: "Alice", age: 25, city: "New York" };
+    const person = { name: "Lissy", age: 25, city: "New York" };
     console.dir(person);
 
     console.group("Grouping example");

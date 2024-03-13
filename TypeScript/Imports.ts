@@ -1,8 +1,8 @@
 // Imported the exported functions and vars
 
-import { variableA, functionA } from './export';
-import functionB from './export';
-import helloWorld from './export';
+import { variableA, functionA } from './Exports';
+import functionB from './Exports';
+import helloWorld from './Exports';
 
 console.log(variableA); 
 functionA(); 

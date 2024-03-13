@@ -1,4 +1,3 @@
-
 interface User {
     type: 'user';
     name: string;
@@ -49,4 +48,4 @@ console.log();
 console.log('Users:');
 persons.filter(isUser).forEach(logPerson);
 
-// In case you are stuck:
+// In case you are stuck

@@ -1,5 +1,6 @@
 /**
- * A Map is a built-in object in JavaScript that allows you to store key-value pairs where both the keys and the values can be of any data type. In other words, it's a collection of elements where each element is a key-value pair.
+ * A Map is a built-in object in JavaScript that allows you to store key-value pairs where both the keys and the values can be of any data type. 
+ * In other words, it's a collection of elements where each element is a key-value pair.
  */
 
 // Creating a Map

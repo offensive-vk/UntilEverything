@@ -48,12 +48,12 @@ const _arr = () => console.log(`Hello `);
 
 // Calling the functions
 greet();
-sayHello("Alice");
+sayHello("Lissy");
 addNumbers(5, 3);
 greetWithDefault();
-greetWithDefault("Bob");
+greetWithDefault("Roy");
 greetWithOptional();
-greetWithOptional("Charlie");
+greetWithOptional("Clair");
 sumAllNumbers(1, 2, 3, 4, 5);
 const result = multiply(2, 3);
 console.log(`Multiplication result: ${result}`);

@@ -42,3 +42,4 @@ while (!stack.isEmpty()) {
 }
 
 console.log("Is the stack empty? " + stack.isEmpty());
+export {}

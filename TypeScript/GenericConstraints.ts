@@ -10,6 +10,7 @@ const textResult = add("Hello", "World"); // Error: Argument of type 'string' is
 interface Printable {
     print(): void;
 }
+
 function printItem<T extends Printable>(item: T) {
     item.print();
 }
@@ -19,6 +20,7 @@ const obj = {
         console.log("Printing...");
     },
 };
+
 printItem(obj); // Valid
 
 // 3. Keyof Constraint: You can use keyof to constrain a type parameter to a specific set of keys of another type:
@@ -82,5 +84,7 @@ class CustomArray<T> implements Lengthwise {
 }
 
 const customArray = new CustomArray([1, 2, 3, 4, 5]);
+
 const result3 = loggingIdentity(customArray);
+
 console.log(result3);

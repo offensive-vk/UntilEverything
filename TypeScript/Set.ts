@@ -1,4 +1,4 @@
-/*
+/**
  * A Set is another built-in object in JavaScript, introduced in ECMAScript 6 (ES6), that allows you to store unique values of any type, whether primitive values or object references. Unlike arrays, Set objects do not allow duplicate values, and the order of elements is based on the order of insertion.
  */
 // Creating a Set

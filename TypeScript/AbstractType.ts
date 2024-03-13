@@ -52,6 +52,7 @@ class TestAnimal<T extends Animal> {
         this.action.execute(this.animal);
     }
 }
+
 // Test
 let testDog = new TestAnimal(new MakeSound<Dog>(), new Dog());
 testDog.performAction();
