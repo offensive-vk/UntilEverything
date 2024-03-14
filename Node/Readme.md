@@ -1,4 +1,11 @@
-![Nodejs](https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/nodejs/nodejs-original.svg)
+<div align="center">
+    <img
+        src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/nodejs/nodejs-original.svg"
+        height=200
+        width=200
+        alt="nodejs"
+    >
+</div>
 
 # **What is Node.js** ?
 
@@ -16,3 +23,16 @@ Node.js has an event-driven architecture capable of asynchronous I/O. These desi
 - Type - Runtime environment
 - License - MIT License
 - Official Website - <https://nodejs.org>
+
+***
+***
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
+  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <kbd>Thanks for visiting :)</kbd>
+</p>
+
+***
+***

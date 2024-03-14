@@ -1,9 +1,9 @@
 <div align="center">
-    <img 
-        src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/html5/html5-original.svg" 
-        height=200 
-        width=200 
-        alt="html5" 
+    <img
+        src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/html5/html5-original.svg"
+        height=200
+        width=200
+        alt="html5"
     >
 </div>
 
@@ -31,7 +31,7 @@ HTML elements are the building blocks of HTML pages. With HTML constructs, image
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
   <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
   <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
-  <sup>Thanks for visiting :)</sup>
+  <kbd>Thanks for visiting :)</kbd>
 </p>
 
 ***

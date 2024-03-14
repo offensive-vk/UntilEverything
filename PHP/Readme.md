@@ -61,3 +61,16 @@ $human_readable_date = $user->getBirthday()?->diffForHumans();
 Constructor property promotion has been added as "syntactic sugar," allowing class properties to be set automatically when parameters are passed into a class constructor. This reduces the amount of boilerplate code that must be written.
 
 Other minor changes include support for use of ::class on objects, which serves as an alternative for the use of get_class(); non-capturing catches in try-catch blocks; variable syntax tweaks to resolve inconsistencies; support for named arguments; and support for trailing commas in parameter lists, which adds consistency with support for trailing commas in other contexts, such as in arrays.
+
+***
+***
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
+  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <kbd>Thanks for visiting :)</kbd>
+</p>
+
+***
+***
