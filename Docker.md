@@ -20,4 +20,18 @@ docs for more detail on building and pushing.
 
 ### References
 
-* [Docker's Node.js guide](https://docs.docker.com/language/nodejs/)
+[Docker's Node.js guide](https://docs.docker.com/language/nodejs/)
+
+[Learn More About Docker](https://github.com/offensive-vk/AwesomeCloud/blob/master/.github/docker.md)
+
+
+***
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
+  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <sup>Thanks for visiting :)</sup>
+</p>
+
+***
