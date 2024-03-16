@@ -1,7 +1,9 @@
+# Keeps file with these patterns from pushing to github.
+# =============
 node_modules/
 *.ipynb
 *.exe
 *.out
 .vscode/
 settings.json
-CSS/Gradients/
+# =============

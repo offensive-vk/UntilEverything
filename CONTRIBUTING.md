@@ -12,8 +12,8 @@ For Information about Concepts and Languages that are available to contribute, p
 - Create a Pull Request [here](https://github.com/UntilEverything/pulls).
 - Create an Issue [here](https://github.com/offensive-vk/UntilEverything/issues) which is optional.
 - Your Pull Request will be reviewed and merged / closed accordingly.
-- Assign me as reviewer of your pull request.
-- Author : [offensive-vk](https://github.com/offensive-vk/)
+- You have to assign me as reviewer of your pull request.
+- Developer & Author : [offensive-vk](https://github.com/offensive-vk/)
 - Thank you.
 
 ## When contributing to this repository, please follow these rules: (For Expert Contributors)

@@ -1,7 +1,8 @@
 {
   "name": "UntilEverything",
-  "version": "11.0.5",
+  "version": "11.2.0",
   "author": "Vedansh Khandelwal <https://github.com/offensive-vk/>",
+  "co-author": "Vedansh's Bot <https://github.com/npm-run-test/>",
   "main": "Dockerfile",
   "homepage": "https://github.com/offensive-vk/UntilEverything/",
   "private": true,

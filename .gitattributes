@@ -1,6 +1,6 @@
 # GitHub Linguist Settings for better visualization.
 
-# ==== START ====
+# ============ START ===============
 *.html linguist-language=PHP
 *.css linguist-language=CSS
 
@@ -32,4 +32,4 @@
 *.jpeg linguist-detectable=false
 *.svg linguist-detectable=false
 
-# ==== END ====
+# =========== END ==============
