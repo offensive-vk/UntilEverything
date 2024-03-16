@@ -22,8 +22,7 @@ WORKDIR /usr/src/app
 # into this layer.
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=package-lock.json,target=package-lock.json \
-    --mount=type=cache,target=/root/.npm \
-    npm ci --omit=dev
+    --mount=type=cache,target=/root/.npm 
 
 # Run the application as a non-root user.
 USER node
@@ -32,7 +31,7 @@ USER node
 COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 7777
+EXPOSE 9999
 
 # Run the application.
-CMD npm start
+CMD ["npm", "start"]
