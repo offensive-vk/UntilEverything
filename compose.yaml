@@ -1,5 +1,5 @@
 # Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Docker compose reference guide at
+# If you need more help, visit the Docker Compose reference guide at
 # https://docs.docker.com/go/compose-spec-reference/
 
 # Here the instructions define your application as a service called "server".
@@ -14,7 +14,7 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 7777:7777
+      - 9999:9999
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
