@@ -1,6 +1,6 @@
 # Language Module / File For Contribution and Learning
 
-Here are the Languages that are available to contribute and you can add your own program / Source Code for any example of any topic in any programming language.
+Here are the Languages that are available to contribute and you can add your own program / Source Code for any example of any topic in any programming language. Please leave a star if this project helped you somehow. Share this With your Friends who likes this kind of stuff.
 
 ## Languages and Frameworks
 
