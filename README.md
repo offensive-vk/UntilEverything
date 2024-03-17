@@ -31,7 +31,7 @@ For Any Information About Contribution Guidelines and Documentation of This Proj
 ### Please Refer to
 
 - [Code of Conduct 🤗](https://github.com/offensive-vk/UntilEverything/blob/master/CODE_OF_CONDUCT.md)
-- [Documentation 📖](https://github.com/offensive-vk/UntilEverything/blob/master/README.md)
+- [Documentation 📖](https://github.com/offensive-vk/UntilEverything/blob/master/README.md) *(Current File)*
 - [Contribution Guidelines ✨](https://github.com/offensive-vk/UntilEverything/blob/master/CONTRIBUTING.md)
 - [Security Guidelines ⚠️](https://github.com/offensive-vk/UntilEverything/blob/master/SECURITY.md)
 - [Language Information 🧭](https://github.com/offensive-vk/UntilEverything/blob/master/LANGUAGES.md)
@@ -64,10 +64,10 @@ Programming paradigms refer to different styles or approaches to programming, ea
 <div align="center">
 <h3>Languages and Frameworks Logos - <i>(Click on Icons to learn more.)</i></h3>
 <p align="center">  
-  <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="200" height="150"/> </a>
-  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/css3/css3-original-wordmark.svg" alt="css3" width="200" height="150"/> </a>
-  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/html5/html5-original-wordmark.svg" alt="html5" width="200" height="150"/> </a>
-  <a href="https://expressjs.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/express/express-original-wordmark.svg" alt="express" width="200" height="150"/> </a>
+  <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/bootstrap/bootstrap-original.svg" alt="bootstrap" width="200" height="150"/> </a>
+  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/css3/css3-original.svg" alt="css3" width="200" height="150"/> </a>
+  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/html5/html5-original.svg" alt="html5" width="200" height="150"/> </a>
+  <a href="https://expressjs.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/express/express-original.svg" alt="express" width="200" height="150"/> </a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/javascript/javascript-original.svg" alt="javascript" width="200" height="150"/> </a>  
   <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="200" height="150"/> </a>
   <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="200" height="150" /> </a>
