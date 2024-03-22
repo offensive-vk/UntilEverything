@@ -16,6 +16,28 @@
     "build": "echo Build Success ✨",
     "lint": "echo Linter isn't available."
   },
-  "keywords": ["Ajax", "Bootstrap","CSS", "HTML", "JavaScript", "PHP", "Python", "Sass", "TypeScript", "MDX", "jQuery", "Express", "Markdown", "YAML"],
+  "dependencies": {
+    "@types/node": "^20.11.30",
+    "@types/promise": "^7.1.30",
+    "express": "^4.18.3",
+    "sass": "^1.72.0",
+    "typescript": "^5.4.2"
+  },
+  "keywords": [
+    "Ajax",
+    "Bootstrap",
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "Sass",
+    "TypeScript",
+    "MDX",
+    "jQuery",
+    "Express",
+    "Markdown",
+    "YAML"
+  ],
   "description": "Language Specific Examples and Various Web Development Projects & Pages."
 }
