@@ -1,7 +1,6 @@
 /* 
 * Copyright (c) by Vedansh (joke)
 */
-
 console.log("\n\t First Typescript Program !!\n\t");
 console.log("================================\n");
 
@@ -17,7 +16,7 @@ let x: null = null;
 let y: undefined;
 let z: void;
 let unknown : unknown;
-let u : unique;
+let u : never;
 let array2: string[] = [];
 let array: Array<number> = [];
 const readonlyArray: readonly number[] = [1, 2, 3];
@@ -33,3 +32,4 @@ log("8th unknown: "+unknown);
 
 console.log("================================\n");
 console.log("\n End of Program !!\n\t");
+export {}
