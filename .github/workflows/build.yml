@@ -1,0 +1,35 @@
+name: CI Build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  schedule:
+    - cron: '50 23 * * *' # Everyday at 11:50 PM UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        ref: 'master'
+
+    - name: Install dependencies and fund
+      run: |
+        npm install
+        npm fund
+
+    - name: Build the Project
+      run: |
+        npm run build
+        echo Build Successful.
+    
+    - name: Finalize the Results
+      run: |
+        echo Everthing Good to Go.
