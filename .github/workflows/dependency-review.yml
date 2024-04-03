@@ -9,10 +9,8 @@
 # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
 name: 'Dependency review'
 on:
-  push:
-    branches: ["master", "*"]
   pull_request:
-    branches: [ "master", "*"]
+    branches: ["master", "main"]
 
 # If using a dependency submission action in this workflow this permission will need to be set to:
 #
@@ -28,6 +26,8 @@ permissions:
 jobs:
   dependency-review:
     runs-on: ubuntu-latest
+    if: ${{ github.base_ref == 'master' }}
+
     steps:
       - name: 'Checkout repository'
         uses: actions/checkout@v4
