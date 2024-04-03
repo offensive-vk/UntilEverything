@@ -1,3 +1,4 @@
+```yaml
 name: Build and Push Docker Image
 
 on:
@@ -27,3 +28,4 @@ jobs:
       - name: Push Docker image
         run: docker push ntsystems/personal:latest
 
+```
