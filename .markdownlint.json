@@ -1,0 +1,7 @@
+{
+  "default": true,
+  "md013": false,
+  "MD033": false,
+  "no-hard-tabs": false,
+  "no-inline-html": false
+}
