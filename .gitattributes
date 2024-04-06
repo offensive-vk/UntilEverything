@@ -18,10 +18,10 @@
 
 ##################################
 ###### JavaScript & JSX ##########
-*.js linguist-language=TypeScript
-*.jsx linguist-language=TypeScript
-*.cjs linguist-language=TypeScript
-*.mjs linguist-language=TypeScript
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.cjs linguist-language=JavaScript
+*.mjs linguist-language=JavaScript
 
 ##################################
 ###### TypeScript & JSX ##########
