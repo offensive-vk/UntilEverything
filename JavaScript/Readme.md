@@ -26,7 +26,7 @@ JavaScript engines were originally used only in web browsers, but are now core c
 - Filename extensions - .js, .cjs, .mjs
 - Website - <https://developer.mozilla.org/en-US/docs/Web/javascript>
 
-***
+
 ***
 
 <p align="center">
@@ -36,5 +36,4 @@ JavaScript engines were originally used only in web browsers, but are now core c
   <sup>Thanks for visiting :)</sup>
 </p>
 
-***
 ***
