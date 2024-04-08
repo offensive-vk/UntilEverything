@@ -26,15 +26,13 @@ In addition, developers can take advantage of CSS classes defined in Bootstrap t
 - License - MIT License (Apache License 2.0 prior to 3.1.0)
 - Website - <https://getbootstrap.com>
 
-***
+
 ***
 
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
   <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
   <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
-  <kbd>Thanks for visiting :)</kbd>
+  <sup>Thanks for visiting :)</sup>
 </p>
 
-***
-***
