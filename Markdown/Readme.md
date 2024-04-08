@@ -21,7 +21,6 @@ The initial description of Markdown contained ambiguities and raised unanswered 
 - Filename extensions - .md, .markdown, .mdx
 
 ***
-***
 
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
@@ -30,5 +29,4 @@ The initial description of Markdown contained ambiguities and raised unanswered 
   <sup>Thanks for visiting :)</sup>
 </p>
 
-***
 ***
