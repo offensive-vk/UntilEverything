@@ -27,14 +27,10 @@ CSS3 consists of a series of selectors and pseudo-selectors that group rules tha
 - Influenced by - CSS (both "indented" and SCSS), YAML and Haml (indented syntax), Less (SCSS)
 
 ***
-***
 
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
-  <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
+  <i>Licensed under <a href="https://github.com/offensive-vk/UntilEverything#CC0-1.0-1-ov-file">CC0-1.0</a></i><br>
   <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
   <kbd>Thanks for visiting :)</kbd>
 </p>
-
-***
-***
