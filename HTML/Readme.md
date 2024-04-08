@@ -25,7 +25,6 @@ HTML elements are the building blocks of HTML pages. With HTML constructs, image
 - Filename extensions - .html , .htm
 
 ***
-***
 
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
@@ -33,6 +32,3 @@ HTML elements are the building blocks of HTML pages. With HTML constructs, image
   <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
   <kbd>Thanks for visiting :)</kbd>
 </p>
-
-***
-***
