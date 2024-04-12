@@ -35,7 +35,6 @@ Here are the Languages that are available to contribute and you can add your own
 ### [Python](https://github.com/offensive-vk/UntilEverything/blob/master/Python/Readme.md) ; [Sass](https://github.com/offensive-vk/UntilEverything/blob/master/Sass/Readme.md) ; [TypeScript](https://github.com/offensive-vk/UntilEverything/blob/master/TypeScript/Readme.md) ; [YAML](https://github.com/offensive-vk/UntilEverything/blob/master/YAML/Readme.md)
 
 ***
-***
 
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
@@ -43,6 +42,3 @@ Here are the Languages that are available to contribute and you can add your own
   <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
   <sup>Thanks for visiting :)</sup>
 </p>
-
-***
-***

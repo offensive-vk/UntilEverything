@@ -23,3 +23,11 @@ YAML targets many of the same communications applications as Extensible Markup L
 - YAML is a superset of JSON
 - YAML is the only language used in Github Actions. To automate your workflows.
   
+***
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="https://github.com/offensive-vk/UntilEverything#CC0-1.0-1-ov-file">CC0-1.0</a></i><br>
+  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <kbd>Thanks for visiting :)</kbd>
+</p>
