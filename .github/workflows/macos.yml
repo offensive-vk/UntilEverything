@@ -1,4 +1,4 @@
-name: Node.js CI - macOS
+name: CI / Node.js - macOS
 
 on:
   push:

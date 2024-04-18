@@ -1,4 +1,4 @@
-name: CI Verify Assets
+name: CI / Verify Assets
 
 on:
   push:

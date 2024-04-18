@@ -5,8 +5,6 @@ on:
     - cron: '10 0 * * *'
   push:
     branches: [ "master", "main" ]
-  pull_request:
-    branches: [ "master", "main" ]
   workflow_dispatch:
 
 env:
