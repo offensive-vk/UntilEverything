@@ -1,6 +1,6 @@
 # GitHub Linguist Settings for better visualization.
 
-##################################
+###################################
 ###### Basics & Well Known ########
 *.html linguist-language=PHP
 *.css linguist-language=SCSS
@@ -9,22 +9,22 @@
 *.php linguist-detectable=true
 *.php linguist-language=PHP
 
-##################################
+###################################
 ###### GH Actions & YAML ##########
 *.yml linguist-detectable=true
 *.yml linguist-language=YAML
 *.yaml linguist-language=YAML
 *.yml linguist-documentation=false
 
-##################################
-###### JavaScript & JSX ##########
+###################################
+###### JavaScript & JSX ###########
 *.js linguist-language=JavaScript
 *.jsx linguist-language=JavaScript
 *.cjs linguist-language=JavaScript
 *.mjs linguist-language=JavaScript
 
-##################################
-###### TypeScript & JSX ##########
+####################################
+###### TypeScript & JSX ############
 *.tsx linguist-language=TypeScript
 *.jsx linguist-language=TypeScript
 *.d.ts linguist-language=TypeScript
@@ -47,4 +47,4 @@
 *.jpeg linguist-detectable=false
 *.svg linguist-detectable=false
 #####################################
-# ============= END ================
+# ============= END =================
