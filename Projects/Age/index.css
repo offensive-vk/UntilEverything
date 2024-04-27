@@ -60,10 +60,6 @@ body {
     cursor: pointer;
 }
 
-/* #years {
-    font-size: 1.5rem;
-    font-weight: bold;
-} */
 #text {
     animation: background-pan 10s linear infinite;
     background: linear-gradient(to left,

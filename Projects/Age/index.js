@@ -1,7 +1,3 @@
-/**
- * 
- * @returns DOB
- */
 function calculateAge() {
     // Prompt user for birth year
     // const birthYear = prompt("Please Enter Your birth year (YYYY):");
