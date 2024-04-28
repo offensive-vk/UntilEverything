@@ -2,8 +2,19 @@ const express = require('express');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
+const rateLimit = require("express-rate-limit");
 
 const app = express();
+
+// Rate limiting configuration (e.g., 100 requests per hour per IP)
+const limiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 100, // limit each IP to 100 requests per windowMs
+  message: 'Too many requests from this IP, please try again later'
+});
+
+// Apply rate limiting to all routes
+app.use(limiter);
 
 // Passport.js configuration
 passport.use(new LocalStrategy({
@@ -56,18 +67,18 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Define a route for logging in
-app.post('/login', passport.authenticate('local'), function(req, res) {
+app.post('/login', limiter, passport.authenticate('local'), function(req, res) {
   res.json({ message: 'Logged in successfully.' });
 });
 
 // Define a route for logging out
-app.get('/logout', function(req, res) {
+app.get('/logout', limiter, function(req, res) {
   req.logout();
   res.json({ message: 'Logged out successfully.' });
 });
 
 // Define a route for checking if a user is logged in
-app.get('/check-login', function(req, res) {
+app.get('/check-login', limiter, function(req, res) {
   if (req.isAuthenticated()) {
     res.json({ message: 'Logged in.' });
   } else {
