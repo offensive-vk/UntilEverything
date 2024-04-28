@@ -62,3 +62,4 @@ testCat.performAction();
 
 let testSnake = new TestAnimal(new MakeSound<Snake>(), new Snake());
 testSnake.performAction();
+export { } ;

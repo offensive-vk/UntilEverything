@@ -11,11 +11,8 @@ abstract class AbstractAnimal implements Animal {
     constructor(name: string) {
         this.name = name;
     }
-    speak(){
+    speak() { };
         
-    };
-        
-    // This method is abstract and must be implemented in subclasses.
     abstract eat(): void;
 }
 
@@ -25,9 +22,7 @@ class Dog extends AbstractAnimal {
         return `${this.name} is eating!`;
     }
     speak() {
-        // console.log(`${this.name} is speaking !`);
         return `${this.name} is speaking !`;
-
     }
 }
 
@@ -39,6 +34,4 @@ function main() {
 }
 
 main();
-// This is the output of the program.
-// Woof!
-// Spot is eating!
+export { }
