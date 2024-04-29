@@ -29,3 +29,4 @@ const myObject: MyExternalObject = {
 };
 
 myObject.greet(); 
+export { }

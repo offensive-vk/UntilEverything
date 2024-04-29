@@ -72,3 +72,4 @@ while (i <= 50) {
 }
 log("\n================================\n");
 log("\n End of Program !!\n\t");
+export { };

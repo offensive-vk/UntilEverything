@@ -42,3 +42,4 @@ function fetchData(callback: (data: string) => void) {
 fetchData((data) => {
     console.log(`Fetched data: ${data}`);
 });
+export { };

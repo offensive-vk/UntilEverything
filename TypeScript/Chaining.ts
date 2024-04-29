@@ -34,3 +34,5 @@ fetchUserData(101)
     .catch((error: string) => {
         console.error("Error:", error);
     });
+
+export { };

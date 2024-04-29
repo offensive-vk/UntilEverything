@@ -31,3 +31,4 @@ console.log(_person.name);
 
 person.name = "Jane Smith";
 console.log(_person.name);
+export { }
