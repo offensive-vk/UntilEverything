@@ -1,5 +1,3 @@
-export {};
-
 // Define a template literal type for creating welcome messages
 type WelcomeMessage<Name extends string> = `Hello, ${Name}! Welcome to our website.`;
 
@@ -12,10 +10,9 @@ function generateWelcomeMessage<Name extends string>(name: Name): WelcomeMessage
 const greeting1: WelcomeMessage<"John"> = generateWelcomeMessage("John");
 console.log(greeting1);
 
-const greeting2: WelcomeMessage<"Bob"> = generateWelcomeMessage("Bob");
+const greeting2: WelcomeMessage<"Clair"> = generateWelcomeMessage("Clair");
 console.log(greeting2); 
 
-// more
 // Define a template literal type for creating URLs
 type URLPattern = `${string}://www.${string}.${string}`;
 
@@ -27,3 +24,4 @@ function constructURL(protocol: string, domain: string, extension: string): URLP
 // Usage
 const websiteURL: URLPattern = constructURL("https", "example", "com");
 console.log(websiteURL); // "https://www.example.com"
+export { }

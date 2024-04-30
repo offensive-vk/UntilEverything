@@ -50,3 +50,4 @@ const copiedObject: { a: number; b: number } = { ...originalObject };
 
 console.log("Copied Array:", copiedArray);
 console.log("Copied Object:", copiedObject);
+export { };

@@ -4,7 +4,7 @@ function getUserInput(question: string): Promise<string> {
     return new Promise((resolve) => {
         process.stdout.write(question);
 
-        process.stdin.once('data', (data) => {
+        process.stdin.once('data', (data: any) => {
             const userInput = data.toString().trim();
             resolve(userInput);
         });
@@ -26,3 +26,4 @@ async function main() {
 }
 
 main();
+export { }
