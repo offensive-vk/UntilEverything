@@ -39,3 +39,4 @@ const newUser: User = {
 };
 
 registerUser(newUser);
+export { }
