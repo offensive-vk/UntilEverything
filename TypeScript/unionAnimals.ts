@@ -23,3 +23,4 @@ const cat: Cat = { kind: "cat", name: "Whiskers", sound: "Meow!" };
 
 makeSound(dog); // Output: Buddy says Woof!
 makeSound(cat); // Output: Whiskers says Meow!
+export { };

@@ -1,5 +1,5 @@
 // Define a function that simulates an asynchronous user data retrieval operation.
-async function fetchUserData(userId: string): Promise<unknown> {
+async function fetchUserData(userId: string): Promise<Object | Error> {
     // Simulate a network delay with setTimeout.
     await new Promise(resolve => setTimeout(resolve, 1000));
 
@@ -24,7 +24,7 @@ async function getUserInfo(userId: string): Promise<void> {
         const userData = await fetchUserData(userId);
 
         // Check if the user data is undefined or unknown.
-        if (userData === undefined || typeof userData === "unknown") {
+        if (userData === undefined || userData instanceof Error) {
             console.error("User data is undefined or of unknown type.");
             return;
         }

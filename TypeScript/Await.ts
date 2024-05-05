@@ -1,7 +1,7 @@
 /* 
 Exploring different scenarios of 'await' keyword in async functions.
 */
-
+export { }
 // Scenario 1: Waiting for a Promise to Resolve
 async function waitOneSecond(): Promise<void> {
     await new Promise((resolve) => setTimeout(resolve, 1000));

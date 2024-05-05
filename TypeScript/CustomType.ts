@@ -20,3 +20,4 @@ type NumericProperties = ExtractNumericProperties<Item>;
 
 // StringProperties: { name: string, address: string, email: string | null }
 // NumericProperties: { age: number }
+export { };

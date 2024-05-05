@@ -12,11 +12,12 @@ function addRandomId<T>(input: T): T & { id: string } {
 }
 
 // Example usage:
-const person = { name: 'John', age: 30 };
+const personId = { name: 'John', age: 30 };
 const product = { name: 'Widget', price: 19.99 };
 
-const personWithId = addRandomId(person);
+const personWithId = addRandomId(personId);
 const productWithId = addRandomId(product);
 
-console.log(personWithId); // { name: 'John', age: 30, id: '1234' } (ID will be different)
-console.log(productWithId); // { name: 'Widget', price: 19.99, id: '5678' } (ID will be different)
+console.log(personWithId); 
+console.log(productWithId);
+export { }

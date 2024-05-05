@@ -21,12 +21,12 @@ function filterUnknownArray<T>(
     if (!Array.isArray(arr)) {
         throw new Error('Input is not an array');
     }
-    return arr.reduce((filtered, item) => {
+    return arr.reduce((filtered: any, item) => {
         if (typeof item !== 'undefined' && predicate(item as T)) {
-            filtered.push(item as T);
+            filtered?.push(item as T);
         }
         return filtered;
-    }, [] as T[]);
+    }, [] as T[]) as T[];
 }
 // Define a function to asynchronously process an array of unknown values using promises
 async function processUnknownArray<T, U>(
@@ -65,3 +65,5 @@ processUnknownArray<number, string>(inputArray, asyncProcessor)
     .catch((error) => {
         console.error('Error:', error.message);
     });
+
+export { }

@@ -28,3 +28,4 @@ console.log("String Length (unsafe):", stringLength);
 let unknownValue: unknown = "TypeScript";
 let unknownLength: number = (unknownValue as string).length;
 console.log("Unknown Length:", unknownLength);
+export { }

@@ -14,7 +14,6 @@ async function fetchAndProcessData() {
         const data = await fetchData(); // Use 'await' to wait for the Promise to resolve
         console.log('Received data:', data);
         console.log('Processing data...');
-        // Simulate further processing
         await new Promise((resolve) => setTimeout(resolve, 1000));
         console.log('Data processing complete');
     } catch (error) {
@@ -23,3 +22,4 @@ async function fetchAndProcessData() {
 }
 
 fetchAndProcessData();
+export { fetchData, fetchAndProcessData };
