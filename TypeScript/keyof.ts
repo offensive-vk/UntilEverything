@@ -27,7 +27,6 @@ const person: Person = {
 };
 /**
  * @type Alien
- * @test for Alien
  */
 const alien: readonly Person = {
     name: "Alien",
@@ -42,3 +41,4 @@ const ishuman = getProperty(alien, "isHuman");
 // const personGender = getProperty(person, "gender"); // Error: "gender" is not a valid key
 console.log(personName);
 console.log(ishuman);
+export { }

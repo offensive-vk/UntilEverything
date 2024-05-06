@@ -30,7 +30,7 @@ async function fetchData() {
 
         const formData = await response.formData();
         console.log('Response body as FormData:', formData);
-    } catch (error) {
+    } catch (error: any) {
         console.error('Error:', error.message);
     }
 }

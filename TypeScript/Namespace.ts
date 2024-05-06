@@ -26,3 +26,4 @@ const rectangle = new Shapes.Rectangle(4, 6);
 // Calculate and display the areas
 console.log(`Circle Area: ${circle.area()}`);
 console.log(`Rectangle Area: ${rectangle.area()}`);
+export { }

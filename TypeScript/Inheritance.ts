@@ -34,3 +34,4 @@ const cat = new Cat("Cute");
 
 dog.makeSound(); // Output: Buddy says Woof!
 cat.makeSound(); // Output: Whiskers says Meow!
+export { }

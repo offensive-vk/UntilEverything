@@ -19,3 +19,4 @@ console.log(array[10]); // Runtime error: Index out of bounds
 // Assertion Error
 let value: any = "hello";
 let length: number = value as number; // Assertion error if the value is not a number at runtime
+export { }
