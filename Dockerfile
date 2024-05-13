@@ -1,17 +1,24 @@
-# syntax=docker/dockerfile:1
-FROM ubuntu:latest
-LABEL ImageName "UntilEverything"
-LABEL maintainer "Vedansh Khandelwal <https://github.com/offensive-vk/>"
-LABEL org.opencontainers.image.source "https://github.com/offensive-vk/UntilEverything"
-ENV NODE_ENV production
-WORKDIR /usr/src/app
-RUN sudo apt install npm nodejs -y
-RUN --mount=type=bind,source=package.json,target=package.json \
-    --mount=type=bind,source=package-lock.json,target=package-lock.json \
-    --mount=type=cache,target=/root/.npm 
+# Use a slimmer and more secure base image
+FROM node:18-slim AS builder
 
-USER user
+# Set working directory for build context
+WORKDIR /app
+
+# Copy package.json and package-lock.json for efficient caching
+COPY package*.json ./
+
+# Install dependencies using a multi-stage build for a smaller image
+RUN --mount=type=bind,source=./package*.json,target=/app/package*.json \
+    npm install --production
+
+# Switch to a non-root user with a dedicated user ID and group ID
+USER vedansh:vedansh  # Replace with appropriate user/group names and IDs
+
+# Copy the rest of the application code
 COPY . .
+
+# Expose the application port
 EXPOSE 9999
+
+# Start the application (adjust command based on your entrypoint script)
 CMD ["npm", "start"]
-# syntax=docker/dockerfile:END
