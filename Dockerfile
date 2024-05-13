@@ -9,10 +9,10 @@ COPY package*.json ./
 
 # Install dependencies using a multi-stage build for a smaller image
 RUN --mount=type=bind,source=./package*.json,target=/app/package*.json \
-    npm install --production
+    npm ci
 
 # Switch to a non-root user with a dedicated user ID and group ID
-USER vedansh:vedansh  # Replace with appropriate user/group names and IDs
+USER user  # Replace with appropriate user/group names and IDs
 
 # Copy the rest of the application code
 COPY . .
