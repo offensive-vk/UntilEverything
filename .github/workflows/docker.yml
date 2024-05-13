@@ -1,31 +1,31 @@
-name: Build and Push Docker Image
+name: Build and Push Multi-Platform Docker Image
 
 on:
   push:
-    branches: ["master", "push-action"]
+    branches: ["master", "push-action"]  
   schedule:
-    - cron: '10 0 * * *'
+    - cron: '10 0 * * *'  
   workflow_dispatch:
-  
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [linux, darwin, windows]
+        arch: [amd64]
     steps:
       - uses: actions/checkout@v3
-
       - name: Login to Docker registry
         uses: docker/login-action@v2
         with:
           username: ntsystems
           password: ${{ secrets.DOCKER_TOKEN }}
-
-      - name: Setup Builder
+      - name: Setup Builder with Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Build Docker image (multi-platform)
         run: |
-          docker buildx create --use --name builder
-          docker buildx 
-          
-      - name: Build Docker image
-        run: docker buildx build --platform linux/amd64,darwin/amd64,windows/amd64 -t ntsystems/personal .
-
-      - name: Push Docker image
-        run: docker push ntsystems/personal:latest
+          docker buildx build --platform ${{ matrix.os }}/${{ matrix.arch }} -t ntsystems/personal:${{ matrix.os }}-latest .
+      - name: Push Docker image (platform specific tag)
+        run: |
+          docker push ntsystems/personal:${{ matrix.os }}-latest
