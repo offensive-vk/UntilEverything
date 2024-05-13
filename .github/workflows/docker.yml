@@ -19,8 +19,13 @@ jobs:
           username: ntsystems
           password: ${{ secrets.DOCKER_TOKEN }}
 
+      - name: Setup Builder
+        run: |
+          docker buildx create --use --name mybuild node-amd64
+          docker buildx create --append --name mybuild node-arm64
+          
       - name: Build Docker image
-        run: docker build --platform linux/amd64,darwin/amd64,windows/amd64 -t ntsystems/personal .
+        run: docker buildx build --platform linux/amd64,darwin/amd64,windows/amd64 -t ntsystems/personal .
 
       - name: Push Docker image
         run: docker push ntsystems/personal:latest
