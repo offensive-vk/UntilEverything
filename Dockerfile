@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ARG NODE_VERSION=20
-FROM node:${NODE_VERSION}-alpine
+FROM node:${NODE_VERSION}
 LABEL maintainer "Vedansh Khandelwal <https://github.com/offensive-vk/>"
 LABEL org.opencontainers.image.source https://github.com/offensive-vk/UntilEverything
 ENV NODE_ENV production
