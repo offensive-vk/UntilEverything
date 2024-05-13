@@ -21,8 +21,8 @@ jobs:
 
       - name: Setup Builder
         run: |
-          docker buildx create --use --name mybuild node-amd64
-          docker buildx create --append --name mybuild node-arm64
+          docker buildx create --use --name builder
+          docker buildx 
           
       - name: Build Docker image
         run: docker buildx build --platform linux/amd64,darwin/amd64,windows/amd64 -t ntsystems/personal .
