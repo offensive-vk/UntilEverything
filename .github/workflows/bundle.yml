@@ -1,0 +1,33 @@
+name: Upload Separate Folders as Artifacts
+
+on:
+  pull_request:
+    branches: 
+       - 'master'
+  push:
+    branches:
+      - 'master'  # Trigger on push events for all branches
+
+jobs:
+  upload-artifacts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Find and upload folders
+      run: |
+        # Find all directories at the root level and upload each as a separate artifact
+        for dir in $(find . -mindepth 1 -maxdepth 1 -type d); do
+          dir_name=$(basename "$dir")
+          echo "Uploading directory: $dir_name"
+          
+          # Upload the directory as an artifact
+          tar -czf "${dir_name}.tar.gz" -C "$dir" .
+          gh api \
+            --method POST \
+            --header "Content-Type: application/zip" \
+            --data-binary @"${dir_name}.tar.gz" \
+            "/repos/${{ github.repository }}/actions/artifacts"
+        done
