@@ -12,7 +12,7 @@ export function info(...args: any[]): void{
  * _info("This is a log message");
  * // Logs: "YYYY-MM-DD HH:MM:SS.MMM AM/PM [info] >> [ 'This is a log message' ] << [info]"
  */
-function trace(...args: any[]): void {
+export function trace(...args: any[]): void {
     const currentDate = new Date();
     const hours = currentDate.getHours() > 12 ? currentDate.getHours() - 12 : currentDate.getHours();
     const minutes = currentDate.getMinutes() < 10 ? `0${currentDate.getMinutes()}` : currentDate.getMinutes();
