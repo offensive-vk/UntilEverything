@@ -1,0 +1,9 @@
+{
+  "name": "UntilEverything",
+  "build": { "dockerfile": "../Dockerfile"},
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardedPorts": [ 9999 ],
+  "overrideCommand": false,
+  "privileged": true,
+  "features": {}
+}
