@@ -17,7 +17,6 @@ def greet(name="Guest"):
 greet()         # Output: Hello, Guest!
 greet("Alice")  # Output: Hello, Alice!
 
-
 def square(x):
     return x ** 2
 
