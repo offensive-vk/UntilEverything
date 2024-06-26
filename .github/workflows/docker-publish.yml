@@ -1,20 +1,18 @@
-name: CI / Docker Publish Image
+name: CI / Docker - Publish Image
 
 on:
   schedule:
     - cron: '10 0 * * *'
   push:
-    branches: [ "master", "main" ]
+    branches: [ "master"]
   workflow_dispatch:
 
 env:
   REGISTRY: docker.io
   IMAGE_NAME: ntsystems/untileverything
 
-
 jobs:
-  build:
-
+  push:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -43,13 +41,11 @@ jobs:
           username: ntsystems
           password: ${{ secrets.DOCKER_TOKEN }}
 
-
       - name: Extract Docker metadata
         id: meta
         uses: docker/metadata-action@96383f45573cb7f253c731d3b3ab81c87ef81934 # v5.0.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
 
       - name: Build and Push Docker image
         id: build-and-push

@@ -20,4 +20,6 @@ const clone = obj => JSON.parse(JSON.stringify(obj));
 
 const hasValue = (arr, value) => arr.includes(value);
 
-// 
+// 6. Use a module without using Variables
+
+require('express').route('/user/');

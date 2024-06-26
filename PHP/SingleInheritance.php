@@ -32,5 +32,4 @@ class Car extends Vehicle {
 // Usage:
 $car = new Car("Nissan GTR", "Blue", 2);
 $car->displayInfo();
-
 ?>

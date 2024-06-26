@@ -1,5 +1,6 @@
 <?php
 
+# Enabling strict types = true;
 declare(strict_types=1);
 
 class Calculator {

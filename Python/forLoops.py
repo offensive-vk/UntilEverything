@@ -17,7 +17,6 @@ print("\nUsing for loop with a range:")
 for num in range(1, 10):
     print(num)
 
-
 # Dictionaries
 person = {"name": "John Wick", "age": 30, "occupation": "Engineer"}
 print("\nUsing for loop with a dictionary:")
