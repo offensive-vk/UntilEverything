@@ -19,6 +19,7 @@ UntilEverything is one of those thousand Github Repository that is completely fi
 - [Node JS](https://github.com/offensive-vk/UntilEverything/blob/master/Node/) is a JavaScript runtime environment that allows developers to run JavaScript code server-side, outside of a web browser.
 - [PHP](https://github.com/offensive-vk/UntilEverything/blob/master/PHP/) is a server-side scripting language primarily used for web development to create dynamic and interactive web pages.
 - [Python](https://github.com/offensive-vk/UntilEverything/blob/master/Python/) is a high-level programming language known for its simplicity and versatility.
+- [React](https://github.com/offensive-vk/UntilEverything/blob/master/React/) is a popular JavaScript library for building user interfaces, primarily for single-page applications where you need a fast and interactive user experience. It allows developers to create reusable UI components, making the code easier to manage and develop.
 - [Sass](https://github.com/offensive-vk/UntilEverything/blob/master/CSS/Sass/) (Syntactically Awesome Style Sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
 - [TypeScript](https://github.com/offensive-vk/UntilEverything/blob/master/TypeScript/) is a superset of JavaScript that adds static typing and other features to the language, making it easier to build and maintain large-scale JavaScript applications.
 - [YAML](https://github.com/offensive-vk/UntilEverything/blob/master/YAML/) (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files and data exchange. It uses indentation to represent data structures and is often used in applications where data needs to be easily readable by humans as well as machines.
@@ -75,8 +76,8 @@ Programming paradigms refer to different styles or approaches to programming, ea
   <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/typescript/typescript-original.svg" alt="typescript" width="200" height="150"/> </a>
   <a href="https://jquery.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/jquery/jquery-plain-wordmark.svg" width="200" height="150"/> </a>
   <a href="https://www.markdownguide.org/" target="_blank" rel="noreferrer" ><img alt="MDX" src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/markdown/markdown-original.svg" width="200" height="150" /></a>
-  <a href="https://mdxjs.com" target="_blank" rel="noreferrer" ><img alt="MDX" src="https://mdx-logo.now.sh" width="200" height="100" /></a>
-  <a href="https://yaml.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/yaml/yaml-original.svg" width="200" height="150"/>      </a>
+  <a href="https://react.dev" target="_blank" rel="noreferrer" ><img alt="react" src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/react/react-original.svg" width="200" height="150" /></a>
+  <a href="https://yaml.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/yaml/yaml-original.svg" width="200" height="150"/></a>
 </p>
 </div>
 
