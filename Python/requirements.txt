@@ -1,0 +1,3 @@
+mypy
+asyncio
+tqdm
