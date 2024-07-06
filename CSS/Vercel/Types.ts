@@ -38,7 +38,6 @@ function Animation() {
             window.removeEventListener('DOMContentLoaded', startAnimation);
         };
     }, []);
-
-    
 }
+
 export default Animation;
