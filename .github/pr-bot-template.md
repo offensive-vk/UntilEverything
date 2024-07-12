@@ -14,7 +14,7 @@ What kind of change does this PR introduce?
 
 ## Pull Author and Reviewers.
 
-* [x] Self
+* [x] Bot
 * [x] Others (Mention)
 
 ### Yayy ! This Pull Request Was Automated by a [github-actions](https://github.com/features/actions) Robot.
@@ -23,6 +23,4 @@ What kind of change does this PR introduce?
 
 Thanks.
 
-Your Robot 🤖
-
-`fg9a0g8pov9vvao10`
+Your Robot 🤖 `fg9a0g8pov9vvao10`
