@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Importing the NodeJS type for process
 import * as process from 'process';
 
@@ -8,11 +9,11 @@ console.log('Platform:', process.platform);
 console.log('Current Working Directory:', process.cwd());
 
 // Handling process events
-process.on('exit', (code) => {
+process.on('exit', (code: unknown) => {
     console.log(`Exiting with code ${code}`);
 });
 
-process.on('unhandledRejection', (reason, promise) => {
+process.on('unhandledRejection', (reason: any, promise: any) => {
     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
     process.exit(1);
 });

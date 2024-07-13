@@ -15,9 +15,9 @@ interface Admin {
 type _Person = User | Admin;
 
 const persons: _Person[] = [
-    { type: 'user', name: 'Max Mustermann', age: 25, occupation: 'Chimney sweep' },
+    { type: 'user', name: 'Max', age: 25, occupation: 'Chimney sweep' },
     { type: 'admin', name: 'Jane Doe', age: 32, role: 'Administrator' },
-    { type: 'user', name: 'Kate Müller', age: 23, occupation: 'Astronaut' },
+    { type: 'user', name: 'Kate Miller', age: 23, occupation: 'Astronaut' },
     { type: 'admin', name: 'Bruce Willis', age: 64, role: 'World saver' }
 ];
 
@@ -47,5 +47,3 @@ console.log();
 
 console.log('Users:');
 persons.filter(isUser).forEach(logPerson);
-
-// In case you are stuck

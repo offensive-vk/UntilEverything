@@ -37,4 +37,4 @@ const numbers: ReadonlyArray<number> = [11, 22, 33, 44, 55];
 console.table(numbers);
 numbers.push(6); // Error: Property 'push' does not exist on type 'readonly number[]'
 numbers[0] = 10; // Error
-export { }
+export { };

@@ -1,4 +1,4 @@
-// We create a utility function that can validate the input value against a constraint
+// A utility function that can validate the input value against a constraint
 function isType<T extends { [key: string]: any }>(input: any, constructor: new (...args: any[]) => T): input is T {
     return input instanceof constructor;
 }
@@ -24,7 +24,7 @@ class Dog extends Animal {
     }
 }
 
-const myDog = new Dog('Max', 'Labrador');
+const myDog = new Dog('Max', 'Ancient');
 
 // This will pass validation and return the dog instance
 const validDog = PerformAction<Dog>(myDog, Dog);

@@ -44,7 +44,7 @@ async (params: unknown) => {
     return `${params} Hello. From Arrow Function.`;
 }
 
-const _arr = () => console.log(`Hello `);
+const greeter = () => console.log(`Hello `);
 
 // Calling the functions
 greet();
@@ -57,5 +57,4 @@ greetWithOptional("Clair");
 sumAllNumbers(1, 2, 3, 4, 5);
 const result = multiply(2, 3);
 console.log(`Multiplication result: ${result}`);
-
-
+export { }

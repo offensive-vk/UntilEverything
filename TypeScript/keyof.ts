@@ -36,9 +36,10 @@ const alien: readonly Person = {
 };
 
 const personName = getProperty(person, "age"); // Valid
-const ishuman = getProperty(alien, "isHuman");
+const isHuman = getProperty(alien, "isHuman");
 
 // const personGender = getProperty(person, "gender"); // Error: "gender" is not a valid key
 console.log(personName);
-console.log(ishuman);
+console.log(isHuman);
+
 export { }

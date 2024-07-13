@@ -9,15 +9,15 @@ functionA();
 functionB();
 helloWorld();
 
-import { pi, phi, absolute } from "./export";
+import { pi, phi, absolute } from "./Exports";
 
 console.log(pi);
 const absPhi = absolute(phi);
 
-import { Cat, Dog } from "./export";
-type Animals = Cat | Dog;
+import { IDog } from "./Exports";
+type Animals = Cat | IDog;
 
-import { createCatName, type Cat, type Dog } from "./export";
+import { createCatName, type Cat, type TDog } from "./Exports";
 
-export type Animals = Cat | Dog;
 const name = createCatName();
+export { }

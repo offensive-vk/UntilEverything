@@ -1,10 +1,8 @@
 /**
  * @author Vedansh
  * @description This is a University Console Management System designed using TypeScript.
- * @license MIT License
  */
 
-type Custom = string | undefined | unknown;
 const puts = console.log;
 const tb = console.table;
 

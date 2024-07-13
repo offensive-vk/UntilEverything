@@ -16,7 +16,7 @@ function delayedGreeting(name: string, callback: () => void) {
     }, 2000);
 }
 
-delayedGreeting("Vedansh", () => {
+delayedGreeting("Offensive", () => {
     console.log("Greeting displayed after 2 seconds.");
 });
 

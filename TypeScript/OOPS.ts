@@ -68,3 +68,4 @@ teacher.displayInfo();
 
 console.log(`Student ID: ${student.getStudentId()}`);
 console.log(`Subject: ${teacher.getSubject()}`);
+export { }

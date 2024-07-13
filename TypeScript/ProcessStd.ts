@@ -1,10 +1,11 @@
+// @ts-ignore
 import * as process from 'process';
 
 function askQuestion(question: string): Promise<string> {
     return new Promise((resolve) => {
         process.stdout.write(question);
 
-        process.stdin.once('data', (data) => {
+        process.stdin.once('data', (data: any) => {
             const input = data.toString().trim();
             resolve(input);
         });
@@ -25,7 +26,7 @@ async function main() {
         }
 
         process.stdout.write(`You are ${parsedAge} years old.\n`);
-    } catch (error) {
+    } catch (error: any) {
         process.stderr.write(`An error occurred: ${error.message}\n`);
         process.exit(1);
     } finally {

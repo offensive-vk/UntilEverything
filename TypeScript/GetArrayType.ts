@@ -1,3 +1,7 @@
+/**
+ * @param arr Array to check
+ * @returns data type of the given array
+ */
 function getArrayType(arr: any[]): string {
     const elementType = arr.length > 0 ? typeof arr[0] : 'unknown';
     

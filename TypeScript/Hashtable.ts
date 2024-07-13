@@ -33,6 +33,12 @@ class HashTable {
         const index = this.hash(key);
         delete this.table[index];
     }
+    public printTable(): HashTable | void {
+        if(this.table.length === 0) { 
+            console.log(`length is zero lol`);
+        }
+        console.table(this.table);
+    }
 }
 
 // Example usage:
@@ -40,6 +46,7 @@ const myHashTable = new HashTable();
 
 myHashTable.set('name', 'John');
 myHashTable.set('age', 25);
+myHashTable.set('extra-user', false);
 
 console.log(myHashTable.get('name')); // Output: John
 console.log(myHashTable.get('age'));  // Output: 25
@@ -47,3 +54,4 @@ console.log(myHashTable.has('name')); // Output: true
 
 myHashTable.delete('age');
 console.log(myHashTable.get('age'));  // Output: undefined
+myHashTable.printTable(); // Prints in table format.

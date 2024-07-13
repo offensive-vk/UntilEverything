@@ -1,10 +1,11 @@
+// Github Program
 interface Life {
-    code: Promise<string | boolean>;
-    rest: Promise<string | boolean>;
-    learn: Promise<string | boolean>;
+    code: () => Promise<string | boolean>;
+    rest: () => Promise<string | boolean>;
+    learn: () => Promise<string | boolean>;
 }
 
-const vedansh: Life = {
+const Me: Life = {
     async code() {
         return "< Writing code />";
     },
@@ -18,7 +19,7 @@ const vedansh: Life = {
 
 const myLifeLoop = async () => {
     while (true) {
-        const activities: Array<Promise<Life | boolean>> = [
+        const activities: Array<Promise<Life | any>> = [
             vedansh.code(),
             vedansh.rest(),
             vedansh.learn(),
@@ -35,4 +36,5 @@ const myLifeLoop = async () => {
         }
     }
 };
+
 myLifeLoop();

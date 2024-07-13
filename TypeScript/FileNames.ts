@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 
 function listFiles(directoryPath: string): void {
-    fs.readdir(directoryPath, (err, files) => {
+    fs.readdir(directoryPath, (err: Error, files: Array<string>) => {
         if (err) {
             console.error(`Error reading directory: ${err}`);
             return;

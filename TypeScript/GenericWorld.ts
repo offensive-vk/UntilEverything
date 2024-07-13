@@ -10,34 +10,6 @@
  * @returns {TKey | TObj[TKey]} - The value corresponding to the specified key if it exists in the object,
  * otherwise the key itself.
  */
-
-// function getValue<TObj, TKey extends keyof TObj>(
-//         obj: TObj, key: TKey, ...args: Array<TKey>
-//     ): TKey | TObj[TKey] {
-//     if (!obj?.hasOwnProperty(key)) {
-//         console.log(`Error ! The Object Doesn't Consist The Key: ${key as string}\n`);
-//         return key;
-//     }
-//     for (const arg of args) {
-//         if (!obj.hasOwnProperty(arg)) {
-//             console.log(`OOPS ! The Object Doesn't Consist The Key: ${arg as string}\n`);
-//             return arg;
-//         }
-//     }
-//     return obj[key] as TKey | TObj[TKey];
-// }
-// // Testing
-// var Test = {
-//     nothing: null,
-//     first: "first",
-//     second: 2,
-//     middle: "something",
-//     last: false
-// };
-// const Search = getValue(Test, "middle");
-// // console.log(`Searching Result : ${Search}\n`);
-// console.log(Search);
-
 function getValue<TObj, TKey extends keyof TObj>(
     obj: TObj, key: TKey, ...args: Array<TKey>
 ): TObj[TKey] | Record<string, TObj[TKey]> {

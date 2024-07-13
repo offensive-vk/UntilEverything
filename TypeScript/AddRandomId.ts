@@ -1,6 +1,6 @@
 /**
- * @author Vedansh
- * @param input Any type of object to be modified.
+ * @author Vedansh ✨
+ * @param input any type of object to be modified.
  * @returns new object of Type with added Id
  */
 function addRandomId<T>(input: T): T & { id: string } {

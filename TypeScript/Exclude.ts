@@ -51,3 +51,4 @@ const cat: OnlyCat = {
 // const dog: OnlyCat = { type: 'dog', bark: () => console.log('Woof!') }; // Error: 'Dog' is not assignable to 'OnlyCat'
 
 console.log(cat);
+export { }

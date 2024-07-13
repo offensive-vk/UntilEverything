@@ -17,7 +17,7 @@ function isStringv2(value: unknown): value is string {
     return typeof value === "string";
 }
 
-function example(x: unknown) {
+function example(x: unknown): void  {
     if (isStringv2(x)) {
         // We can now call any 'string' method on 'x'.
         x.toUpperCase();
@@ -26,5 +26,7 @@ function example(x: unknown) {
         console.log(x);
     }
 }
+
 example("Crazy");
 example(3.4);
+export { };

@@ -18,7 +18,7 @@ function divide(a: number, b: number, onSuccess: (result: number) => void, onErr
     }
 }
 
-divide(10, 2, (result) => {
+divide(10, 0, (result) => {
     console.log("The result of division is:", result);
 }, (error) => {
     console.error("Error:", error);
