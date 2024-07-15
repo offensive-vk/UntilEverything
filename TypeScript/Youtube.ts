@@ -1,6 +1,8 @@
+// @ts-nocheck
 import * as ytdl from 'ytdl-core';
 import * as fs from 'fs';
 import * as path from 'path';
+import * as process from 'process';
 
 async function downloadVideoAndAudio(youtubeUrl: string): Promise<void> {
     try {
@@ -34,3 +36,5 @@ async function downloadVideoAndAudio(youtubeUrl: string): Promise<void> {
 // Example usage
 const youtubeUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Example YouTube video URL
 downloadVideoAndAudio(youtubeUrl);
+
+export { }

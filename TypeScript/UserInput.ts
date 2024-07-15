@@ -1,3 +1,4 @@
+// @ts-ignore
 import * as process from 'process';
 
 function getUserInput(question: string): Promise<string> {

@@ -54,5 +54,6 @@ async function fetchStudentArray(ids: number[]): Promise<Array<Student>> {
     } catch (error) {
         console.error("Error:", error);
     }
-})();
-export { };
+})();0
+
+export {};

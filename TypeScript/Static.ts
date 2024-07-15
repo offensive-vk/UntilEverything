@@ -9,7 +9,6 @@ class MySafe {
     }
 }
 
-const safe = new MySafe();
 const s = new MySafe();
 // console.log(s.secretKey); Property 'secretKey' is private and only accessible within class 'MySafe'.
 // OK to access by index method
@@ -27,7 +26,7 @@ class MyClass {
         return "Hello man what's up!";
     }
     static reg = {
-        regx: function () { },
+        reg: function () { },
         value: null,
     };
 }

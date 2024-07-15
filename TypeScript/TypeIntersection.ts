@@ -24,7 +24,6 @@ const personWithAddress: PersonWithAddress = {
 console.log(personWithAddress.name);
 console.log(personWithAddress.street);
 
-
 // Use Case 2: Combining Function Signatures
 type Loggable = {
     log(message: string): void;
@@ -39,9 +38,17 @@ type LoggerAndSender = Loggable & Sendable;
 
 // Usage
 const loggerAndSender: LoggerAndSender = {
-    log(message: "Log message"),
-    send(data: "Send data")
+    log(message) {
+        console.log("Log: ", message);
+    },
+    send(data) {
+        console.log("Send: ", data);
+    }
 };
+
+// Test the implementation
+loggerAndSender.log("Log message");
+loggerAndSender.send("Send data");
 
 
 // Use Case 3: Extending Existing Types
