@@ -1,5 +1,5 @@
-/* 
-The ReturnType<Type> utility type in TypeScript is used to extract the return type of a function or constructor type.
+/**
+ * The ReturnType<Type> utility type in TypeScript is used to extract the return type of a function or constructor type.
 */
 
 // Define a sample function

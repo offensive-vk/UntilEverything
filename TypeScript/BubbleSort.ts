@@ -27,4 +27,4 @@ const sortedArray = bubbleSort(unsortedArray.slice());
 
 console.log("Unsorted Array:", unsortedArray);
 console.log("Sorted Array:", sortedArray);
-export {bubbleSort};
+export { bubbleSort };

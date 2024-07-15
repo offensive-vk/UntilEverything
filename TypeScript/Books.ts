@@ -26,7 +26,6 @@ class Library {
 
 // Usage example
 const myLibrary = new Library();
-
 const book1: Book = {
     title: "The Great Gatsby",
     author: "F. Scott Fitzgerald",

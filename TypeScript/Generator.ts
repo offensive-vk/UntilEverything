@@ -22,16 +22,18 @@ They are defined using a special syntax with an asterisk (*) after the function 
 it returns an iterator object that can be used to control the execution of the generator.
 */
 
-// yield keyword
 function* generateSequence() {
     yield 1;
     yield 2;
     yield 3;
 }
 
+// Define a iterator.
 const iterator = generateSequence();
 
 console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
+
+export { };

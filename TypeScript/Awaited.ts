@@ -1,7 +1,6 @@
 /**
  * This type is meant to model operations like await in async functions, or the .then() method on Promises - 
  * specifically, the way that they recursively unwrap Promises.
- * 
 */
 type Awaited<T> = T extends Promise<infer R> ? R : T;
 
@@ -17,10 +16,10 @@ type C = Awaited<boolean | Promise<number>>;
 
 // Using the types
 const aValue: A = "Hello, World!"; // Valid assignment
-const bValue: B = 42; // Invalid assignment
+// const bValue: B = 42; // Invalid assignment
 const cValue: C = true; // Valid assignment
 
 console.log(aValue);
-console.log(bValue);
+// console.log(bValue);
 console.log(cValue);
 export { }

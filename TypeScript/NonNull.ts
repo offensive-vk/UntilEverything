@@ -1,4 +1,7 @@
-// The non-null assertion operator (!) is a type assertion in TypeScript that allows you to tell the compiler that a value will never be null or undefined.
+/**
+ * The non-null assertion operator (!) is a type assertion in TypeScript that allows you to tell the compiler that a value will never be null or undefined.
+ * @returns {string | null}
+ */
 
 // Function that may return a string or null
 function getStringOrNull(): string | null {

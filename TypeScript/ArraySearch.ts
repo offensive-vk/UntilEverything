@@ -7,6 +7,7 @@ function linearSearch(arr: number[], target: number): number {
     }
     return -1; // Return -1 if the element is not found
 }
+
 //  2. Binary Search (for Sorted Arrays):
 function binarySearch(arr: number[], target: number): number {
     let left = 0;

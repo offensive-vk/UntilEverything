@@ -18,7 +18,6 @@ function fetchDataUsingAllSettled() {
         fetchDataFromAPI('API-2', false),
         fetchDataFromAPI('API-3', true),
     ];
-
     Promise.allSettled(promises)
         .then((results) => {
             results.forEach((result, index) => {
@@ -38,3 +37,4 @@ function main() {
 }
 
 main();
+export { }

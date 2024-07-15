@@ -9,7 +9,7 @@ console.log("================================\n");
 
 let log = console.log;
 let num: any; // type definition
-let rollno: number = 10922;
+let roll: number = 10922;
 let string: string = "Its me TSX";
 let valid: boolean = true;
 let x: null = null;
@@ -22,7 +22,7 @@ let array: Array<number> = [];
 const readonlyArray: readonly number[] = [1, 2, 3];
 
 log("1st num : "+num);
-log("2nd rollno : "+rollno);
+log("2nd roll : "+roll);
 log("3rd string : "+string);
 log("4th valid : "+valid);
 log("5th x : "+x);

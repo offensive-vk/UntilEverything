@@ -1,7 +1,8 @@
 /**
- * @description This TypeScript program defines a function flattenArray that takes an array as input and returns a new array with all nested arrays flattened. The example usage demonstrates how to flatten a nested array.
+ * Flattens a nested array by recursively flattening all nested arrays.
+ * 
  * @param arr Array to flatten
- * @returns a new array
+ * @returns A new array with all nested arrays flattened
  */
 function flattenArray(arr: any[]): any[] {
     let flattened: any[] = [];
@@ -21,4 +22,5 @@ function flattenArray(arr: any[]): any[] {
 const nestedArray = [1, [2, [3, 4], 5], 6, [7, 8]];
 const flattenedArray = flattenArray(nestedArray);
 
+// Print data.
 console.log(flattenedArray);

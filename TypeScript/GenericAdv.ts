@@ -42,7 +42,7 @@ while (!stringStack.isEmpty()) {
 }
 
 // 2. Functional Approach
-// Generic interface for a key-value pair
+// Generic interface for Creating a key-value pair
 interface KeyValuePair<K, V> {
     key: K;
     value: V;
@@ -58,7 +58,6 @@ async function createKeyValuePair<K, V>(key: K, value: V): Promise<KeyValuePair<
 }
 
 (async () => {
-
     // Create a KeyValuePair with number key and string value
     const numberStringPair = await createKeyValuePair<number, string>(1, "TypeScript");
 
@@ -69,4 +68,3 @@ async function createKeyValuePair<K, V>(key: K, value: V): Promise<KeyValuePair<
     console.log(numberStringPair);
     console.log(stringBooleanPair); 
 })();
-

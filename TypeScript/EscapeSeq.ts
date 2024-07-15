@@ -5,7 +5,6 @@ function sleep(ms: number) {
 async function animate() {
     const frames = ['|', '/', '-', '\\']; 
     let currentFrameIndex = 0;
-
     while (true) {
         // Clear the console (works in Node.js)
         console.clear();
@@ -15,7 +14,6 @@ async function animate() {
 
         // Move to the previous frame or wrap around
         currentFrameIndex = (currentFrameIndex + 1) % frames.length;
-
         await sleep(100);
     }
 }

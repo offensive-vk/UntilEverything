@@ -63,7 +63,7 @@ log("\n================================\n");
 // while (condition) {
 //     // code block to be executed
 // }
-// do{}while(condition)
+// do { } while(condition)
 
 i = 0;
 while (i <= 50) {

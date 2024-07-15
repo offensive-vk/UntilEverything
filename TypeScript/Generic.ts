@@ -2,6 +2,7 @@ class XGlobal<T>{
     private value: T | undefined;
     private reg: T | undefined;
     static check: boolean | string = false;
+    static Global: boolean | undefined;
 
     constructor(
         public id: number,
@@ -21,6 +22,7 @@ const G: XGlobal<number> = new XGlobal<number>(9001, 87000, 'Manish');
 G.showPrivateData();
 G.showPublicData();
 XGlobal.check = true;
+XGlobal.Global = true;
 
 console.log(`\n =================== \n`);
 function Sample<T>(anything: T): T {
@@ -44,5 +46,5 @@ const firstNumber = getFirstElement(_numbers);
 const _names = ["Manish", "Ram", "Don"];
 const firstName = getFirstElement(_names); 
 
-console.log(firstNumber);
-console.log(firstName); 
+console.log(`First Number of Array -> ${firstNumber}`);
+console.log(`First Name of Array -> ${firstName}`);

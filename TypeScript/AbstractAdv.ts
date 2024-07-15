@@ -13,6 +13,7 @@ abstract class AbstractContainer<T> {
         return this.items.length;
     }
 }
+
 // Subclass for a container of strings
 class StringContainer extends AbstractContainer<string> {
     // Implementation of addItem for strings
@@ -31,7 +32,6 @@ class StringContainer extends AbstractContainer<string> {
 }
 
 // Subclass for a container of numbers
-
 class NumberContainer extends AbstractContainer<number> {
     // Implementation of addItem for numbers
     public addItem(item: number): void {
@@ -48,7 +48,7 @@ class NumberContainer extends AbstractContainer<number> {
     }
 }
 
-// Usage of the generic containers
+// String container
 const stringContainer = new StringContainer();
 stringContainer.addItem("Apple");
 stringContainer.addItem("Banana");
@@ -56,6 +56,7 @@ console.log("String Container Items:");
 console.log(stringContainer.getItem(0));
 console.log(stringContainer.getItem(1));
 
+// Number Container
 const numberContainer = new NumberContainer();
 numberContainer.addItem(42);
 numberContainer.addItem(7);

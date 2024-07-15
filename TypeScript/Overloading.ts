@@ -1,5 +1,4 @@
-// Function overloading
-
+// Explain - Function overloading
 function greet(): string;
 function greet(person: string): string;
 function greet(person: string, age: number): string;
@@ -23,3 +22,4 @@ const greeting3 = greet();
 console.log(greeting1);
 console.log(greeting2); 
 console.log(greeting3);
+export { }

@@ -5,7 +5,7 @@ import EventEmitter from "events";
 const myEmitter = new EventEmitter();
 
 // Subscribe to an event
-myEmitter.on('myEvent', (data) => {
+myEmitter.on('myEvent', (data: any) => {
     setTimeout(() => {
         console.log('Event occurred with data: ', data);
     }, 1500);
@@ -31,4 +31,5 @@ myEmitter.addListener('sayHello', () => {
 // Emit the events
 myEmitter.emit('myEvent', { message: 'Hello, EventEmitter!' });
 
+// Hello events
 myEmitter.emit('sayHello');

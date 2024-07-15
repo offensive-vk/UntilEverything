@@ -38,7 +38,7 @@ enum Direction {
 }
 
 // Function that takes a Direction enum parameter and returns a string representation of the direction
-function getDirectionName(direction: Direction): string {
+function getDirectionName(direction: Direction): Direction | string {
     return direction;
 }
 

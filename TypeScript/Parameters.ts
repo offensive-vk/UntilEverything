@@ -21,3 +21,5 @@ function logParameters(params: GreetParams): void {
 // Call the logParameters function with the parameter types
 const params: GreetParams = ['Lissy', 30];
 logParameters(params);
+
+export { }

@@ -25,3 +25,4 @@ function _greet(name: string, greeting: string = "Hello") {
 }
 _greet("John");
 _greet("Jane", "Hi"); 
+export { }

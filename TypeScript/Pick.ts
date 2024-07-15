@@ -27,6 +27,7 @@ const readOnly: ReadOnlyPerson = {
 // readOnlyPerson.age = 26; // Error: Cannot assign to 'age' because it is a read-only property
 console.log(readOnly);
 
+// @ts-ignore
 // Example 3: Use Pick with predefined types
 type HTMLProps = Pick<React.HTMLProps<HTMLDivElement>, 'className' | 'style'>;
 const htmlProps: HTMLProps = {

@@ -1,3 +1,4 @@
+// @ts-nocheck
 function showLoadingEffect(loadingTime: number) {
     const loadingAnimation = ["|", "/", "-", "\\"];
     let animationIndex = 0;

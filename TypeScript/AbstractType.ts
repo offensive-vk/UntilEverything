@@ -48,18 +48,18 @@ class Move<T extends Animal> extends Action<T> {
 class TestAnimal<T extends Animal> {
     constructor(private action: Action<T>, private animal: T) { }
 
-    performAction(): void {
+    PerformAction(): void {
         this.action.execute(this.animal);
     }
 }
 
 // Test
 let testDog = new TestAnimal(new MakeSound<Dog>(), new Dog());
-testDog.performAction();
+testDog.PerformAction();
 
 let testCat = new TestAnimal(new Move<Cat>(), new Cat());
-testCat.performAction();
+testCat.PerformAction();
 
 let testSnake = new TestAnimal(new MakeSound<Snake>(), new Snake());
-testSnake.performAction();
+testSnake.PerformAction();
 export { } ;
