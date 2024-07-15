@@ -14,4 +14,4 @@ export async function action<T extends Partial<1, "key">>
     const X = new Root<ReturnType<USER_SOURCE>>();
     X.getRootId()
 }
-// @ts-nocheck
+// @ts-ignore

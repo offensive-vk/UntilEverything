@@ -37,4 +37,4 @@ async function downloadVideoAndAudio(youtubeUrl: string): Promise<void> {
 const youtubeUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Example YouTube video URL
 downloadVideoAndAudio(youtubeUrl);
 
-export { }
+export { };
