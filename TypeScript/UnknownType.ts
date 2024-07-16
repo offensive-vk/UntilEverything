@@ -42,6 +42,7 @@ async function processUnknownArray<T, U>(
         }
         return asyncProcessor(item as T);
     });
+
     return Promise.all(resultPromises);
 }
 
@@ -66,4 +67,4 @@ processUnknownArray<number, string>(inputArray, asyncProcessor)
         console.error('Error:', error.message);
     });
 
-export { }
+export { };
