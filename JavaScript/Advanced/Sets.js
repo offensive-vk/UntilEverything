@@ -1,4 +1,4 @@
-// Sets is kinda same as Array but its functions are pretty much easy to use.
+// Sets is kinda same as Array but its functions are pretty easy to use.
 let set = new Set();
 
 let john = { name: "John" };
