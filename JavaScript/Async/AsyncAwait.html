@@ -8,7 +8,6 @@
 <body>
     <button id="fetchDataButton">Fetch Data</button>
     <div id="result"></div>
-
     <script>
         async function fetchData() {
             try {
@@ -21,6 +20,7 @@
                 throw error;
             }
         }
+        
         document.getElementById('fetchDataButton').addEventListener('click', async () => {
             try {
                 const resultElement = document.getElementById('result');
@@ -32,7 +32,6 @@
                 console.error('Error:', error);
             }
         });
-        
     </script>
 </body>
 </html>
