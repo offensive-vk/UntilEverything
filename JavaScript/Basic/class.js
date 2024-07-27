@@ -8,10 +8,17 @@ class Rectangle {
         return this.width * this.height;
     }
 }
-class Shape{
-    shape = new Rectangle(null, null);
+
+class Shape {
+    shape = new Rectangle(54, 54);
     constructor(shape){
         this.shape = shape;
+    }
+}
+
+class Circle {
+    constructor(radius) { 
+        this.r = radius;
     }
 }
 const rect1 = new Rectangle(500, 1000);
