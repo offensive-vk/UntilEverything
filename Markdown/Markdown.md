@@ -85,8 +85,13 @@ Unordered List:
     * item 3a
     * item 3b
 
+Other Type List:
+- This is an item
+- This is an item
+- This is an item
 
 ## Others:
 
 - [ ] Checkbox off
 - [x] Checkbox on
+- [ ] Empty One
