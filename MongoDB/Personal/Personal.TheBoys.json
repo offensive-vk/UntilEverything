@@ -5,7 +5,7 @@
       "$oid": "64d0e2c9e034a2921d9a1716"
     },
     "name": "Manish",
-    "group": "Boys",
+    "group": "TheBoys",
     "type": "Co-Leader",
     "subject": "JavaScript",
     "salary": 78000,
@@ -16,7 +16,7 @@
       "$oid": "64d0e2c9e034a2921d9a1717"
     },
     "name": "Sourabh",
-    "group": "Boys",
+    "group": "TheBoys",
     "type": "Co-Leader",
     "subject": "Python",
     "salary": 80000,
@@ -27,8 +27,8 @@
       "$oid": "64d0e6cae034a2921d9a171d"
     },
     "name": "Rupesh Don",
-    "group": "Boys",
-    "type": "Don - Nigga",
+    "group": "TheBoys",
+    "type": "Don",
     "subject": [
       "Anime",
       "Novels",
