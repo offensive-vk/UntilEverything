@@ -19,7 +19,7 @@ CSS is designed to enable the separation of content and presentation, including 
 - Container for - Style rules for HTML elements (tags)
 - Platform - Web platform
 - Website	- https://www.w3.org/TR/CSS/#css
-- File extension - .css
+- File extension - .css, .map
 - Internet media type - text/css
 
 ***
