@@ -14,7 +14,6 @@ const numbers = [1, 2, 3, 4, 5];
 const thirdNumber = numbers.at(-1);
 console.log(thirdNumber); 
 
-
 /* New Array Functions */
 // Example data: an array of arrays
 const nestedArray = [

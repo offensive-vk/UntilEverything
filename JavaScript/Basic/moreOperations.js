@@ -10,17 +10,18 @@ if ("name" in car) {
     console.log("Name property does not exist.");
 }
 
-//copy a object 
+// Copy a object 
 const clonedCar = { ...car };
 console.log(clonedCar);
 
-
+// Get keys of object
 const propertyCount = Object.keys(car).length;
 console.log("Number of properties:", propertyCount);
-/*
-*
-The Object.keys() method is a built-in function in JavaScript that returns an array of a given object's own enumerable property names. It takes an object as an argument and returns an array containing the keys (property names) of that object.
 
+/**
+The Object.keys() method is a built-in function in JavaScript that 
+returns an array of a given object's own enumerable property names. 
+It takes an object as an argument and returns an array containing the keys (property names) of that object.
 */
 const obj1 = {
     name: "Kiddo",
@@ -34,8 +35,9 @@ const obj2 = {
 
 const isEqual = JSON.stringify(obj1) === JSON.stringify(obj2);
 console.log("Objects are equal:", isEqual);
+
 // JSON.stringify() method is used to convert both objects into JSON strings. 
-//The equality of the strings is then checked to determine if the objects are equal.
+// The equality of the strings is then checked to determine if the objects are equal.
 
 //const parsedObject = JSON.parse(json);
 //console.log(parsedObject);
@@ -53,12 +55,11 @@ const person = {
 console.log(person.name);
 person.sayHello();
 
-
 /* 
-Object.assign() is a built-in method in JavaScript that is used to copy the values of all enumerable properties from one or more source objects to a target object. It merges the properties of the source objects into the target object.
+Object.assign() is a built-in method in JavaScript that is used to copy the values of all enumerable properties from one or more source objects to a target object. 
+It merges the properties of the source objects into the target object.
 
 Object.assign(target, ...sources)
-
 target: The target object to which the properties will be copied.
 sources: One or more source objects from which the properties will be copied.
 

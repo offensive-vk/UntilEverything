@@ -14,3 +14,4 @@ const person2 = createPerson("Manish", 30, 102);
 
 person1.greet();
 person2.greet(); 
+person1.greet();

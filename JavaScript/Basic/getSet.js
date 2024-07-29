@@ -24,6 +24,7 @@ class Person {
 }
 
 const person = new Person("Johnny", 30);
+
 console.log(person.name); // Output: Johnny
 person.name = "Jayne";
 console.log(person.name); // Output: Jayne

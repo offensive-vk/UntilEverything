@@ -11,7 +11,6 @@ class MathUtils {
 console.log(MathUtils.square(5)); // Output: 25
 console.log(MathUtils.cube(3)); // Output: 27
 
-
 /* 
 Another example for static
 */

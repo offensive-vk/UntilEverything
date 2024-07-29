@@ -27,7 +27,6 @@ Promise.race([promise1, promise2, promise3])
     });
 
 // Example using Promise.any()
-// Note: Promise.any() requires Node.js version 15.0.0 or later, or a browser with support
 Promise.any([promise1, promise2, promise3])
     .then(result => {
         console.log('Promise.any() result:', result);

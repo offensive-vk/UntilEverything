@@ -9,7 +9,6 @@ document.addEventListener('click', function (event) {
     console.log('Mouse coordinates:', mouseX, mouseY);
 });
 
-//more
 document.addEventListener('click', function (event) {
     console.log('Event type:', event.type);
     console.log('Target element:', event.target);
