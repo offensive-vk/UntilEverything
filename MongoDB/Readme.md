@@ -4,7 +4,7 @@
 
 # **What is MongoDB** ?
 
-MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product, MongoDB utilizes JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and current versions are licensed under the Server Side Public License (SSPL). MongoDB is a member of the MACH Alliance.
+MongoDB is a open source available, cross-platform, document-oriented database program. Classified as a NoSQL database product, MongoDB utilizes JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and current versions are licensed under the Server Side Public License (SSPL). MongoDB is a member of the MACH Alliance.
 
 - Developer(s) - MongoDB Inc.
 - Initial release - February 11, 2009; 15 years ago
@@ -22,8 +22,8 @@ MongoDB is a source-available, cross-platform, document-oriented database progra
     "$oid": "64d5af66948bd51c5fba83e5"
   },
   "reg_no": 1000,
-  "reg_name": "Student 0",
-  "reg_sem": "III Sem",
+  "reg_name": "Student 0th",
+  "reg_sem": "I Sem",
   "reg_dept": "Bachelor of Computer Applications",
   "reg_type": "Student",
   "reg_skills": [
@@ -31,7 +31,7 @@ MongoDB is a source-available, cross-platform, document-oriented database progra
     "CSS",
     "JavaScript"
   ],
-  "reg_cgpa": 5.9,
+  "reg_cgpa": 7.5,
   "isRegular": false,
   "reg_hobbies": null,
   "reg_fees": 75000,

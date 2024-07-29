@@ -6,7 +6,7 @@
     "name": "Administrator | Vedansh",
     "memberof": "Administrators",
     "account_type": "root",
-    "password": "root#admin",
+    "password": "<hashed-password>",
     "regdate": "new Date()",
     "company": "MongoDB",
     "cgpa": 9.7,

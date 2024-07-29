@@ -37,5 +37,4 @@
         db.getFreeMonitoringStatus()
 
         db.createView("viewName", "sourceColl", [{$project:{department: 1}}])
-
 }
