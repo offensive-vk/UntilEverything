@@ -23,6 +23,7 @@ The set of jQuery core features—DOM element selections, traversal, and manipul
 - Written in - JavaScript
 - Website - <https://jquery.com>
 - License - MIT
+- jQuery is Deprecated nowadays, Feel free to try out JavaScript now.
 
 ***
 
