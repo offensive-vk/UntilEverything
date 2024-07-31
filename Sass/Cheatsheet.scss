@@ -1,0 +1,165 @@
+// variables.scss
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: Helvetica, sans-serif;
+
+// styles.scss
+
+// Importing Variables
+@import 'variables';
+
+// Basic Usage
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+}
+
+// Nesting
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Partials
+@import 'header';
+@import 'footer';
+
+// Mixin
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+.box {
+  @include box-shadow(0px 0px 5px #000);
+}
+
+// Inheritance
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+// Functions
+@function calculate-rem($size, $base-font-size: 16px) {
+  @return $size / $base-font-size * 1rem;
+}
+
+.container {
+  width: calculate-rem(960px);
+}
+
+// Loops
+@for $i from 1 through 3 {
+  .col-#{$i} {
+    width: 100% / 3 * $i;
+  }
+}
+
+@each $color, $value in (primary: $primary-color, secondary: $secondary-color) {
+  .#{$color}-text {
+    color: $value;
+  }
+}
+
+@while $i < 6 {
+  .item-#{$i} {
+    width: 20% * $i;
+  }
+  $i: $i + 1;
+}
+
+// Operators
+.sidebar {
+  width: 300px - 50px; // 250px
+}
+
+// Interpolation
+.icon-#{$name} {
+  background-image: url('/images/#{$name}.png');
+}
+
+// Control Directives
+@mixin respond-to($media) {
+  @if $media == 'phone' {
+    @media (max-width: 600px) { @content; }
+  } @else if $media == 'tablet' {
+    @media (max-width: 900px) { @content; }
+  } @else if $media == 'desktop' {
+    @media (min-width: 901px) { @content; }
+  }
+}
+
+.header {
+  @include respond-to('tablet') {
+    background: $primary-color;
+  }
+}
+
+// Lists
+$font-sizes: 12px, 14px, 16px, 20px;
+
+@each $size in $font-sizes {
+  .font-size-#{$size} {
+    font-size: $size;
+  }
+}
+
+// Maps
+$themes: (
+  light: (
+    background: #fff,
+    color: #000
+  ),
+  dark: (
+    background: #000,
+    color: #fff
+  )
+);
+
+@each $theme, $props in $themes {
+  .#{$theme}-theme {
+    background: map-get($props, background);
+    color: map-get($props, color);
+  }
+}
+
+// Placeholders
+%button-style {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.button {
+  @extend %button-style;
+  background-color: $primary-color;
+  color: #fff;
+}

@@ -6,6 +6,7 @@ body {
     overflow: visible;
     place-items: center;
 }
+
 h1 {
     display: flex;
     justify-content: center;
@@ -18,14 +19,18 @@ h1 {
     font-family: Arial Nova, sans-serif;
     padding: 20px;
 }
-span{
+
+span {
     font-size: 7rem;
     padding-left: 0.5em;
     padding-right: 0.5em;
     color: #fff;
     transition: -webkit-text-fill-color 0.4s ease;
 }
-.code, .test, .deploy{
+
+.code,
+.test,
+.deploy {
     background: linear-gradient(45deg, cyan, magenta, orange);
     background-size: 200%;
     background-clip: text;
@@ -34,23 +39,28 @@ span{
     position: relative;
     transition: -webkit-text-fill-color 0.4s ease;
 }
+
 @keyframes code {
     0% {
         -webkit-text-fill-color: transparent;
         background-position: top left;
     }
+
     25% {
         -webkit-text-fill-color: transparent;
         background-position: top left;
     }
+
     50% {
         -webkit-text-fill-color: #fff;
-        background-position: bottom right; 
+        background-position: bottom right;
     }
+
     75% {
         -webkit-text-fill-color: transparent;
         background-position: bottom right;
     }
+
     100% {
         -webkit-text-fill-color: transparent;
         background-position: top left;

@@ -55,14 +55,13 @@ h1 {
     text-align: center;
 }
 
-h1>.magic {
+h1 > .magic {
     display: inline-block;
     position: relative;
 }
 
-h1>.magic>.magic-star {
+h1 > .magic > .magic-star {
     --size: clamp(20px, 1.5vw, 30px);
-
     animation: scale 700ms ease forwards;
     display: block;
     height: var(--size);
