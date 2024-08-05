@@ -6,3 +6,10 @@ Jack:
     - a
     - b
   location: {country: "A", city: "A-A"}
+
+Ryan:
+  age: 20
+  expertise:
+   - C++
+   - Java
+  add: US
