@@ -1,0 +1,6 @@
+[submodule "TypeScript-Complete-Manual"]
+	path = TypeScript-Complete-Manual
+	url = https://github.com/offensive-vk/TypedScript.git
+[submodule "Python-Complete-Manual"]
+	path = Python-Complete-Manual
+	url = https://github.com/offensive-vk/Learn-Python.git
