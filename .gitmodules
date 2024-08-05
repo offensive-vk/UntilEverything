@@ -1,9 +1,9 @@
 [submodule "Github Actions"]
-	path = Github Actions
-	url = https://github.com/offensive-vk/AwesomeScripts/tree/master/gh-actions
-[submodule "TypeScript Complete Manual"]
-  path = TypeScript Complete Manual
-  url = https://github.com/offensive-vk/TypedScript/
+	path = Github-Actions
+  	url = https://github.com/offensive-vk/AwesomeScripts/tree/master/gh-actions
+[submodule "TypeScript-Complete-Manual"]
+  	path = TypeScript/TypeScript Complete Manual
+  	url = https://github.com/offensive-vk/TypedScript/
 [submodule "Python in Deep"]
-  path = Python in Deep
-  url = https://github.com/offensive-vk/Learn-Python/blob/master/readme.md
+  	path = Python/Python-in-Deep
+  	url = https://github.com/offensive-vk/Learn-Python/blob/master/readme.md
