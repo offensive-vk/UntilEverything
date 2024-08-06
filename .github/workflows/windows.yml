@@ -1,4 +1,4 @@
-name: CI / Node.js - Windows
+name: CI / Build & Test - Windows
 
 on:
   push:
@@ -13,7 +13,8 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x, 21.x, 22.x]
-
+    
+    name: Running Tests on Node.js Version ${{ matrix.node-version }} 
     steps:
     - uses: actions/checkout@v3
 
