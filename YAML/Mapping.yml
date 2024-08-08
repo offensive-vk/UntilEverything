@@ -10,7 +10,6 @@ Sammy Sosa: {
     avg: 0.288
   }
 
-
 # Example of mapping (dictionary) in YAML
 person:
   name: Alice
