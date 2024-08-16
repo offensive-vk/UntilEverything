@@ -1,3 +1,4 @@
+
 # 1. $sum
 
 The $sum operator is a powerful and commonly-used operator in MongoDB, which is primarily utilized in conjunction with the $group stage in the aggregation pipeline. As the name suggests, it allows you to calculate the sum of the numeric values in either specified fields or by evaluating expression values for each input document.
@@ -120,3 +121,119 @@ db.employees.aggregate([
 ```
 
 ---
+
+# 5. $skip
+
+The `$skip` operator is a useful tool for paginating query results or skipping over a specified number of documents in a collection. This operator can be applied in the aggregation pipeline using the `skip()` method.
+
+## Syntax
+
+In the following example, we will demonstrate how to use the $skip operator:
+
+```json
+db.collection.aggregate([
+  {
+    $skip: <number>
+  }
+]);
+```
+
+Here, <number> is the number of documents you want to skip in the collection.
+
+### Example
+
+Let’s say we have a collection named employees and we want to skip the first 5 documents of the collection (e.g., for paginating results). We can do this using the $skip operator:
+
+```json
+db.employees.aggregate([
+  {
+    $skip: 5,
+  },
+]);
+
+```
+
+---
+
+# 6. $project
+
+The $project operator helps in selecting or controlling the fields in a document by passing only the necessary attributes to the next stage in the pipeline.
+
+```json
+db.collection.aggregate([
+  {
+    $project:
+      {
+        field1: <1 or 0>,
+        field2: <1 or 0>,
+        ...
+      }
+  }
+])
+```
+
+The value 1 or 0 in the syntax represents whether the field should be included or excluded, respectively.
+
+---
+
+# 7. $sort
+
+The $sort operator is an aggregation operator in MongoDB that sorts the documents that are passed through the pipeline. It takes one or more fields as parameters and sorts the documents in ascending or descending order based on the values in the specified fields.
+
+## Here’s the syntax for the $sort operator:
+
+```{ $sort: { field1: <sort order>, field2: <sort order>, ... } }```
+
+The <sort order> parameter can be either 1 or -1, which corresponds to ascending or descending order, respectively.
+
+For example, suppose we have a collection of documents containing information about books, and we want to sort the documents by the book’s title in ascending order. We can use the following $sort operator:
+
+`db.books.aggregate([{ $sort: { title: 1 } }]);`
+
+---
+
+# 8. $group
+
+The $group operator in MongoDB is used to aggregate and perform operations on the grouped data. The operator allows you to categorize documents in a collection based on specific fields and perform various operations on each group. These operations range from counting the number of documents in a group, to summing up the values of a particular field, to calculating average values, and many more.
+
+## Basic Usage
+The basic syntax for the $group operator is as follows:
+
+```json
+{
+  $group: {
+    _id: <expression>,
+    <field1>: { <accumulator1> : <expression1> },
+    ...
+  }
+}
+```
+
+*Here’s a quick breakdown of the components*:
+
+- _id: This field represents the criteria for grouping the documents. It can be a single field name or an expression that returns a value.
+- field1: This is the name of the field you want to create in the resulting documents, which store the computed values from the group.
+- accumulator1: This is one of the accumulators that MongoDB provides (e.g. $sum, $avg, $min, $max, $push, etc.). They specify the operation to perform on the grouped data.
+- expression1: This is the field or expression that the $group operator applies to the specific accumulator.
+Suppose we have a collection called orders, which contains documents representing sales data.
+
+---
+
+# 9. $match
+
+The $match operator is used to filter documents within the pipeline in the MongoDB aggregation framework. It helps in excluding documents that do not fulfill the specified condition(s). The $match operator filters documents and passes only those that match the specified conditions to the next stage of the pipeline.
+
+## The basic syntax for the $match operator is as follows:
+
+`{ $match: { <query> } }`
+
+Where <query> contains the conditions and the fields which the documents should match.
+
+---
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="https://github.com/offensive-vk/UntilEverything?tab=CC0-1.0-1-ov-file#CC0-1.0-1-ov-file">CC0-1.0</a></i><br>
+  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <sup>Thanks for visiting :)</sup>
+</p>
