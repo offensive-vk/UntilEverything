@@ -1,4 +1,4 @@
-name: Automated PR Manager
+name: CI / Automated Pull Requests
 
 on:
   push:
@@ -15,7 +15,7 @@ on:
 
 jobs:
   create_pr:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Create or Open A PR
