@@ -2,14 +2,14 @@ name: CD / Docker - Publish Image
 
 on:
   schedule:
-    - cron: '10 0 * * *'
+    - cron: '10 0 * * 0'
   push:
-    branches: [ "master"]
+    branches: [ "master" ]
   workflow_dispatch:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: ntsystems/untileverything
+  IMAGE_NAME: ${{ secrets.DOCKER_USER }}/${{ secrets.DOCKER_IMAGE }}
 
 jobs:
   push:
@@ -18,9 +18,8 @@ jobs:
       contents: read
       packages: write
       id-token: write
-
     steps:
-      - name: Checkout RRepository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Install Cosign
@@ -62,4 +61,4 @@ jobs:
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
           DIGEST: ${{ steps.build-and-push.outputs.digest }}
-        run: echo "Image with ${TAGS} tag has been sucessfully Signed.""
+        run: echo "Image with ${TAGS} tag has been sucessfully Signed."
