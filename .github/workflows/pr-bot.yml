@@ -1,4 +1,4 @@
-name: Automated PR Manager
+name: CI / Automated Pull Requests
 
 on:
   push:
@@ -8,9 +8,10 @@ on:
       - "main"
       - "2023"
       - "nov-2023"
+      - "specialized-commits"
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 */1 * * *'
 
 jobs:
   create_pr:

@@ -1,20 +1,22 @@
 name: CI / Build & Test - Windows
 
 on:
+  schedule:
+    - cron: '0 0 * * *'
   push:
-    branches: [ "master" ]
+    branches: [ "master", "*" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "*" ]
   workflow_dispatch:
 
 jobs:
-  windows:
+  build_windows:
     runs-on: windows-latest
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x, 21.x, 22.x]
     
-    name: Running Tests on Node.js Version ${{ matrix.node-version }} 
+    name: Build & Test on Node Version ${{ matrix.node-version }}
     steps:
     - uses: actions/checkout@v3
 
