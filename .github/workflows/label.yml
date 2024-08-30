@@ -5,7 +5,7 @@ on:
     types: [opened, edited]
   pull_request:
     types: [opened, synchronize]
-
+  workflow_dispatch:
 jobs:
   label:
     runs-on: ubuntu-latest
@@ -40,7 +40,7 @@ jobs:
             {label: 'ci/cd', match: ['ci/cd', 'pipeline', 'workflow', '.yml', 'dockerfile', 'compose.yaml']},
             {label: 'documentation', match: ['docs', 'documentation', '.md', '.github/']},
             {label: 'pr_template', match: ['pr template', 'pull request template', '.github/pull-request-template.md', '.github/pr-bot-template.md']},
-            {label: 'unknown', match: ['unknown', 'miscellaneous', 'various', '.py', '.php', '.js', '.ts', '.rs']},
+            {label: 'unknown', match: ['unknown', 'miscellaneous', 'various', '.rs', '.txt', '.rb']},
             {label: 'dotfiles', match: ['dotfile', '.gitlab-ci.yml', '.gitignore', '.gitattributes', '.dockerignore', '.npmrc', '.nvmrc', 'dockerfile', 'license']},
             {label: 'css', match: ['css', 'styles', 'styling', '.css', 'css/']},
             {label: 'bootstrap', match: ['bootstrap', 'ui framework', 'bootstrap/']},
@@ -63,6 +63,9 @@ jobs:
           labelMapping.forEach(({label, match}) => {
             if (match.some(keyword => title.includes(keyword) || body.includes(keyword))) {
               labels.push(label);
+            }
+            else {
+              labels.push('unknown')
             }
           });
 

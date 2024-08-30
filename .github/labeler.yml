@@ -14,11 +14,11 @@ pr_template:
   - '.github/pr-bot-template.md'
 
 unknown:
-  - '**/*.py'
-  - '**/*.php'
-  - '**/*.js'
-  - '**/*.ts'
-  - '**/*.rs'
+  - '**/*.rb'
+  - '**/*.txt'
+  - '**/*.ipynb'
+  - '**/*.mod'
+  - '**/*.exe'
 
 dotfiles:
   - '.gitlab-ci.yml'
