@@ -1,0 +1,83 @@
+name: CI / Automated Label
+
+on: 
+  issues:
+    types: [opened, edited]
+  pull_request:
+    types: [opened, synchronize]
+  workflow_dispatch:
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Label Pull Requests
+      if: github.event_name == 'pull_request'
+      uses: actions/labeler@v4
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Label Issues
+      if: github.event_name == 'issues'
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const issue = context.payload.issue;
+          const labels = [];
+          const title = issue.title.toLowerCase();
+          const body = issue.body ? issue.body.toLowerCase() : '';
+
+          // Expanded Labeling Logic
+          const labelMapping = [
+            {label: 'ci/cd', match: ['ci/cd', 'pipeline', 'workflow', '.yml', 'dockerfile', 'compose.yaml']},
+            {label: 'documentation', match: ['docs', 'documentation', '.md', '.github/']},
+            {label: 'pr_template', match: ['pr template', 'pull request template', '.github/pull-request-template.md', '.github/pr-bot-template.md']},
+            {label: 'unknown', match: ['unknown', 'miscellaneous', 'various', '.rs', '.txt', '.rb']},
+            {label: 'dotfiles', match: ['dotfile', '.gitlab-ci.yml', '.gitignore', '.gitattributes', '.dockerignore', '.npmrc', '.nvmrc', 'dockerfile', 'license']},
+            {label: 'css', match: ['css', 'styles', 'styling', '.css', 'css/']},
+            {label: 'bootstrap', match: ['bootstrap', 'ui framework', 'bootstrap/']},
+            {label: 'expressjs', match: ['express', 'expressjs', 'backend', 'express/']},
+            {label: 'html', match: ['html', 'markup', 'web page', '.html', 'html/']},
+            {label: 'javascript', match: ['javascript', 'js', 'frontend', '.js', 'javascript/']},
+            {label: 'jsx', match: ['jsx', 'react', '.jsx']},
+            {label: 'md', match: ['markdown', '.md', '.mdx', 'markdown/']},
+            {label: 'mongodb', match: ['mongodb', 'database', 'mongo', 'mongodb/']},
+            {label: 'node', match: ['node', 'nodejs', 'backend', '.js', 'node/']},
+            {label: 'php', match: ['php', 'backend', '.php', 'php/']},
+            {label: 'python', match: ['python', 'py', 'backend', '.py', 'python/']},
+            {label: 'react', match: ['react', 'frontend', '.jsx', '.tsx', 'react/']},
+            {label: 'sass', match: ['sass', 'scss', 'styling', '.scss', '.sass', 'sass/']},
+            {label: 'typescript', match: ['typescript', 'ts', '.ts', '.d.ts', '.mts', '.cts', 'typescript/']},
+            {label: 'tsx', match: ['tsx', 'react', 'frontend', '.tsx']},
+            {label: 'yml', match: ['yaml', 'yml', 'config', '.yml', '.yaml', '.github/*.yml', '.github/workflows/*.yml']}
+          ];
+
+          labelMapping.forEach(({label, match}) => {
+            if (match.some(keyword => title.includes(keyword) || body.includes(keyword))) {
+              labels.push(label);
+            }
+            else {
+              labels.push('unknown')
+            }
+          });
+
+          // Apply the labels to the issue
+          if (labels.length > 0) {
+            await github.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels: labels
+            });
+          }
+
+    - name: Finish Off & Cleanup
+      run: echo "Successfully labeled all of the open issues and pull requests."

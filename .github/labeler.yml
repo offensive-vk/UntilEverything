@@ -1,0 +1,100 @@
+# ** DO NOT MODIFY **
+ci/cd:
+  - '*.yml'
+  - '.github/workflows/*.yml'
+  - 'Dockerfile'
+  - 'compose.yaml'
+
+documentation:
+  - '**/*.md'
+  - '.github/*'
+
+pr_template:
+  - '.github/pull-request-template.md'
+  - '.github/pr-bot-template.md'
+
+unknown:
+  - '**/*.rb'
+  - '**/*.txt'
+  - '**/*.ipynb'
+  - '**/*.mod'
+  - '**/*.exe'
+
+dotfiles:
+  - '.gitlab-ci.yml'
+  - '.gitignore'
+  - '.gitattributes'
+  - '.dockerignore'
+  - '.npmrc'
+  - '.nvmrc'
+  - 'Dockerfile'
+  - 'LICENSE'
+
+css:
+  - '**/*.css'
+  - 'CSS/**/*'
+
+bootstrap:
+  - 'Bootstrap/**/*'
+
+expressjs:
+  - 'Express/**/*'
+
+html:
+  - '**/*.html'
+  - 'HTML/**/*'
+
+javascript:
+  - '**/*.js'
+  - 'JavaScript/**/*'
+
+jsx:
+  - '**/*.jsx'
+
+md:
+  - '**/*.md'
+  - 'Markdown/**/*'
+
+mongodb:
+  - 'MongoDB/**/*'
+
+node:
+  - 'Node/**/*'
+  - '**/*.js'
+
+php:
+  - '**/*.php'
+  - 'PHP/**/*'
+
+python:
+  - '**/*.py'
+  - 'Python/**/*'
+  - '**/*.pyc'
+
+react:
+  - 'React/**/*'
+  - '**/*.jsx'
+  - '**/*.tsx'
+
+sass:
+  - '**/*.scss'
+  - '**/*.sass'
+  - 'Sass/**/*'
+
+typescript:
+  - '**/*.d.ts'
+  - '**/*.ts'
+  - '**/*.mts'
+  - '**/*.cts'
+  - 'TypeScript/**/*'
+
+tsx:
+  - '**/*.tsx'
+
+yml:
+  - 'YAML/**/*'
+  - '**/*.yml'
+  - '**/*.yaml'
+  - '.github/*.yml'
+  - '.github/workflows/*.yml'
+# ** DO NOT MODIFY **
