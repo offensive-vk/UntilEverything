@@ -22,6 +22,7 @@ jobs:
         id: open-pr
         uses: repo-sync/pull-request@v2
         with:
+          github_token: ${{ secrets.BOT_TOKEN }}
           destination_branch: "master"
           pr_title: "Automated Pull Request by Actions Bot."
           pr_template: ".github/pr-bot-template.md"
