@@ -22,13 +22,13 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: actions/labeler@v4
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repo-token: ${{ secrets.CLASSIC_TOKEN }}
 
     - name: Label Issues
       if: github.event_name == 'issues'
       uses: actions/github-script@v6
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.CLASSIC_TOKEN }}
         script: |
           const issue = context.payload.issue;
           const labels = [];
@@ -71,7 +71,7 @@ jobs:
 
           // Apply the labels to the issue
           if (labels.length > 0) {
-            await github.issues.addLabels({
+            await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issue.number,
