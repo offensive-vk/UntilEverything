@@ -1,0 +1,105 @@
+image: node
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - setup
+  - build
+  - test
+  - dev
+
+setup-npm:
+  stage: setup
+  script:
+    - node -v && npm -v
+    - npm i -g npm@latest
+    - npm update
+
+build-node16:
+  stage: build
+  script:
+    - npm install --frozen-lockfile=true
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
+
+test-node16:
+  stage: test
+  dependencies:
+    - build-node16
+  script:
+    - npm test
+
+build-node18:
+  stage: build
+  script:
+    - npm install --frozen-lockfile=true
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
+
+test-node18:
+  stage: test
+  dependencies:
+    - build-node18
+  script:
+    - npm test
+
+build-node20:
+  stage: build
+  script:
+    - npm install --frozen-lockfile=true
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
+
+test-node20:
+  stage: test
+  dependencies:
+    - build-node20
+  script:
+    - npm test
+
+build-node22:
+  stage: build
+  script:
+    - npm install --frozen-lockfile=true
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
+
+test-node22:
+  stage: test
+  dependencies:
+    - build-node22
+  script:
+    - npm test
+
+build-node21:
+  stage: build
+  script:
+    - npm install --frozen-lockfile=true
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
+
+test-node21:
+  stage: test
+  dependencies:
+    - build-node21
+  script:
+    - npm test
+
+development:
+  stage: dev
+  script: 
+    - echo "Executing Project With npm."
+    - sleep 3
+    - npm start
