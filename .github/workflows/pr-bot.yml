@@ -1,4 +1,4 @@
-name: CI / Automated Pull Requests
+name: CI / Automated Pull Request
 
 on:
   push:
@@ -17,16 +17,16 @@ jobs:
   create_pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Create or Open A PR
         id: open-pr
         uses: repo-sync/pull-request@v2
         with:
           github_token: ${{ secrets.BOT_TOKEN }}
           destination_branch: "master"
-          pr_title: "Automated Pull Request by Actions Bot."
+          pr_title: "${{ github.workflow }} by @${{ github.actor }}"
           pr_template: ".github/pr-bot-template.md"
           pr_reviewer: "offensive-vk"
-          pr_label: "bot,automated"
+          pr_label: "bot,automated,hamster"
           pr_assignee: "npm-run-test"
           pr_draft: false

@@ -12,6 +12,6 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 
 USER node
 COPY . .
-EXPOSE 9999
+EXPOSE 7777
 CMD ["npm", "start"]
 # syntax=docker/dockerfile:END
