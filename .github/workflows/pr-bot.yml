@@ -25,7 +25,7 @@ jobs:
           github_token: ${{ secrets.BOT_TOKEN }}
           destination_branch: "master"
           pr_title: "${{ github.workflow }} by @${{ github.actor }}"
-          pr_template: ".github/pr-bot-template.md"
+          pr_template: ".github/pr_bot_template.md"
           pr_reviewer: "offensive-vk"
           pr_label: "bot,automated,hamster"
           pr_assignee: "npm-run-test"

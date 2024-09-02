@@ -17,10 +17,10 @@ What kind of change does this PR introduce?
 * [x] Bot
 * [x] Others (Mention)
 
-### Yayy ! This Pull Request Was Automated by a [github-actions](https://github.com/features/actions) Robot.
+### Yayy ! This Pull Request Was Automated by [Hamster [bot]](https://github.com/TheHamsterBot/)
 
 *** 
 
 Thanks.
 
-Your Robot 🤖 <code>FP0GA5P3MXP4</code>
+Your Hamster 🐹 <code>FP0GA5P3MXP4</code>
