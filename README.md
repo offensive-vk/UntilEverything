@@ -84,10 +84,9 @@ Programming paradigms refer to different styles or approaches to programming, ea
 
 ## UntilEverything - (Formally WebDev)
 
-- *Lets Learn Something New and Trendy Today*.
+- *Lets Learn Something Clear and Different Today*.
 - Examples for Various Frameworks and Programming Languages.
 - Web Development Projects and Webpages.
-- Brought To You By [Vedansh ✨](https://github.com/offensive-vk/)
 - Happy Coding. 🤗
 - &copy; Copyright by [Vedansh](https://github.com/offensive-vk/) 2024. All Right Reserved.
 
@@ -96,6 +95,6 @@ Programming paradigms refer to different styles or approaches to programming, ea
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
   <i>Licensed under <a href="https://github.com/offensive-vk/UntilEverything?tab=CC0-1.0-1-ov-file#CC0-1.0-1-ov-file">CC0-1.0</a></i><br>
-  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <a href="https://github.com/TheHamsterBot"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
   <sup>Thanks for visiting :)</sup>
 </p>

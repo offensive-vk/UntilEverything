@@ -34,7 +34,7 @@ jobs:
           const labelMapping = [
             {label: 'ci/cd', match: ['ci/cd', 'pipeline', 'workflow', '.yml', 'dockerfile', 'compose.yaml']},
             {label: 'documentation', match: ['docs', 'documentation', '.md', '.github/']},
-            {label: 'pr_template', match: ['pr template', 'pull request template', '.github/pull-request-template.md', '.github/pr-bot-template.md']},
+            {label: 'pr_template', match: ['pr template', 'pull request template', '.github/pull_request_template.md', '.github/pr_bot_template.md']},
             {label: 'dotfiles', match: ['dotfile', '.gitlab-ci.yml', '.gitignore', '.gitattributes', '.dockerignore', '.npmrc', '.nvmrc', 'dockerfile', 'license']},
             {label: 'css', match: ['css', 'styles', 'styling', '.css', 'css/']},
             {label: 'bootstrap', match: ['bootstrap', 'ui framework', 'bootstrap/']},
@@ -51,6 +51,8 @@ jobs:
             {label: 'sass', match: ['sass', 'scss', 'styling', '.scss', '.sass', 'sass/']},
             {label: 'typescript', match: ['typescript', 'ts', '.ts', '.d.ts', '.mts', '.cts', 'typescript/']},
             {label: 'tsx', match: ['tsx', 'react', 'frontend', '.tsx']},
+            {label: 'offensive-vk', match: ['offensive-vk', 'vedansh', 'admin', 'me', 'context']},
+
             {label: 'yml', match: ['yaml', 'yml', 'config', '.yml', '.yaml', '.github/*.yml', '.github/workflows/*.yml']}
           ];
 
@@ -66,7 +68,6 @@ jobs:
             labels.push('unknown');
           }
 
-          // Apply the labels to the issue
           if (labels.length > 0) {
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
