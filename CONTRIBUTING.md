@@ -23,4 +23,3 @@ For Information about Concepts and Languages that are available to contribute, p
 - Code review from Code Owner(s) and Maintainer(s) is required on every pull request, minimum 1 or more reviewers should be assigned.
 - Kindly wait patiently while one of our maintainer(s) review your Pull Request.
 - Thanks for your valuable contribution and please leave a star to increase the reach of this project.
-
