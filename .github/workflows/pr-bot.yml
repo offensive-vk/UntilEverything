@@ -28,5 +28,5 @@ jobs:
           pr_template: ".github/pr_bot_template.md"
           pr_reviewer: "offensive-vk"
           pr_label: "bot,automated,hamster"
-          pr_assignee: "npm-run-test"
+          pr_assignee: "TheHamsterBot"
           pr_draft: false
