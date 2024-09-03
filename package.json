@@ -6,11 +6,11 @@
   "main": "Dockerfile",
   "homepage": "https://github.com/offensive-vk/UntilEverything/",
   "private": true,
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "npm@9.9.9",
   "license": "ISC",
   "scripts": {
     "start": "node JavaScript/Advanced/Promises.js",
-    "install": "pnpm i typescript express sass @types/node",
+    "install": "npm i typescript express sass",
     "dev": "echo Powering Up Server... && node JavaScript/Advanced/Promises.js",
     "test": "echo Tests were successful.",
     "build": "echo Build Success ✨",
