@@ -51,8 +51,7 @@ jobs:
             {label: 'sass', match: ['sass', 'scss', 'styling', '.scss', '.sass', 'sass/']},
             {label: 'typescript', match: ['typescript', 'ts', '.ts', '.d.ts', '.mts', '.cts', 'typescript/']},
             {label: 'tsx', match: ['tsx', 'react', 'frontend', '.tsx']},
-            {label: 'offensive-vk', match: ['offensive-vk', 'vedansh', 'admin', 'me', 'context']},
-
+            {label: 'offensive-vk', match: ['vedansh', 'admin', 'me', 'context']},
             {label: 'yml', match: ['yaml', 'yml', 'config', '.yml', '.yaml', '.github/*.yml', '.github/workflows/*.yml']}
           ];
 
@@ -84,7 +83,7 @@ jobs:
       pull-requests: write
 
     steps:
-    - name: Checkout repository
+    - name: Checkout Repository
       uses: actions/checkout@v4
 
     - name: Label Pull Requests

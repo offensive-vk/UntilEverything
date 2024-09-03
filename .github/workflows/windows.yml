@@ -2,7 +2,7 @@ name: CI / Build & Test - Windows
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 */4 * * *'
   push:
     branches: [ "master", "*" ]
   pull_request:
@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x, 21.x, 22.x]
+        node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
     
     name: Build & Test on Node Version ${{ matrix.node-version }}
     steps:
@@ -27,5 +27,5 @@ jobs:
         cache: 'npm'
 
     - run: npm ci
-    - run: npm run build --if-present
+    - run: npm run build
     - run: npm start
