@@ -19,7 +19,7 @@ RUN apk add --no-cache bash git openssh
 
 # Copy and install dependencies for both production and development
 COPY package*.json ./
-RUN pnpm i
+RUN npx pnpx i
 
 # Install globally required tools
 RUN npm run install
@@ -40,6 +40,6 @@ USER node
 EXPOSE ${PORT}
 
 # Command to start the application
-CMD ["npm", "run", "start"]
+CMD ["npm","start"]
 
 # syntax=docker/dockerfile:END
