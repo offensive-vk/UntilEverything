@@ -29,11 +29,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: "pnpm"
 
-      - run: npm i
-      - run: npm run build
-      - run: npm start
+      - run: pnpm i
+      - run: pnpm run build
+      - run: pnpm start
     
   on_macos:
     runs-on: macos-latest
@@ -50,11 +50,11 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        cache: 'pnpm'
     
-    - run: npm i
-    - run: npm run build
-    - run: npm start
+    - run: pnpm i
+    - run: pnpm run build
+    - run: pnpm start
 
   on_windows:
     runs-on: windows-latest
@@ -71,11 +71,11 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        cache: 'pnpm'
 
-    - run: npm i
-    - run: npm run build
-    - run: npm start
+    - run: pnpm i
+    - run: pnpm run build
+    - run: pnpm start
 
   job_summary:
       needs: [on_linux, on_windows, on_macos]

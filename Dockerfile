@@ -22,7 +22,7 @@ COPY package*.json ./
 RUN --mount=type=cache,target=/root/.npm npm install --frozen-lockfile
 
 # Install globally required tools
-RUN npm install -g typescript tsup express
+RUN npm run install
 
 # Copy the application code after dependencies are installed
 COPY --chown=node:node . .
