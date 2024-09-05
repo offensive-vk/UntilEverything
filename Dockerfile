@@ -19,10 +19,10 @@ RUN apk add --no-cache bash git openssh
 
 # Copy and install dependencies for both production and development
 COPY package*.json ./
-RUN npx pnpx i
+RUN npm i -g pnpm@9.0.0
 
 # Install globally required tools
-RUN npm run install
+RUN pnpm run install
 
 # Copy the application code after dependencies are installed
 COPY --chown=node:node . .
