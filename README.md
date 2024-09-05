@@ -2,7 +2,7 @@
 
 ## Programs for Different Frameworks and Trending Web Technologies
 
-UntilEverything is one of those thousand Github Repository that is completely filled with Programs and Examples of Various Programming Topics from Various Programming Languages like TypeScript, Sass, JavaScript, Nodejs .etc. Containing and Covering all the important concepts and topics of various Programming Languages, we also have various approach based Problems and their solutions that will help you to improve your coding knowledge and enhance your coding style, workflow, passion and interest.
+UntilEverything is one of those Github Repository that contains Programs and Examples of Various Programming Topics from Various Programming Languages like TypeScript, Sass, JavaScript, Nodejs .etc. Almost Covering all the important concepts and topics of various Programming Languages, we also have various approach based Problems and their solutions that will help you to improve your coding knowledge and enhance your coding style, workflow, passion and interest.
 
 ### Languages and Frameworks
 
@@ -62,7 +62,7 @@ Programming paradigms refer to different styles or approaches to programming, ea
 > Asynchronous programming is a specific form of concurrent programming where tasks can run independently of the main program flow. Asynchronous operations allow a program to continue executing other tasks while waiting for certain operations (like I/O operations or network requests) to complete.
 
 <div align="center">
-<h3>Languages and Frameworks Logos - <i>(Click on Icons to learn more.)</i></h3>
+<h3>Languages and Frameworks Logos - <i>(Explore Icons to learn more)</i></h3>
 <p align="center">  
   <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/bootstrap/bootstrap-original.svg" alt="bootstrap" width="200" height="150"/> </a>
   <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/css3/css3-original.svg" alt="css3" width="200" height="150"/> </a>
@@ -74,11 +74,11 @@ Programming paradigms refer to different styles or approaches to programming, ea
   <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/php/php-original.svg" alt="php" width="200" height="150"/> </a>   <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/python/python-original.svg" alt="python" width="200" height="150"/> </a>
   <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/sass/sass-original.svg" alt="sass" width="200" height="150"/> </a>
   <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/typescript/typescript-original.svg" alt="typescript" width="200" height="150"/> </a>
-  <a href="https://jquery.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/jquery/jquery-plain-wordmark.svg" width="200" height="150"/> </a>
+  <a href="https://jquery.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/jquery/jquery-plain-wordmark.svg" width="200" height="150" alt="jquery"/> </a>
   <a href="https://www.markdownguide.org/" target="_blank" rel="noreferrer" ><img alt="MDX" src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/markdown/markdown-original.svg" width="200" height="150" /></a>
   <a href="https://react.dev" target="_blank" rel="noreferrer" ><img alt="react" src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/react/react-original.svg" width="200" height="150" /></a>
   <a href="https://mdxjs.com" target="_blank" rel="noreferrer" ><img alt="MDX" src="https://mdx-logo.vercel.app" width="200" height="100" /></a>
-  <a href="https://yaml.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/yaml/yaml-original.svg" width="200" height="150"/></a>
+  <a href="https://yaml.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/yaml/yaml-original.svg" width="200" height="150" alt="yaml"/></a>
 </p>
 </div>
 
@@ -93,8 +93,8 @@ Programming paradigms refer to different styles or approaches to programming, ea
 ***
 
 <p align="center">
-  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2020 - Present</i><br>
   <i>Licensed under <a href="https://github.com/offensive-vk/UntilEverything?tab=CC0-1.0-1-ov-file#CC0-1.0-1-ov-file">CC0-1.0</a></i><br>
-  <a href="https://github.com/TheHamsterBot"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <a href="https://github.com/TheHamsterBot"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" alt="hamster"/></a><br>
   <sup>Thanks for visiting :)</sup>
 </p>

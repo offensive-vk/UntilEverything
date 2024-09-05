@@ -56,7 +56,7 @@ jobs:
           - Workflow Path: ${{ github.workflow }}
           - Pull Request Number: #${{ env.PR_NUMBER }} || "$PR_NUMBER"
           - Pusher Details: ${{ github.event.pusher.date }} <${{ github.event.pusher.email }}>
-         
+
           ---
           
           Thanks.

@@ -2,8 +2,8 @@
 
 ARG NODE_VERSION=20
 FROM node:${NODE_VERSION}-alpine
-LABEL maintainer="Vedansh Khandelwal <https://github.com/offensive-vk/>"
-LABEL org.opencontainers.image.source="https://github.com/offensive-vk/UntilEverything"
+LABEL maintainer="Vedansh <https://github.com/offensive-vk/>"
+LABEL source="https://github.com/offensive-vk/UntilEverything"
 LABEL image="ntsystems/untileverything:latest"
 
 ENV NODE_ENV production
