@@ -6,7 +6,6 @@
   "main": "Dockerfile",
   "homepage": "https://github.com/offensive-vk/UntilEverything/",
   "private": true,
-  "packageManager": "pnpm@9.0.0",
   "license": "ISC",
   "scripts": {
     "start": "node JavaScript/Advanced/Promises.js",
@@ -21,6 +20,7 @@
     "bootstrap": "^5.3.3",
     "express": "^4.19.2",
     "nodemon": "^3.1.4",
+    "pnpm": "^9.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.78.0",
@@ -45,8 +45,5 @@
     "Markdown",
     "YAML"
   ],
-  "description": "Language Specific Examples and Various Web Development Projects & Pages.",
-  "devDependencies": {
-    "pnpm": "9.0.0"
-  }
+  "description": "Language Specific Examples and Various Web Development Projects & Pages."
 }

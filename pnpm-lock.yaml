@@ -17,6 +17,9 @@ importers:
       nodemon:
         specifier: ^3.1.4
         version: 3.1.4
+      pnpm:
+        specifier: ^9.9.0
+        version: 9.9.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -38,10 +41,6 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
-    devDependencies:
-      pnpm:
-        specifier: 9.0.0
-        version: 9.0.0
 
 packages:
 
@@ -899,8 +898,8 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
 
-  pnpm@9.0.0:
-    resolution: {integrity: sha512-tBBnB8ciWxdIthWVlTzL6/+XtUrQXQAqo2NfYzucU81mb3zpuLxEcE8foEi5pJtVNxqy2enWZ9Hv4u8VFLzVEw==}
+  pnpm@9.9.0:
+    resolution: {integrity: sha512-YMGKzROL/2ldM5vmrRP36TbupnRWYNTMSndtUkfFQNDt7hpWNpXBg6ZuuRfviPK0/rH8JfMqetytx6rzQ46ZwQ==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -1992,7 +1991,7 @@ snapshots:
 
   pirates@4.0.6: {}
 
-  pnpm@9.0.0: {}
+  pnpm@9.9.0: {}
 
   postcss-import@15.1.0(postcss@8.4.45):
     dependencies:
