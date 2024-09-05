@@ -1,11 +1,11 @@
-## Building and running your application
+# Building and running your application
 
 When you're ready, start your application by running:
 `docker compose up --build`.
 
 Your application will be available at <http://localhost:7777>.
 
-### Deploying your application to the cloud
+## Deploying your application to the cloud
 
 First, build your image, e.g.: `docker build -t myapp .`.
 If your cloud uses a different CPU architecture than your development
@@ -24,12 +24,11 @@ docs for more detail on building and pushing.
 
 [Learn More About Docker](https://github.com/offensive-vk/AwesomeCloud/blob/master/.github/docker.md)
 
-
 ***
 
 <p align="center">
-  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
-  <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
-  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2020 - Present</i><br>
+  <i>Licensed under <a href="https://mit-license.org/">CC-01.0</a></i><br>
+  <a href="https://github.com/TheHamsterBot"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" alt="hamster" /></a><br>
   <sup>Thanks for visiting :)</sup>
 </p>

@@ -1,0 +1,92 @@
+name: CI / Build & Test
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  push:
+    branches: ["master", "**"]
+  pull_request:
+    branches: ["master", "**"]
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  on_linux:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      matrix:
+        node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
+
+    name: Linux - Build & Test on Node Version ${{ matrix.node-version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+  
+      - name: Setup pnpm@v9
+        run: npm i -g pnpm@9.0.0; pnpm -v
+
+      - run: pnpm i
+      - run: pnpm run build
+      - run: pnpm start
+    
+  on_macos:
+    runs-on: macos-latest
+    continue-on-error: true
+    strategy:
+      matrix:
+        node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
+    
+    name: Macos - Build & Test on Node Version ${{ matrix.node-version }} 
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    
+    - name: Setup pnpm@v9
+      run: npm i -g pnpm@9.0.0; pnpm -v
+
+    - run: pnpm i
+    - run: pnpm run build
+    - run: pnpm start
+
+  on_windows:
+    runs-on: windows-latest
+    continue-on-error: true
+    strategy:
+      matrix:
+        node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
+    
+    name: Windows - Build & Test on Node Version ${{ matrix.node-version }}
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Setup pnpm@v9
+      run: npm i -g pnpm@9.0.0; pnpm -v
+
+    - run: pnpm i
+    - run: pnpm run build
+    - run: pnpm start
+
+  job_summary:
+      needs: [on_linux, on_windows, on_macos]
+      continue-on-error: false
+      runs-on: ubuntu-latest
+      steps:
+        - name: Job Summary
+          run: echo "🎉 The job was successful."

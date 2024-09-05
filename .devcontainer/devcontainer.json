@@ -1,11 +1,26 @@
 {
-  "name": "UntilEverything",
-  "build": { "dockerfile": "../Dockerfile"},
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "forwardedPorts": [ 9999 ],
-  "overrideCommand": false,
-  "privileged": true,
-  "features": {
-    "ghcr.io/wxw-matt/devcontainer-features/command_runner:0": {}
-  }
+  "name": "Full-Featured DevContainer",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "..", 
+    "args": {
+      "NODE_VERSION": "20"
+    }
+  },
+  "runArgs": ["--privileged"],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "/bin/bash",
+    "remoteUser": "node"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "streetsidesoftware.code-spell-checker",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode.vscode-git"
+  ],
+  "forwardPorts": [7777],
+  "postCreateCommand": "npm install && npm run build && sudo apt-get update && sudo apt-get install -y git openssh-client gpg base64 iputils-ping net-tools curl",
+  "remoteUser": "anonymous"
 }
