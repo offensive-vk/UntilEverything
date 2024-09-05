@@ -2,7 +2,7 @@ name: CI / Docker - Build Image
 
 on:
   schedule:
-    - cron: '10 0 * * *'
+    - cron: '0 */1 * * *'
   push:
     branches: [ "master", "*" ]
   pull_request:
@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag UntilEverything:$(date +%s)
+    - name: Build the Docker Image
+      run: docker build . --file Dockerfile --tag untileverything:$(date +%s)

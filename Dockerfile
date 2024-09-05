@@ -5,7 +5,7 @@ ARG NODE_VERSION=20
 FROM node:${NODE_VERSION}-alpine AS base
 LABEL maintainer="Vedansh <https://github.com/offensive-vk/>"
 LABEL source="https://github.com/offensive-vk/UntilEverything"
-LABEL image="ntsystems/untileverything:latest"
+LABEL image="untileverything:sep-2024"
 
 # Set environment variables
 ENV NODE_ENV production
@@ -19,10 +19,10 @@ RUN apk add --no-cache bash git openssh
 
 # Copy and install dependencies for both production and development
 COPY package*.json ./
-RUN --mount=type=cache,target=/root/.npm npm install --frozen-lockfile
+RUN npm i -g pnpm@9.0.0
 
 # Install globally required tools
-RUN npm run install
+RUN pnpm run install
 
 # Copy the application code after dependencies are installed
 COPY --chown=node:node . .
@@ -40,6 +40,6 @@ USER node
 EXPOSE ${PORT}
 
 # Command to start the application
-CMD ["npm", "run", "start"]
+CMD ["npm","start"]
 
 # syntax=docker/dockerfile:END
