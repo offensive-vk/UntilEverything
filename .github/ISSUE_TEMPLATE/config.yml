@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📝 ​ ​Typo or Grammatical Mistake
+    url: https://github.com/offensive-vk/UntilEverything/tree/master
+    about: Please submit a pull request instead of reporting it as an issue.
+  - name: 🤝 ​ ​Guidance
+    url: mailto:superuser.ntsystems@outlook.com
+    about: Leave a mail
+  - name: ⚡ Explore Author
+    url: https://github.com/offensive-vk
+    about: Find more about the author here.

@@ -1,26 +1,32 @@
 {
   "name": "UntilEverything",
-  "version": "11.5.0",
+  "version": "15.5.0",
   "author": "Vedansh Khandelwal <https://github.com/offensive-vk/>",
   "co-author": "Vedansh's Bot <https://github.com/TheHamsterBot/>",
   "main": "Dockerfile",
   "homepage": "https://github.com/offensive-vk/UntilEverything/",
   "private": true,
-  "packageManager": "npm@9.9.9",
   "license": "ISC",
   "scripts": {
     "start": "node JavaScript/Advanced/Promises.js",
-    "install": "npm i typescript express sass",
+    "install": "pnpm add typescript express sass nodemon tailwindcss react react-dom bootstrap tsup ts-node pnpm",
     "dev": "echo Powering Up Server... && node JavaScript/Advanced/Promises.js",
     "test": "echo Tests were successful.",
     "build": "echo Build Success ✨",
-    "lint": "echo Linter isn't available."
+    "lint": "echo Linter isn't available.",
+    "tailwind": "pnpx tailwindcss init -p"
   },
   "dependencies": {
-    "@types/node": "^20.16.3",
-    "@types/promise": "^7.1.30",
+    "bootstrap": "^5.3.3",
     "express": "^4.19.2",
-    "sass": "^1.77.8",
+    "nodemon": "^3.1.4",
+    "pnpm": "^9.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.78.0",
+    "tailwindcss": "^3.4.10",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   },
   "keywords": [
