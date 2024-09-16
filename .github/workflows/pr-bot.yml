@@ -26,14 +26,14 @@ jobs:
           github_token: ${{ secrets.BOT_TOKEN }}
           destination_branch: "master"
           pr_title: "Hamster Left A Pull Request - (${{ github.event.head_commit.message }})"
-          pr_body: "Hamster is working here. Sit Tight !"
+          pr_body: "### Hamster is working here. Sit Tight !"
           pr_reviewer: "offensive-vk"
           pr_label: "bot,automated,hamster"
           pr_assignee: "TheHamsterBot"
           pr_draft: false
 
       - name: Save PR Number in ENV
-        run: echo "PR_NUMBER=${{ steps.create-pr.outputs.number }}" >> $GITHUB_ENV
+        run: echo "PR_NUMBER=${{ steps.create-pr.outputs.number }}" >> $GITHUB_ENV; echo "Pull Request Number - ${{ env.PR_NUMBER }}"
 
   update_pr:
     needs: create_pr
@@ -51,11 +51,11 @@ jobs:
           > Details of Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           - Author: @TheHamsterBot
-          - Branch: master (base) / ${{ github.event.head_commit.url }} (head)
+          - Branch: master (base) / ${{ github.event.ref }} (head)
           - Commit: ${{ github.sha }}
           - Workflow Path: ${{ github.workflow }}
-          - Pull Request Number: #${{ env.PR_NUMBER }} || "$PR_NUMBER"
-          - Pusher Details: ${{ github.event.pusher.date }} <${{ github.event.pusher.email }}>
+          - Pull Request Number: #${{ env.PR_NUMBER }} || #${{ steps.create-pr.outputs.number }}
+          - Pusher Details: ${{ github.actor }} <${{ github.event.pusher.email }}>
 
           ---
           
