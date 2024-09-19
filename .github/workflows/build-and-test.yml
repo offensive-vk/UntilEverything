@@ -21,7 +21,7 @@ jobs:
       matrix:
         node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
 
-    name: Linux - Build & Test on Node Version ${{ matrix.node-version }}
+    name: Linux - Build & Test on v${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v4
 
@@ -44,7 +44,7 @@ jobs:
       matrix:
         node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
     
-    name: Macos - Build & Test on Node Version ${{ matrix.node-version }} 
+    name: Macos - Build & Test on v${{ matrix.node-version }} 
     steps:
     - uses: actions/checkout@v4
 
@@ -67,7 +67,7 @@ jobs:
       matrix:
         node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
     
-    name: Windows - Build & Test on Node Version ${{ matrix.node-version }}
+    name: Windows - Build & Test on v${{ matrix.node-version }}
     steps:
     - uses: actions/checkout@v4
 
