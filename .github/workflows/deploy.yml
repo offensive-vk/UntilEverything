@@ -1,21 +1,23 @@
 name: CI / Deploy to GHCR
 
 on:
-  schedule:
-    - cron: '0 0 * * 0'
   push:
     tags:
       - '*'
+  schedule:
+      - cron: '0 0 1 * *'
   workflow_dispatch:
 
 env:
+  USERNAME: ${{ github.repository_owner }}
   REGISTRY: ghcr.io
-  USER: ${{ github.repository_owner }}
   IMAGE_NAME: ${{ github.repository }}
-  TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  PASSPRHASE: ${{ secrets.GITHUB_TOKEN || secrets.BOT_TOKEN }}
+  
 jobs:
-  build-and-push-image:
-    runs-on: macos-latest
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: read
       packages: write
@@ -24,21 +26,28 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Log in to the Container Registry
+      - name: Login to the Registry
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ env.USERNAME }}
+          password: ${{ env.PASSPRHASE }}
 
-      - name: Extract Metadata (tags, labels) for Docker
+      - name: Extract Metadatafor Docker
         id: meta
         uses: docker/metadata-action@v4
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v3
+      - name: Verify Tags and Labels
+        run: |
+          echo "## Github Action Summary - Docker CI " >> $GITHUB_STEP_SUMMARY
+          echo "Tags: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
+          echo "Labels: ${{ steps.meta.outputs.labels }} " >> $GITHUB_STEP_SUMMARY
+          echo "*** VERIFICATION COMPLETED ***" >> $GITHUB_STEP_SUMMARY
+
+      - name: Build and Push Image
+        uses: docker/build-push-action@v4
         with:
           context: .
           push: true
