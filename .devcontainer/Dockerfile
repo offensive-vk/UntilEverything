@@ -20,7 +20,7 @@ RUN apt-get update && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN npm i -g pnpm
+RUN npm i -g pnpm@9.0.0
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --frozen-lockfile
@@ -29,4 +29,4 @@ COPY . .
 RUN chown -R user:user /usr/src/app
 USER user
 EXPOSE 7777
-CMD ["npm", "run", "start"]
+CMD ["pnpm", "run", "start"]

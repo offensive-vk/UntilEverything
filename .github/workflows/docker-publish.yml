@@ -8,7 +8,8 @@ on:
 env:
   REGISTRY: docker.io
   IMAGE_NAME: ${{ secrets.DOCKER_USER }}/${{ secrets.DOCKER_IMAGE }}
-
+  USERNAME: ${{ secrets.DOCKER_USER }}
+  PASSWORD: ${{ secrets.DOCKER_TOKEN }}
 jobs:
   push:
     runs-on: ubuntu-latest
@@ -29,19 +30,26 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@f95db51fddba0c2d1ec667646a06c2ce06100226 # v3.0.0
 
-      - name: Log into registry ${{ env.REGISTRY }}
+      - name: Login to Registry ${{ env.REGISTRY }}
         if: github.event_name != 'pull_request'
         uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCKER_TOKEN }}
+          username: ${{ env.USERNAME }}
+          password: ${{ env.PASSWORD }}
 
       - name: Extract Docker Metadata
         id: meta
         uses: docker/metadata-action@96383f45573cb7f253c731d3b3ab81c87ef81934 # v5.0.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Verify Tags and Labels
+        run: |
+          echo "## Github Action Summary - Docker CI " >> $GITHUB_STEP_SUMMARY
+          echo "Tags: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
+          echo "Labels: ${{ steps.meta.outputs.labels }} " >> $GITHUB_STEP_SUMMARY
+          echo "*** VERIFICATION COMPLETED ***" >> $GITHUB_STEP_SUMMARY
 
       - name: Build and Push Docker Image
         id: build-and-push

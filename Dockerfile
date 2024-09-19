@@ -28,7 +28,7 @@ RUN pnpm run install
 COPY --chown=node:node . .
 
 # Build TypeScript files using tsup (for bundling)
-RUN npm run build
+RUN pnpm run build
 
 # Set proper file ownership and permissions
 RUN chown -R node:node /usr/src/app
@@ -40,6 +40,6 @@ USER node
 EXPOSE ${PORT}
 
 # Command to start the application
-CMD ["npm","start"]
+CMD ["pnpm","start"]
 
 # syntax=docker/dockerfile:END

@@ -47,7 +47,7 @@ jobs:
           ## This Pull Request Was Automated by [Hamster [bot]](https://github.com/TheHamsterBot)
 
           > [!NOTE]
-          > Workflow Trigger: ${{ github.event_name }} event at ${{ github.action_ref }} .
+          > Workflow Trigger: ${{ github.event_name }} event ${{ github.action_ref }} .
           > Details of Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           - Author: @TheHamsterBot
