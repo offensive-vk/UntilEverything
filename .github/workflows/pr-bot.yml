@@ -16,6 +16,7 @@ on:
 jobs:
   create_pr:
     runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' && github.event.pusher.name != 'dependabot[bot]' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -38,8 +39,10 @@ jobs:
   update_pr:
     needs: create_pr
     runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' && github.event.pusher.name != 'dependabot[bot]' }}
     steps:
       - uses: actions/checkout@v4
+
       - name: Generate Pull Request Template
         run: |
           timestamp=$(date '+%b %d, %A %I:%M:%S %p')
@@ -54,8 +57,8 @@ jobs:
           - Branch: master (base) / ${{ github.event.ref }} (head)
           - Commit: ${{ github.sha }}
           - Workflow Path: ${{ github.workflow }}
-          - Pull Request Number: #${{ env.PR_NUMBER }} || #${{ steps.create-pr.outputs.number }}
-          - Pusher Details: ${{ github.actor }} <${{ github.event.pusher.email }}>
+          - Pull Request Number: ${{ env.PR_NUMBER }} || ${{ steps.create-pr.outputs.number }}
+          - Pusher Details: ${{ github.event.pusher.name }} <${{ github.event.pusher.email }}>
 
           ---
           
