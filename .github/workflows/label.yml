@@ -9,6 +9,11 @@ on:
     types: [opened, synchronize]
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+  issues: write
+  contents: write
+
 jobs:
   label_issues:
     runs-on: ubuntu-latest
@@ -90,7 +95,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: actions/labeler@v4
       with:
-        repo-token: ${{ secrets.BOT_TOKEN }}
+        repo-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
 
   finish_cleanup:
     runs-on: ubuntu-latest
