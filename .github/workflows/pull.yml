@@ -1,4 +1,4 @@
-name: Automated Docker Commands
+name: CI / Automated Docker Commands
 
 on:
   workflow_dispatch:

@@ -16,7 +16,7 @@ env:
   
 jobs:
   deploy:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
       contents: read
@@ -67,4 +67,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          platforms: linux/amd64,linux/arm64,linux/arm/v6
+          platforms: linux/amd64,linux/arm64
