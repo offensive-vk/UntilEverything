@@ -1,4 +1,4 @@
-name: ⚒️ Automated Image Testing
+name: CI / Image Testing
 
 on:
   workflow_dispatch:
