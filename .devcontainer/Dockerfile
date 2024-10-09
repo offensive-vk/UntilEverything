@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 LABEL maintainer="Vedansh <https://github.com/offensive-vk/>"
 LABEL source="https://github.com/offensive-vk/UntilEverything"
-LABEL image="ntsystems/untileverything:dev"
+LABEL image="ntsystems/untileverything:latest"
 ENV DEBIAN_FRONTEND=noninteractive
 ENV NODE_ENV=development
 
@@ -11,12 +11,8 @@ RUN apt-get update && \
     git \
     openssh-client \
     gpg \
-    base64 \
     iputils-ping \
-    net-tools \
-    sudo \
     nodejs \
-    npm \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -29,4 +25,4 @@ COPY . .
 RUN chown -R user:user /usr/src/app
 USER user
 EXPOSE 7777
-CMD ["pnpm", "run", "start"]
+CMD ["pnpm", "start"]

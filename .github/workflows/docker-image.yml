@@ -16,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker Image
-      run: docker build . --file Dockerfile --tag untileverything:$(date +%s)
+      run: docker build . --file Dockerfile -t untileverything:$(date +%s)

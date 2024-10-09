@@ -26,14 +26,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Pull Image from Docker Hub
-        continue-on-error: true
         run: |
-          docker pull ntsystems/untileverything
+          docker pull ntsystems/untileverything:latest
 
       - name: Pull Image from GHRC
-        continue-on-error: true
         run: |
-          docker pull ghcr.io/offensive-vk/untileverything
+          docker pull ghcr.io/offensive-vk/untileverything:latest
 
       - name: Run Container - GHCR
         run: |
@@ -45,7 +43,8 @@ jobs:
 
       - name: List Running Docker Containers
         run: |
-          docker ps -a; echo "## Docker Version " >> $GITHUB_STEP_SUMMARY
+          docker ps -a
+          echo "## Docker Version " >> $GITHUB_STEP_SUMMARY
           docker version >> $GITHUB_STEP_SUMMARY
 
       - name: Get System Details
