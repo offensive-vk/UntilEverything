@@ -1,0 +1,52 @@
+name: ⚒️ Automated Image Testing
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - '**'
+  schedule:
+    - cron: '0 */1 * * *'
+
+jobs:
+  test-images:
+    runs-on: ubuntu-latest
+    services:
+      docker:
+        image: docker:dind
+        options: >-
+          --privileged  --mount
+          type=tmpfs,destination=/var/lib/docker,tmpfs-size=4096m
+        ports:
+          - 2375:2375
+
+    name: Begin Image Testing
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pull Image from Docker Hub
+        run: |
+          docker pull ntsystems/untileverything
+
+      - name: Pull Image from GHRC Hub
+        run: |
+          docker pull ghcr.io/offensive-vk/untileverything
+
+      - name: Run Container - GHCR
+        run: |
+          docker run -it -d --name my-container ghcr.io/offensive-vk/untileverything
+
+      - name: Run Container - Docker Hub
+        run: |
+          docker run -it -d --name dev-container ntsystems/untileverything
+
+      - name: List Running Docker Containers
+        run: |
+          docker ps -a; echo "## Docker Version " >> $GITHUB_STEP_SUMMARY
+          docker version >> $GITHUB_STEP_SUMMARY
+
+      - name: Get System Details
+        run: |
+          echo "## Docker Info" >> $GITHUB_STEP_SUMMARY
+          docker system info >> $GITHUB_STEP_SUMMARY
