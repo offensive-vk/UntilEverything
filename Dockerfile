@@ -2,7 +2,7 @@
 
 # Build arguments for flexibility
 ARG NODE_VERSION=20
-FROM --platform=$BUILDPLATFORM node:${NODE_VERSION}-alpine AS base
+FROM node:${NODE_VERSION}-alpine AS base
 LABEL maintainer="Vedansh <https://github.com/offensive-vk/>"
 LABEL source="https://github.com/offensive-vk/UntilEverything"
 LABEL image="untileverything:sep-2024"
@@ -22,7 +22,7 @@ COPY package*.json ./
 RUN npm i -g pnpm@9.0.0
 
 # Install dependencies
-RUN pnpm install --frozen-lockfile
+RUN pnpm install
 
 # Copy application source code after dependencies are installed
 COPY --chown=node:node . .
