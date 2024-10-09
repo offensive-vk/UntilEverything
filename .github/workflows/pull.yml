@@ -12,6 +12,7 @@ on:
 jobs:
   images:
     runs-on: ubuntu-latest
+    name: Automate Stuff
     services:
       docker:
         image: docker:dind
@@ -33,6 +34,9 @@ jobs:
     - name: Run Commands
       run: |
         for i in $(seq 1 ${{ github.event.inputs.repeat_count }}); do
-            docker pull ntsystems/untileverything
-            docker system prune -f
+            docker pull ntsystems/untileverything:latest
+            docker rmi ntsystems/untileverything:latest
+            docker pull ghcr.io/offensive-vk/untileverything:latest
+            docker rmi ghcr.io/offensive-vk/untileverything:latest
+            docker system prune -f 
         done

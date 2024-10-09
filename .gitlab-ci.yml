@@ -13,8 +13,8 @@ setup-pnpm:
   stage: setup
   script:
     - node -v && npm -v
-    - npm i -g pnpm@9.0.0
-    - pnpm -v
+    - npm install -g pnpm@9.0.0  # Ensure pnpm is globally installed
+    - pnpm -v  # Verify pnpm installation
 
 build-node19:
   stage: build
