@@ -12,7 +12,7 @@ env:
   USERNAME: ${{ github.repository_owner }}
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  PASSPRHASE: ${{ secrets.GITHUB_TOKEN || secrets.BOT_TOKEN }}
+  PASSPRHASE: ${{ secrets.GITHUB_TOKEN }}
   
 jobs:
   deploy:
@@ -38,13 +38,16 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
+          tags: |
+            latest
+            edge
+            
       - name: Verify Tags and Labels
         run: |
           echo "## Github Action Summary - Docker CI " >> $GITHUB_STEP_SUMMARY
           echo "Tags: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
           echo "Labels: ${{ steps.meta.outputs.labels }} " >> $GITHUB_STEP_SUMMARY
-          echo "*** VERIFICATION COMPLETED ***" >> $GITHUB_STEP_SUMMARY
+          echo "*** VERIFICATION COMPLETED ***"
 
       - name: Build and Push Image
         uses: docker/build-push-action@v6
@@ -53,3 +56,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          platforms: linux/amd64,linux/arm64,linux/arm/v7

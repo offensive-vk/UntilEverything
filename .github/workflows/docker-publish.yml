@@ -10,6 +10,7 @@ env:
   IMAGE_NAME: ${{ secrets.DOCKER_USER }}/${{ secrets.DOCKER_IMAGE }}
   USERNAME: ${{ secrets.DOCKER_USER }}
   PASSWORD: ${{ secrets.DOCKER_TOKEN }}
+  
 jobs:
   push:
     runs-on: ubuntu-latest
@@ -43,13 +44,16 @@ jobs:
         uses: docker/metadata-action@70b2cdc6480c1a8b86edf1777157f8f437de2166 # v5.0.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            latest
+            edge
 
       - name: Verify Tags and Labels
         run: |
           echo "## Github Action Summary - Docker CI " >> $GITHUB_STEP_SUMMARY
           echo "Tags: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
           echo "Labels: ${{ steps.meta.outputs.labels }} " >> $GITHUB_STEP_SUMMARY
-          echo "*** VERIFICATION COMPLETED ***" >> $GITHUB_STEP_SUMMARY
+          echo "*** VERIFICATION COMPLETED ***"
 
       - name: Build and Push Docker Image
         id: build-and-push
@@ -61,6 +65,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
 
       - name: Sign the Docker Image
         if: ${{ github.event_name != 'pull_request' }}
