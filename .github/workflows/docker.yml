@@ -1,4 +1,4 @@
-name: ⚒️ Automated Image Testing
+name: CI / Image Testing
 
 on:
   workflow_dispatch:
@@ -26,10 +26,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Pull Image from Docker Hub
+        continue-on-error: true
         run: |
           docker pull ntsystems/untileverything
 
-      - name: Pull Image from GHRC Hub
+      - name: Pull Image from GHRC
+        continue-on-error: true
         run: |
           docker pull ghcr.io/offensive-vk/untileverything
 
