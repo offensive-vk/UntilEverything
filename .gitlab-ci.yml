@@ -66,4 +66,4 @@ development:
   script:
     - echo "Executing Project With pnpm."
     - sleep 3
-    - pnpm start
+    - npm start
