@@ -13,14 +13,14 @@ setup-pnpm:
   stage: setup
   script:
     - node -v && npm -v
-    - npm install -g pnpm@9.0.0  # Ensure pnpm is globally installed
-    - pnpm -v  # Verify pnpm installation
+    - npm install -g pnpm@9.0.0
+    - pnpm -v
 
 build-node19:
   stage: build
   script:
-    - pnpm install
-    - pnpm run build
+    - npx pnpm install
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
@@ -28,8 +28,8 @@ build-node19:
 build-node18:
   stage: build
   script:
-    - pnpm install
-    - pnpm run build
+    - npx pnpm install
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
@@ -37,17 +37,8 @@ build-node18:
 build-node20:
   stage: build
   script:
-    - pnpm install
-    - pnpm run build
-  artifacts:
-    paths:
-      - node_modules/
-
-build-node22:
-  stage: build
-  script:
-    - pnpm install
-    - pnpm run build
+    - npx pnpm install
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
@@ -55,8 +46,17 @@ build-node22:
 build-node21:
   stage: build
   script:
-    - pnpm install
-    - pnpm run build
+    - npx pnpm install
+    - npx pnpm run build
+  artifacts:
+    paths:
+      - node_modules/
+
+build-node22:
+  stage: build
+  script:
+    - npx pnpm install
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
