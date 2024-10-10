@@ -2,7 +2,7 @@ name: CD / Docker
 
 on:
   schedule:
-    - cron: '10 0 * * 0'
+    - cron: '0 0 * * 0'
   workflow_dispatch:
 
 env:
@@ -50,6 +50,10 @@ jobs:
           tags: |
             latest
             edge
+          labels: |
+            org.opencontainers.image.title=untileverything
+            org.opencontainers.image.vendor=Vedansh
+            org.opencontainers.image.source=https://github.com/offensive-vk/UntilEverything/
 
       - name: Verify Tags and Labels
         run: |
