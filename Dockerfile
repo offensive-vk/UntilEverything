@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1
+# syntax=docker/dockerfile:1.4
 
 # Build arguments for flexibility
 ARG NODE_VERSION=20
@@ -8,8 +8,8 @@ LABEL source="https://github.com/offensive-vk/UntilEverything"
 LABEL image="untileverything:sep-2024"
 
 # Set environment variables
-ENV NODE_ENV production
-ENV PORT 7777
+ENV NODE_ENV=production
+ENV PORT=7777
 
 # Set working directory
 WORKDIR /usr/src/app
@@ -21,10 +21,10 @@ RUN apk add --no-cache bash git openssh
 COPY package*.json ./
 RUN npm i -g pnpm@9.0.0
 
-# Install globally required tools
-RUN pnpm run install
+# Install dependencies
+RUN pnpm install
 
-# Copy the application code after dependencies are installed
+# Copy application source code after dependencies are installed
 COPY --chown=node:node . .
 
 # Build TypeScript files using tsup (for bundling)
@@ -33,13 +33,11 @@ RUN pnpm run build
 # Set proper file ownership and permissions
 RUN chown -R node:node /usr/src/app
 
-# Switch to a non-root user for better security
+# Switch to non-root user for better security
 USER node
 
 # Expose the application's port
 EXPOSE ${PORT}
 
 # Command to start the application
-CMD ["pnpm","start"]
-
-# syntax=docker/dockerfile:END
+CMD ["pnpm", "start"]

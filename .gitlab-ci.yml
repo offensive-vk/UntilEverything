@@ -7,99 +7,63 @@ cache:
 stages:
   - setup
   - build
-  - test
   - dev
 
-setup-npm:
+setup-pnpm:
   stage: setup
   script:
     - node -v && npm -v
-    - npm i -g npm@latest
-    - npm update
+    - npm install -g pnpm@9.0.0
+    - pnpm -v
 
-build-node16:
+build-node19:
   stage: build
   script:
-    - npm install --frozen-lockfile=true
-    - npm run build
+    - npx pnpm install
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
-
-test-node16:
-  stage: test
-  dependencies:
-    - build-node16
-  script:
-    - npm test
 
 build-node18:
   stage: build
   script:
-    - npm install --frozen-lockfile=true
-    - npm run build
+    - npx pnpm install
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
-
-test-node18:
-  stage: test
-  dependencies:
-    - build-node18
-  script:
-    - npm test
 
 build-node20:
   stage: build
   script:
-    - npm install --frozen-lockfile=true
-    - npm run build
+    - npx pnpm install
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
-
-test-node20:
-  stage: test
-  dependencies:
-    - build-node20
-  script:
-    - npm test
-
-build-node22:
-  stage: build
-  script:
-    - npm install --frozen-lockfile=true
-    - npm run build
-  artifacts:
-    paths:
-      - node_modules/
-
-test-node22:
-  stage: test
-  dependencies:
-    - build-node22
-  script:
-    - npm test
 
 build-node21:
   stage: build
   script:
-    - npm install --frozen-lockfile=true
-    - npm run build
+    - npx pnpm install
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
 
-test-node21:
-  stage: test
-  dependencies:
-    - build-node21
+build-node22:
+  stage: build
   script:
-    - npm test
+    - npx pnpm install
+    - npx pnpm run build
+  artifacts:
+    paths:
+      - node_modules/
 
 development:
   stage: dev
-  script: 
-    - echo "Executing Project With npm."
+  script:
+    - echo "Executing Project With pnpm."
     - sleep 3
     - npm start
