@@ -1,8 +1,6 @@
 name: CI / Automated Label
 
 on: 
-  schedule:
-    - cron: '0 */1 * * *'
   issues:
     types: [opened, edited]
   pull_request:
@@ -96,6 +94,7 @@ jobs:
       uses: actions/labeler@v4
       with:
         repo-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
+        sync-labels: true
 
   finish_cleanup:
     runs-on: ubuntu-latest

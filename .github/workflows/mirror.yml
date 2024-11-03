@@ -1,15 +1,13 @@
-name: CI / Gitlab - Mirror Sync
+name: CI / Mirror Sync
 on:
-  schedule:
-    - cron: '0 */2 * * *'
   push: 
-    branches: ["*"]
+    branches: ["master"]
   workflow_dispatch:
 jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    name: Gitlab Repo Sync
+    name: Sync
     steps:
     - uses: actions/checkout@v4
       with:
