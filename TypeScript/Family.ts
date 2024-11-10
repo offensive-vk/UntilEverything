@@ -1,25 +1,39 @@
 // Life Cycle Program
 class Kid {
-  private name: string;
-  private age: number;
+  public name: string;
+  public age: number;
+  public friends: Array<string>;
 
   constructor(name: string, age: number) {
     this.name = name;
     this.age = age;
+    this.friends = [];
   }
 
   getInfo(): string {
     return `${this.name} (${this.age} years old)`;
   }
   gotoSchool(): string {
-    return `${this.name} going to School`;
+    return `${this.name} going to School.`;
+  }
+  doHomework(): string {
+    return `${this.name} doing Homework.`;
+  }
+  useComputer(): string {
+    return `${this.name} using Computer.`;
+  }
+  makeFriends(FriendName: string): string {
+    return `${FriendName} is now a friend of ${this.name}`;
+  }
+  play<T = 'indoor' | 'outdoor'>(type: T): string {
+    return `${this.name} is playing ${type} game.`;
   }
 }
 
 class Wife {
   private name: string;
   private age: number;
-  private kids: Kid[];
+  protected kids: Kid[];
   private husband: Husband | null;
 
   constructor(name: string, age: number) {
@@ -32,9 +46,11 @@ class Wife {
     this.husband = husband;
   }
 
-  addChild(name: string, age: number): void {
+  addChild(name: string, age: number): typeof Kid.name {
     const kid = new Kid(name, age);
     this.kids.push(kid);
+    this.kids.length++;
+    return kid.name;
   }
 
   getKidsInfo(): string {
@@ -44,8 +60,11 @@ class Wife {
   getInfo(): string {
     return `${this.name} (Wife, ${this.age} years old)`;
   }
-}
 
+  order<T extends () => string>(command: T): string {
+      return command();
+  }
+}
 class Husband {
   private name: string;
   private age: number;
@@ -75,7 +94,7 @@ const husband = new Husband("Madhav", 30);
 
 husband.marry(wife);
 wife.addChild("John", 5);
-wife.addChild("Clair", 3);
+const x = wife.addChild("Clair", 3);
 
 console.log(husband.getInfo());
 console.log(`Children: ${wife.getKidsInfo()}`);
