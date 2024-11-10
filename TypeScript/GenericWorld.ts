@@ -11,39 +11,45 @@
  * otherwise the key itself.
  */
 function getValue<TObj, TKey extends keyof TObj>(
-    obj: TObj, key: TKey, ...args: Array<TKey>
+  obj: TObj,
+  key: TKey,
+  ...args: Array<TKey>
 ): TObj[TKey] | Record<string, TObj[TKey]> {
-    if (!obj?.hasOwnProperty(key)) {
-        console.log(`Error! The Object Doesn't Consist The Key: ${key as string}\n`);
-        if (args.length === 0) {
-            return {} as Record<string, TObj[TKey]>;
-        }
+  if (!obj?.hasOwnProperty(key)) {
+    console.log(
+      `Error! The Object Doesn't Consist The Key: ${key as string}\n`,
+    );
+    if (args.length === 0) {
+      return {} as Record<string, TObj[TKey]>;
     }
+  }
 
-    const result: Record<string, TObj[TKey]> = {} as Record<string, TObj[TKey]>;
+  const result: Record<string, TObj[TKey]> = {} as Record<string, TObj[TKey]>;
 
-    if (obj?.hasOwnProperty(key)) {
-        result[key as string] = obj[key] as TObj[TKey];
+  if (obj?.hasOwnProperty(key)) {
+    result[key as string] = obj[key] as TObj[TKey];
+  }
+
+  for (const arg of args) {
+    if (!obj?.hasOwnProperty(arg)) {
+      console.log(
+        `OOPS! The Object Doesn't Consist The Key: ${arg as string}\n`,
+      );
+    } else {
+      result[arg as string] = obj[arg] as TObj[TKey];
     }
+  }
 
-    for (const arg of args) {
-        if (!obj?.hasOwnProperty(arg)) {
-            console.log(`OOPS! The Object Doesn't Consist The Key: ${arg as string}\n`);
-        } else {
-            result[arg as string] = obj[arg] as TObj[TKey];
-        }
-    }
-
-    return result;
+  return result;
 }
 
 // Testing
 var Test = {
-    nothing: null,
-    first: true,
-    second: 2,
-    middle: "something",
-    last: false
+  nothing: null,
+  first: true,
+  second: 2,
+  middle: "something",
+  last: false,
 };
 
 const Search = getValue(Test, "middle", "second");

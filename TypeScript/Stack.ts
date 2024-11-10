@@ -1,29 +1,29 @@
 class Stack<T> {
-    private items: T[] = [];
+  private items: T[] = [];
 
-    push(item: T): void {
-        this.items.push(item);
-    }
+  push(item: T): void {
+    this.items.push(item);
+  }
 
-    pop(): T | undefined {
-        return this.items.pop();
-    }
+  pop(): T | undefined {
+    return this.items.pop();
+  }
 
-    peek(): T | undefined {
-        return this.items[this.items.length - 1];
-    }
+  peek(): T | undefined {
+    return this.items[this.items.length - 1];
+  }
 
-    isEmpty(): boolean {
-        return this.items.length === 0;
-    }
+  isEmpty(): boolean {
+    return this.items.length === 0;
+  }
 
-    size(): number {
-        return this.items.length;
-    }
+  size(): number {
+    return this.items.length;
+  }
 
-    clear(): void {
-        this.items = [];
-    }
+  clear(): void {
+    this.items = [];
+  }
 }
 
 // Example usage:
@@ -38,8 +38,8 @@ console.log("Stack size: " + stack.size());
 console.log("Top element: " + stack.peek());
 
 while (!stack.isEmpty()) {
-    console.log("Popped: " + stack.pop());
+  console.log("Popped: " + stack.pop());
 }
 
 console.log("Is the stack empty? " + stack.isEmpty());
-export {}
+export {};

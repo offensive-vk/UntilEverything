@@ -1,8 +1,8 @@
 function swap<T>(a: T, b: T): void {
-    let temp: T = a;
-    a = b;
-    b = temp;
-    console.log(`After swapping: a = ${a}, b = ${b}`);
+  let temp: T = a;
+  a = b;
+  b = temp;
+  console.log(`After swapping: a = ${a}, b = ${b}`);
 }
 
 let num1: number = 5;
@@ -17,8 +17,7 @@ let str2: string = "world";
 console.log(`Before swapping: str1 = ${str1}, str2 = ${str2}`);
 swap(str1, str2);
 
-
-let [val1 , val2] = ['value1', 'value2'];
+let [val1, val2] = ["value1", "value2"];
 console.log(`\n\n Before swapping: val1 = ${val1}, val2 = ${val2}`);
 
 [val1, val2] = [val2, val1];

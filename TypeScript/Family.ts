@@ -1,73 +1,73 @@
 // Life Cycle Program
 class Kid {
-    private name: string;
-    private age: number;
+  private name: string;
+  private age: number;
 
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-    }
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
 
-    getInfo(): string {
-        return `${this.name} (${this.age} years old)`;
-    }
-    gotoSchool(): string{
-        return `${this.name} going to School`;
-    }
+  getInfo(): string {
+    return `${this.name} (${this.age} years old)`;
+  }
+  gotoSchool(): string {
+    return `${this.name} going to School`;
+  }
 }
 
 class Wife {
-    private name: string;
-    private age: number;
-    private kids: Kid[];
-    private husband: Husband | null;
+  private name: string;
+  private age: number;
+  private kids: Kid[];
+  private husband: Husband | null;
 
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-        this.husband = null;
-        this.kids = [];
-    }
-    marry(husband: Husband): void {
-        this.husband = husband;
-    }
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+    this.husband = null;
+    this.kids = [];
+  }
+  marry(husband: Husband): void {
+    this.husband = husband;
+  }
 
-    addChild(name: string, age: number): void {
-        const kid = new Kid(name, age);
-        this.kids.push(kid);
-    }
+  addChild(name: string, age: number): void {
+    const kid = new Kid(name, age);
+    this.kids.push(kid);
+  }
 
-    getKidsInfo(): string {
-        return this.kids.map(kid => kid.getInfo()).join(", ");
-    }
+  getKidsInfo(): string {
+    return this.kids.map((kid) => kid.getInfo()).join(", ");
+  }
 
-    getInfo(): string {
-        return `${this.name} (Wife, ${this.age} years old)`;
-    }
+  getInfo(): string {
+    return `${this.name} (Wife, ${this.age} years old)`;
+  }
 }
 
 class Husband {
-    private name: string;
-    private age: number;
-    private wife: Wife | null;
+  private name: string;
+  private age: number;
+  private wife: Wife | null;
 
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-        this.wife = null;
-    }
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+    this.wife = null;
+  }
 
-    marry(wife: Wife): void {
-        this.wife = wife;
-    }
+  marry(wife: Wife): void {
+    this.wife = wife;
+  }
 
-    getInfo(): string {
-        if (this.wife) {
-            return `${this.name} (Husband, ${this.age} years old) - Married to ${this.wife.getInfo()}`;
-        } else {
-            return `${this.name} (Husband, ${this.age} years old) - Single`;
-        }
+  getInfo(): string {
+    if (this.wife) {
+      return `${this.name} (Husband, ${this.age} years old) - Married to ${this.wife.getInfo()}`;
+    } else {
+      return `${this.name} (Husband, ${this.age} years old) - Single`;
     }
+  }
 }
 
 const wife = new Wife("Sneha", 27);

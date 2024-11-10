@@ -8,10 +8,16 @@ console.log("Uppercase:", sampleString.toUpperCase());
 console.log("Lowercase:", sampleString.toLowerCase());
 console.log("Substring from index 7 to 12:", sampleString.substring(7, 12));
 console.log("Index of 'world':", sampleString.indexOf("world"));
-console.log("Replace 'sample' with 'modified':", sampleString.replace("sample", "modified"));
+console.log(
+  "Replace 'sample' with 'modified':",
+  sampleString.replace("sample", "modified"),
+);
 console.log("Split by space:", sampleString.split(" "));
 console.log("Trimmed:", sampleString.trim());
-console.log("Concatenated with ' - appended string':", sampleString.concat(" - appended string"));
+console.log(
+  "Concatenated with ' - appended string':",
+  sampleString.concat(" - appended string"),
+);
 console.log("Includes 'world'?", sampleString.includes("world"));
 console.log("Starts with 'Hello'?", sampleString.startsWith("Hello"));
 console.log("Ends with 'string'?", sampleString.endsWith("string"));
@@ -22,37 +28,37 @@ console.log("Last index of 'i':", sampleString.lastIndexOf("i"));
 // ======= Functional Usage =============
 // Function to count the occurrences of a substring in a string
 function countOccurrences(str: string, subStr: string): number {
-    return str.split(subStr).length - 1;
+  return str.split(subStr).length - 1;
 }
 
 // Function to reverse a string
 function reverseString(str: string): string {
-    return str.split('').reverse().join('');
+  return str.split("").reverse().join("");
 }
 
 // Function to check if a string is a palindrome
 function isPalindrome(str: string): boolean {
-    const reversedStr = str.split('').reverse().join('');
-    return str === reversedStr;
+  const reversedStr = str.split("").reverse().join("");
+  return str === reversedStr;
 }
 
 // Function to truncate a string
 function truncateString(str: string, maxLength: number): string {
-    if (str.length > maxLength) {
-        return str.slice(0, maxLength) + '...';
-    }
-    return str;
+  if (str.length > maxLength) {
+    return str.slice(0, maxLength) + "...";
+  }
+  return str;
 }
 
 // Function to capitalize the first letter of each word in a string
 function capitalizeWords(str: string): string {
-    return str.replace(/\b\w/g, char => char.toUpperCase());
+  return str.replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
 // Sample usage
 const sample = "hello world";
 console.log("Original String:", sample);
-console.log("Number of 'l' occurrences:", countOccurrences(sample, 'l'));
+console.log("Number of 'l' occurrences:", countOccurrences(sample, "l"));
 console.log("Reversed String:", reverseString(sample));
 console.log("Is palindrome?", isPalindrome(sample));
 console.log("Truncated String (max length 5):", truncateString(sample, 5));

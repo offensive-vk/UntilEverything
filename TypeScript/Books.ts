@@ -1,47 +1,47 @@
 interface Book {
-    title: string;
-    author: string;
-    publishedYear: number;
+  title: string;
+  author: string;
+  publishedYear: number;
 }
 
 class Library {
-    private books: Book[];
+  private books: Book[];
 
-    constructor() {
-        this.books = [];
-    }
+  constructor() {
+    this.books = [];
+  }
 
-    addBook(book: Book) {
-        this.books.push(book);
-    }
+  addBook(book: Book) {
+    this.books.push(book);
+  }
 
-    getAllBooks(): Book[] {
-        return this.books;
-    }
+  getAllBooks(): Book[] {
+    return this.books;
+  }
 
-    findBooksByAuthor(author: string): Book[] {
-        return this.books.filter((book) => book.author === author);
-    }
+  findBooksByAuthor(author: string): Book[] {
+    return this.books.filter((book) => book.author === author);
+  }
 }
 
 // Usage example
 const myLibrary = new Library();
 const book1: Book = {
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    publishedYear: 1925,
+  title: "The Great Gatsby",
+  author: "F. Scott Fitzgerald",
+  publishedYear: 1925,
 };
 
 const book2: Book = {
-    title: "To Kill a Mockingbird",
-    author: "Harper Lee",
-    publishedYear: 1960,
+  title: "To Kill a Mockingbird",
+  author: "Harper Lee",
+  publishedYear: 1960,
 };
 
 const book3: Book = {
-    title: "1984",
-    author: "George Orwell",
-    publishedYear: 1949,
+  title: "1984",
+  author: "George Orwell",
+  publishedYear: 1949,
 };
 
 myLibrary.addBook(book1);

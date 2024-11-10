@@ -4,21 +4,21 @@
  * @returns new sorted array
  */
 function bubbleSort(arr: number[]): number[] {
-    const n = arr.length;
+  const n = arr.length;
 
-    // Outer loop - controls the number of passes
-    for (let i = 0; i < n - 1; i++) {
-        // Inner loop - compares and swaps elements
-        for (let j = 0; j < n - 1 - i; j++) {
-            // Compare adjacent elements
-            if (arr[j] > arr[j + 1]) {
-                // Swap if they are in the wrong order
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-            }
-        }
+  // Outer loop - controls the number of passes
+  for (let i = 0; i < n - 1; i++) {
+    // Inner loop - compares and swaps elements
+    for (let j = 0; j < n - 1 - i; j++) {
+      // Compare adjacent elements
+      if (arr[j] > arr[j + 1]) {
+        // Swap if they are in the wrong order
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
     }
+  }
 
-    return arr;
+  return arr;
 }
 
 // Example usage:

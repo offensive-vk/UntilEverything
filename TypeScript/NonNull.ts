@@ -5,10 +5,10 @@
 
 // Function that may return a string or null
 function getStringOrNull(): string | null {
-    const randomValue = Math.random();
+  const randomValue = Math.random();
 
-    // Return a string 70% of the time, otherwise return null
-    return randomValue < 0.7 ? 'Hello, TypeScript!' : null;
+  // Return a string 70% of the time, otherwise return null
+  return randomValue < 0.7 ? "Hello, TypeScript!" : null;
 }
 
 // Get the result from the function

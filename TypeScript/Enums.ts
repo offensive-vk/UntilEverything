@@ -1,22 +1,22 @@
 // Enum defining different shapes
 enum Shape {
-    Circle,
-    Square,
-    Triangle
+  Circle,
+  Square,
+  Triangle,
 }
 
 // Function that takes a Shape enum parameter and returns a string representation of the shape
 function getShapeName(shape: Shape): string {
-    switch (shape) {
-        case Shape.Circle:
-            return "Circle";
-        case Shape.Square:
-            return "Square";
-        case Shape.Triangle:
-            return "Triangle";
-        default:
-            throw new Error("Invalid shape");
-    }
+  switch (shape) {
+    case Shape.Circle:
+      return "Circle";
+    case Shape.Square:
+      return "Square";
+    case Shape.Triangle:
+      return "Triangle";
+    default:
+      throw new Error("Invalid shape");
+  }
 }
 
 // Using the Shape enum
@@ -31,15 +31,15 @@ console.log("Shape 3:", getShapeName(shape3)); // Output: Shape 3: Triangle
 
 // Enums can also have string values
 enum Direction {
-    Up = "UP",
-    Down = "DOWN",
-    Left = "LEFT",
-    Right = "RIGHT"
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT",
 }
 
 // Function that takes a Direction enum parameter and returns a string representation of the direction
 function getDirectionName(direction: Direction): Direction | string {
-    return direction;
+  return direction;
 }
 
 // Using the Direction enum
