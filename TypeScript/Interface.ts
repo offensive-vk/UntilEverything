@@ -25,11 +25,11 @@ interface User {
 
 function registerUser(newUser: User): void {
   console.log("Username : " + newUser.username);
-  console.log("Password : " + newUser.password);
+  console.log("Password : " + "********");
   console.log("Email : " + newUser.email);
 
   // Returns the whole object of the user.
-  console.log("User registered:", newUser);
+  console.log("User registered:", { ...newUser, password: "********" });
 }
 
 const newUser: User = {
