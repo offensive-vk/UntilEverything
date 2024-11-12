@@ -18,8 +18,8 @@ console.log("Sum:", sum);
 /// <reference types="jquery" />
 import $ from "jquery";
 
-$(document).ready(function() {
-    console.log("jQuery is ready!");
+$(document).ready(function () {
+  console.log("jQuery is ready!");
 });
 
 // Triple-slash directive to include type definitions for React

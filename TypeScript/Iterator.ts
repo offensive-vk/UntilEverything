@@ -7,8 +7,8 @@ const iterator = numbers[Symbol.iterator]();
 console.log("Using iterator in TypeScript:");
 let result = iterator.next();
 while (!result.done) {
-    console.log(result.value);
-    result = iterator.next();
+  console.log(result.value);
+  result = iterator.next();
 }
 
-export { };
+export {};

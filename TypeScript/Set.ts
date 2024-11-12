@@ -14,9 +14,9 @@ console.log(`Has value 2: ${mySet.has(2)}`); // Output: true
 console.log(`Has value 4: ${mySet.has(4)}`); // Output: false
 
 // Iterating over values
-console.log('Iterating over values:');
-mySet.forEach(value => {
-    console.log(`Value: ${value}`);
+console.log("Iterating over values:");
+mySet.forEach((value) => {
+  console.log(`Value: ${value}`);
 });
 
 // Size of the Set

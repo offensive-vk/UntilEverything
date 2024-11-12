@@ -9,11 +9,11 @@ let num2: number = 100823;
 let res: number = num1 * num2 - num1 % num2;
 
 if (res <= 99999999) {
-    log("less than equal to 99999999");
+  log("less than equal to 99999999");
 } else if (res >= 99999999) {
-    log("greater than equal to 99999999");
+  log("greater than equal to 99999999");
 } else {
-    log("Undesired Result lol!");
+  log("Undesired Result lol!");
 }
 
 log("Result is " + res);
@@ -22,14 +22,14 @@ log("\n End of Conditionals !!\n\t");
 
 const isMailSent = true;
 if (isMailSent) {
-    log('Mail sent to recipient');
+  log("Mail sent to recipient");
 }
 
 // Loops in TypeScript
 // for.. in loop
 const arr: number[] = [124, 543, 311, 781, 500];
 for (let i in arr) {
-    log(i + ". " + arr[i] + " ");
+  log(i + ". " + arr[i] + " ");
 }
 
 log("================================\n");
@@ -38,8 +38,8 @@ log("================================\n");
 const names: string[] = ["Rahul", "Manish", "Rupesh", "Payal", "Sneha"];
 let i = 0;
 for (let name of names) {
-    i++;
-    log(i + ". " + name);
+  i++;
+  log(i + ". " + name);
 }
 
 log("================================\n");
@@ -49,13 +49,13 @@ const games: string[] = ["Hockey", "Cricket", "Football", "Rugby", "Chess"];
 
 log(":: Some Games ::\n");
 for (let i = 0; i < games.length; i++) {
-    log(i + ". " + games[i]);
+  log(i + ". " + games[i]);
 }
 log("\n================================\n");
 
 // foreach loop
-arr.forEach(element => {
-    log(":: " + element);
+arr.forEach((element) => {
+  log(":: " + element);
 });
 
 log("\n================================\n");
@@ -67,9 +67,9 @@ log("\n================================\n");
 
 i = 0;
 while (i <= 50) {
-    log(i);
-    i++;
+  log(i);
+  i++;
 }
 log("\n================================\n");
 log("\n End of Program !!\n\t");
-export { };
+export {};

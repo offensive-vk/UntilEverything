@@ -1,27 +1,31 @@
 // Profile Programs
 
 interface Life {
-    code: Promise<string | boolean>;
-    rest: Promise<string | boolean>;
-    learn: Promise<string | boolean>;
+  code: Promise<string | boolean>;
+  rest: Promise<string | boolean>;
+  learn: Promise<string | boolean>;
 }
 interface Wasted {
-    wasted: Promise<string | boolean>;
-    again: Array<Promise<Life>>;
+  wasted: Promise<string | boolean>;
+  again: Array<Promise<Life>>;
 }
 const vedansh: Life = {
-    async code() {
-        return "->< Writing code />";
-    },
-    async rest() {
-        return "->< Resting />";
-    },
-    async learn(){
-        return "->< Learning />";
-    }
+  async code() {
+    return "->< Writing code />";
+  },
+  async rest() {
+    return "->< Resting />";
+  },
+  async learn() {
+    return "->< Learning />";
+  },
 };
 
-const myLife: Array<Promise<Array<Life> | Array<Wasted>>> = [vedansh.code(), vedansh.rest(), vedansh.learn()];
+const myLife: Array<Promise<Array<Life> | Array<Wasted>>> = [
+  vedansh.code(),
+  vedansh.rest(),
+  vedansh.learn(),
+];
 console.log(...myLife);
 
 // // Another - 3
@@ -53,7 +57,7 @@ console.log(...myLife);
 
 //         for (const activityPromise of activities) {
 //             const activity = await activityPromise;
-            
+
 //             if (typeof activity === 'boolean') {
 //                 console.log('Got a boolean:', activity);
 //             } else {

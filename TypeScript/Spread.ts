@@ -10,7 +10,10 @@ console.log("Cloned Array:", clonedArray);
 
 // Spread with Objects
 const object1: { name: string; age: number } = { name: "Alex", age: 25 };
-const object2: { city: string; country: string } = { city: "New York", country: "USA" };
+const object2: { city: string; country: string } = {
+  city: "New York",
+  country: "USA",
+};
 
 const combinedObject = { ...object1, ...object2 };
 console.log("Combined Object:", combinedObject);
@@ -19,8 +22,8 @@ const clonedObject = { ...object1 };
 console.log("Cloned Object:", clonedObject);
 
 // Spread with Function Arguments
-function sum(a: number, b: number, c: number):number {
-    return a + b + c;
+function sum(a: number, b: number, c: number): number {
+  return a + b + c;
 }
 
 const Some: Array<number> = [10, 20, 30];
@@ -35,7 +38,7 @@ console.log("Body Parts:", bodyParts);
 
 // Spread in Function Parameters
 function displayInfo(firstName: string, lastName: string, age: number): void {
-    console.log(`Name: ${firstName} ${lastName}, Age: ${age}`);
+  console.log(`Name: ${firstName} ${lastName}, Age: ${age}`);
 }
 
 const person: [string, string, number] = ["John", "Wick", 30];
@@ -50,4 +53,4 @@ const copiedObject: { a: number; b: number } = { ...originalObject };
 
 console.log("Copied Array:", copiedArray);
 console.log("Copied Object:", copiedObject);
-export { };
+export {};

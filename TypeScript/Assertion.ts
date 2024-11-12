@@ -10,7 +10,7 @@ console.log("Squared:", squared);
 
 // Using Type Casting (Alternative to 'as' syntax)
 let numValue: any = "123";
-let numLength: number = (<string>numValue).length;
+let numLength: number = (<string> numValue).length;
 console.log("Number Length:", numLength);
 
 // Using Type Assertion for Union Types
@@ -28,4 +28,4 @@ console.log("String Length (unsafe):", stringLength);
 let unknownValue: unknown = "TypeScript";
 let unknownLength: number = (unknownValue as string).length;
 console.log("Unknown Length:", unknownLength);
-export { }
+export {};

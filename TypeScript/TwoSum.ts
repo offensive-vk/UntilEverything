@@ -12,20 +12,20 @@ Explanation: nums[0] + nums[1] equals 9, so the answer is [0, 1].
  */
 
 function twoSum(nums: number[], target: number): number[] {
-    const numIndicesMap: { [key: number]: number } = {};
+  const numIndicesMap: { [key: number]: number } = {};
 
-    for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
+  for (let i = 0; i < nums.length; i++) {
+    const complement = target - nums[i];
 
-        if (complement in numIndicesMap) {
-            return [numIndicesMap[complement], i];
-        }
-
-        numIndicesMap[nums[i]] = i;
+    if (complement in numIndicesMap) {
+      return [numIndicesMap[complement], i];
     }
 
-    // If no solution is found
-    return [];
+    numIndicesMap[nums[i]] = i;
+  }
+
+  // If no solution is found
+  return [];
 }
 
 // Example usage:

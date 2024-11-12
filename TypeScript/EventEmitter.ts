@@ -5,31 +5,31 @@ import EventEmitter from "events";
 const myEmitter = new EventEmitter();
 
 // Subscribe to an event
-myEmitter.on('myEvent', (data: any) => {
-    setTimeout(() => {
-        console.log('Event occurred with data: ', data);
-    }, 1500);
+myEmitter.on("myEvent", (data: any) => {
+  setTimeout(() => {
+    console.log("Event occurred with data: ", data);
+  }, 1500);
 });
 
 // another event
-myEmitter.on('sayHello', () => {
-    setTimeout(() => {
-        console.log(`Saying Hello from Event.`);
-    }, 1500)
-})
+myEmitter.on("sayHello", () => {
+  setTimeout(() => {
+    console.log(`Saying Hello from Event.`);
+  }, 1500);
+});
 
 // listener 1
-myEmitter.addListener('myEvent', () => {
-    console.log(`Well, Hello from first listener !!`);
+myEmitter.addListener("myEvent", () => {
+  console.log(`Well, Hello from first listener !!`);
 });
 
 // listener 2
-myEmitter.addListener('sayHello', () => {
-    console.log(`Well, Hello from second listener !!`);
+myEmitter.addListener("sayHello", () => {
+  console.log(`Well, Hello from second listener !!`);
 });
 
 // Emit the events
-myEmitter.emit('myEvent', { message: 'Hello, EventEmitter!' });
+myEmitter.emit("myEvent", { message: "Hello, EventEmitter!" });
 
 // Hello events
-myEmitter.emit('sayHello');
+myEmitter.emit("sayHello");
