@@ -7,7 +7,7 @@ on:
 
 jobs:
   sync:
-     uses: offensive-vk/auto-repo-sync/.github/workflows/mirror.yml@master
+     uses: offensive-vk/auto-repo-sync/.github/workflows/sync.yml@master
      with:
         target-url: ${{ secrets.TARGET_URL }}
         target-username: ${{ secrets.TARGET_USERNAME }}
