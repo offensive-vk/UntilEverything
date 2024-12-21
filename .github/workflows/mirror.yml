@@ -1,4 +1,4 @@
-name: CI / Mirror
+name: CI / Mirror Sync
 
 on:
   push: 
@@ -7,8 +7,16 @@ on:
 
 jobs:
   sync:
-     uses: offensive-vk/auto-repo-sync/.github/workflows/sync.yml@master
-     with:
-        target-url: "${{ secrets.TARGET_URL }}"
-        target-username: "${{ secrets.TARGET_USERNAME }}"
-        target-token: "${{ secrets.TARGET_TOKEN }}"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    name: Sync
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - uses: offensive-vk/auto-repo-sync@master
+      with:
+        target-url: ${{ secrets.TARGET_URL }}
+        target-username: ${{ secrets.TARGET_USERNAME }}
+        target-token: ${{ secrets.TARGET_TOKEN }}
