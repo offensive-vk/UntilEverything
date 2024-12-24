@@ -1,4 +1,4 @@
-name: 🦅 Sync to Gitlab
+name: CI / Sync to Gitlab
 
 on:
   push:
