@@ -14,8 +14,8 @@ jobs:
         with:
           fetch-depth: 0
           
-      - name: Run
-        uses: offensive-vk/auto-repo-sync@v7
+      - name: Sync
+        uses: offensive-vk/auto-repo-sync@master
         with:
           target-url: ${{ secrets.TARGET_URL }}
           target-username: ${{ secrets.TARGET_USER }}
