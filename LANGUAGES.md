@@ -14,7 +14,7 @@ Here are the Languages that are available to contribute and you can add your own
 - [Markdown](https://github.com/offensive-vk/UntilEverything/blob/master/Markdown/) is a lightweight markup language for creating formatted text using a plain-text editor. Markdown is widely used for blogging and instant messaging, and also used elsewhere in inline forums, collaborative software, documentation pages, and readme files.
 - [MDX](https://github.com/offensive-vk/UntilEverything/blob/master/Markdown/) is a lightweight markup language with plain-text formatting syntax, often used to format readme files, documentation, and notes, commonly supported in platforms like GitHub and Stack Overflow.
 - [MongoDB](https://github.com/offensive-vk/UntilEverything/blob/master/MongoDB/) is a NoSQL database management system that uses a document-oriented data model to store data in flexible, JSON-like documents, commonly used for scalable, high-performance applications.
-- [Node JS](https://github.com/offensive-vk/UntilEverything/blob/master/Node/) is a JavaScript runtime environment that allows developers to run JavaScript code server-side, outside of a web browser.
+- [Node.JS](https://github.com/offensive-vk/UntilEverything/blob/master/Node/) is a JavaScript runtime environment that allows developers to run JavaScript code server-side, outside of a web browser.
 - [PHP](https://github.com/offensive-vk/UntilEverything/blob/master/PHP/) is a server-side scripting language primarily used for web development to create dynamic and interactive web pages.
 - [Python](https://github.com/offensive-vk/UntilEverything/blob/master/Python/) is a high-level programming language known for its simplicity and versatility.
 - [React](https://github.com/offensive-vk/UntilEverything/blob/master/React/) is a popular JavaScript library for building user interfaces, primarily for single-page applications where you need a fast and interactive user experience. It allows developers to create reusable UI components, making the code easier to manage and develop.
@@ -41,7 +41,7 @@ Here are the Languages that are available to contribute and you can add your own
 
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
-  <i>Licensed under <a href="https://mit-license.org/">MIT</a></i><br>
+  <i>Licensed under <a href="https://mit-license.org/">CC0-1.0</a></i><br>
   <a href="https://github.com/TheHamsterBot"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" alt="hamster" /></a><br>
   <sup>Thanks for visiting :)</sup>
 </p>
