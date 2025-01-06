@@ -3,7 +3,7 @@
   "version": "15.5.0",
   "author": "Vedansh Khandelwal <https://github.com/offensive-vk/>",
   "co-author": "Vedansh's Bot <https://github.com/TheHamsterBot/>",
-  "main": "Dockerfile",
+  "main": "./Dockerfile",
   "homepage": "https://github.com/offensive-vk/UntilEverything/",
   "private": true,
   "license": "ISC",

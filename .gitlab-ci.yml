@@ -13,7 +13,7 @@ setup-pnpm:
   stage: setup
   script:
     - node -v && npm -v
-    - npm install -g pnpm@9.0.0
+    - npm install -g pnpm@9.15.0
     - pnpm -v
 
 build-node19:
