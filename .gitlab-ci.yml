@@ -19,8 +19,8 @@ setup-pnpm:
 build-node19:
   stage: build
   script:
-    - pnpm i
-    - pnpm run build
+    - npx pnpm i
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
@@ -28,8 +28,8 @@ build-node19:
 build-node18:
   stage: build
   script:
-    - pnpm i
-    - pnpm run build
+    - npx pnpm i
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
@@ -37,8 +37,8 @@ build-node18:
 build-node20:
   stage: build
   script:
-    - pnpm i
-    - pnpm run build
+    - npx pnpm i
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
@@ -46,8 +46,8 @@ build-node20:
 build-node21:
   stage: build
   script:
-    - pnpm i
-    - pnpm run build
+    - npx pnpm i
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
@@ -55,8 +55,8 @@ build-node21:
 build-node22:
   stage: build
   script:
-    - pnpm i
-    - pnpm run build
+    - npx pnpm i
+    - npx pnpm run build
   artifacts:
     paths:
       - node_modules/
