@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 RUN apk add --no-cache bash git openssh
 COPY package*.json ./
 RUN npm i -g pnpm@10.0.0
-RUN pnpm install
+RUN pnpm i
 COPY --chown=node:node . .
 RUN pnpm run build
 RUN chown -R node:node /usr/src/app
