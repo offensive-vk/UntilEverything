@@ -9,7 +9,7 @@
   "license": "ISC",
   "scripts": {
     "start": "node JavaScript/Advanced/Promises.js",
-    "install": "pnpm add typescript express sass nodemon tailwindcss react react-dom bootstrap tsup ts-node pnpm",
+    "add": "pnpm add typescript express sass nodemon tailwindcss react react-dom bootstrap tsup ts-node pnpm",
     "dev": "echo Powering Up Server... && node JavaScript/Advanced/Promises.js",
     "test": "echo Tests were successful.",
     "build": "echo Build Success ✨",
