@@ -20,16 +20,17 @@ jobs:
 
       - name: Create or Update Pull Request
         id: create-pr
-        uses: repo-sync/pull-request@v2
+        uses: offensive-vk/auto-pr-action@master
         with:
-          github_token: ${{ secrets.BOT_TOKEN }}
+          repo-token: ${{ secrets.BOT_TOKEN }}
           destination_branch: "master"
-          pr_title: "Hamster Left A Pull Request - (${{ github.event.head_commit.message }})"
-          pr_body: "### Hamster is working here. Sit Tight !"
-          pr_reviewer: "offensive-vk"
-          pr_label: "bot,automated,hamster"
-          pr_assignee: "TheHamsterBot"
-          pr_draft: false
+          title: "Hamster Left A Pull Request - (${{ github.event.head_commit.message }})"
+          body: "### Hamster is working here. Sit Tight !"
+          reviewers: "offensive-vk"
+          labels: "bot,automated,hamster"
+          assignees: "TheHamsterBot"
+          draft: false
+          debug: true
 
       - name: Save PR Number in ENV
         run: echo "PR_NUMBER=${{ steps.create-pr.outputs.number }}" >> $GITHUB_ENV
