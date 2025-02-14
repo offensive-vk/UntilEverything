@@ -1,0 +1,135 @@
+# ** DO NOT MODIFY **
+ci/cd:
+  match:
+    - "**/*.yml"
+    - "Dockerfile"
+    - "compose.yaml"
+    - ".github/workflows/*.yml"
+  description: "Related to Continuous Integration and Continuous Deployment processes."
+
+documentation:
+  match:
+    - "**/*.md"
+    - ".github/*"
+  description: "Related to documentation updates or changes."
+
+pr_template:
+  match:
+    - ".github/pull-request-template.md"
+    - ".github/pr-bot-template.md"
+  description: "Related to Pull Request templates."
+
+unknown:
+  match:
+    - "**/*.rb"
+    - "**/*.txt"
+    - "**/*.ipynb"
+    - "**/*.mod"
+    - "**/*.exe"
+  description: "Files of unknown or less common types.  Review and consider more specific labels if appropriate."
+
+dotfiles:
+  match:
+    - ".gitlab-ci.yml"
+    - ".gitignore"
+    - ".gitattributes"
+    - ".dockerignore"
+    - ".npmrc"
+    - ".nvmrc"
+    - "LICENSE"
+  description: "Configuration files and settings (dotfiles)."
+
+css:
+  match:
+    - "**/*.css"
+    - "CSS/**/*"
+  description: "Related to Cascading Style Sheets."
+
+bootstrap:
+  match:
+    - "Bootstrap/**/*"
+  description: "Related to the Bootstrap UI framework."
+
+expressjs:
+  match:
+    - "Express/**/*"
+  description: "Related to the Express.js framework."
+
+html:
+  match:
+    - "**/*.html"
+    - "HTML/**/*"
+  description: "Related to HyperText Markup Language."
+
+javascript:
+  match:
+    - "**/*.js"
+    - "JavaScript/**/*"
+  description: "Related to JavaScript code."
+
+jsx:
+  match:
+    - "**/*.jsx"
+  description: "Related to JSX syntax (usually with React)."
+
+md:
+  match:
+    - "**/*.md"
+    - "Markdown/**/*"
+  description: "Related to Markdown files."
+
+mongodb:
+  match:
+    - "MongoDB/**/*"
+  description: "Related to MongoDB database."
+
+node:
+  match:
+    - "Node/**/*"
+  description: "Related to Node.js."
+
+php:
+  match:
+    - "**/*.php"
+    - "PHP/**/*"
+  description: "Related to PHP code."
+
+python:
+  match:
+    - "**/*.py"
+    - "Python/**/*"
+    - "**/*.pyc"
+  description: "Related to Python code."
+
+react:
+  match:
+    - "React/**/*"
+  description: "Related to the React library."
+
+sass:
+  match:
+    - "**/*.scss"
+    - "**/*.sass"
+    - "Sass/**/*"
+  description: "Related to Sass stylesheets."
+
+typescript:
+  match:
+    - "**/*.d.ts"
+    - "**/*.ts"
+    - "**/*.mts"
+    - "**/*.cts"
+    - "TypeScript/**/*"
+  description: "Related to TypeScript code."
+
+tsx:
+  match:
+    - "**/*.tsx"
+  description: "Related to TSX syntax (usually with React)."
+
+yml:
+  match:
+    - "**/*.yml"
+    - "**/*.yaml"
+    - "YAML/**/*"
+  description: "Related to YAML configuration files."

@@ -1,0 +1,40 @@
+name: CI / Label
+
+on: 
+  issues:
+    types: [opened, edited]
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  label:
+    name: Label Issues and Pull Requests
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Label Issues
+      if: github.event_name == 'issues'
+      uses: offensive-vk/auto-label@master
+      with:
+        debug: true
+        create-labels: true
+        auth-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN || github.token }}
+        issue-config: '.github/issue-labels.yml'
+
+    - name: Label Pull Requests
+      if: github.event_name == 'pull_request'
+      uses: offensive-vk/auto-label@master
+      with:
+        debug: true
+        create-labels: true
+        auth-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN || github.token }}
+        pr-config: '.github/pr-labels.yml'
+        

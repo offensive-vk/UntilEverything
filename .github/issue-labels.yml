@@ -1,0 +1,185 @@
+# .github/labels.yml
+ci/cd:
+  match:
+    - "ci/cd"
+    - "pipeline"
+    - "workflow"
+    - ".yml"
+    - "dockerfile"
+    - "compose.yaml"
+  description: "Related to Continuous Integration and Continuous Deployment processes."
+
+documentation:
+  match:
+    - "docs"
+    - "documentation"
+    - ".md"
+    - ".github/"
+  description: "Related to documentation updates or changes."
+
+pr_template:
+  match:
+    - "pr template"
+    - "pull request template"
+    - ".github/pull_request_template.md"
+    - ".github/pr_bot_template.md"
+  description: "Related to Pull Request templates."
+
+dotfiles:
+  match:
+    - "dotfile"
+    - ".gitlab-ci.yml"
+    - ".gitignore"
+    - ".gitattributes"
+    - ".dockerignore"
+    - ".npmrc"
+    - ".nvmrc"
+    - "dockerfile"
+    - "license"
+  description: "Configuration files and settings."
+
+css:
+  match:
+    - "css"
+    - "styles"
+    - "styling"
+    - ".css"
+    - "css/"
+  description: "Related to Cascading Style Sheets."
+
+bootstrap:
+  match:
+    - "bootstrap"
+    - "ui framework"
+    - "bootstrap/"
+  description: "Related to the Bootstrap UI framework."
+
+expressjs:
+  match:
+    - "express"
+    - "expressjs"
+    - "backend"
+    - "express/"
+  description: "Related to the Express.js framework."
+
+html:
+  match:
+    - "html"
+    - "markup"
+    - "web page"
+    - ".html"
+    - "html/"
+  description: "Related to HyperText Markup Language."
+
+javascript:
+  match:
+    - "javascript"
+    - "js"
+    - "frontend"
+    - ".js"
+    - "javascript/"
+  description: "Related to JavaScript code."
+
+jsx:
+  match:
+    - "jsx"
+    - "react"
+    - ".jsx"
+  description: "Related to JSX syntax (usually with React)."
+
+md:
+  match:
+    - "markdown"
+    - ".md"
+    - ".mdx"
+    - "markdown/"
+  description: "Related to Markdown files."
+
+mongodb:
+  match:
+    - "mongodb"
+    - "database"
+    - "mongo"
+    - "mongodb/"
+  description: "Related to MongoDB database."
+
+node:
+  match:
+    - "node"
+    - "nodejs"
+    - "backend"
+    - ".js"
+    - "node/"
+  description: "Related to Node.js."
+
+php:
+  match:
+    - "php"
+    - "backend"
+    - ".php"
+    - "php/"
+  description: "Related to PHP code."
+
+python:
+  match:
+    - "python"
+    - "py"
+    - "backend"
+    - ".py"
+    - "python/"
+  description: "Related to Python code."
+
+react:
+  match:
+    - "react"
+    - "frontend"
+    - ".jsx"
+    - ".tsx"
+    - "react/"
+  description: "Related to the React library."
+
+sass:
+  match:
+    - "sass"
+    - "scss"
+    - "styling"
+    - ".scss"
+    - ".sass"
+    - "sass/"
+  description: "Related to Sass stylesheets."
+
+typescript:
+  match:
+    - "typescript"
+    - "ts"
+    - ".ts"
+    - ".d.ts"
+    - ".mts"
+    - ".cts"
+    - "Typescript/"
+  description: "Related to TypeScript code."
+
+tsx:
+  match:
+    - "tsx"
+    - "react"
+    - "frontend"
+    - ".tsx"
+  description: "Related to TSX syntax (usually with React)."
+
+offensive-vk:
+  match:
+    - "vedansh"
+    - "admin"
+    - "me"
+    - "context"
+  description: "Potentially project-specific or personal labels.  Review carefully."
+
+yml:
+  match:
+    - "yaml"
+    - "yml"
+    - "config"
+    - ".yml"
+    - ".yaml"
+  description: "Related to YAML configuration files."
