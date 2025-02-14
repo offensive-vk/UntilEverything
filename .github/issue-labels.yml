@@ -1,10 +1,8 @@
-# .github/labels.yml
 ci/cd:
   match:
     - "ci/cd"
     - "pipeline"
     - "workflow"
-    - ".yml"
     - "dockerfile"
     - "compose.yaml"
   description: "Related to Continuous Integration and Continuous Deployment processes."
@@ -14,7 +12,6 @@ documentation:
     - "docs"
     - "documentation"
     - ".md"
-    - ".github/"
   description: "Related to documentation updates or changes."
 
 pr_template:
@@ -167,7 +164,7 @@ tsx:
     - ".tsx"
   description: "Related to TSX syntax (usually with React)."
 
-offensive-vk:
+boss:
   match:
     - "vedansh"
     - "admin"

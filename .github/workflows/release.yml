@@ -1,0 +1,74 @@
+name: CI / Automated Release
+
+on:
+  schedule:
+    - cron: '0 0 28 * *'
+  workflow_dispatch:
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+    name: Create Release
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get Date
+        id: date
+        run: |
+          month=$(date +'%B')
+          year=$(date +'%Y')
+          tag="${year}-$(date +'%m')"
+          title="${month}-${year}"
+          echo "TAG=$tag" >> $GITHUB_ENV
+          echo "TITLE=$title" >> $GITHUB_ENV
+
+      - name: Check if Tag Already Exists
+        id: tag_check
+        run: |
+          if gh release view "${{ env.TAG }}" > /dev/null 2>&1; then
+            echo "Release tag already exists. Skipping release."
+            exit 1
+          fi
+        continue-on-error: true
+
+      - name: Create Release Notes
+        id: release_notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api \
+            -X POST /repos/${{ github.repository }}/releases/generate-notes \
+            -f tag_name="${{ env.TAG }}" > release_notes.json
+          jq -r .body release_notes.json > release_notes.txt
+          cat release_notes.txt
+          {
+            echo "RELEASE_NOTES<<EOF"
+            cat release_notes.txt
+            echo "EOF"
+          } >> $GITHUB_ENV
+
+      - name: Upload Release Notes as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Release Notes
+          path: release_notes.txt
+
+      - name: Publish Release
+        if: ${{ success() }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ env.TAG }}" \
+            --title "${{ env.TITLE }}" \
+            --notes-file release_notes.txt \
+            --target $(git rev-parse HEAD)
+
+      - name: Log Success
+        if: ${{ success() }}
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY;
+          echo "## Release Notes: ${{ env.RELEASE_NOTES }}" >> $GITHUB_STEP_SUMMARY;
+          echo "" >> $GITHUB_STEP_SUMMARY;
+          echo "## Monthly Release Successfully ⚒️: ${{ env.TAG }}" >> $GITHUB_STEP_SUMMARY;
+          echo "" >> $GITHUB_STEP_SUMMARY;

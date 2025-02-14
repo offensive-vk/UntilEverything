@@ -5,7 +5,6 @@ ARG NODE_VERSION=20
 FROM node:${NODE_VERSION}-alpine AS base
 LABEL maintainer="Vedansh <https://github.com/offensive-vk/>"
 LABEL source="https://github.com/offensive-vk/UntilEverything"
-LABEL image="untileverything:sep-2024"
 
 # Set environment variables
 ENV NODE_ENV=production

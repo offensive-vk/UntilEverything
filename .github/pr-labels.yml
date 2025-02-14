@@ -50,7 +50,7 @@ bootstrap:
     - "Bootstrap/**/*"
   description: "Related to the Bootstrap UI framework."
 
-expressjs:
+express:
   match:
     - "Express/**/*"
   description: "Related to the Express.js framework."
