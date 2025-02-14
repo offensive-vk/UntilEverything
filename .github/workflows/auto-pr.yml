@@ -49,15 +49,16 @@ jobs:
           ### This Pull Request Was Automated by [Hamster [bot]](https://github.com/TheHamsterBot)
 
           > [!NOTE]
-          > Workflow Trigger: ${{ github.event_name }} event ${{ github.ref_name }}
+          > Workflow Trigger: ${{ github.event_name }} event at ${{ github.ref_name }}
           > Details of Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           - Author: @TheHamsterBot
           - Branch: master (base) / ${{ github.ref_name }} (head)
           - Commit: ${{ github.sha }}
-          - Workflow Path: ${{ github.workflow }}
+          - Workflow Path: ${{ github.workflow_ref }}
           - Pusher Details: ${{ github.event.pusher.name }} - <${{ github.event.pusher.email }}>
-
+          - Commit Details: ${{ github.event.head_commit.url }}
+          
           ---
           
           Thanks.
