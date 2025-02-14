@@ -27,7 +27,7 @@ jobs:
           title: "Hamster Left A Pull Request - (${{ github.event.head_commit.message }})"
           body: "### Hamster is working here. Sit Tight !"
           reviewers: "offensive-vk"
-          labels: "bot,automated,hamster"
+          labels: "hamster"
           assignees: "TheHamsterBot"
           draft: false
           debug: true
@@ -46,18 +46,17 @@ jobs:
         run: |
           timestamp=$(date '+%b %d, %A %I:%M:%S %p')
           markdown=$(cat <<EOF
-          ## This Pull Request Was Automated by [Hamster [bot]](https://github.com/TheHamsterBot)
+          ### This Pull Request Was Automated by [Hamster [bot]](https://github.com/TheHamsterBot)
 
           > [!NOTE]
-          > Workflow Trigger: ${{ github.event_name }} event ${{ github.action_ref }} .
+          > Workflow Trigger: ${{ github.event_name }} event ${{ github.ref_name }}
           > Details of Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           - Author: @TheHamsterBot
-          - Branch: master (base) / ${{ github.event.ref }} (head)
+          - Branch: master (base) / ${{ github.ref_name }} (head)
           - Commit: ${{ github.sha }}
           - Workflow Path: ${{ github.workflow }}
-          - Pull Request Number: ${{ env.PR_NUMBER }} || ${{ steps.create-pr.outputs.number }}
-          - Pusher Details: ${{ github.event.pusher.name }} <${{ github.event.pusher.email }}>
+          - Pusher Details: ${{ github.event.pusher.name }} - <${{ github.event.pusher.email }}>
 
           ---
           
