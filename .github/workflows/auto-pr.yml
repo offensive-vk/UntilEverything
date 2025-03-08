@@ -23,7 +23,7 @@ jobs:
         uses: offensive-vk/auto-pr-action@master
         with:
           repo-token: ${{ secrets.BOT_TOKEN }}
-          destination_branch: "master"
+          destination-branch: "master"
           title: "Hamster Left A Pull Request - (${{ github.event.head_commit.message }})"
           body: "### Hamster is working here. Sit Tight !"
           reviewers: "offensive-vk"

@@ -53,7 +53,6 @@ jobs:
           labels: |
             org.opencontainers.image.title=untileverything
             org.opencontainers.image.vendor=Vedansh
-            org.opencontainers.image.source=https://github.com/offensive-vk/UntilEverything/
 
       - name: Verify Tags and Labels
         run: |

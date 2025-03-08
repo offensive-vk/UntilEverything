@@ -3,7 +3,7 @@ name: CI / Deploy to GHCR
 on:
   push:
     tags:
-      - '*'
+      - '**'
   workflow_dispatch:
 
 env:
