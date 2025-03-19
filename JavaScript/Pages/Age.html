@@ -4,20 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Age Calculator</title>
     <script>
         let getAge = () => {
             let dob = new Date(document.querySelector("#dob").value);
-            let date = new Date();
-            let days = parseInt((date - dob) / (1000 * 60 * 60 * 24));
-            let years = parseInt(days / 365);
-            days = days % 365;
-            let months = parseInt(days / 30);
-            months = days % 30;
+            let today = new Date();
+
+            let years = today.getFullYear() - dob.getFullYear();
+            let months = today.getMonth() - dob.getMonth();
+            let days = today.getDate() - dob.getDate();
+
+            if (days < 0) {
+                months--;
+                let lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                days += lastMonth.getDate(); 
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
             document.querySelector("#res").style.color = "red";
-            document.querySelector("#res").innerHTML = "You are " + years + " years " + months + " months " + days + " days old.";
-        } 
+            document.querySelector("#res").innerHTML = `You are ${years} years, ${months} months, and ${days} days old.`;
+        };
     </script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            font-size: 1.2rem;
+        }
+
+        input {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #444;
+            padding: 10px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+
+        #res {
+            margin-top: 15px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Age Calculator</h1><br>
