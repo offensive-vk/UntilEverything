@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "express": "^4.21.2",
+    "express": "^5.1.0",
     "nodemon": "^3.1.9",
     "pnpm": "^10.7.0",
     "react": "^19.0.0",
