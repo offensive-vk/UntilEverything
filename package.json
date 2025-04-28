@@ -19,7 +19,7 @@
   "dependencies": {
     "bootstrap": "^5.3.5",
     "express": "^5.1.0",
-    "nodemon": "^3.1.9",
+    "nodemon": "^3.1.10",
     "pnpm": "^10.9.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
