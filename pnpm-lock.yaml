@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       bootstrap:
-        specifier: ^5.3.5
-        version: 5.3.5(@popperjs/core@2.11.8)
+        specifier: ^5.3.6
+        version: 5.3.6(@popperjs/core@2.11.8)
       express:
         specifier: ^5.1.0
         version: 5.1.0
@@ -30,8 +30,8 @@ importers:
         specifier: ^1.88.0
         version: 1.88.0
       tailwindcss:
-        specifier: ^4.1.5
-        version: 4.1.5
+        specifier: ^4.1.6
+        version: 4.1.6
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.5.4)(typescript@5.8.3)
@@ -475,8 +475,8 @@ packages:
     resolution: {integrity: sha512-02qvAaxv8tp7fBa/mw1ga98OGm+eCbqzJOKoRt70sLmfEEi+jyBYVTDGfCL/k06/4EMk/z01gCe7HoCH/f2LTg==}
     engines: {node: '>=18'}
 
-  bootstrap@5.3.5:
-    resolution: {integrity: sha512-ct1CHKtiobRimyGzmsSldEtM03E8fcEX4Tb3dGXz1V8faRwM50+vfHwTzOxB3IlKO7m+9vTH3s/3C6T2EAPeTA==}
+  bootstrap@5.3.6:
+    resolution: {integrity: sha512-jX0GAcRzvdwISuvArXn3m7KZscWWFAf1MKBcnzaN02qWMb3jpMoUX4/qgeiGzqyIb4ojulRzs89UCUmGcFSzTA==}
     peerDependencies:
       '@popperjs/core': ^2.11.8
 
@@ -1067,8 +1067,8 @@ packages:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
     engines: {node: '>=4'}
 
-  tailwindcss@4.1.5:
-    resolution: {integrity: sha512-nYtSPfWGDiWgCkwQG/m+aX83XCwf62sBgg3bIlNiiOcggnS1x3uVRDAuyelBFL+vJdOPPCGElxv9DjHJjRHiVA==}
+  tailwindcss@4.1.6:
+    resolution: {integrity: sha512-j0cGLTreM6u4OWzBeLBpycK0WIh8w7kSwcUsQZoGLHZ7xDTdM69lN64AgoIEEwFi0tnhs4wSykUa5YWxAzgFYg==}
 
   thenify-all@1.6.0:
     resolution: {integrity: sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==}
@@ -1493,7 +1493,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  bootstrap@5.3.5(@popperjs/core@2.11.8):
+  bootstrap@5.3.6(@popperjs/core@2.11.8):
     dependencies:
       '@popperjs/core': 2.11.8
 
@@ -2117,7 +2117,7 @@ snapshots:
     dependencies:
       has-flag: 3.0.0
 
-  tailwindcss@4.1.5: {}
+  tailwindcss@4.1.6: {}
 
   thenify-all@1.6.0:
     dependencies:
