@@ -20,11 +20,11 @@
     "bootstrap": "^5.3.6",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
-    "pnpm": "^10.11.0",
+    "pnpm": "^10.11.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.88.0",
-    "tailwindcss": "^4.1.7",
+    "tailwindcss": "^4.1.8",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
