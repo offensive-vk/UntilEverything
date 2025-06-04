@@ -5,7 +5,7 @@ Numbers.forEach((num) => {
 });
 
 // Use Case 2: Callback for Array.map()
-const doubledNumbers = numbers.map((num) => num * 2);
+const doubledNumbers = Numbers.map((num) => num * 2);
 console.log(doubledNumbers);
 
 // Use Case 3: Callback for setTimeout()

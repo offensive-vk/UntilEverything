@@ -3,7 +3,7 @@
 # Build arguments for flexibility
 ARG NODE_VERSION=20
 FROM node:${NODE_VERSION}-alpine AS base
-LABEL maintainer="Vedansh <https://github.com/offensive-vk/>"
+LABEL maintainer="Vedansh"
 LABEL source="https://github.com/offensive-vk/UntilEverything"
 
 # Set environment variables
@@ -18,7 +18,7 @@ RUN apk add --no-cache bash git openssh
 
 # Copy and install dependencies for both production and development
 COPY package*.json ./
-RUN npm i -g pnpm@9.15.0
+RUN npm i -g pnpm@10.10.0
 
 # Install dependencies
 RUN pnpm install

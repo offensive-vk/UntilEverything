@@ -1,7 +1,6 @@
 // Conditionals and loops in TypeScript
 
 const log = console.log;
-log("\n\t :: Second Typescript Program !!\n\t");
 log("================================\n");
 
 let num1: number = 464348;
@@ -18,7 +17,6 @@ if (res <= 99999999) {
 
 log("Result is " + res);
 log("================================");
-log("\n End of Conditionals !!\n\t");
 
 const isMailSent = true;
 if (isMailSent) {
@@ -70,6 +68,6 @@ while (i <= 50) {
   log(i);
   i++;
 }
+
 log("\n================================\n");
-log("\n End of Program !!\n\t");
 export {};
