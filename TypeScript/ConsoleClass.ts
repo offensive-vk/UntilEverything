@@ -1,4 +1,4 @@
-function callFunctionsDemo() {
+function callFunctions() {
   console.log("This is a log message.");
   console.info("This is an info message.");
   console.warn("This is a warning message.");
@@ -31,4 +31,4 @@ function callFunctionsDemo() {
   //console.clear(); // clears the console
 }
 
-callFunctionsDemo();
+callFunctions();
