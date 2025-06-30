@@ -18,8 +18,8 @@ importers:
         specifier: ^3.1.10
         version: 3.1.10
       pnpm:
-        specifier: ^10.12.2
-        version: 10.12.2
+        specifier: ^10.12.4
+        version: 10.12.4
       react:
         specifier: ^19.0.0
         version: 19.1.0
@@ -30,8 +30,8 @@ importers:
         specifier: ^1.88.0
         version: 1.89.1
       tailwindcss:
-        specifier: ^4.1.10
-        version: 4.1.10
+        specifier: ^4.1.11
+        version: 4.1.11
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.5.4)(typescript@5.8.3)
@@ -925,8 +925,8 @@ packages:
   pkg-types@1.3.1:
     resolution: {integrity: sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ==}
 
-  pnpm@10.12.2:
-    resolution: {integrity: sha512-oyVAGFuWTuMLtOl55AWtxq9ZImtDjuTMGfnodzZnpm0wL1v+5go508rGnjXkuW5winHdACt+k1nEESoXIqwyPw==}
+  pnpm@10.12.4:
+    resolution: {integrity: sha512-Xqiw3u2U7WhpHJutTJVUknBcXuuKh++GvGLHSiawN7CP+VcPEIsuTb0d0akYb+qSXlJ/FBxkjoWvRWMQdGgBhA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -1104,8 +1104,8 @@ packages:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
     engines: {node: '>=4'}
 
-  tailwindcss@4.1.10:
-    resolution: {integrity: sha512-P3nr6WkvKV/ONsTzj6Gb57sWPMX29EPNPopo7+FcpkQaNsrNpZ1pv8QmrYI2RqEKD7mlGqLnGovlcYnBK0IqUA==}
+  tailwindcss@4.1.11:
+    resolution: {integrity: sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA==}
 
   thenify-all@1.6.0:
     resolution: {integrity: sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==}
@@ -1979,7 +1979,7 @@ snapshots:
       mlly: 1.7.4
       pathe: 2.0.3
 
-  pnpm@10.12.2: {}
+  pnpm@10.12.4: {}
 
   postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.4.49)(yaml@2.6.1):
     dependencies:
@@ -2194,7 +2194,7 @@ snapshots:
     dependencies:
       has-flag: 3.0.0
 
-  tailwindcss@4.1.10: {}
+  tailwindcss@4.1.11: {}
 
   thenify-all@1.6.0:
     dependencies:
