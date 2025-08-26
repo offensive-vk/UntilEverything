@@ -24,7 +24,7 @@
     "react": "^19.1.1",
     "react-dom": "^19.0.0",
     "sass": "^1.90.0",
-    "tailwindcss": "^4.1.11",
+    "tailwindcss": "^4.1.12",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2"
