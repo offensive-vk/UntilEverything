@@ -17,14 +17,14 @@
     "tailwind": "pnpx tailwindcss init -p"
   },
   "dependencies": {
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.8",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
-    "pnpm": "^10.15.0",
+    "pnpm": "^10.15.1",
     "react": "^19.1.1",
     "react-dom": "^19.0.0",
     "sass": "^1.92.1",
-    "tailwindcss": "^4.1.12",
+    "tailwindcss": "^4.1.13",
     "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2"
