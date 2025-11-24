@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Image
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
     - name: Build the Docker Image
       run: docker build . --file Dockerfile -t untileverything:$(date +%s)
