@@ -19,14 +19,14 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10",
+    "nodemon": "^3.1.11",
     "pnpm": "^10.21.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "sass": "^1.93.0",
-    "tailwindcss": "^4.1.16",
+    "tailwindcss": "^4.1.17",
     "ts-node": "^10.9.2",
-    "tsup": "^8.5.0",
+    "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   },
   "keywords": [
