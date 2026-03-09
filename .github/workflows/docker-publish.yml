@@ -44,7 +44,7 @@ jobs:
 
       - name: Extract Docker Metadata
         id: meta
-        uses: docker/metadata-action@70b2cdc6480c1a8b86edf1777157f8f437de2166 # v5.0.0
+        uses: docker/metadata-action@f58488e2659d6b48d33bf75cb4af197793ce477f # v5.0.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
