@@ -36,7 +36,7 @@ jobs:
 
       - name: Login to Registry ${{ env.REGISTRY }}
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@3227f5311cb93ffd14d13e65d8cc400d30f4dd8a # v3.0.0
+        uses: docker/login-action@db14339dbc0a1f0b184157be94b23a2138122354 # v3.0.0
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ env.USERNAME }}
