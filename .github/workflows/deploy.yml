@@ -59,7 +59,7 @@ jobs:
           echo "*** VERIFICATION COMPLETED ***"
 
       - name: Build and Push Image
-        uses: docker/build-push-action@v7
+        uses: docker/build-push-action@v7.1.0
         with:
           context: .
           push: true
