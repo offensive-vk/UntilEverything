@@ -27,7 +27,7 @@ jobs:
 
       - name: Install Cosign
         if: github.event_name != 'pull_request'
-        uses: sigstore/cosign-installer@cad07c2e89fa2edd6e2d7bab4c1aa38e53f76003 #v4.1.1
+        uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 #v4.1.2
         with:
           cosign-release: 'v2.1.1'
 
@@ -36,7 +36,7 @@ jobs:
 
       - name: Login to Registry ${{ env.REGISTRY }}
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@9f4a8ea54ed9055d5f86c993e1f2ffa674f98344 # v3.0.0
+        uses: docker/login-action@650006c6eb7dba73a995cc03b0b2d7f5ca915bee # v3.0.0
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ env.USERNAME }}
@@ -62,7 +62,7 @@ jobs:
 
       - name: Build and Push Docker Image
         id: build-and-push
-        uses: docker/build-push-action@bcafcacb16a39f128d818304e6c9c0c18556b85f # v7.1.0
+        uses: docker/build-push-action@f9f3042f7e2789586610d6e8b85c8f03e5195baf # v7.2.0
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
