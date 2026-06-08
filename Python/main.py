@@ -3,8 +3,7 @@ import sys
 import os
 import time
 import string
-import html
-
+import datetime
 
 time.sleep(2)
 os.system("color A && ipconfig /all")
@@ -12,8 +11,9 @@ os.system("cls && echo Hello user")
 
 print("Current Working Directory:", os.getcwd())
 
-# print("Directory created:", os.mkdir('sample')) 
-# print("Current Time: ", datetime.datetime.now())
+print("Directory created:", os.mkdir('sample')) 
+print("Current Time: ", datetime.datetime.now())
+
 time.time.__init__
 sys.stdout.write("Yo yo yo yo")
 
@@ -32,16 +32,6 @@ print("Random Password:", random_password)
 
 # for i in range(1, len(name)):
 #     print(i*name," \n")
-
-class example:
-    try:
-        print(random.randint(99,999)/0)
-    except ZeroDivisionError:
-        print(random.randint(10,99)/1)
-    finally:
-        print("Sorry vro thak gaya hu")
-pass
-
 
 # def guess(num):
 #     number = random.randint(1, 10)

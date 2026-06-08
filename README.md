@@ -2,7 +2,7 @@
 
 ## Programs for Different Frameworks and Trending Web Technologies
 
-UntilEverything is one of the thousand Repository that contains Programs and Examples of Various Programming Topics from Various Programming Languages like TypeScript, Sass, JavaScript, Nodejs .etc. Almost Covering all the important concepts and topics of various Programming Languages, we also have various approach based Problems and their solutions that will help you to improve your coding knowledge and enhance your coding style, workflow, passion and interest.
+UntilEverything is one of the many Repositories that contains Programs and Examples of Various Programming Topics from Various Programming Languages and Tooling like TypeScript, Sass, JavaScript, Nodejs .etc. Almost Covering all the important concepts and topics of various Programming Languages, we also have various approach based Problems and their solutions that will help you to improve your coding knowledge and enhance your coding style, workflow, passion and interest.
 
 ### Languages and Frameworks
 
@@ -81,13 +81,6 @@ Programming paradigms refer to different styles or approaches to programming, ea
   <a href="https://yaml.org/" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/yaml/yaml-original.svg" width="200" height="150" alt="yaml"/></a>
 </p>
 </div>
-
-## UntilEverything - (Formally WebDev)
-
-- *Why Not Learn Something Clear and Different Today*.
-- Examples for Various Frameworks and Programming Languages.
-- Web Development Projects and Webpages.
-- Happy Coding. 🤗
 
 ***
 
