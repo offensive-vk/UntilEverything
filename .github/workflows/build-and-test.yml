@@ -17,7 +17,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
+        node-version: [21.x, 22.x, 23.x, 24.x, 25.x]
 
     name: Linux - Build & Test on v${{ matrix.node-version }}
     steps:
@@ -28,8 +28,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
   
-      - name: Setup pnpm@v9
-        run: npm i -g pnpm@9.0.0; pnpm -v
+      - name: Setup pnpm
+        run: npm i -g pnpm@11.5.0; pnpm -v
 
       - run: pnpm i
       - run: pnpm run build
@@ -40,7 +40,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
+        node-version: [21.x, 22.x, 23.x, 24.x, 25.x]
     
     name: Macos - Build & Test on v${{ matrix.node-version }} 
     steps:
@@ -52,7 +52,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     
     - name: Setup pnpm@v9
-      run: npm i -g pnpm@9.0.0; pnpm -v
+      run: npm i -g pnpm@11.5.0; pnpm -v
 
     - run: pnpm i
     - run: pnpm run build
@@ -63,7 +63,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        node-version: [18.x, 19.x, 20.x, 21.x, 22.x]
+        node-version: [21.x, 22.x, 23.x, 24.x, 25.x]
     
     name: Windows - Build & Test on v${{ matrix.node-version }}
     steps:
@@ -74,8 +74,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Setup pnpm@v9
-      run: npm i -g pnpm@9.0.0; pnpm -v
+    - name: Setup pnpm
+      run: npm i -g pnpm@11.5.0; pnpm -v
 
     - run: pnpm i
     - run: pnpm run build

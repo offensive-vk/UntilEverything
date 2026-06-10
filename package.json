@@ -9,7 +9,7 @@
   "license": "ISC",
   "scripts": {
     "start": "node JavaScript/Advanced/Promises.js",
-    "add": "pnpm add typescript express sass nodemon tailwindcss react react-dom bootstrap tsup ts-node pnpm",
+    "deps": "pnpm add typescript express sass nodemon tailwindcss react react-dom bootstrap tsup",
     "dev": "echo Powering Up Server... && node JavaScript/Advanced/Promises.js",
     "test": "echo Tests were successful.",
     "build": "echo Build Success ✨",
@@ -20,14 +20,13 @@
     "bootstrap": "^5.3.8",
     "express": "^5.2.1",
     "nodemon": "^3.1.14",
-    "pnpm": "^10.30.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "sass": "^1.100.0",
     "tailwindcss": "^4.3.0",
-    "ts-node": "^10.9.2",
     "tsup": "^8.5.1",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "yaml": "^2.9.0"
   },
   "keywords": [
     "Ajax",
