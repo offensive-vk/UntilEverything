@@ -17,7 +17,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        node-version: [21.x, 22.x, 23.x, 24.x, 25.x]
+        node-version: [22.x, 23.x, 24.x, 25.x, 26.x]
 
     name: Linux - Build & Test on v${{ matrix.node-version }}
     steps:
@@ -40,7 +40,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        node-version: [21.x, 22.x, 23.x, 24.x, 25.x]
+        node-version: [22.x, 23.x, 24.x, 25.x, 26.x]
     
     name: Macos - Build & Test on v${{ matrix.node-version }} 
     steps:
@@ -63,7 +63,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        node-version: [21.x, 22.x, 23.x, 24.x, 25.x]
+        node-version: [22.x, 23.x, 24.x, 25.x, 26.x]
     
     name: Windows - Build & Test on v${{ matrix.node-version }}
     steps:
