@@ -21,7 +21,7 @@
     "express": "^5.2.1",
     "nodemon": "^3.1.14",
     "react": "^19.3.0",
-    "react-dom": "^19.2.8",
+    "react-dom": "^19.3.0",
     "sass": "^1.103.1",
     "tailwindcss": "^4.3.0",
     "tsup": "^8.5.1",
