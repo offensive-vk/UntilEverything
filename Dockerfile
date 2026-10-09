@@ -18,7 +18,7 @@ RUN apk add --no-cache bash git openssh
 
 # Copy and install dependencies for both production and development
 COPY package*.json pnpm-workspace.yaml ./
-RUN npm i -g pnpm@11.2.0
+RUN npm i -g pnpm@11.5.0
 
 # Install dependencies
 RUN pnpm install

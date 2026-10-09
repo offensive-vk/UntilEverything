@@ -19,7 +19,6 @@ Please search on the [issue tracker](../) before creating one.
 1.
 2.
 3.
-4.
 
 ## Context
 <!--- How has this issue affected you? What are you trying to accomplish? -->
